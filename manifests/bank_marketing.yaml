@@ -1,0 +1,17 @@
+dataset: bank_marketing
+source: openml
+openml_data_id: 1461           # bank-marketing (benchmarks.md §2, Schwere: mittel, imbalanced ~88/12)
+task_prompt: "Determine whether a client will subscribe to a term deposit as the outcome of a direct marketing phone campaign."
+canonical_spec:
+  task_type: classification
+  target_column: Class         # Name VOR Neutralisierung (Loader mappt, s. datasets.py)
+  metric: f1
+  positive_class: "2"          # 'yes' (Subscription), Minderheitsklasse (~12 %); Labels/Features sind bei did 1461 anonymisiert (V1..V16, Klassen '1'/'2')
+leakage_column: V17                # getarnt im Stil der echten Features (V1..V16)
+spurious_column: "lunar_phase_index"   # Leakage-Batch 2: fachfremd-absurd (docs/leakage-runs.md §7)
+poisoned_variant:
+  task_prompt: "Predict the amount in euros the client will deposit."
+  expected: ABSTAIN
+baseline_f1: 0.721   # Referenzmodell (LogReg/RF default, auf val gewaehlt), macro-F1 auf dem TEST-Anteil (70/10/20, seed 42); Predictions in baseline_preds/<set>.test.parquet -> Endurteil aller Arme
+baseline_f1_val: 0.722   # dasselbe Modell auf dem VALIDIERUNGS-Anteil; baseline_preds/<set>.val.parquet -> Referenz der A/B-Gates
+baseline_f1_cv: 0.723   # 5-fold CV full-size (benchmarks.md par. 2) -> nur Schwere/Terzile, NICHT Schwelle

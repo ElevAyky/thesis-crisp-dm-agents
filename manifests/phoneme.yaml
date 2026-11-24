@@ -1,0 +1,17 @@
+dataset: phoneme
+source: openml
+openml_data_id: 1489           # phoneme (benchmarks.md §2, Schwere: mittel)
+task_prompt: "Determine whether a spoken phoneme is nasal or oral from the amplitudes of its first five harmonics."
+canonical_spec:
+  task_type: classification
+  target_column: Class         # Name VOR Neutralisierung (Loader mappt, s. datasets.py)
+  metric: f1
+  positive_class: "2"          # oral, Minderheitsklasse (~29 %); Labels sind '1'/'2' (anonymisiert)
+leakage_column: V6                 # getarnt im Stil der echten Features (V1..V5)
+spurious_column: "stock_index_close"   # Leakage-Batch 2: fachfremd-absurd (docs/leakage-runs.md §7)
+poisoned_variant:
+  task_prompt: "Predict the age of the speaker in years."
+  expected: ABSTAIN
+baseline_f1: 0.862   # Referenzmodell (LogReg/RF default, auf val gewaehlt), macro-F1 auf dem TEST-Anteil (70/10/20, seed 42); Predictions in baseline_preds/<set>.test.parquet -> Endurteil aller Arme
+baseline_f1_val: 0.873   # dasselbe Modell auf dem VALIDIERUNGS-Anteil; baseline_preds/<set>.val.parquet -> Referenz der A/B-Gates
+baseline_f1_cv: 0.890   # 5-fold CV full-size (benchmarks.md par. 2) -> nur Schwere/Terzile, NICHT Schwelle

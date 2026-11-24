@@ -1,0 +1,221 @@
+{
+ "p1_parity_clean": {
+  "core": {
+   "friedman_p_F": 0.8528667510114334,
+   "rank_A": 2.269230769230769,
+   "rank_D": 2.730769230769231,
+   "rank_diff_AD": 0.4615384615384617,
+   "cd": 1.3008798056732775,
+   "nemenyi_sig_AD": false,
+   "cliffs_mean_AD": 0.017094017094017103,
+   "cliffs_mag_AD": "negligible"
+  },
+  "post": {
+   "f1_A": {
+    "ev_purchase": 0.8202880905129305,
+    "student_health": 0.9018344624353238
+   },
+   "f1_D": {
+    "ev_purchase": 0.8102292202207951,
+    "student_health": 0.8774069914609326
+   },
+   "friedman_p_F": 0.052044019330914,
+   "cd": 3.316605756983416
+  }
+ },
+ "p2_traps": {
+  "leak_perfect_D_exploited": 1,
+  "leak_spurious_D_exploited": 4,
+  "A_B_C_on_leakage_run": false,
+  "poisoned_tasks_run": false,
+  "v12_bank_marketing_A_excluded": 6,
+  "bank_marketing_f1": {
+   "hard_fsm": 0.7093193277979538,
+   "soft_fsm": 0.7099878891854073,
+   "crisp_react": 0.7750311394834175,
+   "naked_react": 0.752802362308727
+  },
+  "bank_marketing_success": {
+   "hard_fsm": 6,
+   "soft_fsm": 6,
+   "crisp_react": 6,
+   "naked_react": 5
+  }
+ },
+ "p3_runsd_A_lt_D": {
+  "core_median_A": 0.008823500338631418,
+  "core_median_D": 0.0067311035107550776,
+  "core_cells_A_lt_D": 4,
+  "core_cells": 13,
+  "post_median_A": 0.002308206559504863,
+  "post_median_D": 0.018179116883070022
+ },
+ "p4_imbalanced_success_A_gt_D": {
+  "majority_share": {
+   "adult": 0.7607347607347608,
+   "bank_marketing": 0.8830220874016494,
+   "breast_cancer": 0.6256281407035176,
+   "cmc": 0.42718446601941745,
+   "cnae_9": 0.1111111111111111,
+   "connect_4": 0.6583137727589926,
+   "covertype": 0.4875991807369925,
+   "credit_g": 0.7,
+   "eucalyptus": 0.2918287937743191,
+   "ev_purchase": 0.8253554527683121,
+   "fashion_mnist": 0.1,
+   "phoneme": 0.706504494976203,
+   "student_health": 0.8586762334363569,
+   "vehicle": 0.2571912013536379,
+   "wine": 0.4032258064516129
+  },
+  "success_by_set": {
+   "adult": {
+    "hard_fsm": 6,
+    "soft_fsm": 6,
+    "crisp_react": 6,
+    "naked_react": 6
+   },
+   "bank_marketing": {
+    "hard_fsm": 6,
+    "soft_fsm": 6,
+    "crisp_react": 6,
+    "naked_react": 5
+   },
+   "breast_cancer": {
+    "hard_fsm": 6,
+    "soft_fsm": 6,
+    "crisp_react": 6,
+    "naked_react": 6
+   },
+   "cmc": {
+    "hard_fsm": 6,
+    "soft_fsm": 6,
+    "crisp_react": 6,
+    "naked_react": 6
+   },
+   "cnae_9": {
+    "hard_fsm": 6,
+    "soft_fsm": 6,
+    "crisp_react": 6,
+    "naked_react": 6
+   },
+   "connect_4": {
+    "hard_fsm": 6,
+    "soft_fsm": 6,
+    "crisp_react": 6,
+    "naked_react": 6
+   },
+   "covertype": {
+    "hard_fsm": 6,
+    "soft_fsm": 6,
+    "crisp_react": 6,
+    "naked_react": 6
+   },
+   "credit_g": {
+    "hard_fsm": 6,
+    "soft_fsm": 6,
+    "crisp_react": 6,
+    "naked_react": 6
+   },
+   "eucalyptus": {
+    "hard_fsm": 6,
+    "soft_fsm": 6,
+    "crisp_react": 6,
+    "naked_react": 6
+   },
+   "fashion_mnist": {
+    "hard_fsm": 6,
+    "soft_fsm": 6,
+    "crisp_react": 6,
+    "naked_react": 6
+   },
+   "phoneme": {
+    "hard_fsm": 6,
+    "soft_fsm": 6,
+    "crisp_react": 6,
+    "naked_react": 6
+   },
+   "vehicle": {
+    "hard_fsm": 6,
+    "soft_fsm": 6,
+    "crisp_react": 6,
+    "naked_react": 6
+   },
+   "wine": {
+    "hard_fsm": 6,
+    "soft_fsm": 6,
+    "crisp_react": 6,
+    "naked_react": 6
+   },
+   "ev_purchase": {
+    "hard_fsm": 6,
+    "soft_fsm": 6,
+    "crisp_react": 6,
+    "naked_react": 4
+   },
+   "student_health": {
+    "hard_fsm": 5,
+    "soft_fsm": 6,
+    "crisp_react": 2,
+    "naked_react": 2
+   }
+  },
+  "core_only_nonpass": [
+   "main-bank_marketing-naked_react-r5"
+  ],
+  "core_fisher_AD": {
+   "a": "hard_fsm",
+   "b": "naked_react",
+   "table": [
+    [
+     78,
+     0
+    ],
+    [
+     77,
+     1
+    ]
+   ],
+   "odds_ratio": "inf",
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  "post_fisher_AD": {
+   "a": "hard_fsm",
+   "b": "naked_react",
+   "table": [
+    [
+     11,
+     1
+    ],
+    [
+     6,
+     6
+    ]
+   ],
+   "odds_ratio": 11.0,
+   "p": 0.06864988558352403,
+   "p_holm": 0.34324942791762014
+  }
+ },
+ "p5_refinement_highdim": {
+  "cnae_9": {
+   "crisp_react": 0.9556161717093731,
+   "hard_fsm": 0.9570905747093438,
+   "naked_react": 0.957120768820085,
+   "soft_fsm": 0.955659863938723
+  },
+  "fashion_mnist": {
+   "crisp_react": 0.8905791215766262,
+   "hard_fsm": 0.8949966016029719,
+   "naked_react": 0.8879192895502305,
+   "soft_fsm": 0.8934193580139803
+  },
+  "tercile_hard_ranks": {
+   "hard_fsm": 2.8,
+   "soft_fsm": 2.2,
+   "crisp_react": 2.0,
+   "naked_react": 3.0
+  }
+ }
+}

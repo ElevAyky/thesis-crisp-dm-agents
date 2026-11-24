@@ -1,0 +1,23 @@
+%!TEX root = ../thesis.tex
+% generiert von thesis/scripts/make_figures_kap7.py aus thesis/facts/derived/process_coding.json und postcutoff.json — nicht von Hand aendern
+\begin{table}[htbp]
+  \centering
+  \small
+  \caption[Routes on student health]{Runs on student health (post-cutoff control, six per arm) by the route to the final model. \emph{Balanced class weights set}: the code of the run sets balanced class or sample weights at some point. Runs of A and B are assigned by whether the Evaluation gate returned them to Modeling (event log); that the seven runs without a return kept a weighted model and that the five with a return removed or weakened the weighting rests on an inspection of their code, as does the dummy as the only comparison of the eight free runs in the fourth row (\autoref{sec:6:PostCutoffControl}). The one run of C that compared its weighted model with an unweighted variant is not counted as tuning by the coder, because the weights enter at fitting and not in the model constructor (\autoref{sec:7:CodingTheTranscripts}). \emph{Passed}: not significantly worse than the baseline; last column: passed runs of the row. Arms as in \autoref{tab:3:arms}.}
+  \label{tab:7:studenthealth}
+  \begin{tabular}{lrrrrr}
+    \toprule
+    Route to the final model & A & B & C & D & Passed \\
+    \midrule
+    \multicolumn{6}{l}{\emph{Balanced class weights set}} \\
+    \quad No return; several families compared, weighted model kept & 4 & 3 & 0 & 0 & 6 of 7 \\
+    \quad Returned by the Evaluation gate; weighting removed or weakened & 2 & 3 & 0 & 0 & 5 of 5 \\
+    \quad Weighted model compared with an unweighted variant & 0 & 0 & 1 & 0 & 1 of 1 \\
+    \quad One weighted model, compared only with a dummy & 0 & 0 & 4 & 4 & 0 of 8 \\
+    \midrule
+    No class weights & 0 & 0 & 1 & 2 & 3 of 3 \\
+    \midrule
+    Passed (of 6) & 5 & 6 & 2 & 2 & 15 of 24 \\
+    \bottomrule
+  \end{tabular}
+\end{table}

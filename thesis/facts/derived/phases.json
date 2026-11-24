@@ -1,0 +1,261 @@
+{
+ "core": {
+  "hard_fsm": {
+   "runs": 78,
+   "attempts_total": {
+    "bu": 78,
+    "du": 102,
+    "prep": 78,
+    "model": 83,
+    "eval": 78
+   },
+   "attempts_mean": {
+    "bu": 1.0,
+    "du": 1.3076923076923077,
+    "prep": 1.0,
+    "model": 1.064102564102564,
+    "eval": 1.0
+   },
+   "loops": {
+    "retry_model": 5,
+    "retry_du": 24
+   },
+   "runs_with": {
+    "retry_model": 5,
+    "any_repeat": 25,
+    "retry_du": 24
+   },
+   "eval_to_model_runs": [],
+   "du_to_bu_runs": [],
+   "gate_fail_events_by_phase": {
+    "model": 5,
+    "du": 24
+   },
+   "du_gate_fail_feedback": {
+    "target_excluded": 24
+   },
+   "model_gate_fail_feedback_A": {
+    "model.pkl cannot be loaded: No module named '": 5
+   },
+   "total_calls_mean": 5.371794871794871,
+   "total_calls_max": 7,
+   "total_calls_min": 5,
+   "gate_calls_total": 0,
+   "gate_calls_mean": 0.0,
+   "worker_turns_mean": 47.14102564102564,
+   "worker_turns_median": 47.0,
+   "worker_turns_max": 66,
+   "worker_turns_summary_equals_events": 78,
+   "budget_exhausted": 0,
+   "bu_correct": 78,
+   "bu_correct_first": 78,
+   "target_ok": 78,
+   "per_dataset_backjump_runs": {}
+  },
+  "soft_fsm": {
+   "runs": 78,
+   "attempts_total": {
+    "bu": 78,
+    "du": 97,
+    "prep": 78,
+    "model": 79,
+    "eval": 78
+   },
+   "attempts_mean": {
+    "bu": 1.0,
+    "du": 1.2435897435897436,
+    "prep": 1.0,
+    "model": 1.0128205128205128,
+    "eval": 1.0
+   },
+   "loops": {
+    "retry_model": 1,
+    "retry_du": 19
+   },
+   "runs_with": {
+    "retry_model": 1,
+    "any_repeat": 20,
+    "retry_du": 19
+   },
+   "eval_to_model_runs": [],
+   "du_to_bu_runs": [],
+   "gate_fail_events_by_phase": {
+    "model": 1,
+    "du": 19
+   },
+   "du_gate_fail_feedback": {
+    "target_excluded": 19
+   },
+   "model_gate_fail_feedback_A": {},
+   "total_calls_mean": 5.256410256410256,
+   "total_calls_max": 6,
+   "total_calls_min": 5,
+   "gate_calls_total": 410,
+   "gate_calls_mean": 5.256410256410256,
+   "worker_turns_mean": 47.1025641025641,
+   "worker_turns_median": 47.0,
+   "worker_turns_max": 61,
+   "worker_turns_summary_equals_events": 78,
+   "budget_exhausted": 0,
+   "bu_correct": 78,
+   "bu_correct_first": 78,
+   "target_ok": 78,
+   "per_dataset_backjump_runs": {}
+  }
+ },
+ "post_cutoff": {
+  "hard_fsm": {
+   "runs": 12,
+   "attempts_total": {
+    "bu": 12,
+    "du": 14,
+    "prep": 12,
+    "model": 16,
+    "eval": 14
+   },
+   "attempts_mean": {
+    "bu": 1.0,
+    "du": 1.1666666666666667,
+    "prep": 1.0,
+    "model": 1.3333333333333333,
+    "eval": 1.1666666666666667
+   },
+   "loops": {
+    "retry_model": 2,
+    "back_eval_to_model": 2,
+    "retry_du": 2
+   },
+   "runs_with": {
+    "retry_model": 2,
+    "any_repeat": 4,
+    "back_eval_to_model": 2,
+    "any_backjump": 2,
+    "retry_du": 2
+   },
+   "eval_to_model_runs": [
+    "main-student_health-hard_fsm-r1",
+    "main-student_health-hard_fsm-r5"
+   ],
+   "du_to_bu_runs": [],
+   "gate_fail_events_by_phase": {
+    "model": 2,
+    "eval": 2,
+    "du": 2
+   },
+   "du_gate_fail_feedback": {
+    "target_excluded": 2
+   },
+   "model_gate_fail_feedback_A": {
+    "model.pkl cannot be loaded: Can't get attribu": 1,
+    "metrics.json reports metric 'f1_macro', but t": 1
+   },
+   "total_calls_mean": 5.666666666666667,
+   "total_calls_max": 9,
+   "total_calls_min": 5,
+   "gate_calls_total": 0,
+   "gate_calls_mean": 0.0,
+   "worker_turns_mean": 51.75,
+   "worker_turns_median": 48.0,
+   "worker_turns_max": 73,
+   "worker_turns_summary_equals_events": 12,
+   "budget_exhausted": 0,
+   "bu_correct": 12,
+   "bu_correct_first": 12,
+   "target_ok": 12,
+   "per_dataset_backjump_runs": {
+    "student_health": 2
+   }
+  },
+  "soft_fsm": {
+   "runs": 12,
+   "attempts_total": {
+    "bu": 12,
+    "du": 15,
+    "prep": 12,
+    "model": 15,
+    "eval": 15
+   },
+   "attempts_mean": {
+    "bu": 1.0,
+    "du": 1.25,
+    "prep": 1.0,
+    "model": 1.25,
+    "eval": 1.25
+   },
+   "loops": {
+    "retry_du": 3,
+    "back_eval_to_model": 3
+   },
+   "runs_with": {
+    "retry_du": 3,
+    "any_repeat": 5,
+    "back_eval_to_model": 3,
+    "any_backjump": 3
+   },
+   "eval_to_model_runs": [
+    "main-student_health-soft_fsm-r2",
+    "main-student_health-soft_fsm-r4",
+    "main-student_health-soft_fsm-r6"
+   ],
+   "du_to_bu_runs": [],
+   "gate_fail_events_by_phase": {
+    "du": 3,
+    "eval": 3
+   },
+   "du_gate_fail_feedback": {
+    "target_excluded": 3
+   },
+   "model_gate_fail_feedback_A": {},
+   "total_calls_mean": 5.75,
+   "total_calls_max": 8,
+   "total_calls_min": 5,
+   "gate_calls_total": 69,
+   "gate_calls_mean": 5.75,
+   "worker_turns_mean": 53.916666666666664,
+   "worker_turns_median": 51.0,
+   "worker_turns_max": 75,
+   "worker_turns_summary_equals_events": 12,
+   "budget_exhausted": 0,
+   "bu_correct": 12,
+   "bu_correct_first": 12,
+   "target_ok": 12,
+   "per_dataset_backjump_runs": {
+    "student_health": 3
+   }
+  }
+ },
+ "react_turns": {
+  "core": {
+   "crisp_react": {
+    "mean": 9.064102564102564,
+    "median": 9.0,
+    "max": 16,
+    "summary_field_zero": 78,
+    "runs": 78
+   },
+   "naked_react": {
+    "mean": 6.884615384615385,
+    "median": 6.0,
+    "max": 13,
+    "summary_field_zero": 78,
+    "runs": 78
+   }
+  },
+  "post_cutoff": {
+   "crisp_react": {
+    "mean": 9.75,
+    "median": 9.5,
+    "max": 13,
+    "summary_field_zero": 12,
+    "runs": 12
+   },
+   "naked_react": {
+    "mean": 6.583333333333333,
+    "median": 7.0,
+    "max": 10,
+    "summary_field_zero": 12,
+    "runs": 12
+   }
+  }
+ }
+}

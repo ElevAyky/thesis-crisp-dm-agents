@@ -1,0 +1,655 @@
+{
+ "cells": [
+  {
+   "phase": "calib",
+   "dataset": "covertype",
+   "arm": "hard_fsm",
+   "n": 3,
+   "in_core_suite": true,
+   "outcomes": {
+    "SUCCESS": 3
+   },
+   "f1_values": [
+    0.9485318590091175,
+    0.9485318590091175,
+    0.9485318590091175
+   ],
+   "mean": 0.9485318590091175,
+   "sd": 0.0,
+   "cost_total": 5.308165000000001,
+   "cost_per_run": 1.7693883333333336,
+   "holdout_intact": true,
+   "thresholds": [
+    0.5
+   ]
+  },
+  {
+   "phase": "calib",
+   "dataset": "covertype",
+   "arm": "naked_react",
+   "n": 3,
+   "in_core_suite": true,
+   "outcomes": {
+    "SUCCESS": 3
+   },
+   "f1_values": [
+    0.9544337314738113,
+    0.9530121696176975,
+    0.9539561163324113
+   ],
+   "mean": 0.9538006724746401,
+   "sd": 0.000723416631256499,
+   "cost_total": 1.1616645,
+   "cost_per_run": 0.38722150000000005,
+   "holdout_intact": true,
+   "thresholds": [
+    0.5
+   ]
+  },
+  {
+   "phase": "calib",
+   "dataset": "credit_g",
+   "arm": "hard_fsm",
+   "n": 3,
+   "in_core_suite": true,
+   "outcomes": {
+    "SUCCESS": 3
+   },
+   "f1_values": [
+    0.7417933379098427,
+    0.735491512041058,
+    0.7417933379098427
+   ],
+   "mean": 0.7396927292869145,
+   "sd": 0.0036383608617289905,
+   "cost_total": 5.03648275,
+   "cost_per_run": 1.6788275833333335,
+   "holdout_intact": true,
+   "thresholds": [
+    0.5
+   ]
+  },
+  {
+   "phase": "calib",
+   "dataset": "credit_g",
+   "arm": "naked_react",
+   "n": 3,
+   "in_core_suite": true,
+   "outcomes": {
+    "SUCCESS": 3
+   },
+   "f1_values": [
+    0.6878526163801172,
+    0.7562016930437983,
+    0.7562016930437983
+   ],
+   "mean": 0.7334186674892379,
+   "sd": 0.03946135781063863,
+   "cost_total": 0.9258415,
+   "cost_per_run": 0.3086138333333333,
+   "holdout_intact": true,
+   "thresholds": [
+    0.5
+   ]
+  },
+  {
+   "phase": "scan",
+   "dataset": "adult",
+   "arm": "naked_react",
+   "n": 3,
+   "in_core_suite": true,
+   "outcomes": {
+    "SUCCESS": 3
+   },
+   "f1_values": [
+    0.871149325541253,
+    0.8715453735071962,
+    0.8722741897737003
+   ],
+   "mean": 0.8716562962740498,
+   "sd": 0.0005705767087032714,
+   "cost_total": 1.0228495,
+   "cost_per_run": 0.34094983333333334,
+   "holdout_intact": true,
+   "thresholds": [
+    0.5
+   ]
+  },
+  {
+   "phase": "scan",
+   "dataset": "bank_marketing",
+   "arm": "hard_fsm",
+   "n": 3,
+   "in_core_suite": true,
+   "outcomes": {
+    "SUCCESS": 3
+   },
+   "f1_values": [
+    0.8723018329864296,
+    0.8721872754945614,
+    0.8732101958479948
+   ],
+   "mean": 0.8725664347763287,
+   "sd": 0.0005604481178310355,
+   "cost_total": 5.391275,
+   "cost_per_run": 1.7970916666666668,
+   "holdout_intact": true,
+   "thresholds": [
+    0.5
+   ]
+  },
+  {
+   "phase": "scan",
+   "dataset": "bank_marketing",
+   "arm": "naked_react",
+   "n": 3,
+   "in_core_suite": true,
+   "outcomes": {
+    "SUCCESS": 1,
+    "FAIL": 2
+   },
+   "f1_values": [
+    0.9034275432427915
+   ],
+   "mean": 0.9034275432427915,
+   "sd": null,
+   "cost_total": 0.96884875,
+   "cost_per_run": 0.32294958333333335,
+   "holdout_intact": true,
+   "thresholds": [
+    0.5
+   ]
+  },
+  {
+   "phase": "scan",
+   "dataset": "breast_cancer",
+   "arm": "naked_react",
+   "n": 3,
+   "in_core_suite": true,
+   "outcomes": {
+    "SUCCESS": 3
+   },
+   "f1_values": [
+    0.9647247085304307,
+    0.9647247085304307,
+    0.9647247085304307
+   ],
+   "mean": 0.9647247085304307,
+   "sd": 0.0,
+   "cost_total": 0.8063895,
+   "cost_per_run": 0.2687965,
+   "holdout_intact": true,
+   "thresholds": [
+    0.5
+   ]
+  },
+  {
+   "phase": "scan",
+   "dataset": "cmc",
+   "arm": "naked_react",
+   "n": 3,
+   "in_core_suite": true,
+   "outcomes": {
+    "SUCCESS": 3
+   },
+   "f1_values": [
+    0.5539145791258342,
+    0.5441531903206278,
+    0.5032638749723746
+   ],
+   "mean": 0.5337772148062788,
+   "sd": 0.026872273977393498,
+   "cost_total": 0.7249642500000001,
+   "cost_per_run": 0.24165475000000003,
+   "holdout_intact": true,
+   "thresholds": [
+    0.5
+   ]
+  },
+  {
+   "phase": "scan",
+   "dataset": "cnae_9",
+   "arm": "hard_fsm",
+   "n": 3,
+   "in_core_suite": true,
+   "outcomes": {
+    "SUCCESS": 3
+   },
+   "f1_values": [
+    0.9034323559996023,
+    0.8955272324436678,
+    0.9034323559996023
+   ],
+   "mean": 0.9007973148142908,
+   "sd": 0.004564025212995991,
+   "cost_total": 5.00108075,
+   "cost_per_run": 1.6670269166666667,
+   "holdout_intact": true,
+   "thresholds": [
+    0.5
+   ]
+  },
+  {
+   "phase": "scan",
+   "dataset": "cnae_9",
+   "arm": "naked_react",
+   "n": 3,
+   "in_core_suite": true,
+   "outcomes": {
+    "SUCCESS": 3
+   },
+   "f1_values": [
+    0.9539730785931394,
+    0.9539730785931394,
+    0.9539730785931394
+   ],
+   "mean": 0.9539730785931394,
+   "sd": 0.0,
+   "cost_total": 1.01527775,
+   "cost_per_run": 0.3384259166666667,
+   "holdout_intact": true,
+   "thresholds": [
+    0.5
+   ]
+  },
+  {
+   "phase": "scan",
+   "dataset": "connect_4",
+   "arm": "naked_react",
+   "n": 3,
+   "in_core_suite": true,
+   "outcomes": {
+    "SUCCESS": 3
+   },
+   "f1_values": [
+    0.8463129777183424,
+    0.8569309386240188,
+    0.8556852636020676
+   ],
+   "mean": 0.8529763933148096,
+   "sd": 0.005804201678397342,
+   "cost_total": 1.10837875,
+   "cost_per_run": 0.36945958333333334,
+   "holdout_intact": true,
+   "thresholds": [
+    0.5
+   ]
+  },
+  {
+   "phase": "scan",
+   "dataset": "covertype",
+   "arm": "naked_react",
+   "n": 3,
+   "in_core_suite": true,
+   "outcomes": {
+    "SUCCESS": 3
+   },
+   "f1_values": [
+    0.9539561163324113,
+    0.9544337314738113,
+    0.8592622124522863
+   ],
+   "mean": 0.9225506867528362,
+   "sd": 0.05480994675717498,
+   "cost_total": 1.01803175,
+   "cost_per_run": 0.3393439166666667,
+   "holdout_intact": true,
+   "thresholds": [
+    0.5
+   ]
+  },
+  {
+   "phase": "scan",
+   "dataset": "credit_g",
+   "arm": "naked_react",
+   "n": 3,
+   "in_core_suite": true,
+   "outcomes": {
+    "SUCCESS": 3
+   },
+   "f1_values": [
+    0.7416933638443937,
+    0.7155686418844315,
+    0.7155686418844315
+   ],
+   "mean": 0.7242768825377522,
+   "sd": 0.015083115256088294,
+   "cost_total": 0.9642072500000001,
+   "cost_per_run": 0.3214024166666667,
+   "holdout_intact": true,
+   "thresholds": [
+    0.5
+   ]
+  },
+  {
+   "phase": "scan",
+   "dataset": "eucalyptus",
+   "arm": "naked_react",
+   "n": 3,
+   "in_core_suite": true,
+   "outcomes": {
+    "SUCCESS": 3
+   },
+   "f1_values": [
+    0.6548338526997063,
+    0.6678396788843177,
+    0.6633893943604721
+   ],
+   "mean": 0.6620209753148321,
+   "sd": 0.006610015635339595,
+   "cost_total": 1.1542275,
+   "cost_per_run": 0.3847425,
+   "holdout_intact": true,
+   "thresholds": [
+    0.5
+   ]
+  },
+  {
+   "phase": "scan",
+   "dataset": "fashion_mnist",
+   "arm": "hard_fsm",
+   "n": 3,
+   "in_core_suite": true,
+   "outcomes": {
+    "SUCCESS": 3
+   },
+   "f1_values": [
+    0.8369747491671259,
+    0.844241045145605,
+    0.8317614216757241
+   ],
+   "mean": 0.8376590719961516,
+   "sd": 0.006267892292329642,
+   "cost_total": 5.542347250000001,
+   "cost_per_run": 1.8474490833333335,
+   "holdout_intact": true,
+   "thresholds": [
+    0.5
+   ]
+  },
+  {
+   "phase": "scan",
+   "dataset": "fashion_mnist",
+   "arm": "naked_react",
+   "n": 3,
+   "in_core_suite": true,
+   "outcomes": {
+    "SUCCESS": 3
+   },
+   "f1_values": [
+    0.8914554841450509,
+    0.8917276945504105,
+    0.8917276945504105
+   ],
+   "mean": 0.891636957748624,
+   "sd": 0.00015716075081053526,
+   "cost_total": 1.00487975,
+   "cost_per_run": 0.33495991666666663,
+   "holdout_intact": true,
+   "thresholds": [
+    0.5
+   ]
+  },
+  {
+   "phase": "scan",
+   "dataset": "jm1",
+   "arm": "naked_react",
+   "n": 3,
+   "in_core_suite": false,
+   "outcomes": {
+    "SUCCESS": 3
+   },
+   "f1_values": [
+    0.7733801848879946,
+    0.7485022576748473,
+    0.7809247745602965
+   ],
+   "mean": 0.7676024057077129,
+   "sd": 0.016965905501590023,
+   "cost_total": 0.98865625,
+   "cost_per_run": 0.32955208333333336,
+   "holdout_intact": true,
+   "thresholds": [
+    0.5
+   ]
+  },
+  {
+   "phase": "scan",
+   "dataset": "phoneme",
+   "arm": "naked_react",
+   "n": 3,
+   "in_core_suite": true,
+   "outcomes": {
+    "SUCCESS": 3
+   },
+   "f1_values": [
+    0.8687501371529246,
+    0.8983330764383548,
+    0.8835273293721277
+   ],
+   "mean": 0.883536847654469,
+   "sd": 0.014791471939588588,
+   "cost_total": 0.86883975,
+   "cost_per_run": 0.28961325,
+   "holdout_intact": true,
+   "thresholds": [
+    0.5
+   ]
+  },
+  {
+   "phase": "scan",
+   "dataset": "synth_machine",
+   "arm": "naked_react",
+   "n": 3,
+   "in_core_suite": false,
+   "outcomes": {
+    "SUCCESS": 3
+   },
+   "f1_values": [
+    0.7673248094096292,
+    0.7630489028375768,
+    0.756076894355953
+   ],
+   "mean": 0.762150202201053,
+   "sd": 0.005677556286752683,
+   "cost_total": 0.9565795,
+   "cost_per_run": 0.31885983333333334,
+   "holdout_intact": true,
+   "thresholds": [
+    0.5
+   ]
+  },
+  {
+   "phase": "scan",
+   "dataset": "uber_rides",
+   "arm": "hard_fsm",
+   "n": 3,
+   "in_core_suite": false,
+   "outcomes": {
+    "SUCCESS": 3
+   },
+   "f1_values": [
+    0.9608163276763917,
+    0.9611134658418173,
+    0.6795673705155647
+   ],
+   "mean": 0.8671657213445912,
+   "sd": 0.16246500545686826,
+   "cost_total": 6.5751057500000005,
+   "cost_per_run": 2.1917019166666667,
+   "holdout_intact": true,
+   "thresholds": [
+    0.5
+   ]
+  },
+  {
+   "phase": "scan",
+   "dataset": "uber_rides",
+   "arm": "naked_react",
+   "n": 3,
+   "in_core_suite": false,
+   "outcomes": {
+    "SUCCESS": 3
+   },
+   "f1_values": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mean": 1.0,
+   "sd": 0.0,
+   "cost_total": 1.1961344999999999,
+   "cost_per_run": 0.39871149999999994,
+   "holdout_intact": true,
+   "thresholds": [
+    0.5
+   ]
+  },
+  {
+   "phase": "scan",
+   "dataset": "vehicle",
+   "arm": "naked_react",
+   "n": 3,
+   "in_core_suite": true,
+   "outcomes": {
+    "SUCCESS": 3
+   },
+   "f1_values": [
+    0.84880174291939,
+    0.84880174291939,
+    0.84880174291939
+   ],
+   "mean": 0.84880174291939,
+   "sd": 0.0,
+   "cost_total": 0.82987325,
+   "cost_per_run": 0.27662441666666665,
+   "holdout_intact": true,
+   "thresholds": [
+    0.5
+   ]
+  },
+  {
+   "phase": "scan",
+   "dataset": "wine",
+   "arm": "naked_react",
+   "n": 3,
+   "in_core_suite": true,
+   "outcomes": {
+    "SUCCESS": 3
+   },
+   "f1_values": [
+    0.9719701552732407,
+    0.9719701552732407,
+    0.9719701552732407
+   ],
+   "mean": 0.9719701552732407,
+   "sd": 0.0,
+   "cost_total": 0.6607075,
+   "cost_per_run": 0.22023583333333333,
+   "holdout_intact": true,
+   "thresholds": [
+    0.5
+   ]
+  }
+ ],
+ "runs_without_summary": [
+  "scan-naked_react-vehicle-r1"
+ ],
+ "calibration": {
+  "runs": 12,
+  "cost": 12.432153750000001,
+  "success": 12,
+  "datasets": [
+   "covertype",
+   "credit_g"
+  ],
+  "arms": [
+   "hard_fsm",
+   "naked_react"
+  ],
+  "holdout_intact_all": true,
+  "mean_diff_A_minus_D": {
+   "covertype": -0.005268813465522548,
+   "credit_g": 0.006274061797676644
+  },
+  "cost_per_run_by_arm": {
+   "hard_fsm": 1.7241079583333334,
+   "naked_react": 0.34791766666666674
+  }
+ },
+ "scan": {
+  "runs": 60,
+  "cost": 37.79865425,
+  "runs_suite": 48,
+  "cost_suite": 28.082178250000002,
+  "runs_out_of_suite": 12,
+  "cost_out_of_suite": 9.716476,
+  "out_of_suite_cells": [
+   "jm1|naked_react",
+   "synth_machine|naked_react",
+   "uber_rides|hard_fsm",
+   "uber_rides|naked_react"
+  ],
+  "success": 58,
+  "fail": 2,
+  "d_suite_cells": 13,
+  "a_suite_cells": 3,
+  "d_cells_sd_gt_0_01": [
+   "cmc",
+   "covertype",
+   "credit_g",
+   "phoneme"
+  ],
+  "d_cells_sd_ge_0_015": [
+   "cmc",
+   "covertype",
+   "credit_g"
+  ]
+ },
+ "heuristic": {
+  "target_se": 0.016666666666666666,
+  "pooled": {
+   "covertype|naked_react": {
+    "calib_sd": 0.000723416631256499,
+    "scan_sd": 0.05480994675717498,
+    "pooled_sd": 0.038759860649560746,
+    "n_required": 5.408376471264123
+   },
+   "credit_g|naked_react": {
+    "calib_sd": 0.03946135781063863,
+    "scan_sd": 0.015083115256088294,
+    "pooled_sd": 0.0298722205911085,
+    "n_required": 3.212458426957848
+   }
+  },
+  "governing_sd": {
+   "covertype|hard_fsm": 0,
+   "covertype|naked_react": 0.038759860649560746,
+   "credit_g|hard_fsm": 0.0036383608617289905,
+   "credit_g|naked_react": 0.0298722205911085,
+   "adult|naked_react": 0.0005705767087032714,
+   "bank_marketing|hard_fsm": 0.0005604481178310355,
+   "breast_cancer|naked_react": 0,
+   "cmc|naked_react": 0.026872273977393498,
+   "cnae_9|hard_fsm": 0.004564025212995991,
+   "cnae_9|naked_react": 0,
+   "connect_4|naked_react": 0.005804201678397342,
+   "eucalyptus|naked_react": 0.006610015635339595,
+   "fashion_mnist|hard_fsm": 0.006267892292329642,
+   "fashion_mnist|naked_react": 0.00015716075081053526,
+   "phoneme|naked_react": 0.014791471939588588,
+   "vehicle|naked_react": 0,
+   "wine|naked_react": 0
+  },
+  "worst_cell": "covertype|naked_react",
+  "worst_sd": 0.038759860649560746,
+  "n_required_worst": 5.408376471264123,
+  "n_chosen": 6,
+  "se_at_n6": 0.01582364684880073,
+  "strict_single_max_cell": "covertype|naked_react|scan",
+  "strict_single_max_sd": 0.05480994675717498,
+  "strict_n_required": 10.814868948687682,
+  "calib_credit_g_D_over_A_sd_ratio": 10.845916419595099,
+  "a_cells_max_sd": 0.006267892292329642
+ }
+}

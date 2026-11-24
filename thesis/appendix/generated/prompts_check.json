@@ -1,0 +1,32 @@
+{
+ "harness": "14e99e4",
+ "code": {
+  "runs": 360,
+  "fingerprint_runs": "79225b953b84aa7e76098a4037e7fbf209784059a6b88e0ad0f3ecb4c5741074",
+  "fingerprint_local": "79225b953b84aa7e76098a4037e7fbf209784059a6b88e0ad0f3ecb4c5741074",
+  "fingerprint_equal": true
+ },
+ "replay": {
+  "worker": 1146,
+  "judge": 479,
+  "judge_skipped_form_error": 0,
+  "runs": 360,
+  "worker_by_arm": {
+   "hard_fsm": 487,
+   "soft_fsm": 479,
+   "crisp_react": 90,
+   "naked_react": 90
+  },
+  "line_endings_in_transcripts": {
+   "crlf": 1625,
+   "lf": 0
+  }
+ },
+ "example_runs": [
+  "main-adult-hard_fsm-r1",
+  "main-adult-soft_fsm-r1",
+  "main-adult-crisp_react-r1",
+  "main-adult-naked_react-r1"
+ ],
+ "wrap": 80
+}

@@ -1,0 +1,26 @@
+{
+ "runs_with_git_calls": [
+  {
+   "batch": "core",
+   "run_id": "main-adult-hard_fsm-r3",
+   "commands": [
+    "cat > du/notes.md << 'EOF'\n# Data Understanding (CRISP-DM Phase 2) — notes\n\n## 2.1 Collect initial data\n- Source: `data/train.parquet` (single flat table, read-only). Loaded with pandas `read_parquet`"
+   ]
+  },
+  {
+   "batch": "post_cutoff",
+   "run_id": "main-student_health-hard_fsm-r5",
+   "commands": [
+    "cd \"C:\\projects\\thesis-crisp-dm-runs\\main-student_health-hard_fsm-r5\\work\" && git log --oneline -10 2>/dev/null; echo \"---STATUS---\"; git status --short 2>/dev/null; echo \"---DIFF STAT---\"; git diff H"
+   ]
+  },
+  {
+   "batch": "post_cutoff",
+   "run_id": "main-student_health-soft_fsm-r6",
+   "commands": [
+    "cd \"C:\\projects\\thesis-crisp-dm-runs\\main-student_health-soft_fsm-r6\\work\" && git log --oneline -15 2>/dev/null; echo \"---STATUS---\"; git status --short 2>/dev/null"
+   ]
+  }
+ ],
+ "scanned_runs": 438
+}

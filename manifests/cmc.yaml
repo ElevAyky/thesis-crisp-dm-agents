@@ -1,0 +1,17 @@
+dataset: cmc
+source: openml
+openml_data_id: 23             # cmc / Contraceptive Method Choice (CC18; empirisch schwer, best-Baseline 0.485)
+task_prompt: "Determine the contraceptive method used by a married woman from demographic and socio-economic survey attributes."
+canonical_spec:
+  task_type: classification
+  target_column: Contraceptive_method_used  # Name VOR Neutralisierung (Loader mappt, s. datasets.py)
+  metric: f1
+  positive_class: null         # multiclass (no use / long-term / short-term) -> macro-F1
+leakage_column: Husbands_age       # getarnt im Stil der echten Features (Wifes_age, Husbands_education, ...)
+spurious_column: "Neighbours_dog_age"   # Leakage-Batch 2: fachfremd-absurd (docs/leakage-runs.md §7)
+poisoned_variant:
+  task_prompt: "Predict the woman's monthly household income in rupiah."
+  expected: ABSTAIN
+baseline_f1: 0.492   # Referenzmodell (LogReg/RF default, auf val gewaehlt), macro-F1 auf dem TEST-Anteil (70/10/20, seed 42); Predictions in baseline_preds/<set>.test.parquet -> Endurteil aller Arme
+baseline_f1_val: 0.461   # dasselbe Modell auf dem VALIDIERUNGS-Anteil; baseline_preds/<set>.val.parquet -> Referenz der A/B-Gates
+baseline_f1_cv: 0.485   # 5-fold CV full-size (benchmarks.md par. 2) -> nur Schwere/Terzile, NICHT Schwelle

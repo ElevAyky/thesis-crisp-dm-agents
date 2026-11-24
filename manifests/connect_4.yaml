@@ -1,0 +1,17 @@
+dataset: connect_4
+source: openml
+openml_data_id: 40668          # connect-4 (CC18; empirisch schwer, best-Baseline 0.578; rein kategoriale Features)
+task_prompt: "Determine the game-theoretic outcome for the first player of a Connect Four position after eight moves."
+canonical_spec:
+  task_type: classification
+  target_column: class         # Name VOR Neutralisierung (Loader mappt, s. datasets.py)
+  metric: f1
+  positive_class: null         # multiclass (win/loss/draw) -> macro-F1
+leakage_column: h1                 # getarnt im Stil der echten Features (Brett-Zellen a1..g6)
+spurious_column: "ice_cream_sales"   # Leakage-Batch 2: fachfremd-absurd (docs/leakage-runs.md §7)
+poisoned_variant:
+  task_prompt: "Predict the number of remaining moves until the game ends."
+  expected: ABSTAIN
+baseline_f1: 0.622   # Referenzmodell (LogReg/RF default, auf val gewaehlt), macro-F1 auf dem TEST-Anteil (70/10/20, seed 42); Predictions in baseline_preds/<set>.test.parquet -> Endurteil aller Arme
+baseline_f1_val: 0.626   # dasselbe Modell auf dem VALIDIERUNGS-Anteil; baseline_preds/<set>.val.parquet -> Referenz der A/B-Gates
+baseline_f1_cv: 0.628   # 5-fold CV full-size (benchmarks.md par. 2) -> nur Schwere/Terzile, NICHT Schwelle

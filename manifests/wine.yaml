@@ -1,0 +1,14 @@
+dataset: wine
+task_prompt: "Determine the cultivar of a wine from its chemical analysis."
+canonical_spec:
+  task_type: classification
+  target_column: target
+  metric: f1
+  positive_class: null
+spurious_column: "rocket_launches"   # Leakage-Batch 2: fachfremd-absurd (docs/leakage-runs.md §7)
+poisoned_variant:
+  task_prompt: "Predict the retail price of the wine bottle in euros."
+  expected: ABSTAIN
+baseline_f1: 0.971   # Referenzmodell (LogReg/RF default, auf val gewaehlt), macro-F1 auf dem TEST-Anteil (70/10/20, seed 42); Predictions in baseline_preds/<set>.test.parquet -> Endurteil aller Arme
+baseline_f1_val: 1.000   # dasselbe Modell auf dem VALIDIERUNGS-Anteil; baseline_preds/<set>.val.parquet -> Referenz der A/B-Gates
+baseline_f1_cv: 0.983   # 5-fold CV full-size (benchmarks.md par. 2) -> nur Schwere/Terzile, NICHT Schwelle

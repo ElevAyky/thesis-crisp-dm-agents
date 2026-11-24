@@ -1,0 +1,293 @@
+{
+  "rule": "point comparison on test rows: baseline_comparison.diff >= 0 (unrounded), formal checks as reported",
+  "per_arm": {
+    "hard_fsm": {
+      "point": 59,
+      "reported": 78,
+      "n": 78
+    },
+    "soft_fsm": {
+      "point": 59,
+      "reported": 78,
+      "n": 78
+    },
+    "crisp_react": {
+      "point": 70,
+      "reported": 78,
+      "n": 78
+    },
+    "naked_react": {
+      "point": 69,
+      "reported": 77,
+      "n": 78
+    }
+  },
+  "per_set": {
+    "adult": {
+      "hard_fsm": {
+        "point": 6,
+        "n": 6
+      },
+      "soft_fsm": {
+        "point": 6,
+        "n": 6
+      },
+      "crisp_react": {
+        "point": 6,
+        "n": 6
+      },
+      "naked_react": {
+        "point": 6,
+        "n": 6
+      }
+    },
+    "bank_marketing": {
+      "hard_fsm": {
+        "point": 0,
+        "n": 6
+      },
+      "soft_fsm": {
+        "point": 0,
+        "n": 6
+      },
+      "crisp_react": {
+        "point": 5,
+        "n": 6
+      },
+      "naked_react": {
+        "point": 5,
+        "n": 6
+      }
+    },
+    "breast_cancer": {
+      "hard_fsm": {
+        "point": 5,
+        "n": 6
+      },
+      "soft_fsm": {
+        "point": 6,
+        "n": 6
+      },
+      "crisp_react": {
+        "point": 6,
+        "n": 6
+      },
+      "naked_react": {
+        "point": 6,
+        "n": 6
+      }
+    },
+    "cmc": {
+      "hard_fsm": {
+        "point": 6,
+        "n": 6
+      },
+      "soft_fsm": {
+        "point": 6,
+        "n": 6
+      },
+      "crisp_react": {
+        "point": 5,
+        "n": 6
+      },
+      "naked_react": {
+        "point": 6,
+        "n": 6
+      }
+    },
+    "cnae_9": {
+      "hard_fsm": {
+        "point": 3,
+        "n": 6
+      },
+      "soft_fsm": {
+        "point": 3,
+        "n": 6
+      },
+      "crisp_react": {
+        "point": 3,
+        "n": 6
+      },
+      "naked_react": {
+        "point": 3,
+        "n": 6
+      }
+    },
+    "connect_4": {
+      "hard_fsm": {
+        "point": 6,
+        "n": 6
+      },
+      "soft_fsm": {
+        "point": 6,
+        "n": 6
+      },
+      "crisp_react": {
+        "point": 6,
+        "n": 6
+      },
+      "naked_react": {
+        "point": 6,
+        "n": 6
+      }
+    },
+    "covertype": {
+      "hard_fsm": {
+        "point": 4,
+        "n": 6
+      },
+      "soft_fsm": {
+        "point": 5,
+        "n": 6
+      },
+      "crisp_react": {
+        "point": 6,
+        "n": 6
+      },
+      "naked_react": {
+        "point": 6,
+        "n": 6
+      }
+    },
+    "credit_g": {
+      "hard_fsm": {
+        "point": 3,
+        "n": 6
+      },
+      "soft_fsm": {
+        "point": 3,
+        "n": 6
+      },
+      "crisp_react": {
+        "point": 6,
+        "n": 6
+      },
+      "naked_react": {
+        "point": 6,
+        "n": 6
+      }
+    },
+    "eucalyptus": {
+      "hard_fsm": {
+        "point": 2,
+        "n": 6
+      },
+      "soft_fsm": {
+        "point": 1,
+        "n": 6
+      },
+      "crisp_react": {
+        "point": 3,
+        "n": 6
+      },
+      "naked_react": {
+        "point": 1,
+        "n": 6
+      }
+    },
+    "fashion_mnist": {
+      "hard_fsm": {
+        "point": 6,
+        "n": 6
+      },
+      "soft_fsm": {
+        "point": 6,
+        "n": 6
+      },
+      "crisp_react": {
+        "point": 6,
+        "n": 6
+      },
+      "naked_react": {
+        "point": 6,
+        "n": 6
+      }
+    },
+    "phoneme": {
+      "hard_fsm": {
+        "point": 6,
+        "n": 6
+      },
+      "soft_fsm": {
+        "point": 5,
+        "n": 6
+      },
+      "crisp_react": {
+        "point": 6,
+        "n": 6
+      },
+      "naked_react": {
+        "point": 6,
+        "n": 6
+      }
+    },
+    "vehicle": {
+      "hard_fsm": {
+        "point": 6,
+        "n": 6
+      },
+      "soft_fsm": {
+        "point": 6,
+        "n": 6
+      },
+      "crisp_react": {
+        "point": 6,
+        "n": 6
+      },
+      "naked_react": {
+        "point": 6,
+        "n": 6
+      }
+    },
+    "wine": {
+      "hard_fsm": {
+        "point": 6,
+        "n": 6
+      },
+      "soft_fsm": {
+        "point": 6,
+        "n": 6
+      },
+      "crisp_react": {
+        "point": 6,
+        "n": 6
+      },
+      "naked_react": {
+        "point": 6,
+        "n": 6
+      }
+    }
+  },
+  "fisher_holm": [
+    {
+      "pair": "hard_fsm-soft_fsm",
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "pair": "hard_fsm-crisp_react",
+      "p": 0.032959803373980384,
+      "p_holm": 0.1977588202438823
+    },
+    {
+      "pair": "hard_fsm-naked_react",
+      "p": 0.059104109883920786,
+      "p_holm": 0.23641643953568314
+    },
+    {
+      "pair": "soft_fsm-crisp_react",
+      "p": 0.032959803373980384,
+      "p_holm": 0.1977588202438823
+    },
+    {
+      "pair": "soft_fsm-naked_react",
+      "p": 0.059104109883920786,
+      "p_holm": 0.23641643953568314
+    },
+    {
+      "pair": "crisp_react-naked_react",
+      "p": 1.0,
+      "p_holm": 1.0
+    }
+  ]
+}

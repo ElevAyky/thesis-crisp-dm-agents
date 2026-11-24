@@ -1,0 +1,29 @@
+%!TEX root = ../thesis.tex
+% generiert von thesis/scripts/make_tables.py — nicht von Hand aendern
+\begin{table}[htbp]
+  \centering
+  \small
+  \caption[Cost and token usage]{Cost and token usage, computed from the recorded token counts at the provider's list prices (USD 5 / 25 per million input / output tokens, 0.50 for cache reads, 6.25 for cache creation). Because all workers run inside the same command-line scaffold, costs are comparable between arms but not with published API figures. The judge calls account for 28.2\,\% of the cost of Arm B in the core suite and 26.0\,\% post-cutoff. Arms as in \autoref{tab:3:arms}.}
+  \label{tab:6:cost}
+  \begin{tabular}{lrrlrrrr}
+    \toprule
+     & \multicolumn{3}{c}{Cost (USD)} & \multicolumn{4}{c}{Tokens per run (mean)} \\
+    \cmidrule(lr){2-4}\cmidrule(lr){5-8}
+    Arm & Total & Per run & Ratio to C / D & Input & Output & Cache read & Cache creation \\
+    \midrule
+    \multicolumn{8}{l}{\emph{Core suite (78 runs per arm)}} \\
+    \quad A & 92.40 & 1.185 & 4.67 / 8.98 & 84 & 24,940 & 423,243 & 55,859 \\
+    \quad B & 129.44 & 1.659 & 6.54 / 12.57 & 136 & 34,026 & 588,046 & 82,253 \\
+    \quad C & 19.80 & 0.254 & -- / 1.92 & 17 & 4,656 & 109,074 & 13,251 \\
+    \quad D & 10.30 & 0.132 & -- & 13 & 3,030 & 44,243 & 5,447 \\
+    \quad Total & 251.93 &  &  &  &  &  &  \\
+    \midrule
+    \multicolumn{8}{l}{\emph{Post-cutoff (12 runs per arm)}} \\
+    \quad A & 15.03 & 1.252 & 4.53 / 9.90 & 91 & 26,679 & 454,186 & 57,261 \\
+    \quad B & 22.08 & 1.840 & 6.66 / 14.54 & 152 & 38,100 & 679,774 & 87,448 \\
+    \quad C & 3.31 & 0.276 & -- / 2.18 & 19 & 5,095 & 122,884 & 13,969 \\
+    \quad D & 1.52 & 0.127 & -- & 12 & 2,920 & 39,968 & 5,354 \\
+    \quad Total & 41.94 &  &  &  &  &  &  \\
+    \bottomrule
+  \end{tabular}
+\end{table}

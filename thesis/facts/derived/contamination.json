@@ -1,0 +1,335 @@
+{
+ "archived_dir_counts": {
+  "automem_leak-": 39,
+  "automem_main-": 360,
+  "automem_spur-": 39,
+  "automem__": 4,
+  "gitctx_leak-": 22,
+  "gitctx__": 1,
+  "promptv1_main-": 157
+ },
+ "promptv1_by_arm": {
+  "crisp_react": 78,
+  "hard_fsm": 1,
+  "naked_react": 78
+ },
+ "automem_main_runs": 360,
+ "automem_post_cutoff_runs": 48,
+ "automem_core_runs": 312,
+ "automem_total_runs": 438,
+ "gitctx_dirs": 22,
+ "gitctx_with_summary": 21,
+ "gitctx_without_summary": [
+  "gitctx_leak-eucalyptus-naked_react-r2"
+ ],
+ "snapshot_files": 35,
+ "snapshot_names": [
+  "MEMORY.md",
+  "adult-income-leak-jobtenure.md",
+  "adult-spur-goldfish-distractor.md",
+  "arrow-backed-parquet-cv-indexing.md",
+  "balanced-weight-hurts-macrof1.md",
+  "bank-marketing-spur-lunar-phase-distractor.md",
+  "bank-marketing-v17-leak.md",
+  "breast-cancer-nuclear-density-leak.md",
+  "breast-cancer-spur-icecream-distractor.md",
+  "cmc-f1-is-macro.md",
+  "cmc-husbands-age-leak.md",
+  "cmc-spur-dog-age-leak.md",
+  "cnae9-spur-cheese-distractor.md",
+  "cnae9-v857-leak.md",
+  "connect4-h1-leak.md",
+  "covertype-canopy-density-leak.md",
+  "covertype-spur-icecream-distractor.md",
+  "credit-g-repayment-status-leak.md",
+  "credit-g-spur-horoscope-distractor.md",
+  "eucalyptus-soilph-leak.md",
+  "eucalyptus-spur-football-distractor.md",
+  "ev-purchase-f1-threshold.md",
+  "eval-nan-in-passthrough-numeric.md",
+  "fashion-mnist-pixel785-leak.md",
+  "fashion-mnist-spur-moon-phase-distractor.md",
+  "large-tree-pickle-blowup.md",
+  "phoneme-spur-stock-index-distractor.md",
+  "phoneme-v6-leak.md",
+  "pickle-no-custom-classes.md",
+  "sklearn19-treeensemble-classweight-strlabels.md",
+  "student-health-f1-macro-hgb.md",
+  "vehicle-silhouette-complexity-leak.md",
+  "vehicle-spur-driver-shoe-size-distractor.md",
+  "wine-proline-ratio-leak.md",
+  "wine-spur-rocket-launches-distractor.md"
+ ],
+ "archived_comparison": {
+  "automem__main": {
+   "success": {
+    "hard_fsm": 78,
+    "soft_fsm": 78,
+    "crisp_react": 77,
+    "naked_react": 75
+   },
+   "n": {
+    "hard_fsm": 78,
+    "soft_fsm": 78,
+    "crisp_react": 78,
+    "naked_react": 78
+   },
+   "friedman_p_chi2": 0.7091449001554255,
+   "friedman_p_F": 0.7245884440866495,
+   "avg_ranks": {
+    "hard_fsm": 2.269230769230769,
+    "soft_fsm": 2.3461538461538463,
+    "crisp_react": 2.576923076923077,
+    "naked_react": 2.8076923076923075
+   },
+   "run_sd_median": {
+    "hard_fsm": 0.004490957659478122,
+    "soft_fsm": 0.00909291736399003,
+    "crisp_react": 0.005627006977639173,
+    "naked_react": 0.010365727581566356
+   },
+   "cost_total": 290.00663525,
+   "cell_means": {
+    "adult": {
+     "hard_fsm": 0.817189111821484,
+     "soft_fsm": 0.8142792516575158,
+     "crisp_react": 0.8166783259298893,
+     "naked_react": 0.8179060347817476
+    },
+    "bank_marketing": {
+     "hard_fsm": 0.7103539138314602,
+     "soft_fsm": 0.708948587823492,
+     "crisp_react": 0.7882537308546445,
+     "naked_react": 0.7543607886204257
+    },
+    "breast_cancer": {
+     "hard_fsm": 0.9683589641583025,
+     "soft_fsm": 0.9715330369949213,
+     "crisp_react": 0.9635230855100065,
+     "naked_react": 0.9651350450594386
+    },
+    "cmc": {
+     "hard_fsm": 0.5575476653353667,
+     "soft_fsm": 0.5414540180650772,
+     "crisp_react": 0.5395763081277275,
+     "naked_react": 0.5248127714685982
+    },
+    "cnae_9": {
+     "hard_fsm": 0.9660662957066201,
+     "soft_fsm": 0.9585556535973078,
+     "crisp_react": 0.9472903468441888,
+     "naked_react": 0.9600588604236021
+    },
+    "connect_4": {
+     "hard_fsm": 0.7259680510886922,
+     "soft_fsm": 0.7368339634404308,
+     "crisp_react": 0.7112834218972283,
+     "naked_react": 0.710368143573798
+    },
+    "covertype": {
+     "hard_fsm": 0.9147459570253466,
+     "soft_fsm": 0.926499755257761,
+     "crisp_react": 0.9225623415056909,
+     "naked_react": 0.88656988735712
+    },
+    "credit_g": {
+     "hard_fsm": 0.6446563609779665,
+     "soft_fsm": 0.6396280110169291,
+     "crisp_react": 0.6454416410337067,
+     "naked_react": 0.6534471465203396
+    },
+    "eucalyptus": {
+     "hard_fsm": 0.6057205023754935,
+     "soft_fsm": 0.6018448857169166,
+     "crisp_react": 0.6384915101725211,
+     "naked_react": 0.6007258141287588
+    },
+    "fashion_mnist": {
+     "hard_fsm": 0.8952939453495846,
+     "soft_fsm": 0.8953499515450094,
+     "crisp_react": 0.8921866071623646,
+     "naked_react": 0.8893073914283599
+    },
+    "phoneme": {
+     "hard_fsm": 0.862051237236585,
+     "soft_fsm": 0.864867687346834,
+     "crisp_react": 0.8721067680713462,
+     "naked_react": 0.8719404387384406
+    },
+    "vehicle": {
+     "hard_fsm": 0.8466829960725782,
+     "soft_fsm": 0.8488158532922504,
+     "crisp_react": 0.8371875407782557,
+     "naked_react": 0.8381932401988502
+    },
+    "wine": {
+     "hard_fsm": 0.9709618874773139,
+     "soft_fsm": 0.9709618874773139,
+     "crisp_react": 0.9709618874773139,
+     "naked_react": 0.9709618874773139
+    }
+   },
+   "generated_at": "2026-10-04T15:21:52",
+   "sig_better": {
+    "crisp_react": 45,
+    "hard_fsm": 30,
+    "naked_react": 36,
+    "soft_fsm": 31
+   },
+   "sig_better_n": {
+    "crisp_react": 78,
+    "hard_fsm": 78,
+    "naked_react": 78,
+    "soft_fsm": 78
+   },
+   "sig_better_pairs": [
+    {
+     "a": "hard_fsm",
+     "b": "soft_fsm",
+     "table": [
+      [
+       30,
+       48
+      ],
+      [
+       31,
+       47
+      ]
+     ],
+     "odds_ratio": 0.9475806451612904,
+     "p": 1.0,
+     "p_holm": 1.0
+    },
+    {
+     "a": "hard_fsm",
+     "b": "crisp_react",
+     "table": [
+      [
+       30,
+       48
+      ],
+      [
+       45,
+       33
+      ]
+     ],
+     "odds_ratio": 0.4583333333333333,
+     "p": 0.024555789511028846,
+     "p_holm": 0.14733473706617306
+    },
+    {
+     "a": "hard_fsm",
+     "b": "naked_react",
+     "table": [
+      [
+       30,
+       48
+      ],
+      [
+       36,
+       42
+      ]
+     ],
+     "odds_ratio": 0.7291666666666666,
+     "p": 0.41788177593383175,
+     "p_holm": 1.0
+    },
+    {
+     "a": "soft_fsm",
+     "b": "crisp_react",
+     "table": [
+      [
+       31,
+       47
+      ],
+      [
+       45,
+       33
+      ]
+     ],
+     "odds_ratio": 0.4836879432624113,
+     "p": 0.03697328418920476,
+     "p_holm": 0.1848664209460238
+    },
+    {
+     "a": "soft_fsm",
+     "b": "naked_react",
+     "table": [
+      [
+       31,
+       47
+      ],
+      [
+       36,
+       42
+      ]
+     ],
+     "odds_ratio": 0.7695035460992907,
+     "p": 0.5177980376107844,
+     "p_holm": 1.0
+    },
+    {
+     "a": "crisp_react",
+     "b": "naked_react",
+     "table": [
+      [
+       45,
+       33
+      ],
+      [
+       36,
+       42
+      ]
+     ],
+     "odds_ratio": 1.5909090909090908,
+     "p": 0.19970703022820105,
+     "p_holm": 0.7988281209128042
+    }
+   ]
+  },
+  "automem__post_cutoff": {
+   "success": {
+    "hard_fsm": 12,
+    "soft_fsm": 12,
+    "crisp_react": 12,
+    "naked_react": 12
+   },
+   "n": {
+    "hard_fsm": 12,
+    "soft_fsm": 12,
+    "crisp_react": 12,
+    "naked_react": 12
+   },
+   "friedman_p_chi2": 0.6149349357825376,
+   "friedman_p_F": 0.7476842122656544,
+   "avg_ranks": {
+    "hard_fsm": 3.5,
+    "soft_fsm": 2.5,
+    "crisp_react": 2.0,
+    "naked_react": 2.0
+   },
+   "run_sd_median": {
+    "hard_fsm": 0.0016288625290228,
+    "soft_fsm": 0.0019295259518359587,
+    "crisp_react": 0.0017494179389871726,
+    "naked_react": 0.0004653919476775588
+   },
+   "cost_total": 47.55691275,
+   "cell_means": {
+    "ev_purchase": {
+     "hard_fsm": 0.8213165805716853,
+     "soft_fsm": 0.8223202544655709,
+     "crisp_react": 0.8222605440388896,
+     "naked_react": 0.8222184902662629
+    },
+    "student_health": {
+     "hard_fsm": 0.9093335232754005,
+     "soft_fsm": 0.9080954597341312,
+     "crisp_react": 0.9098462573713452,
+     "naked_react": 0.9108411792227038
+    }
+   },
+   "generated_at": "2026-10-04T20:46:50"
+  }
+ }
+}

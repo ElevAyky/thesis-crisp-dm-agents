@@ -1,0 +1,22 @@
+%!TEX root = ../thesis.tex
+% generiert von thesis/scripts/make_tables.py — nicht von Hand aendern
+\begin{table}[htbp]
+  \centering
+  \small
+  \caption[Fisher's exact test on the post-cutoff pass counts]{Fisher's exact test on the post-cutoff pass counts, raw and Holm-adjusted over the six pairs. The pooled comparison of the state-machine arms (A+B) with the free arms (C+D) was chosen after seeing the data and is exploratory only; it treats the runs as independent although they cluster on two datasets. Arms as in \autoref{tab:3:arms}.}
+  \label{tab:6:postcutoff-tests}
+  \begin{tabular}{llrr}
+    \toprule
+    Pair & Passed & $p$ & $p$ (Holm) \\
+    \midrule
+    A vs.\ B & 11/12 vs.\ 12/12 & 1.000 & 1.000 \\
+    A vs.\ C & 11/12 vs.\ 8/12 & 0.317 & 0.950 \\
+    A vs.\ D & 11/12 vs.\ 6/12 & 0.069 & 0.343 \\
+    B vs.\ C & 12/12 vs.\ 8/12 & 0.093 & 0.373 \\
+    B vs.\ D & 12/12 vs.\ 6/12 & 0.014 & 0.082 \\
+    C vs.\ D & 8/12 vs.\ 6/12 & 0.680 & 1.000 \\
+    \midrule
+    A+B vs.\ C+D (post hoc) & 23/24 vs.\ 14/24 & 0.004 & -- \\
+    \bottomrule
+  \end{tabular}
+\end{table}

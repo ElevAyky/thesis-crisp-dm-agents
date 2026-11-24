@@ -1,0 +1,18 @@
+%!TEX root = ../../thesis.tex
+% generiert von thesis/scripts/make_appendix_prompts.py — nicht von Hand aendern
+% Zahlen aus dem Replay (prompts_check.json) fuer den Einleitungstext von Anhang C.
+\providecommand{\AppCRuns}{360}
+\providecommand{\AppCWorkerCalls}{1{,}146}
+\providecommand{\AppCJudgeCalls}{479}
+\providecommand{\AppCJudgeSkipped}{0}
+\providecommand{\AppCWrap}{80}
+\providecommand{\AppCRest}{\textrm{[\,followed by the complete prompt of the phase as printed above\,]}}
+% Satz der Prompts: Verbatim mit commandchars \@^ (kommen in keinem Prompt vor).
+\DefineVerbatimEnvironment{AppCPrompt}{Verbatim}{fontsize=\footnotesize,commandchars=\\\@\^,frame=lines,framesep=1.5mm,rulecolor=\color[gray]{0.6}}
+\providecommand{\AppCVal}[1]{\textsl{#1}}
+\providecommand{\AppCQ}{\textquotesingle}
+\providecommand{\AppCMath}[1]{\ensuremath{#1}}
+\providecommand{\AppCDash}{\textrm{\textemdash}}
+\providecommand{\AppCNDash}{\textrm{\textendash}}
+\providecommand{\AppCCont}{\makebox[0pt][r]{\ensuremath{\hookrightarrow}\,}}
+\providecommand{\AppCCrisp}[1]{{\footnotesize\rmfamily[\,CRISP-DM 1.0 text of this phase (block {\ttfamily #1}), quoted in \autoref{app:C:CrispText}\,]}}

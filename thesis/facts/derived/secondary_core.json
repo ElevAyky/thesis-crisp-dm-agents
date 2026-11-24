@@ -1,0 +1,270 @@
+{
+ "per_arm": {
+  "hard_fsm": {
+   "sig_better": 29,
+   "n": 78,
+   "rate": 0.3717948717948718,
+   "wilson": [
+    0.27293398524227175,
+    0.4826915157254513
+   ]
+  },
+  "soft_fsm": {
+   "sig_better": 32,
+   "n": 78,
+   "rate": 0.41025641025641024,
+   "wilson": [
+    0.3078173313444522,
+    0.5211205193329539
+   ]
+  },
+  "crisp_react": {
+   "sig_better": 39,
+   "n": 78,
+   "rate": 0.5,
+   "wilson": [
+    0.39167242528547985,
+    0.6083275747145201
+   ]
+  },
+  "naked_react": {
+   "sig_better": 38,
+   "n": 78,
+   "rate": 0.48717948717948717,
+   "wilson": [
+    0.37948764475056745,
+    0.5960749053462049
+   ]
+  }
+ },
+ "pairs": [
+  {
+   "a": "hard_fsm",
+   "b": "soft_fsm",
+   "table": [
+    [
+     29,
+     49
+    ],
+    [
+     32,
+     46
+    ]
+   ],
+   "odds_ratio": 0.8507653061224489,
+   "p": 0.7429516569327246,
+   "p_holm": 1.0
+  },
+  {
+   "a": "hard_fsm",
+   "b": "crisp_react",
+   "table": [
+    [
+     29,
+     49
+    ],
+    [
+     39,
+     39
+    ]
+   ],
+   "odds_ratio": 0.5918367346938775,
+   "p": 0.14593729067942907,
+   "p_holm": 0.8756237440765744
+  },
+  {
+   "a": "hard_fsm",
+   "b": "naked_react",
+   "table": [
+    [
+     29,
+     49
+    ],
+    [
+     38,
+     40
+    ]
+   ],
+   "odds_ratio": 0.6229860365198711,
+   "p": 0.1955174604618972,
+   "p_holm": 0.977587302309486
+  },
+  {
+   "a": "soft_fsm",
+   "b": "crisp_react",
+   "table": [
+    [
+     32,
+     46
+    ],
+    [
+     39,
+     39
+    ]
+   ],
+   "odds_ratio": 0.6956521739130435,
+   "p": 0.3347454856578806,
+   "p_holm": 1.0
+  },
+  {
+   "a": "soft_fsm",
+   "b": "naked_react",
+   "table": [
+    [
+     32,
+     46
+    ],
+    [
+     38,
+     40
+    ]
+   ],
+   "odds_ratio": 0.7322654462242563,
+   "p": 0.42098924463536763,
+   "p_holm": 1.0
+  },
+  {
+   "a": "crisp_react",
+   "b": "naked_react",
+   "table": [
+    [
+     39,
+     39
+    ],
+    [
+     38,
+     40
+    ]
+   ],
+   "odds_ratio": 1.0526315789473684,
+   "p": 1.0,
+   "p_holm": 1.0
+  }
+ ],
+ "per_cell": [
+  {
+   "dataset": "adult",
+   "hard_fsm": 6,
+   "soft_fsm": 6,
+   "crisp_react": 6,
+   "naked_react": 6
+  },
+  {
+   "dataset": "bank_marketing",
+   "hard_fsm": 0,
+   "soft_fsm": 0,
+   "crisp_react": 5,
+   "naked_react": 5
+  },
+  {
+   "dataset": "breast_cancer",
+   "hard_fsm": 0,
+   "soft_fsm": 0,
+   "crisp_react": 0,
+   "naked_react": 0
+  },
+  {
+   "dataset": "cmc",
+   "hard_fsm": 3,
+   "soft_fsm": 4,
+   "crisp_react": 1,
+   "naked_react": 0
+  },
+  {
+   "dataset": "cnae_9",
+   "hard_fsm": 0,
+   "soft_fsm": 0,
+   "crisp_react": 0,
+   "naked_react": 0
+  },
+  {
+   "dataset": "connect_4",
+   "hard_fsm": 6,
+   "soft_fsm": 6,
+   "crisp_react": 6,
+   "naked_react": 6
+  },
+  {
+   "dataset": "covertype",
+   "hard_fsm": 2,
+   "soft_fsm": 3,
+   "crisp_react": 6,
+   "naked_react": 6
+  },
+  {
+   "dataset": "credit_g",
+   "hard_fsm": 0,
+   "soft_fsm": 1,
+   "crisp_react": 0,
+   "naked_react": 1
+  },
+  {
+   "dataset": "eucalyptus",
+   "hard_fsm": 0,
+   "soft_fsm": 0,
+   "crisp_react": 0,
+   "naked_react": 0
+  },
+  {
+   "dataset": "fashion_mnist",
+   "hard_fsm": 6,
+   "soft_fsm": 6,
+   "crisp_react": 6,
+   "naked_react": 5
+  },
+  {
+   "dataset": "phoneme",
+   "hard_fsm": 0,
+   "soft_fsm": 0,
+   "crisp_react": 3,
+   "naked_react": 3
+  },
+  {
+   "dataset": "vehicle",
+   "hard_fsm": 6,
+   "soft_fsm": 6,
+   "crisp_react": 6,
+   "naked_react": 6
+  },
+  {
+   "dataset": "wine",
+   "hard_fsm": 0,
+   "soft_fsm": 0,
+   "crisp_react": 0,
+   "naked_react": 0
+  }
+ ],
+ "cells_with_zero": {
+  "hard_fsm": [
+   "bank_marketing",
+   "breast_cancer",
+   "cnae_9",
+   "credit_g",
+   "eucalyptus",
+   "phoneme",
+   "wine"
+  ],
+  "soft_fsm": [
+   "bank_marketing",
+   "breast_cancer",
+   "cnae_9",
+   "eucalyptus",
+   "phoneme",
+   "wine"
+  ],
+  "crisp_react": [
+   "breast_cancer",
+   "cnae_9",
+   "credit_g",
+   "eucalyptus",
+   "wine"
+  ],
+  "naked_react": [
+   "breast_cancer",
+   "cmc",
+   "cnae_9",
+   "eucalyptus",
+   "wine"
+  ]
+ }
+}

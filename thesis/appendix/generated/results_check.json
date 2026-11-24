@@ -1,0 +1,87 @@
+{
+ "runs_loaded": {
+  "core": 312,
+  "post_cutoff": 48
+ },
+ "core_cell_means_3_views = derived/core.json": true,
+ "post_cell_means_primary = derived/postcutoff.json": true,
+ "cell_means_3_views = runs/_main + _post_cutoff/analysis/analysis.json": true,
+ "run_sd = derived/runsd_core.json + postcutoff.json": true,
+ "cell_medians_3_views = derived/median_core + median_postcutoff": true,
+ "passes_per_cell = derived level1.per_cell": true,
+ "fails = derived (core 1, post 11)": {
+  "core": 1,
+  "post_cutoff": 11
+ },
+ "baseline_test = derived (one value per dataset)": true,
+ "significantly_better_counts = derived secondary": true,
+ "cost_per_arm = derived/costs.json": {
+  "core": 251.93,
+  "post_cutoff": 41.94
+ },
+ "rounded values = thesis/tables/tab6_f1cells, tab6_runsd, tab6_postcutoff": true,
+ "leakage_runs_loaded": {
+  "perfect": 39,
+  "spurious": 39
+ },
+ "leakage = derived/leakage.json": {
+  "perfect": {
+   "exploited": 1,
+   "passed": 34,
+   "cost": 6.51
+  },
+  "spurious": {
+   "exploited": 4,
+   "passed": 35,
+   "cost": 6.25
+  }
+ },
+ "rounded values = thesis/tables/tab6_leakage": true,
+ "leakage_baseline = core baseline_test": true,
+ "rows": {
+  "runs": 360,
+  "leakage": 78,
+  "primary": 15,
+  "combined": 15,
+  "passed": 15,
+  "median": 15
+ },
+ "median_view_differences": [
+  [
+   "bank-marketing",
+   "D",
+   "passed",
+   "0.7798560026456366"
+  ],
+  [
+   "student health",
+   "C",
+   "combined",
+   "0.0"
+  ],
+  [
+   "student health",
+   "C",
+   "passed",
+   "0.910084757642857"
+  ],
+  [
+   "student health",
+   "D",
+   "combined",
+   "0.0"
+  ],
+  [
+   "student health",
+   "D",
+   "passed",
+   "0.9063474549427679"
+  ],
+  [
+   "EV purchase",
+   "D",
+   "passed",
+   "0.8189353789795666"
+  ]
+ ]
+}

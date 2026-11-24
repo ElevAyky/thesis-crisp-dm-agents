@@ -1,0 +1,20 @@
+%!TEX root = ../thesis.tex
+% generiert von thesis/scripts/make_tables.py — nicht von Hand aendern
+\begin{table}[htbp]
+  \centering
+  \small
+  \caption[Level 1 on the core suite]{Level~1 on the core suite (78 runs per arm). \emph{Passed}: not significantly worse than the default baseline (paired bootstrap); \emph{Sig.\ better}: lower bound of the same interval above zero (secondary, descriptive). Wilson 95\,\% intervals. Fisher's exact test: all pairs $p = 1.000$ for passing; for \emph{sig.\ better} the smallest $p$ is A vs.\ C with 0.146 (Holm 0.876). Arms as in \autoref{tab:3:arms}.}
+  \label{tab:6:passrates}
+  \begin{tabular}{lrrlcrrl}
+    \toprule
+     & \multicolumn{4}{c}{Passed} & \multicolumn{3}{c}{Sig.\ better than baseline} \\
+    \cmidrule(lr){2-5}\cmidrule(lr){6-8}
+    Arm & $k/n$ & Rate & Wilson CI & Failures & $k/n$ & Rate & Wilson CI \\
+    \midrule
+    A & 78/78 & 1.000 & [0.953, 1.000] & -- & 29/78 & 0.372 & [0.273, 0.483] \\
+    B & 78/78 & 1.000 & [0.953, 1.000] & -- & 32/78 & 0.410 & [0.308, 0.521] \\
+    C & 78/78 & 1.000 & [0.953, 1.000] & -- & 39/78 & 0.500 & [0.392, 0.608] \\
+    D & 77/78 & 0.987 & [0.931, 0.998] & 1$\times$ below baseline & 38/78 & 0.487 & [0.379, 0.596] \\
+    \bottomrule
+  \end{tabular}
+\end{table}

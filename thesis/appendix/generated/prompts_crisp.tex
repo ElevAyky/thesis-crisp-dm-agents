@@ -1,0 +1,308 @@
+%!TEX root = ../../thesis.tex
+% generiert von thesis/scripts/make_appendix_prompts.py — nicht von Hand aendern
+\subsection*{Phase 1: Business Understanding (generic tasks 1.1--1.4, block \texttt{bu})}
+\begin{AppCPrompt}
+1.1 Determine business objectives
+The first objective of the data analyst is to thoroughly understand, from a
+\AppCCont@^business perspective, what the client really wants to accomplish. Often the
+\AppCCont@^client has many competing objectives and constraints that must be properly
+\AppCCont@^balanced. The analyst’s goal is to uncover important factors, at the beginning,
+\AppCCont@^that can influence the outcome of the project. A possible consequence of
+\AppCCont@^neglecting this step is to expend a great deal of effort producing the right
+\AppCCont@^answers to the wrong questions.
+Background: Record the information that is known about the organization’s
+\AppCCont@^business situation at the beginning of the project.
+Business objectives: Describe the customer’s primary objective, from a business
+\AppCCont@^perspective. In addition to the primary business objective, there are typically
+\AppCCont@^other related business questions that the customer would like to address. For
+\AppCCont@^example, the primary business goal might be to keep current customers by
+\AppCCont@^predicting when they are prone to move to a competitor. Examples of related
+\AppCCont@^business questions are “How does the primary channel (e.g., ATM, visit branch,
+\AppCCont@^internet) a bank customer uses affect whether they stay or go?” or “Will lower
+\AppCCont@^ATM fees significantly reduce the number of high-value customers who leave?”
+Business success criteria: Describe the criteria for a successful or useful
+\AppCCont@^outcome to the project from the business point of view. This might be quite
+\AppCCont@^specific and able to be measured objectively, such as reduction of customer
+\AppCCont@^churn to a certain level or general and subjective such as “give useful insights
+\AppCCont@^into the relationships.” In the latter case it should be indicated who makes the
+\AppCCont@^subjective judgment.
+1.2 Assess situation
+This task involves more detailed fact-finding about all of the resources,
+\AppCCont@^constraints, assumptions and other factors that should be considered in
+\AppCCont@^determining the data analysis goal and project plan. In the previous task, your
+\AppCCont@^objective is to quickly get to the crux of the situation. Here, you want to
+\AppCCont@^flesh out the details.
+Inventory of resources: List the resources available to the project, including:
+\AppCCont@^personnel (business experts, data experts, technical support, data mining
+\AppCCont@^personnel), data (fixed extracts, access to live warehoused or operational
+\AppCCont@^data), computing resources (hardware platforms) and software (data mining tools,
+\AppCCont@^other relevant software).
+Requirements, assumptions and constraints: List all requirements of the project
+\AppCCont@^including schedule of completion, comprehensibility and quality of results and
+\AppCCont@^security as well as legal issues. As part of this output, make sure that you are
+\AppCCont@^allowed to use the data. List the assumptions made by the project. These may be
+\AppCCont@^assumptions about the data that can be checked during data mining, but may also
+\AppCCont@^include non-checkable assumptions about the business upon which the project
+\AppCCont@^rests. It is particularly important to list the latter if they form conditions
+\AppCCont@^on the validity of the results. List the constraints on the project. These may
+\AppCCont@^be constraints on the availability of resources, but may also include
+\AppCCont@^technological constraints such as the size of data that it is practical to use
+\AppCCont@^for modeling.
+Risks and contingencies: List the risks or events that might occur to delay the
+\AppCCont@^project or cause it to fail. List the corresponding contingency plans; what
+\AppCCont@^action will be taken if the risks happen.
+Terminology: Compile a glossary of terminology relevant to the project. This may
+\AppCCont@^include two components: (1) A glossary of relevant business terminology, which
+\AppCCont@^forms part of the business understanding available to the project. Constructing
+\AppCCont@^this glossary is a useful “knowledge elicitation” and education exercise. (2) A
+\AppCCont@^glossary of data mining terminology, illustrated with examples relevant to the
+\AppCCont@^business problem in question.
+Costs and benefits: Construct a cost-benefit analysis for the project, which
+\AppCCont@^compares the costs of the project with the potential benefit to the business if
+\AppCCont@^it is successful. The comparison should be as specific as possible, for example
+\AppCCont@^using monetary measures in a commercial situation.
+1.3 Determine data mining goals
+A business goal states objectives in business terminology. A data mining goal
+\AppCCont@^states project objectives in technical terms. For example, the business goal
+\AppCCont@^might be “Increase catalog sales to existing customers.” A data mining goal
+\AppCCont@^might be “Predict how many widgets a customer will buy, given their purchases
+\AppCCont@^over the past three years, demographic information (age, salary, city, etc.) and
+\AppCCont@^the price of the item.”
+Data mining goals: Describe the intended outputs of the project that enables the
+\AppCCont@^achievement of the business objectives.
+Data mining success criteria: Define the criteria for a successful outcome to
+\AppCCont@^the project in technical terms, for example a certain level of predictive
+\AppCCont@^accuracy or a propensity to purchase profile with a given degree of “lift.” As
+\AppCCont@^with business success criteria, it may be necessary to describe these in
+\AppCCont@^subjective terms, in which case the person or persons making the subjective
+\AppCCont@^judgment should be identified.
+1.4 Produce project plan
+Describe the intended plan for achieving the data mining goals and thereby
+\AppCCont@^achieving the business goals. The plan should specify the anticipated set of
+\AppCCont@^steps to be performed during the rest of the project including an initial
+\AppCCont@^selection of tools and techniques.
+Project plan: List the stages to be executed in the project, together with
+\AppCCont@^duration, resources required, inputs, outputs and dependencies. Where possible
+\AppCCont@^make explicit the large-scale iterations in the data mining process, for example
+\AppCCont@^repetitions of the modeling and evaluation phases. As part of the project plan,
+\AppCCont@^it is also important to analyze dependencies between time schedule and risks.
+\AppCCont@^Mark results of these analyses explicitly in the project plan, ideally with
+\AppCCont@^actions and recommendations if the risks appear. Note: the project plan contains
+\AppCCont@^detailed plans for each phase. For example, decide at this point which
+\AppCCont@^evaluation strategy will be used in the evaluation phase. The project plan is a
+\AppCCont@^dynamic document in the sense that at the end of each phase a review of progress
+\AppCCont@^and achievements is necessary and an update of the project plan accordingly is
+\AppCCont@^recommended. Specific review points for these reviews are part of the project
+\AppCCont@^plan, too.
+Initial assessment of tools and techniques: At the end of the first phase, the
+\AppCCont@^project also performs an initial assessment of tools and techniques. Here, you
+\AppCCont@^select a data mining tool that supports various methods for different stages of
+\AppCCont@^the process, for example. It is important to assess tools and techniques early
+\AppCCont@^in the process since the selection of tools and techniques possibly influences
+\AppCCont@^the entire project.
+\end{AppCPrompt}
+\subsection*{Phase 2: Data Understanding (generic tasks 2.1--2.4, block \texttt{du})}
+\begin{AppCPrompt}
+2.1 Collect initial data
+Acquire within the project the data (or access to the data) listed in the
+\AppCCont@^project resources. This initial collection includes data loading if necessary
+\AppCCont@^for data understanding. For example, if you apply a specific tool for data
+\AppCCont@^understanding, it makes perfect sense to load your data into this tool. This
+\AppCCont@^effort possibly leads to initial data preparation steps. Note: if you acquire
+\AppCCont@^multiple data sources, integration is an additional issue, either here or in the
+\AppCCont@^later data preparation phase.
+Initial data collection report: List the dataset (or datasets) acquired,
+\AppCCont@^together with their locations within the project, the methods used to acquire
+\AppCCont@^them and any problems encountered. Record problems encountered and any solutions
+\AppCCont@^achieved to aid with future replication of this project or with the execution of
+\AppCCont@^similar future projects.
+2.2 Describe data
+Examine the “gross” or “surface” properties of the acquired data and report on
+\AppCCont@^the results.
+Data description report: Describe the data which has been acquired, including:
+\AppCCont@^the format of the data, the quantity of data, for example number of records and
+\AppCCont@^fields in each table, the identities of the fields and any other surface
+\AppCCont@^features of the data which have been discovered. Does the data acquired satisfy
+\AppCCont@^the relevant requirements?
+2.3 Explore data
+This task tackles the data mining questions, which can be addressed using
+\AppCCont@^querying, visualization and reporting. These include: distribution of key
+\AppCCont@^attributes, for example the target attribute of a prediction task; relations
+\AppCCont@^between pairs or small numbers of attributes; results of simple aggregations;
+\AppCCont@^properties of significant sub-populations; simple statistical analyses. These
+\AppCCont@^analyses may address directly the data mining goals; they may also contribute to
+\AppCCont@^or refine the data description and quality reports and feed into the
+\AppCCont@^transformation and other data preparation needed for further analysis.
+Data exploration report: Describe results of this task including first findings
+\AppCCont@^or initial hypothesis and their impact on the remainder of the project. If
+\AppCCont@^appropriate, include graphs and plots, which indicate data characteristics or
+\AppCCont@^lead to interesting data subsets for further examination.
+2.4 Verify data quality
+Examine the quality of the data, addressing questions such as: is the data
+\AppCCont@^complete (does it cover all the cases required)? Is it correct or does it
+\AppCCont@^contain errors and if there are errors how common are they? Are there missing
+\AppCCont@^values in the data? If so how are they represented, where do they occur and how
+\AppCCont@^common are they?
+Data quality report: List the results of the data quality verification; if
+\AppCCont@^quality problems exist, list possible solutions. Solutions to data quality
+\AppCCont@^problems generally depend heavily on both data and business knowledge.
+\end{AppCPrompt}
+\subsection*{Phase 3: Data Preparation (generic tasks 3.1--3.5, block \texttt{prep})}
+\begin{AppCPrompt}
+3.1 Select data
+Decide on the data to be used for analysis. Criteria include relevance to the
+\AppCCont@^data mining goals, quality and technical constraints such as limits on data
+\AppCCont@^volume or data types. Note that data selection covers selection of attributes
+\AppCCont@^(columns) as well as selection of records (rows) in a table.
+Rationale for inclusion/exclusion: List the data to be included/excluded and the
+\AppCCont@^reasons for these decisions.
+3.2 Clean data
+Raise the data quality to the level required by the selected analysis
+\AppCCont@^techniques. This may involve selection of clean subsets of the data, the
+\AppCCont@^insertion of suitable defaults or more ambitious techniques such as the
+\AppCCont@^estimation of missing data by modeling.
+Data cleaning report: Describe what decisions and actions were taken to address
+\AppCCont@^the data quality problems reported during the verify data quality task of the
+\AppCCont@^data understanding phase. Transformations of the data for cleaning purposes and
+\AppCCont@^the possible impact on the analysis results should be considered.
+3.3 Construct data
+This task includes constructive data preparation operations such as the
+\AppCCont@^production of derived attributes, entire new records or transformed values for
+\AppCCont@^existing attributes.
+Derived attributes: Derived attributes are new attributes that are constructed
+\AppCCont@^from one or more existing attributes in the same record. Examples: area = length
+\AppCCont@^* width.
+Generated records: Describe the creation of completely new records. Example:
+\AppCCont@^create records for customers who made no purchase during the past year. There
+\AppCCont@^was no reason to have such records in the raw data, but for modeling purposes it
+\AppCCont@^might make sense to explicitly represent the fact that certain customers made
+\AppCCont@^zero purchases.
+3.4 Integrate data
+These are methods whereby information is combined from multiple tables or
+\AppCCont@^records to create new records or values.
+Merged data: Merging tables refers to joining together two or more tables that
+\AppCCont@^have different information about the same objects. Example: a retail chain has
+\AppCCont@^one table with information about each store’s general characteristics (e.g.,
+\AppCCont@^floor space, type of mall), another table with summarized sales data (e.g.,
+\AppCCont@^profit, percent change in sales from previous year) and another with information
+\AppCCont@^about the demographics of the surrounding area. Each of these tables contains
+\AppCCont@^one record for each store. These tables can be merged together into a new table
+\AppCCont@^with one record for each store, combining fields from the source tables. Merged
+\AppCCont@^data also covers aggregations. Aggregation refers to operations where new values
+\AppCCont@^are computed by summarizing together information from multiple records and/or
+\AppCCont@^tables. For example, converting a table of customer purchases where there is one
+\AppCCont@^record for each purchase into a new table where there is one record for each
+\AppCCont@^customer, with fields such as number of purchases, average purchase amount,
+\AppCCont@^percent of orders charged to credit card, percent of items under promotion, etc.
+3.5 Format data
+Formatting transformations refer to primarily syntactic modifications made to
+\AppCCont@^the data that do not change its meaning, but might be required by the modeling
+\AppCCont@^tool.
+Reformatted data: Some tools have requirements on the order of the attributes,
+\AppCCont@^such as the first field being a unique identifier for each record or the last
+\AppCCont@^field being the outcome field the model is to predict. It might be important to
+\AppCCont@^change the order of the records in the dataset. Perhaps the modeling tool
+\AppCCont@^requires that the records be sorted according to the value of the outcome
+\AppCCont@^attribute. A common situation is that the records of the dataset are initially
+\AppCCont@^ordered in some way but the modeling algorithm needs them to be in a fairly
+\AppCCont@^random order. For example, when using neural networks it is generally best for
+\AppCCont@^the records to be presented in a random order although some tools handle this
+\AppCCont@^automatically without explicit user intervention. Additionally, there are purely
+\AppCCont@^syntactic changes made to satisfy the requirements of the specific modeling
+\AppCCont@^tool. Examples: removing commas from within text fields in comma-delimited data
+\AppCCont@^files, trimming all values to a maximum of 32 characters.
+\end{AppCPrompt}
+\subsection*{Phase 4: Modeling (generic tasks 4.1--4.4, block \texttt{model})}
+\begin{AppCPrompt}
+4.1 Select modeling technique
+As the first step in modeling, select the actual modeling technique that is to
+\AppCCont@^be used. Whereas you possibly already selected a tool in business understanding,
+\AppCCont@^this task refers to the specific modeling technique, e.g., decision tree
+\AppCCont@^building with C4.5 or neural network generation with back propagation. If
+\AppCCont@^multiple techniques are applied, perform this task for each technique
+\AppCCont@^separately.
+Modeling technique: Document the actual modeling technique that is to be used.
+Modeling assumptions: Many modeling techniques make specific assumptions on the
+\AppCCont@^data, e.g., all attributes have uniform distributions, no missing values
+\AppCCont@^allowed, class attribute must be symbolic etc. Record any such assumptions made.
+4.2 Generate test design
+Before we actually build a model, we need to generate a procedure or mechanism
+\AppCCont@^to test the model’s quality and validity. For example, in supervised data mining
+\AppCCont@^tasks such as classification, it is common to use error rates as quality
+\AppCCont@^measures for data mining models. Therefore, we typically separate the dataset
+\AppCCont@^into train and test set, build the model on the train set and estimate its
+\AppCCont@^quality on the separate test set.
+Test design: Describe the intended plan for training, testing and evaluating the
+\AppCCont@^models. A primary component of the plan is to decide how to divide the available
+\AppCCont@^dataset into training data, test data and validation datasets.
+4.3 Build model
+Run the modeling tool on the prepared dataset to create one or more models.
+Parameter settings: With any modeling tool, there are often a large number of
+\AppCCont@^parameters that can be adjusted. List the parameters and their chosen value,
+\AppCCont@^along with the rationale for the choice of parameter settings.
+Models: These are the actual models produced by the modeling tool, not a report.
+Model description: Describe the resultant model. Report on the interpretation of
+\AppCCont@^the models and document any difficulties encountered with their meanings.
+4.4 Assess model
+The data mining engineer interprets the models according to his domain
+\AppCCont@^knowledge, the data mining success criteria and the desired test design. This
+\AppCCont@^task interferes with the subsequent evaluation phase. Whereas the data mining
+\AppCCont@^engineer judges the success of the application of modeling and discovery
+\AppCCont@^techniques more technically, he contacts business analysts and domain experts
+\AppCCont@^later in order to discuss the data mining results in the business context.
+\AppCCont@^Moreover, this task only considers models whereas the evaluation phase also
+\AppCCont@^takes into account all other results that were produced in the course of the
+\AppCCont@^project. The data mining engineer tries to rank the models. He assesses the
+\AppCCont@^models according to the evaluation criteria. As far as possible he also takes
+\AppCCont@^into account business objectives and business success criteria. In most data
+\AppCCont@^mining projects, the data mining engineer applies a single technique more than
+\AppCCont@^once or generates data mining results with different alternative techniques. In
+\AppCCont@^this task, he also compares all results according to the evaluation criteria.
+Model assessment: Summarize results of this task, list qualities of generated
+\AppCCont@^models (e.g., in terms of accuracy) and rank their quality in relation to each
+\AppCCont@^other.
+Revised parameter settings: According to the model assessment, revise parameter
+\AppCCont@^settings and tune them for the next run in the Build Model task. Iterate model
+\AppCCont@^building and assessment until you strongly believe that you found the best
+\AppCCont@^model(s). Document all such revisions and assessments.
+\end{AppCPrompt}
+\subsection*{Phase 5: Evaluation (generic tasks 5.1--5.3, block \texttt{eval})}
+\begin{AppCPrompt}
+5.1 Evaluate results
+Previous evaluation steps dealt with factors such as the accuracy and generality
+\AppCCont@^of the model. This step assesses the degree to which the model meets the
+\AppCCont@^business objectives and seeks to determine if there is some business reason why
+\AppCCont@^this model is deficient. Another option of evaluation is to test the model(s) on
+\AppCCont@^test applications in the real application if time and budget constraints permit.
+\AppCCont@^Moreover, evaluation also assesses other data mining results generated. Data
+\AppCCont@^mining results cover models which are necessarily related to the original
+\AppCCont@^business objectives and all other findings which are not necessarily related to
+\AppCCont@^the original business objectives but might also unveil additional challenges,
+\AppCCont@^information or hints for future directions.
+Assessment of data mining results with respect to business success criteria:
+\AppCCont@^Summarize assessment results in terms of business success criteria including a
+\AppCCont@^final statement whether the project already meets the initial business
+\AppCCont@^objectives.
+Approved models: After model assessment with respect to business success
+\AppCCont@^criteria, the generated models that meet the selected criteria become approved
+\AppCCont@^models.
+5.2 Review process
+At this point the resultant model hopefully appears to be satisfactory and to
+\AppCCont@^satisfy business needs. It is now appropriate to do a more thorough review of
+\AppCCont@^the data mining engagement in order to determine if there is any important
+\AppCCont@^factor or task that has somehow been overlooked. This review also covers quality
+\AppCCont@^assurance issues, e.g., did we correctly build the model? Did we only use
+\AppCCont@^attributes that we are allowed to use and that are available for future
+\AppCCont@^analyses?
+Review of process: Summarize the process review and highlight activities that
+\AppCCont@^have been missed and/or should be repeated.
+5.3 Determine next steps
+According to the assessment results and the process review, the project decides
+\AppCCont@^how to proceed at this stage. The project needs to decide whether to finish this
+\AppCCont@^project and move on to deployment if appropriate or whether to initiate further
+\AppCCont@^iterations or set up new data mining projects. This task includes analyses of
+\AppCCont@^remaining resources and budget that influences the decisions.
+List of possible actions: List the potential further actions along with the
+\AppCCont@^reasons for and against each option.
+Decision: Describe the decision as to how to proceed along with the rationale.
+\end{AppCPrompt}

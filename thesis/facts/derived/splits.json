@@ -1,0 +1,617 @@
+{
+ "_main|adult": {
+  "n_features": 14,
+  "n_classes": 2,
+  "n_train": 34188,
+  "n_val": 4885,
+  "n_test": 9769,
+  "logs": 24,
+  "consistent": true,
+  "total": 48842,
+  "fractions": [
+   0.699971336145121,
+   0.10001637934564514,
+   0.20001228450923386
+  ]
+ },
+ "_main|bank_marketing": {
+  "n_features": 16,
+  "n_classes": 2,
+  "n_train": 31647,
+  "n_val": 4521,
+  "n_test": 9043,
+  "logs": 24,
+  "consistent": true,
+  "total": 45211,
+  "fractions": [
+   0.6999845170423127,
+   0.09999778814890181,
+   0.20001769480878548
+  ]
+ },
+ "_main|breast_cancer": {
+  "n_features": 30,
+  "n_classes": 2,
+  "n_train": 398,
+  "n_val": 57,
+  "n_test": 114,
+  "logs": 24,
+  "consistent": true,
+  "total": 569,
+  "fractions": [
+   0.6994727592267135,
+   0.10017574692442882,
+   0.20035149384885764
+  ]
+ },
+ "_main|cmc": {
+  "n_features": 9,
+  "n_classes": 3,
+  "n_train": 1030,
+  "n_val": 148,
+  "n_test": 295,
+  "logs": 24,
+  "consistent": true,
+  "total": 1473,
+  "fractions": [
+   0.6992532247114732,
+   0.10047522063815342,
+   0.20027155465037338
+  ]
+ },
+ "_main|cnae_9": {
+  "n_features": 856,
+  "n_classes": 9,
+  "n_train": 756,
+  "n_val": 108,
+  "n_test": 216,
+  "logs": 24,
+  "consistent": true,
+  "total": 1080,
+  "fractions": [
+   0.7,
+   0.1,
+   0.2
+  ]
+ },
+ "_main|connect_4": {
+  "n_features": 42,
+  "n_classes": 3,
+  "n_train": 47289,
+  "n_val": 6756,
+  "n_test": 13512,
+  "logs": 24,
+  "consistent": true,
+  "total": 67557,
+  "fractions": [
+   0.6999866779164261,
+   0.10000444069452462,
+   0.20000888138904924
+  ]
+ },
+ "_main|covertype": {
+  "n_features": 54,
+  "n_classes": 7,
+  "n_train": 406707,
+  "n_val": 58102,
+  "n_test": 116203,
+  "logs": 24,
+  "consistent": true,
+  "total": 581012,
+  "fractions": [
+   0.6999975904112136,
+   0.10000137690787798,
+   0.2000010326809085
+  ]
+ },
+ "_main|credit_g": {
+  "n_features": 20,
+  "n_classes": 2,
+  "n_train": 700,
+  "n_val": 100,
+  "n_test": 200,
+  "logs": 24,
+  "consistent": true,
+  "total": 1000,
+  "fractions": [
+   0.7,
+   0.1,
+   0.2
+  ]
+ },
+ "_main|eucalyptus": {
+  "n_features": 19,
+  "n_classes": 5,
+  "n_train": 514,
+  "n_val": 74,
+  "n_test": 148,
+  "logs": 24,
+  "consistent": true,
+  "total": 736,
+  "fractions": [
+   0.6983695652173914,
+   0.10054347826086957,
+   0.20108695652173914
+  ]
+ },
+ "_main|fashion_mnist": {
+  "n_features": 784,
+  "n_classes": 10,
+  "n_train": 49000,
+  "n_val": 7000,
+  "n_test": 14000,
+  "logs": 24,
+  "consistent": true,
+  "total": 70000,
+  "fractions": [
+   0.7,
+   0.1,
+   0.2
+  ]
+ },
+ "_main|phoneme": {
+  "n_features": 5,
+  "n_classes": 2,
+  "n_train": 3782,
+  "n_val": 541,
+  "n_test": 1081,
+  "logs": 24,
+  "consistent": true,
+  "total": 5404,
+  "fractions": [
+   0.6998519615099926,
+   0.10011102886750556,
+   0.20003700962250184
+  ]
+ },
+ "_main|vehicle": {
+  "n_features": 18,
+  "n_classes": 4,
+  "n_train": 591,
+  "n_val": 85,
+  "n_test": 170,
+  "logs": 24,
+  "consistent": true,
+  "total": 846,
+  "fractions": [
+   0.6985815602836879,
+   0.10047281323877069,
+   0.20094562647754138
+  ]
+ },
+ "_main|wine": {
+  "n_features": 13,
+  "n_classes": 3,
+  "n_train": 124,
+  "n_val": 18,
+  "n_test": 36,
+  "logs": 24,
+  "consistent": true,
+  "total": 178,
+  "fractions": [
+   0.6966292134831461,
+   0.10112359550561797,
+   0.20224719101123595
+  ]
+ },
+ "_post_cutoff|ev_purchase": {
+  "n_features": 13,
+  "n_classes": 2,
+  "n_train": 468065,
+  "n_val": 66867,
+  "n_test": 133733,
+  "logs": 24,
+  "consistent": true,
+  "total": 668665,
+  "fractions": [
+   0.6999992522414064,
+   0.10000074775859362,
+   0.2
+  ]
+ },
+ "_post_cutoff|student_health": {
+  "n_features": 13,
+  "n_classes": 3,
+  "n_train": 483061,
+  "n_val": 69009,
+  "n_test": 138018,
+  "logs": 24,
+  "consistent": true,
+  "total": 690088,
+  "fractions": [
+   0.6999991305456695,
+   0.10000028981811016,
+   0.2000005796362203
+  ]
+ },
+ "_leakage|adult": {
+  "n_features": 14,
+  "n_classes": 2,
+  "n_train": 34188,
+  "n_val": 4885,
+  "n_test": 9769,
+  "logs": 3,
+  "consistent": true,
+  "total": 48842,
+  "fractions": [
+   0.699971336145121,
+   0.10001637934564514,
+   0.20001228450923386
+  ]
+ },
+ "_leakage|bank_marketing": {
+  "n_features": 16,
+  "n_classes": 2,
+  "n_train": 31647,
+  "n_val": 4521,
+  "n_test": 9043,
+  "logs": 3,
+  "consistent": true,
+  "total": 45211,
+  "fractions": [
+   0.6999845170423127,
+   0.09999778814890181,
+   0.20001769480878548
+  ]
+ },
+ "_leakage|breast_cancer": {
+  "n_features": 30,
+  "n_classes": 2,
+  "n_train": 398,
+  "n_val": 57,
+  "n_test": 114,
+  "logs": 3,
+  "consistent": true,
+  "total": 569,
+  "fractions": [
+   0.6994727592267135,
+   0.10017574692442882,
+   0.20035149384885764
+  ]
+ },
+ "_leakage|cmc": {
+  "n_features": 9,
+  "n_classes": 3,
+  "n_train": 1030,
+  "n_val": 148,
+  "n_test": 295,
+  "logs": 3,
+  "consistent": true,
+  "total": 1473,
+  "fractions": [
+   0.6992532247114732,
+   0.10047522063815342,
+   0.20027155465037338
+  ]
+ },
+ "_leakage|cnae_9": {
+  "n_features": 856,
+  "n_classes": 9,
+  "n_train": 756,
+  "n_val": 108,
+  "n_test": 216,
+  "logs": 3,
+  "consistent": true,
+  "total": 1080,
+  "fractions": [
+   0.7,
+   0.1,
+   0.2
+  ]
+ },
+ "_leakage|connect_4": {
+  "n_features": 42,
+  "n_classes": 3,
+  "n_train": 47289,
+  "n_val": 6756,
+  "n_test": 13512,
+  "logs": 3,
+  "consistent": true,
+  "total": 67557,
+  "fractions": [
+   0.6999866779164261,
+   0.10000444069452462,
+   0.20000888138904924
+  ]
+ },
+ "_leakage|covertype": {
+  "n_features": 54,
+  "n_classes": 7,
+  "n_train": 406707,
+  "n_val": 58102,
+  "n_test": 116203,
+  "logs": 3,
+  "consistent": true,
+  "total": 581012,
+  "fractions": [
+   0.6999975904112136,
+   0.10000137690787798,
+   0.2000010326809085
+  ]
+ },
+ "_leakage|credit_g": {
+  "n_features": 20,
+  "n_classes": 2,
+  "n_train": 700,
+  "n_val": 100,
+  "n_test": 200,
+  "logs": 3,
+  "consistent": true,
+  "total": 1000,
+  "fractions": [
+   0.7,
+   0.1,
+   0.2
+  ]
+ },
+ "_leakage|eucalyptus": {
+  "n_features": 19,
+  "n_classes": 5,
+  "n_train": 514,
+  "n_val": 74,
+  "n_test": 148,
+  "logs": 3,
+  "consistent": true,
+  "total": 736,
+  "fractions": [
+   0.6983695652173914,
+   0.10054347826086957,
+   0.20108695652173914
+  ]
+ },
+ "_leakage|fashion_mnist": {
+  "n_features": 784,
+  "n_classes": 10,
+  "n_train": 49000,
+  "n_val": 7000,
+  "n_test": 14000,
+  "logs": 3,
+  "consistent": true,
+  "total": 70000,
+  "fractions": [
+   0.7,
+   0.1,
+   0.2
+  ]
+ },
+ "_leakage|phoneme": {
+  "n_features": 5,
+  "n_classes": 2,
+  "n_train": 3782,
+  "n_val": 541,
+  "n_test": 1081,
+  "logs": 3,
+  "consistent": true,
+  "total": 5404,
+  "fractions": [
+   0.6998519615099926,
+   0.10011102886750556,
+   0.20003700962250184
+  ]
+ },
+ "_leakage|vehicle": {
+  "n_features": 18,
+  "n_classes": 4,
+  "n_train": 591,
+  "n_val": 85,
+  "n_test": 170,
+  "logs": 3,
+  "consistent": true,
+  "total": 846,
+  "fractions": [
+   0.6985815602836879,
+   0.10047281323877069,
+   0.20094562647754138
+  ]
+ },
+ "_leakage|wine": {
+  "n_features": 13,
+  "n_classes": 3,
+  "n_train": 124,
+  "n_val": 18,
+  "n_test": 36,
+  "logs": 3,
+  "consistent": true,
+  "total": 178,
+  "fractions": [
+   0.6966292134831461,
+   0.10112359550561797,
+   0.20224719101123595
+  ]
+ },
+ "_spurious|adult": {
+  "n_features": 14,
+  "n_classes": 2,
+  "n_train": 34188,
+  "n_val": 4885,
+  "n_test": 9769,
+  "logs": 3,
+  "consistent": true,
+  "total": 48842,
+  "fractions": [
+   0.699971336145121,
+   0.10001637934564514,
+   0.20001228450923386
+  ]
+ },
+ "_spurious|bank_marketing": {
+  "n_features": 16,
+  "n_classes": 2,
+  "n_train": 31647,
+  "n_val": 4521,
+  "n_test": 9043,
+  "logs": 3,
+  "consistent": true,
+  "total": 45211,
+  "fractions": [
+   0.6999845170423127,
+   0.09999778814890181,
+   0.20001769480878548
+  ]
+ },
+ "_spurious|breast_cancer": {
+  "n_features": 30,
+  "n_classes": 2,
+  "n_train": 398,
+  "n_val": 57,
+  "n_test": 114,
+  "logs": 3,
+  "consistent": true,
+  "total": 569,
+  "fractions": [
+   0.6994727592267135,
+   0.10017574692442882,
+   0.20035149384885764
+  ]
+ },
+ "_spurious|cmc": {
+  "n_features": 9,
+  "n_classes": 3,
+  "n_train": 1030,
+  "n_val": 148,
+  "n_test": 295,
+  "logs": 3,
+  "consistent": true,
+  "total": 1473,
+  "fractions": [
+   0.6992532247114732,
+   0.10047522063815342,
+   0.20027155465037338
+  ]
+ },
+ "_spurious|cnae_9": {
+  "n_features": 856,
+  "n_classes": 9,
+  "n_train": 756,
+  "n_val": 108,
+  "n_test": 216,
+  "logs": 3,
+  "consistent": true,
+  "total": 1080,
+  "fractions": [
+   0.7,
+   0.1,
+   0.2
+  ]
+ },
+ "_spurious|connect_4": {
+  "n_features": 42,
+  "n_classes": 3,
+  "n_train": 47289,
+  "n_val": 6756,
+  "n_test": 13512,
+  "logs": 3,
+  "consistent": true,
+  "total": 67557,
+  "fractions": [
+   0.6999866779164261,
+   0.10000444069452462,
+   0.20000888138904924
+  ]
+ },
+ "_spurious|covertype": {
+  "n_features": 54,
+  "n_classes": 7,
+  "n_train": 406707,
+  "n_val": 58102,
+  "n_test": 116203,
+  "logs": 3,
+  "consistent": true,
+  "total": 581012,
+  "fractions": [
+   0.6999975904112136,
+   0.10000137690787798,
+   0.2000010326809085
+  ]
+ },
+ "_spurious|credit_g": {
+  "n_features": 20,
+  "n_classes": 2,
+  "n_train": 700,
+  "n_val": 100,
+  "n_test": 200,
+  "logs": 3,
+  "consistent": true,
+  "total": 1000,
+  "fractions": [
+   0.7,
+   0.1,
+   0.2
+  ]
+ },
+ "_spurious|eucalyptus": {
+  "n_features": 19,
+  "n_classes": 5,
+  "n_train": 514,
+  "n_val": 74,
+  "n_test": 148,
+  "logs": 3,
+  "consistent": true,
+  "total": 736,
+  "fractions": [
+   0.6983695652173914,
+   0.10054347826086957,
+   0.20108695652173914
+  ]
+ },
+ "_spurious|fashion_mnist": {
+  "n_features": 784,
+  "n_classes": 10,
+  "n_train": 49000,
+  "n_val": 7000,
+  "n_test": 14000,
+  "logs": 3,
+  "consistent": true,
+  "total": 70000,
+  "fractions": [
+   0.7,
+   0.1,
+   0.2
+  ]
+ },
+ "_spurious|phoneme": {
+  "n_features": 5,
+  "n_classes": 2,
+  "n_train": 3782,
+  "n_val": 541,
+  "n_test": 1081,
+  "logs": 3,
+  "consistent": true,
+  "total": 5404,
+  "fractions": [
+   0.6998519615099926,
+   0.10011102886750556,
+   0.20003700962250184
+  ]
+ },
+ "_spurious|vehicle": {
+  "n_features": 18,
+  "n_classes": 4,
+  "n_train": 591,
+  "n_val": 85,
+  "n_test": 170,
+  "logs": 3,
+  "consistent": true,
+  "total": 846,
+  "fractions": [
+   0.6985815602836879,
+   0.10047281323877069,
+   0.20094562647754138
+  ]
+ },
+ "_spurious|wine": {
+  "n_features": 13,
+  "n_classes": 3,
+  "n_train": 124,
+  "n_val": 18,
+  "n_test": 36,
+  "logs": 3,
+  "consistent": true,
+  "total": 178,
+  "fractions": [
+   0.6966292134831461,
+   0.10112359550561797,
+   0.20224719101123595
+  ]
+ }
+}

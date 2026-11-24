@@ -1,0 +1,120 @@
+{
+ "main": {
+  "runs_with_eval_to_model": [
+   "main-student_health-hard_fsm-r1",
+   "main-student_health-hard_fsm-r5",
+   "main-student_health-soft_fsm-r2",
+   "main-student_health-soft_fsm-r4",
+   "main-student_health-soft_fsm-r6"
+  ],
+  "per_run": {
+   "main-student_health-hard_fsm-r1": {
+    "model_calls_after_return": 1,
+    "tool_calls": 5,
+    "mentions": 0,
+    "mention_examples": [],
+    "prompts_match_calls": true
+   },
+   "main-student_health-hard_fsm-r5": {
+    "model_calls_after_return": 1,
+    "tool_calls": 6,
+    "mentions": 0,
+    "mention_examples": [],
+    "prompts_match_calls": true
+   },
+   "main-student_health-soft_fsm-r2": {
+    "model_calls_after_return": 1,
+    "tool_calls": 5,
+    "mentions": 0,
+    "mention_examples": [],
+    "prompts_match_calls": true
+   },
+   "main-student_health-soft_fsm-r4": {
+    "model_calls_after_return": 1,
+    "tool_calls": 13,
+    "mentions": 0,
+    "mention_examples": [],
+    "prompts_match_calls": true
+   },
+   "main-student_health-soft_fsm-r6": {
+    "model_calls_after_return": 1,
+    "tool_calls": 8,
+    "mentions": 0,
+    "mention_examples": [],
+    "prompts_match_calls": true
+   }
+  },
+  "runs_mentioning": [],
+  "tool_calls_min_max": [
+   5,
+   13
+  ]
+ },
+ "h1": {
+  "runs_with_eval_to_model": [
+   "h1-student_health-hard_fsm-r1",
+   "h1-student_health-hard_fsm-r2",
+   "h1-student_health-hard_fsm-r5",
+   "h1-student_health-hard_fsm-r6",
+   "h1-student_health-hard_fsm_single-r3",
+   "h1-student_health-hard_fsm_single-r5",
+   "h1-student_health-hard_fsm_single-r6"
+  ],
+  "per_run": {
+   "h1-student_health-hard_fsm-r1": {
+    "model_calls_after_return": 1,
+    "tool_calls": 6,
+    "mentions": 0,
+    "mention_examples": [],
+    "prompts_match_calls": true
+   },
+   "h1-student_health-hard_fsm-r2": {
+    "model_calls_after_return": 1,
+    "tool_calls": 5,
+    "mentions": 0,
+    "mention_examples": [],
+    "prompts_match_calls": true
+   },
+   "h1-student_health-hard_fsm-r5": {
+    "model_calls_after_return": 1,
+    "tool_calls": 6,
+    "mentions": 0,
+    "mention_examples": [],
+    "prompts_match_calls": true
+   },
+   "h1-student_health-hard_fsm-r6": {
+    "model_calls_after_return": 1,
+    "tool_calls": 6,
+    "mentions": 0,
+    "mention_examples": [],
+    "prompts_match_calls": true
+   },
+   "h1-student_health-hard_fsm_single-r3": {
+    "model_calls_after_return": 1,
+    "tool_calls": 5,
+    "mentions": 0,
+    "mention_examples": [],
+    "prompts_match_calls": true
+   },
+   "h1-student_health-hard_fsm_single-r5": {
+    "model_calls_after_return": 1,
+    "tool_calls": 3,
+    "mentions": 0,
+    "mention_examples": [],
+    "prompts_match_calls": true
+   },
+   "h1-student_health-hard_fsm_single-r6": {
+    "model_calls_after_return": 1,
+    "tool_calls": 7,
+    "mentions": 0,
+    "mention_examples": [],
+    "prompts_match_calls": true
+   }
+  },
+  "runs_mentioning": [],
+  "tool_calls_min_max": [
+   3,
+   7
+  ]
+ }
+}

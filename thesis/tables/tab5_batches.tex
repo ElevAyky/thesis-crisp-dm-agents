@@ -1,0 +1,20 @@
+%!TEX root = ../thesis.tex
+% generiert von thesis/scripts/make_tables.py — nicht von Hand aendern
+\begin{table}[htbp]
+  \centering
+  \small
+  \caption[Clean experiment batches]{Clean experiment batches in execution order. All runs used Claude Code 2.1.280 and the same prompt fingerprint; harness \texttt{9bb6a91} differs from \texttt{14e99e4} in documentation only. \emph{Period}: local time, CEST until 25 Oct 03:00, CET afterwards; \emph{Hours}: elapsed time from the first to the last transcript time stamp; \emph{Pauses}: interruptions longer than 60 minutes, resumed by the runner; \emph{USD}: cost at list prices.}
+  \label{tab:5:batches}
+  \begin{tabular}{llrl>{\RaggedRight\arraybackslash}p{2.9cm}rrr}
+    \toprule
+    Batch & Arms & Runs & Harness & Period (2026) & Hours & Pauses & USD \\
+    \midrule
+    Leakage, perfect & D & 39 & 9bb6a91 & \mbox{24 Oct 16:36--17:21} & 0.75 & 0 & 6.51 \\
+    Leakage, spurious & D & 39 & 14e99e4 & \mbox{24 Oct 17:23--18:09} & 0.77 & 0 & 6.25 \\
+    Core suite & A--D & 312 & 14e99e4 & \mbox{24 Oct 18:09} -- \mbox{26 Oct 19:55} & 50.78 & 2 & 251.93 \\
+    Post-cutoff control & A--D & 48 & 14e99e4 & \mbox{26 Oct 19:56} -- \mbox{27 Oct 10:26} & 14.49 & 1 & 41.94 \\
+    \midrule
+    Total &  & 438 &  &  &  &  & 306.63 \\
+    \bottomrule
+  \end{tabular}
+\end{table}

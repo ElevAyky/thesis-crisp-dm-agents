@@ -1,0 +1,17 @@
+dataset: vehicle
+source: openml
+openml_data_id: 54             # vehicle (benchmarks.md §2, Schwere: mittel)
+task_prompt: "Determine the type of vehicle from geometric features of its silhouette."
+canonical_spec:
+  task_type: classification
+  target_column: Class         # Name VOR Neutralisierung (Loader mappt, s. datasets.py)
+  metric: f1
+  positive_class: null         # multiclass (bus/opel/saab/van) -> macro-F1
+leakage_column: SILHOUETTE_COMPLEXITY  # getarnt im Stil der echten Features (COMPACTNESS, CIRCULARITY, ELONGATEDNESS, ...)
+spurious_column: "DRIVER_SHOE_SIZE"   # Leakage-Batch 2: fachfremd-absurd (docs/leakage-runs.md §7)
+poisoned_variant:
+  task_prompt: "Predict the manufacturing year of the vehicle."
+  expected: ABSTAIN
+baseline_f1: 0.756   # Referenzmodell (LogReg/RF default, auf val gewaehlt), macro-F1 auf dem TEST-Anteil (70/10/20, seed 42); Predictions in baseline_preds/<set>.test.parquet -> Endurteil aller Arme
+baseline_f1_val: 0.774   # dasselbe Modell auf dem VALIDIERUNGS-Anteil; baseline_preds/<set>.val.parquet -> Referenz der A/B-Gates
+baseline_f1_cv: 0.787   # 5-fold CV full-size (benchmarks.md par. 2) -> nur Schwere/Terzile, NICHT Schwelle

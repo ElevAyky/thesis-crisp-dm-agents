@@ -1,0 +1,20 @@
+dataset: student_health
+source: kaggle
+kaggle_competition: playground-series-s6e7   # "Predicting Student Health Risk", Start 01.07.2026 (> Cutoff 2026-01-31)
+# Synthetisch aus "College Student Health Behavior Dataset" (ziya07, Kaggle-Upload 27.04.2026) —
+# Zeilen UND Original nach dem Cutoff (benchmarks.md §2, Post-Cutoff-Kontrolle, Decker 14.09.)
+drop_columns: [id]
+data_sha256: 424d744d0344b14b7888b901d79db536f6ffbe73229809a736247ff812416fed   # train.csv, 690088 Zeilen (23.09.)
+task_prompt: "Determine the health condition category of a college student from lifestyle and health-behavior measurements."
+canonical_spec:
+  task_type: classification
+  target_column: health_condition   # Name VOR Neutralisierung (Loader mappt, s. datasets.py)
+  metric: f1
+  positive_class: null         # multiclass (at-risk 86 % / unhealthy 8 % / fit 6 %) -> macro-F1
+leakage_column: screen_time        # getarnt im Stil der echten Features (sleep_duration, step_count, water_intake, ...)
+poisoned_variant:
+  task_prompt: "Predict how many times the student will visit a doctor in the next twelve months."
+  expected: ABSTAIN
+baseline_f1: 0.902   # Referenzmodell (LogReg/RF default, auf val gewaehlt), macro-F1 auf dem TEST-Anteil (70/10/20, seed 42); Predictions in baseline_preds/<set>.test.parquet -> Endurteil aller Arme
+baseline_f1_val: 0.897   # dasselbe Modell auf dem VALIDIERUNGS-Anteil; baseline_preds/<set>.val.parquet -> Referenz der A/B-Gates
+baseline_f1_cv: 0.901   # 5-fold CV full-size (benchmarks.md par. 2) -> nur Schwere/Terzile, NICHT Schwelle

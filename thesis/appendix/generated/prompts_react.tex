@@ -1,0 +1,55 @@
+%!TEX root = ../../thesis.tex
+% generiert von thesis/scripts/make_appendix_prompts.py — nicht von Hand aendern
+\subsection*{Arm D: complete prompt (\texttt{prompts.react\_prompt})}
+\begin{AppCPrompt}
+You are an ML engineer working in the current directory. Write Python code to
+\AppCCont@^files and run it with Bash. Use pandas and scikit-learn. Work exclusively in the
+\AppCCont@^current directory; do not access anything outside it (e.g. via \AppCQ@^..\AppCQ@^).
+There is no client or domain expert to consult: make and state your own
+\AppCCont@^assumptions.
+TASK: \AppCVal@Determine whether a person\AppCQ@^s annual income exceeds 50K dollars from census^
+\AppCCont@^\AppCVal@attributes.^
+The directory contains \AppCQ@^data/train.parquet\AppCQ@^ and \AppCQ@^data/test_features.parquet\AppCQ@^
+\AppCCont@^(contains NO target column). This is a classification task. Derive the target
+\AppCCont@^column and choose a metric (f1 or accuracy). Do not guess a target column that
+\AppCCont@^does not fit the task \AppCDash@^ an honest cannot_determine is better than an invented
+\AppCCont@^target. Identify columns that are not suitable as features (e.g. IDs, constants
+\AppCCont@^or suspected leakage columns that separate the target suspiciously perfectly).
+\AppCCont@^Handle missing values and make all features numeric. Compare your model against
+\AppCCont@^a simple baseline (e.g. the most frequent class). Apply exactly the same
+\AppCCont@^preprocessing to the test features as in training.
+Produce a prediction for every row of test_features and write them to
+\AppCCont@^\AppCQ@^predictions.parquet\AppCQ@^ \AppCDash@^ exactly one column \AppCQ@^prediction\AppCQ@^ containing class labels
+\AppCCont@^in the same form as the values of the target column in \AppCQ@^data/train.parquet\AppCQ@^ (not
+\AppCCont@^encoded codes or probabilities), same row count and row order as test_features.
+\AppCCont@^Write \AppCQ@^predictions.parquet\AppCQ@^ as soon as you have a first working model and
+\AppCCont@^overwrite it whenever you find a better one. Together with your first
+\AppCCont@^\AppCQ@^predictions.parquet\AppCQ@^, write \AppCQ@^result.json\AppCQ@^ with {"target_column": "<column>",
+\AppCCont@^"task_type": "classification", "metric": "f1"|"accuracy"} and update it if your
+\AppCCont@^choice changes. Both files are required.
+If no target column can be derived from the task and the data (the target
+\AppCCont@^variable does not exist in the data or is ambiguous), instead write
+\AppCCont@^\AppCQ@^result.json\AppCQ@^ with {"cannot_determine": true, "reason": "<justification>"}.
+\end{AppCPrompt}
+\subsection*{Arm C: block appended to the prompt of Arm D (\texttt{prompts.CRISP\_GUIDANCE})}
+\begin{AppCPrompt}
+APPROACH (CRISP-DM): Work on the task following the CRISP-DM process. Go through
+\AppCCont@^these phases in order and complete each one before you start the next, and
+\AppCCont@^return to an earlier phase when the results require it. As the CRISP-DM 1.0
+\AppCCont@^reference model puts it: “The sequence of the phases is not rigid. Moving back
+\AppCCont@^and forth between different phases is always required. It depends on the outcome
+\AppCCont@^of each phase which phase or which particular task of a phase, has to be
+\AppCCont@^performed next.”
+Where the reference model asks for reports, documentation or plots, keep them
+\AppCCont@^brief (e.g. a short notes file); they do not replace the required output files.
+1. Business Understanding:
+\AppCCrisp@bu^
+2. Data Understanding:
+\AppCCrisp@du^
+3. Data Preparation:
+\AppCCrisp@prep^
+4. Modeling:
+\AppCCrisp@model^
+5. Evaluation:
+\AppCCrisp@eval^
+\end{AppCPrompt}

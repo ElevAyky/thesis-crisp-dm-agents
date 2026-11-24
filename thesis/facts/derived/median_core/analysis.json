@@ -1,0 +1,1685 @@
+{
+  "input": "C:\\projects\\thesis-crisp-dm-runs\\_main\\main_runs.json",
+  "agg": "median",
+  "alpha": 0.05,
+  "arms": [
+    "hard_fsm",
+    "soft_fsm",
+    "crisp_react",
+    "naked_react"
+  ],
+  "metrics": {
+    "f1_measured": {
+      "metric": "f1_measured",
+      "agg": "median",
+      "datasets": [
+        "adult",
+        "bank_marketing",
+        "breast_cancer",
+        "cmc",
+        "cnae_9",
+        "connect_4",
+        "covertype",
+        "credit_g",
+        "eucalyptus",
+        "fashion_mnist",
+        "phoneme",
+        "vehicle",
+        "wine"
+      ],
+      "dropped": [],
+      "matrix": [
+        [
+          0.8162026375449892,
+          0.8147617220618895,
+          0.8153054308436929,
+          0.8162734317143654
+        ],
+        [
+          0.7105247520164046,
+          0.709622587342999,
+          0.7875749427216548,
+          0.7641554559216239
+        ],
+        [
+          0.9619111259605746,
+          0.971433344470431,
+          0.9667470046088706,
+          0.9619111259605746
+        ],
+        [
+          0.5495330195511335,
+          0.5573034566851307,
+          0.548568124502704,
+          0.5347142892088115
+        ],
+        [
+          0.9585066981875492,
+          0.9562549906384592,
+          0.9564534952638677,
+          0.9585075827021116
+        ],
+        [
+          0.7299930573399067,
+          0.7258541050755918,
+          0.7238712577526087,
+          0.711552791793183
+        ],
+        [
+          0.9155245438220756,
+          0.9169216023619711,
+          0.9208074165233178,
+          0.9208074165233178
+        ],
+        [
+          0.6311037530200203,
+          0.6325466089661984,
+          0.639697776343739,
+          0.6815662224318906
+        ],
+        [
+          0.6022744245099949,
+          0.6066675620233899,
+          0.6334821369447006,
+          0.6001985751281818
+        ],
+        [
+          0.8950104149738856,
+          0.8949304706750784,
+          0.8935259203489699,
+          0.888840522245592
+        ],
+        [
+          0.8648938622211236,
+          0.8656863112185286,
+          0.8700882635481679,
+          0.8718572740719879
+        ],
+        [
+          0.8509998672164181,
+          0.8390811530226312,
+          0.8353060957523333,
+          0.8321422782924852
+        ],
+        [
+          0.9709618874773139,
+          0.9709618874773139,
+          0.9709618874773139,
+          0.9709618874773139
+        ]
+      ],
+      "friedman": {
+        "N": 13,
+        "k": 4,
+        "avg_ranks": [
+          2.5384615384615383,
+          2.576923076923077,
+          2.3076923076923075,
+          2.576923076923077
+        ],
+        "chi2": 0.392307692307709,
+        "p_chi2": 0.9418269215225921,
+        "F": 0.12193664076509789,
+        "df": [
+          3,
+          36
+        ],
+        "p_F": 0.9465778982499671
+      },
+      "cd": 1.3008798056732775,
+      "nemenyi": [
+        {
+          "a": "hard_fsm",
+          "b": "soft_fsm",
+          "rank_diff": 0.03846153846153877,
+          "significant": false
+        },
+        {
+          "a": "hard_fsm",
+          "b": "crisp_react",
+          "rank_diff": 0.23076923076923084,
+          "significant": false
+        },
+        {
+          "a": "hard_fsm",
+          "b": "naked_react",
+          "rank_diff": 0.03846153846153877,
+          "significant": false
+        },
+        {
+          "a": "soft_fsm",
+          "b": "crisp_react",
+          "rank_diff": 0.2692307692307696,
+          "significant": false
+        },
+        {
+          "a": "soft_fsm",
+          "b": "naked_react",
+          "rank_diff": 0.0,
+          "significant": false
+        },
+        {
+          "a": "crisp_react",
+          "b": "naked_react",
+          "rank_diff": 0.2692307692307696,
+          "significant": false
+        }
+      ],
+      "cliques": [
+        [
+          "crisp_react",
+          "hard_fsm",
+          "soft_fsm",
+          "naked_react"
+        ]
+      ],
+      "cliffs": [
+        {
+          "a": "hard_fsm",
+          "b": "soft_fsm",
+          "per_dataset": {
+            "adult": 0.1111111111111111,
+            "bank_marketing": 0.1111111111111111,
+            "breast_cancer": -0.25,
+            "cmc": -0.16666666666666666,
+            "cnae_9": 0.08333333333333333,
+            "connect_4": 0.6388888888888888,
+            "covertype": -0.1388888888888889,
+            "credit_g": 0.0,
+            "eucalyptus": -0.05555555555555555,
+            "fashion_mnist": 0.2777777777777778,
+            "phoneme": -0.1111111111111111,
+            "vehicle": 0.4722222222222222,
+            "wine": 0.0
+          },
+          "mean_delta": 0.07478632478632478,
+          "mean_magnitude": "negligible",
+          "a_better_large": 1,
+          "b_better_large": 0
+        },
+        {
+          "a": "hard_fsm",
+          "b": "crisp_react",
+          "per_dataset": {
+            "adult": 0.3333333333333333,
+            "bank_marketing": -0.7777777777777778,
+            "breast_cancer": -0.08333333333333333,
+            "cmc": 0.2222222222222222,
+            "cnae_9": -0.08333333333333333,
+            "connect_4": 0.9444444444444444,
+            "covertype": -0.3333333333333333,
+            "credit_g": -0.6666666666666666,
+            "eucalyptus": -0.5,
+            "fashion_mnist": 1.0,
+            "phoneme": -0.8333333333333334,
+            "vehicle": 0.7222222222222222,
+            "wine": 0.0
+          },
+          "mean_delta": -0.004273504273504277,
+          "mean_magnitude": "negligible",
+          "a_better_large": 3,
+          "b_better_large": 4
+        },
+        {
+          "a": "hard_fsm",
+          "b": "naked_react",
+          "per_dataset": {
+            "adult": -0.2222222222222222,
+            "bank_marketing": -0.6666666666666666,
+            "breast_cancer": 0.16666666666666666,
+            "cmc": 0.7222222222222222,
+            "cnae_9": -0.1111111111111111,
+            "connect_4": 0.7777777777777778,
+            "covertype": -0.3333333333333333,
+            "credit_g": -1.0,
+            "eucalyptus": 0.05555555555555555,
+            "fashion_mnist": 1.0,
+            "phoneme": -1.0,
+            "vehicle": 0.8333333333333334,
+            "wine": 0.0
+          },
+          "mean_delta": 0.017094017094017103,
+          "mean_magnitude": "negligible",
+          "a_better_large": 4,
+          "b_better_large": 3
+        },
+        {
+          "a": "soft_fsm",
+          "b": "crisp_react",
+          "per_dataset": {
+            "adult": -0.05555555555555555,
+            "bank_marketing": -0.8333333333333334,
+            "breast_cancer": 0.25,
+            "cmc": 0.5,
+            "cnae_9": -0.08333333333333333,
+            "connect_4": 0.3888888888888889,
+            "covertype": -0.6666666666666666,
+            "credit_g": 0.0,
+            "eucalyptus": -0.6111111111111112,
+            "fashion_mnist": 0.5555555555555556,
+            "phoneme": -0.8055555555555556,
+            "vehicle": 0.4722222222222222,
+            "wine": 0.0
+          },
+          "mean_delta": -0.06837606837606838,
+          "mean_magnitude": "negligible",
+          "a_better_large": 2,
+          "b_better_large": 4
+        },
+        {
+          "a": "soft_fsm",
+          "b": "naked_react",
+          "per_dataset": {
+            "adult": -0.5555555555555556,
+            "bank_marketing": -0.6666666666666666,
+            "breast_cancer": 0.5,
+            "cmc": 0.7222222222222222,
+            "cnae_9": -0.1388888888888889,
+            "connect_4": 0.5555555555555556,
+            "covertype": -0.6666666666666666,
+            "credit_g": -0.7222222222222222,
+            "eucalyptus": 0.2777777777777778,
+            "fashion_mnist": 0.6666666666666666,
+            "phoneme": -1.0,
+            "vehicle": 0.7777777777777778,
+            "wine": 0.0
+          },
+          "mean_delta": -0.019230769230769225,
+          "mean_magnitude": "negligible",
+          "a_better_large": 5,
+          "b_better_large": 5
+        },
+        {
+          "a": "crisp_react",
+          "b": "naked_react",
+          "per_dataset": {
+            "adult": -0.6388888888888888,
+            "bank_marketing": 0.6666666666666666,
+            "breast_cancer": 0.5,
+            "cmc": 0.4444444444444444,
+            "cnae_9": 0.05555555555555555,
+            "connect_4": 0.3888888888888889,
+            "covertype": 0.16666666666666666,
+            "credit_g": -1.0,
+            "eucalyptus": 0.6944444444444444,
+            "fashion_mnist": 0.3611111111111111,
+            "phoneme": -0.25,
+            "vehicle": 0.3055555555555556,
+            "wine": 0.0
+          },
+          "mean_delta": 0.13034188034188035,
+          "mean_magnitude": "negligible",
+          "a_better_large": 3,
+          "b_better_large": 2
+        }
+      ],
+      "skipped": null,
+      "avg_ranks": {
+        "hard_fsm": 2.5384615384615383,
+        "soft_fsm": 2.576923076923077,
+        "crisp_react": 2.3076923076923075,
+        "naked_react": 2.576923076923077
+      }
+    },
+    "f1_combined": {
+      "metric": "f1_combined",
+      "agg": "median",
+      "datasets": [
+        "adult",
+        "bank_marketing",
+        "breast_cancer",
+        "cmc",
+        "cnae_9",
+        "connect_4",
+        "covertype",
+        "credit_g",
+        "eucalyptus",
+        "fashion_mnist",
+        "phoneme",
+        "vehicle",
+        "wine"
+      ],
+      "dropped": [],
+      "matrix": [
+        [
+          0.8162026375449892,
+          0.8147617220618895,
+          0.8153054308436929,
+          0.8162734317143654
+        ],
+        [
+          0.7105247520164046,
+          0.709622587342999,
+          0.7875749427216548,
+          0.7641554559216239
+        ],
+        [
+          0.9619111259605746,
+          0.971433344470431,
+          0.9667470046088706,
+          0.9619111259605746
+        ],
+        [
+          0.5495330195511335,
+          0.5573034566851307,
+          0.548568124502704,
+          0.5347142892088115
+        ],
+        [
+          0.9585066981875492,
+          0.9562549906384592,
+          0.9564534952638677,
+          0.9585075827021116
+        ],
+        [
+          0.7299930573399067,
+          0.7258541050755918,
+          0.7238712577526087,
+          0.711552791793183
+        ],
+        [
+          0.9155245438220756,
+          0.9169216023619711,
+          0.9208074165233178,
+          0.9208074165233178
+        ],
+        [
+          0.6311037530200203,
+          0.6325466089661984,
+          0.639697776343739,
+          0.6815662224318906
+        ],
+        [
+          0.6022744245099949,
+          0.6066675620233899,
+          0.6334821369447006,
+          0.6001985751281818
+        ],
+        [
+          0.8950104149738856,
+          0.8949304706750784,
+          0.8935259203489699,
+          0.888840522245592
+        ],
+        [
+          0.8648938622211236,
+          0.8656863112185286,
+          0.8700882635481679,
+          0.8718572740719879
+        ],
+        [
+          0.8509998672164181,
+          0.8390811530226312,
+          0.8353060957523333,
+          0.8321422782924852
+        ],
+        [
+          0.9709618874773139,
+          0.9709618874773139,
+          0.9709618874773139,
+          0.9709618874773139
+        ]
+      ],
+      "friedman": {
+        "N": 13,
+        "k": 4,
+        "avg_ranks": [
+          2.5384615384615383,
+          2.576923076923077,
+          2.3076923076923075,
+          2.576923076923077
+        ],
+        "chi2": 0.392307692307709,
+        "p_chi2": 0.9418269215225921,
+        "F": 0.12193664076509789,
+        "df": [
+          3,
+          36
+        ],
+        "p_F": 0.9465778982499671
+      },
+      "cd": 1.3008798056732775,
+      "nemenyi": [
+        {
+          "a": "hard_fsm",
+          "b": "soft_fsm",
+          "rank_diff": 0.03846153846153877,
+          "significant": false
+        },
+        {
+          "a": "hard_fsm",
+          "b": "crisp_react",
+          "rank_diff": 0.23076923076923084,
+          "significant": false
+        },
+        {
+          "a": "hard_fsm",
+          "b": "naked_react",
+          "rank_diff": 0.03846153846153877,
+          "significant": false
+        },
+        {
+          "a": "soft_fsm",
+          "b": "crisp_react",
+          "rank_diff": 0.2692307692307696,
+          "significant": false
+        },
+        {
+          "a": "soft_fsm",
+          "b": "naked_react",
+          "rank_diff": 0.0,
+          "significant": false
+        },
+        {
+          "a": "crisp_react",
+          "b": "naked_react",
+          "rank_diff": 0.2692307692307696,
+          "significant": false
+        }
+      ],
+      "cliques": [
+        [
+          "crisp_react",
+          "hard_fsm",
+          "soft_fsm",
+          "naked_react"
+        ]
+      ],
+      "cliffs": [
+        {
+          "a": "hard_fsm",
+          "b": "soft_fsm",
+          "per_dataset": {
+            "adult": 0.1111111111111111,
+            "bank_marketing": 0.1111111111111111,
+            "breast_cancer": -0.25,
+            "cmc": -0.16666666666666666,
+            "cnae_9": 0.08333333333333333,
+            "connect_4": 0.6388888888888888,
+            "covertype": -0.1388888888888889,
+            "credit_g": 0.0,
+            "eucalyptus": -0.05555555555555555,
+            "fashion_mnist": 0.2777777777777778,
+            "phoneme": -0.1111111111111111,
+            "vehicle": 0.4722222222222222,
+            "wine": 0.0
+          },
+          "mean_delta": 0.07478632478632478,
+          "mean_magnitude": "negligible",
+          "a_better_large": 1,
+          "b_better_large": 0
+        },
+        {
+          "a": "hard_fsm",
+          "b": "crisp_react",
+          "per_dataset": {
+            "adult": 0.3333333333333333,
+            "bank_marketing": -0.7777777777777778,
+            "breast_cancer": -0.08333333333333333,
+            "cmc": 0.2222222222222222,
+            "cnae_9": -0.08333333333333333,
+            "connect_4": 0.9444444444444444,
+            "covertype": -0.3333333333333333,
+            "credit_g": -0.6666666666666666,
+            "eucalyptus": -0.5,
+            "fashion_mnist": 1.0,
+            "phoneme": -0.8333333333333334,
+            "vehicle": 0.7222222222222222,
+            "wine": 0.0
+          },
+          "mean_delta": -0.004273504273504277,
+          "mean_magnitude": "negligible",
+          "a_better_large": 3,
+          "b_better_large": 4
+        },
+        {
+          "a": "hard_fsm",
+          "b": "naked_react",
+          "per_dataset": {
+            "adult": -0.2222222222222222,
+            "bank_marketing": -0.6666666666666666,
+            "breast_cancer": 0.16666666666666666,
+            "cmc": 0.7222222222222222,
+            "cnae_9": -0.1111111111111111,
+            "connect_4": 0.7777777777777778,
+            "covertype": -0.3333333333333333,
+            "credit_g": -1.0,
+            "eucalyptus": 0.05555555555555555,
+            "fashion_mnist": 1.0,
+            "phoneme": -1.0,
+            "vehicle": 0.8333333333333334,
+            "wine": 0.0
+          },
+          "mean_delta": 0.017094017094017103,
+          "mean_magnitude": "negligible",
+          "a_better_large": 4,
+          "b_better_large": 3
+        },
+        {
+          "a": "soft_fsm",
+          "b": "crisp_react",
+          "per_dataset": {
+            "adult": -0.05555555555555555,
+            "bank_marketing": -0.8333333333333334,
+            "breast_cancer": 0.25,
+            "cmc": 0.5,
+            "cnae_9": -0.08333333333333333,
+            "connect_4": 0.3888888888888889,
+            "covertype": -0.6666666666666666,
+            "credit_g": 0.0,
+            "eucalyptus": -0.6111111111111112,
+            "fashion_mnist": 0.5555555555555556,
+            "phoneme": -0.8055555555555556,
+            "vehicle": 0.4722222222222222,
+            "wine": 0.0
+          },
+          "mean_delta": -0.06837606837606838,
+          "mean_magnitude": "negligible",
+          "a_better_large": 2,
+          "b_better_large": 4
+        },
+        {
+          "a": "soft_fsm",
+          "b": "naked_react",
+          "per_dataset": {
+            "adult": -0.5555555555555556,
+            "bank_marketing": -0.6666666666666666,
+            "breast_cancer": 0.5,
+            "cmc": 0.7222222222222222,
+            "cnae_9": -0.1388888888888889,
+            "connect_4": 0.5555555555555556,
+            "covertype": -0.6666666666666666,
+            "credit_g": -0.7222222222222222,
+            "eucalyptus": 0.2777777777777778,
+            "fashion_mnist": 0.6666666666666666,
+            "phoneme": -1.0,
+            "vehicle": 0.7777777777777778,
+            "wine": 0.0
+          },
+          "mean_delta": -0.019230769230769225,
+          "mean_magnitude": "negligible",
+          "a_better_large": 5,
+          "b_better_large": 5
+        },
+        {
+          "a": "crisp_react",
+          "b": "naked_react",
+          "per_dataset": {
+            "adult": -0.6388888888888888,
+            "bank_marketing": 0.6666666666666666,
+            "breast_cancer": 0.5,
+            "cmc": 0.4444444444444444,
+            "cnae_9": 0.05555555555555555,
+            "connect_4": 0.3888888888888889,
+            "covertype": 0.16666666666666666,
+            "credit_g": -1.0,
+            "eucalyptus": 0.6944444444444444,
+            "fashion_mnist": 0.3611111111111111,
+            "phoneme": -0.25,
+            "vehicle": 0.3055555555555556,
+            "wine": 0.0
+          },
+          "mean_delta": 0.13034188034188035,
+          "mean_magnitude": "negligible",
+          "a_better_large": 3,
+          "b_better_large": 2
+        }
+      ],
+      "skipped": null,
+      "avg_ranks": {
+        "hard_fsm": 2.5384615384615383,
+        "soft_fsm": 2.576923076923077,
+        "crisp_react": 2.3076923076923075,
+        "naked_react": 2.576923076923077
+      }
+    },
+    "f1_on_success": {
+      "metric": "f1_on_success",
+      "agg": "median",
+      "datasets": [
+        "adult",
+        "bank_marketing",
+        "breast_cancer",
+        "cmc",
+        "cnae_9",
+        "connect_4",
+        "covertype",
+        "credit_g",
+        "eucalyptus",
+        "fashion_mnist",
+        "phoneme",
+        "vehicle",
+        "wine"
+      ],
+      "dropped": [],
+      "matrix": [
+        [
+          0.8162026375449892,
+          0.8147617220618895,
+          0.8153054308436929,
+          0.8162734317143654
+        ],
+        [
+          0.7105247520164046,
+          0.709622587342999,
+          0.7875749427216548,
+          0.7798560026456366
+        ],
+        [
+          0.9619111259605746,
+          0.971433344470431,
+          0.9667470046088706,
+          0.9619111259605746
+        ],
+        [
+          0.5495330195511335,
+          0.5573034566851307,
+          0.548568124502704,
+          0.5347142892088115
+        ],
+        [
+          0.9585066981875492,
+          0.9562549906384592,
+          0.9564534952638677,
+          0.9585075827021116
+        ],
+        [
+          0.7299930573399067,
+          0.7258541050755918,
+          0.7238712577526087,
+          0.711552791793183
+        ],
+        [
+          0.9155245438220756,
+          0.9169216023619711,
+          0.9208074165233178,
+          0.9208074165233178
+        ],
+        [
+          0.6311037530200203,
+          0.6325466089661984,
+          0.639697776343739,
+          0.6815662224318906
+        ],
+        [
+          0.6022744245099949,
+          0.6066675620233899,
+          0.6334821369447006,
+          0.6001985751281818
+        ],
+        [
+          0.8950104149738856,
+          0.8949304706750784,
+          0.8935259203489699,
+          0.888840522245592
+        ],
+        [
+          0.8648938622211236,
+          0.8656863112185286,
+          0.8700882635481679,
+          0.8718572740719879
+        ],
+        [
+          0.8509998672164181,
+          0.8390811530226312,
+          0.8353060957523333,
+          0.8321422782924852
+        ],
+        [
+          0.9709618874773139,
+          0.9709618874773139,
+          0.9709618874773139,
+          0.9709618874773139
+        ]
+      ],
+      "friedman": {
+        "N": 13,
+        "k": 4,
+        "avg_ranks": [
+          2.5384615384615383,
+          2.576923076923077,
+          2.3076923076923075,
+          2.576923076923077
+        ],
+        "chi2": 0.392307692307709,
+        "p_chi2": 0.9418269215225921,
+        "F": 0.12193664076509789,
+        "df": [
+          3,
+          36
+        ],
+        "p_F": 0.9465778982499671
+      },
+      "cd": 1.3008798056732775,
+      "nemenyi": [
+        {
+          "a": "hard_fsm",
+          "b": "soft_fsm",
+          "rank_diff": 0.03846153846153877,
+          "significant": false
+        },
+        {
+          "a": "hard_fsm",
+          "b": "crisp_react",
+          "rank_diff": 0.23076923076923084,
+          "significant": false
+        },
+        {
+          "a": "hard_fsm",
+          "b": "naked_react",
+          "rank_diff": 0.03846153846153877,
+          "significant": false
+        },
+        {
+          "a": "soft_fsm",
+          "b": "crisp_react",
+          "rank_diff": 0.2692307692307696,
+          "significant": false
+        },
+        {
+          "a": "soft_fsm",
+          "b": "naked_react",
+          "rank_diff": 0.0,
+          "significant": false
+        },
+        {
+          "a": "crisp_react",
+          "b": "naked_react",
+          "rank_diff": 0.2692307692307696,
+          "significant": false
+        }
+      ],
+      "cliques": [
+        [
+          "crisp_react",
+          "hard_fsm",
+          "soft_fsm",
+          "naked_react"
+        ]
+      ],
+      "cliffs": [
+        {
+          "a": "hard_fsm",
+          "b": "soft_fsm",
+          "per_dataset": {
+            "adult": 0.1111111111111111,
+            "bank_marketing": 0.1111111111111111,
+            "breast_cancer": -0.25,
+            "cmc": -0.16666666666666666,
+            "cnae_9": 0.08333333333333333,
+            "connect_4": 0.6388888888888888,
+            "covertype": -0.1388888888888889,
+            "credit_g": 0.0,
+            "eucalyptus": -0.05555555555555555,
+            "fashion_mnist": 0.2777777777777778,
+            "phoneme": -0.1111111111111111,
+            "vehicle": 0.4722222222222222,
+            "wine": 0.0
+          },
+          "mean_delta": 0.07478632478632478,
+          "mean_magnitude": "negligible",
+          "a_better_large": 1,
+          "b_better_large": 0
+        },
+        {
+          "a": "hard_fsm",
+          "b": "crisp_react",
+          "per_dataset": {
+            "adult": 0.3333333333333333,
+            "bank_marketing": -0.7777777777777778,
+            "breast_cancer": -0.08333333333333333,
+            "cmc": 0.2222222222222222,
+            "cnae_9": -0.08333333333333333,
+            "connect_4": 0.9444444444444444,
+            "covertype": -0.3333333333333333,
+            "credit_g": -0.6666666666666666,
+            "eucalyptus": -0.5,
+            "fashion_mnist": 1.0,
+            "phoneme": -0.8333333333333334,
+            "vehicle": 0.7222222222222222,
+            "wine": 0.0
+          },
+          "mean_delta": -0.004273504273504277,
+          "mean_magnitude": "negligible",
+          "a_better_large": 3,
+          "b_better_large": 4
+        },
+        {
+          "a": "hard_fsm",
+          "b": "naked_react",
+          "per_dataset": {
+            "adult": -0.2222222222222222,
+            "bank_marketing": -1.0,
+            "breast_cancer": 0.16666666666666666,
+            "cmc": 0.7222222222222222,
+            "cnae_9": -0.1111111111111111,
+            "connect_4": 0.7777777777777778,
+            "covertype": -0.3333333333333333,
+            "credit_g": -1.0,
+            "eucalyptus": 0.05555555555555555,
+            "fashion_mnist": 1.0,
+            "phoneme": -1.0,
+            "vehicle": 0.8333333333333334,
+            "wine": 0.0
+          },
+          "mean_delta": -0.008547008547008543,
+          "mean_magnitude": "negligible",
+          "a_better_large": 4,
+          "b_better_large": 3
+        },
+        {
+          "a": "soft_fsm",
+          "b": "crisp_react",
+          "per_dataset": {
+            "adult": -0.05555555555555555,
+            "bank_marketing": -0.8333333333333334,
+            "breast_cancer": 0.25,
+            "cmc": 0.5,
+            "cnae_9": -0.08333333333333333,
+            "connect_4": 0.3888888888888889,
+            "covertype": -0.6666666666666666,
+            "credit_g": 0.0,
+            "eucalyptus": -0.6111111111111112,
+            "fashion_mnist": 0.5555555555555556,
+            "phoneme": -0.8055555555555556,
+            "vehicle": 0.4722222222222222,
+            "wine": 0.0
+          },
+          "mean_delta": -0.06837606837606838,
+          "mean_magnitude": "negligible",
+          "a_better_large": 2,
+          "b_better_large": 4
+        },
+        {
+          "a": "soft_fsm",
+          "b": "naked_react",
+          "per_dataset": {
+            "adult": -0.5555555555555556,
+            "bank_marketing": -1.0,
+            "breast_cancer": 0.5,
+            "cmc": 0.7222222222222222,
+            "cnae_9": -0.1388888888888889,
+            "connect_4": 0.5555555555555556,
+            "covertype": -0.6666666666666666,
+            "credit_g": -0.7222222222222222,
+            "eucalyptus": 0.2777777777777778,
+            "fashion_mnist": 0.6666666666666666,
+            "phoneme": -1.0,
+            "vehicle": 0.7777777777777778,
+            "wine": 0.0
+          },
+          "mean_delta": -0.044871794871794865,
+          "mean_magnitude": "negligible",
+          "a_better_large": 5,
+          "b_better_large": 5
+        },
+        {
+          "a": "crisp_react",
+          "b": "naked_react",
+          "per_dataset": {
+            "adult": -0.6388888888888888,
+            "bank_marketing": 0.6,
+            "breast_cancer": 0.5,
+            "cmc": 0.4444444444444444,
+            "cnae_9": 0.05555555555555555,
+            "connect_4": 0.3888888888888889,
+            "covertype": 0.16666666666666666,
+            "credit_g": -1.0,
+            "eucalyptus": 0.6944444444444444,
+            "fashion_mnist": 0.3611111111111111,
+            "phoneme": -0.25,
+            "vehicle": 0.3055555555555556,
+            "wine": 0.0
+          },
+          "mean_delta": 0.1252136752136752,
+          "mean_magnitude": "negligible",
+          "a_better_large": 3,
+          "b_better_large": 2
+        }
+      ],
+      "skipped": null,
+      "avg_ranks": {
+        "hard_fsm": 2.5384615384615383,
+        "soft_fsm": 2.576923076923077,
+        "crisp_react": 2.3076923076923075,
+        "naked_react": 2.576923076923077
+      }
+    }
+  },
+  "rates": {
+    "per_arm": {
+      "hard_fsm": {
+        "success": 78,
+        "n": 78,
+        "rate": 1.0,
+        "wilson": [
+          0.9530605462258804,
+          1.0
+        ]
+      },
+      "soft_fsm": {
+        "success": 78,
+        "n": 78,
+        "rate": 1.0,
+        "wilson": [
+          0.9530605462258804,
+          1.0
+        ]
+      },
+      "crisp_react": {
+        "success": 78,
+        "n": 78,
+        "rate": 1.0,
+        "wilson": [
+          0.9530605462258804,
+          1.0
+        ]
+      },
+      "naked_react": {
+        "success": 77,
+        "n": 78,
+        "rate": 0.9871794871794872,
+        "wilson": [
+          0.9308897697115066,
+          0.9977333266111463
+        ]
+      }
+    },
+    "per_cell": [
+      {
+        "arm": "hard_fsm",
+        "dataset": "adult",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "soft_fsm",
+        "dataset": "adult",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "crisp_react",
+        "dataset": "adult",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "naked_react",
+        "dataset": "adult",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "hard_fsm",
+        "dataset": "bank_marketing",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "soft_fsm",
+        "dataset": "bank_marketing",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "crisp_react",
+        "dataset": "bank_marketing",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "naked_react",
+        "dataset": "bank_marketing",
+        "success": 5,
+        "n": 6,
+        "wilson": [
+          0.43649056343635395,
+          0.9699474141282697
+        ],
+        "fail_reasons": {
+          "below_threshold": 1
+        }
+      },
+      {
+        "arm": "hard_fsm",
+        "dataset": "breast_cancer",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "soft_fsm",
+        "dataset": "breast_cancer",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "crisp_react",
+        "dataset": "breast_cancer",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "naked_react",
+        "dataset": "breast_cancer",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "hard_fsm",
+        "dataset": "cmc",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "soft_fsm",
+        "dataset": "cmc",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "crisp_react",
+        "dataset": "cmc",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "naked_react",
+        "dataset": "cmc",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "hard_fsm",
+        "dataset": "cnae_9",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "soft_fsm",
+        "dataset": "cnae_9",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "crisp_react",
+        "dataset": "cnae_9",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "naked_react",
+        "dataset": "cnae_9",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "hard_fsm",
+        "dataset": "connect_4",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "soft_fsm",
+        "dataset": "connect_4",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "crisp_react",
+        "dataset": "connect_4",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "naked_react",
+        "dataset": "connect_4",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "hard_fsm",
+        "dataset": "covertype",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "soft_fsm",
+        "dataset": "covertype",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "crisp_react",
+        "dataset": "covertype",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "naked_react",
+        "dataset": "covertype",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "hard_fsm",
+        "dataset": "credit_g",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "soft_fsm",
+        "dataset": "credit_g",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "crisp_react",
+        "dataset": "credit_g",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "naked_react",
+        "dataset": "credit_g",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "hard_fsm",
+        "dataset": "eucalyptus",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "soft_fsm",
+        "dataset": "eucalyptus",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "crisp_react",
+        "dataset": "eucalyptus",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "naked_react",
+        "dataset": "eucalyptus",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "hard_fsm",
+        "dataset": "fashion_mnist",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "soft_fsm",
+        "dataset": "fashion_mnist",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "crisp_react",
+        "dataset": "fashion_mnist",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "naked_react",
+        "dataset": "fashion_mnist",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "hard_fsm",
+        "dataset": "phoneme",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "soft_fsm",
+        "dataset": "phoneme",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "crisp_react",
+        "dataset": "phoneme",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "naked_react",
+        "dataset": "phoneme",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "hard_fsm",
+        "dataset": "vehicle",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "soft_fsm",
+        "dataset": "vehicle",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "crisp_react",
+        "dataset": "vehicle",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "naked_react",
+        "dataset": "vehicle",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "hard_fsm",
+        "dataset": "wine",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "soft_fsm",
+        "dataset": "wine",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "crisp_react",
+        "dataset": "wine",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "naked_react",
+        "dataset": "wine",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      }
+    ],
+    "fisher": [
+      {
+        "a": "hard_fsm",
+        "b": "soft_fsm",
+        "table": [
+          [
+            78,
+            0
+          ],
+          [
+            78,
+            0
+          ]
+        ],
+        "odds_ratio": NaN,
+        "p": 1.0
+      },
+      {
+        "a": "hard_fsm",
+        "b": "crisp_react",
+        "table": [
+          [
+            78,
+            0
+          ],
+          [
+            78,
+            0
+          ]
+        ],
+        "odds_ratio": NaN,
+        "p": 1.0
+      },
+      {
+        "a": "hard_fsm",
+        "b": "naked_react",
+        "table": [
+          [
+            78,
+            0
+          ],
+          [
+            77,
+            1
+          ]
+        ],
+        "odds_ratio": Infinity,
+        "p": 1.0
+      },
+      {
+        "a": "soft_fsm",
+        "b": "crisp_react",
+        "table": [
+          [
+            78,
+            0
+          ],
+          [
+            78,
+            0
+          ]
+        ],
+        "odds_ratio": NaN,
+        "p": 1.0
+      },
+      {
+        "a": "soft_fsm",
+        "b": "naked_react",
+        "table": [
+          [
+            78,
+            0
+          ],
+          [
+            77,
+            1
+          ]
+        ],
+        "odds_ratio": Infinity,
+        "p": 1.0
+      },
+      {
+        "a": "crisp_react",
+        "b": "naked_react",
+        "table": [
+          [
+            78,
+            0
+          ],
+          [
+            77,
+            1
+          ]
+        ],
+        "odds_ratio": Infinity,
+        "p": 1.0
+      }
+    ]
+  },
+  "run_sd": {
+    "hard_fsm": {
+      "median_sd": 0.008823500338631418,
+      "max_sd": 0.028003813499560902,
+      "cells": 13
+    },
+    "soft_fsm": {
+      "median_sd": 0.007752877199891858,
+      "max_sd": 0.04857214602603226,
+      "cells": 13
+    },
+    "crisp_react": {
+      "median_sd": 0.005347015977070755,
+      "max_sd": 0.03356442694261329,
+      "cells": 13
+    },
+    "naked_react": {
+      "median_sd": 0.0067311035107550776,
+      "max_sd": 0.04135240154620506,
+      "cells": 13
+    }
+  }
+}

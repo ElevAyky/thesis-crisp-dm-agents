@@ -1,0 +1,191 @@
+{
+ "seed": 20261109,
+ "rule": "per arm (sorted) x stratum (easy, medium, hard, post_cutoff): rng.sample of k distinct sets (sorted names), then rng.choice of one replicate per set (sorted)",
+ "quota": {
+  "easy": 3,
+  "medium": 3,
+  "hard": 4,
+  "post_cutoff": 2
+ },
+ "universe_size": {
+  "crisp_react/easy": 24,
+  "crisp_react/hard": 30,
+  "crisp_react/medium": 24,
+  "crisp_react/post_cutoff": 12,
+  "naked_react/easy": 24,
+  "naked_react/hard": 30,
+  "naked_react/medium": 24,
+  "naked_react/post_cutoff": 12
+ },
+ "n": 24,
+ "runs": [
+  {
+   "run": "main-breast_cancer-crisp_react-r3",
+   "arm": "crisp_react",
+   "set": "breast_cancer",
+   "rep": 3,
+   "stratum": "easy"
+  },
+  {
+   "run": "main-cnae_9-crisp_react-r5",
+   "arm": "crisp_react",
+   "set": "cnae_9",
+   "rep": 5,
+   "stratum": "easy"
+  },
+  {
+   "run": "main-wine-crisp_react-r2",
+   "arm": "crisp_react",
+   "set": "wine",
+   "rep": 2,
+   "stratum": "easy"
+  },
+  {
+   "run": "main-adult-crisp_react-r1",
+   "arm": "crisp_react",
+   "set": "adult",
+   "rep": 1,
+   "stratum": "medium"
+  },
+  {
+   "run": "main-fashion_mnist-crisp_react-r4",
+   "arm": "crisp_react",
+   "set": "fashion_mnist",
+   "rep": 4,
+   "stratum": "medium"
+  },
+  {
+   "run": "main-vehicle-crisp_react-r1",
+   "arm": "crisp_react",
+   "set": "vehicle",
+   "rep": 1,
+   "stratum": "medium"
+  },
+  {
+   "run": "main-bank_marketing-crisp_react-r2",
+   "arm": "crisp_react",
+   "set": "bank_marketing",
+   "rep": 2,
+   "stratum": "hard"
+  },
+  {
+   "run": "main-cmc-crisp_react-r3",
+   "arm": "crisp_react",
+   "set": "cmc",
+   "rep": 3,
+   "stratum": "hard"
+  },
+  {
+   "run": "main-credit_g-crisp_react-r6",
+   "arm": "crisp_react",
+   "set": "credit_g",
+   "rep": 6,
+   "stratum": "hard"
+  },
+  {
+   "run": "main-eucalyptus-crisp_react-r3",
+   "arm": "crisp_react",
+   "set": "eucalyptus",
+   "rep": 3,
+   "stratum": "hard"
+  },
+  {
+   "run": "main-ev_purchase-crisp_react-r4",
+   "arm": "crisp_react",
+   "set": "ev_purchase",
+   "rep": 4,
+   "stratum": "post_cutoff"
+  },
+  {
+   "run": "main-student_health-crisp_react-r4",
+   "arm": "crisp_react",
+   "set": "student_health",
+   "rep": 4,
+   "stratum": "post_cutoff"
+  },
+  {
+   "run": "main-cnae_9-naked_react-r6",
+   "arm": "naked_react",
+   "set": "cnae_9",
+   "rep": 6,
+   "stratum": "easy"
+  },
+  {
+   "run": "main-covertype-naked_react-r1",
+   "arm": "naked_react",
+   "set": "covertype",
+   "rep": 1,
+   "stratum": "easy"
+  },
+  {
+   "run": "main-wine-naked_react-r2",
+   "arm": "naked_react",
+   "set": "wine",
+   "rep": 2,
+   "stratum": "easy"
+  },
+  {
+   "run": "main-fashion_mnist-naked_react-r2",
+   "arm": "naked_react",
+   "set": "fashion_mnist",
+   "rep": 2,
+   "stratum": "medium"
+  },
+  {
+   "run": "main-phoneme-naked_react-r5",
+   "arm": "naked_react",
+   "set": "phoneme",
+   "rep": 5,
+   "stratum": "medium"
+  },
+  {
+   "run": "main-vehicle-naked_react-r4",
+   "arm": "naked_react",
+   "set": "vehicle",
+   "rep": 4,
+   "stratum": "medium"
+  },
+  {
+   "run": "main-cmc-naked_react-r6",
+   "arm": "naked_react",
+   "set": "cmc",
+   "rep": 6,
+   "stratum": "hard"
+  },
+  {
+   "run": "main-connect_4-naked_react-r4",
+   "arm": "naked_react",
+   "set": "connect_4",
+   "rep": 4,
+   "stratum": "hard"
+  },
+  {
+   "run": "main-credit_g-naked_react-r2",
+   "arm": "naked_react",
+   "set": "credit_g",
+   "rep": 2,
+   "stratum": "hard"
+  },
+  {
+   "run": "main-eucalyptus-naked_react-r4",
+   "arm": "naked_react",
+   "set": "eucalyptus",
+   "rep": 4,
+   "stratum": "hard"
+  },
+  {
+   "run": "main-ev_purchase-naked_react-r3",
+   "arm": "naked_react",
+   "set": "ev_purchase",
+   "rep": 3,
+   "stratum": "post_cutoff"
+  },
+  {
+   "run": "main-student_health-naked_react-r6",
+   "arm": "naked_react",
+   "set": "student_health",
+   "rep": 6,
+   "stratum": "post_cutoff"
+  }
+ ]
+}

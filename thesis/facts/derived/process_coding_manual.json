@@ -1,0 +1,4420 @@
+{
+ "meta": {
+  "coder": "second coder = LLM agent (Claude Opus 5.5, fresh context), not a human",
+  "date": "2026-11-09",
+  "codebook": "thesis/facts/codebook.md v1.0",
+  "material": "thesis/facts/derived/actions/<run>.md (tool outputs stripped for reading); process_coding.json, code_process.py and kap7.md were NOT opened before this file was written",
+  "sample": "thesis/facts/derived/validation_sample.json (thesis/scripts/validation_sample.py, seed 20261109)",
+  "policy": "value = decision rule of the codebook as written (enumerated keyword/pattern lists read as closed; open wording such as 'StandardScaler u. a.' read by the definition). alt_intent = value by the code's definition where it differs from the literal rule (construct-validity flag).",
+  "n_code_actions": "underspecified in the codebook; coded as actions whose content is Python code (inline python -c/heredoc, Write/Edit of a .py); 'python script.py' alone and failed Writes not counted",
+  "binary_codes": [
+   "bu_target",
+   "bu_metric",
+   "bu_explicit",
+   "bu_metric_rationale",
+   "bu_success_criterion",
+   "bu_business_context",
+   "du_inspect_before_model",
+   "du_class_dist",
+   "du_missing",
+   "du_quality_ext",
+   "du_stats",
+   "du_relations",
+   "du_leakage",
+   "leakage_mention_any",
+   "prep_explicit",
+   "prep_select",
+   "prep_select_rule",
+   "prep_construct",
+   "model_multi_family",
+   "model_cv",
+   "model_test_design",
+   "model_tuning",
+   "model_assess_detail",
+   "model_class_weight",
+   "eval_baseline",
+   "eval_business",
+   "eval_review_next",
+   "doc_notes",
+   "doc_crisp_sections",
+   "doc_upfront",
+   "verify_outputs",
+   "canonical_order",
+   "implicit_crisp",
+   "backjump_any",
+   "monolith",
+   "single_pipeline_script"
+  ],
+  "count_codes": [
+   "n_families",
+   "n_backjumps",
+   "n_actions",
+   "n_code_actions",
+   "n_scripts",
+   "n_inline_python"
+  ]
+ },
+ "runs": {
+  "main-breast_cancer-crisp_react-r3": {
+   "arm": "crisp_react",
+   "set": "breast_cancer",
+   "stratum": "easy",
+   "model_start": "#4:L34 LogisticRegression(",
+   "phase_sequence": "DU-PREP-MODEL-EVAL",
+   "codes": {
+    "bu_target": {
+     "value": 1,
+     "evidence": "T>#2 '`col_30` is the only column in train but not test — the target'"
+    },
+    "bu_metric": {
+     "value": 1,
+     "evidence": "T>#3 'I'll use F1'"
+    },
+    "bu_explicit": {
+     "value": 1,
+     "evidence": "T>#3 (target T>#2, metric T>#3)"
+    },
+    "bu_metric_rationale": {
+     "value": 1,
+     "evidence": "T>#3 'Classification with mild imbalance → I'll use F1'"
+    },
+    "bu_success_criterion": {
+     "value": 0,
+     "evidence": "no success criterion before #4:L34"
+    },
+    "bu_business_context": {
+     "value": 0,
+     "evidence": "'costly error' only in final report"
+    },
+    "du_inspect_before_model": {
+     "value": 1,
+     "evidence": "#2:L5 print('TRAIN shape', tr.shape)"
+    },
+    "du_class_dist": {
+     "value": 1,
+     "evidence": "#3:L5 tr['col_30'].value_counts"
+    },
+    "du_missing": {
+     "value": 1,
+     "evidence": "#3:L7 tr.isna().sum().sum()"
+    },
+    "du_quality_ext": {
+     "value": 1,
+     "evidence": "#4:L19 train[c].nunique() > 1 (before L34)"
+    },
+    "du_stats": {
+     "value": 1,
+     "evidence": "#3:L10 tr.describe()"
+    },
+    "du_relations": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_leakage": {
+     "value": 1,
+     "evidence": "T>#3 'no IDs or constants'"
+    },
+    "leakage_mention_any": {
+     "value": 1,
+     "evidence": "T>#3"
+    },
+    "prep_explicit": {
+     "value": 1,
+     "evidence": "#4:L23 .astype(int) / #4:L33 StandardScaler"
+    },
+    "prep_select": {
+     "value": 0,
+     "evidence": "no .drop with named column"
+    },
+    "prep_select_rule": {
+     "value": 0,
+     "evidence": "constant filter #4:L19 is a list comprehension without .drop(/selector"
+    },
+    "prep_construct": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_multi_family": {
+     "value": 1,
+     "evidence": "linear, random_forest"
+    },
+    "model_cv": {
+     "value": 1,
+     "evidence": "#4:L25 StratifiedKFold / cross_val_score"
+    },
+    "model_test_design": {
+     "value": 1,
+     "evidence": "#4:L40 cross_val_score"
+    },
+    "model_tuning": {
+     "value": 0,
+     "evidence": "one config per family, no search/threshold"
+    },
+    "model_assess_detail": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_class_weight": {
+     "value": 1,
+     "evidence": "#4:L34 class_weight='balanced'"
+    },
+    "eval_baseline": {
+     "value": 1,
+     "evidence": "#4:L28 DummyClassifier (same action as first model) / T>#5"
+    },
+    "eval_business": {
+     "value": 0,
+     "evidence": "no criterion + evaluation verb sentence"
+    },
+    "eval_review_next": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_notes": {
+     "value": 0,
+     "evidence": "no note"
+    },
+    "doc_crisp_sections": {
+     "value": 0,
+     "evidence": "no note"
+    },
+    "doc_upfront": {
+     "value": 0,
+     "evidence": "no note"
+    },
+    "verify_outputs": {
+     "value": 1,
+     "evidence": "#6 reads predictions.parquet + result.json"
+    },
+    "canonical_order": {
+     "value": 1,
+     "evidence": "BU T>#2 < MODEL #4; DU #2 < PREP/MODEL/EVAL #4"
+    },
+    "implicit_crisp": {
+     "value": 1,
+     "evidence": "all five phases, bu_explicit, canonical"
+    },
+    "backjump_any": {
+     "value": 0,
+     "evidence": "DU,PREP,MODEL,EVAL"
+    },
+    "monolith": {
+     "value": 1,
+     "evidence": "model.py: DU (#4:L19 nunique) + PREP + MODEL + predictions"
+    },
+    "single_pipeline_script": {
+     "value": 1,
+     "evidence": "model.py"
+    },
+    "n_families": {
+     "value": 2,
+     "evidence": ""
+    },
+    "n_backjumps": {
+     "value": 0,
+     "evidence": "DU-PREP-MODEL-EVAL"
+    },
+    "n_actions": {
+     "value": 6,
+     "evidence": ""
+    },
+    "n_code_actions": {
+     "value": 4,
+     "evidence": ""
+    },
+    "n_scripts": {
+     "value": 1,
+     "evidence": ""
+    },
+    "n_inline_python": {
+     "value": 3,
+     "evidence": ""
+    }
+   },
+   "alt_intent": {
+    "prep_select_rule": {
+     "value": 1,
+     "reason": "#4:L19 data-dependent constant filter (definition), only the .drop( form is missing"
+    }
+   },
+   "notes": "n_code_actions = actions containing Python code (inline python or Write/Edit .py); python model.py not counted"
+  },
+  "main-cnae_9-crisp_react-r5": {
+   "arm": "crisp_react",
+   "set": "cnae_9",
+   "stratum": "easy",
+   "model_start": "#5:L30 LogisticRegression(",
+   "phase_sequence": "DU-PREP-MODEL-EVAL-(PREP: TfidfTransformer?)-MODEL-EVAL(note #11 baseline number)",
+   "codes": {
+    "bu_target": {
+     "value": 1,
+     "evidence": "T>#2 'The target column is `col_856`'"
+    },
+    "bu_metric": {
+     "value": 1,
+     "evidence": "T>#4 'I'll use accuracy'"
+    },
+    "bu_explicit": {
+     "value": 1,
+     "evidence": "T>#4"
+    },
+    "bu_metric_rationale": {
+     "value": 1,
+     "evidence": "T>#4 'Classes are perfectly balanced, so accuracy and macro-F1 are essentially equivalent; I'll use accuracy.'"
+    },
+    "bu_success_criterion": {
+     "value": 0,
+     "evidence": "none before model"
+    },
+    "bu_business_context": {
+     "value": 0,
+     "evidence": "'business description' only in note #11 (after model)"
+    },
+    "du_inspect_before_model": {
+     "value": 1,
+     "evidence": "#2:L5 tr.shape"
+    },
+    "du_class_dist": {
+     "value": 1,
+     "evidence": "#3:L6 tr['col_856'].value_counts()"
+    },
+    "du_missing": {
+     "value": 1,
+     "evidence": "#3:L14 feat.isnull()"
+    },
+    "du_quality_ext": {
+     "value": 1,
+     "evidence": "#4:L5 feat.nunique()"
+    },
+    "du_stats": {
+     "value": 1,
+     "evidence": "#3:L12 feat['V1'].describe()"
+    },
+    "du_relations": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_leakage": {
+     "value": 0,
+     "evidence": "no leak/ID wording before model"
+    },
+    "leakage_mention_any": {
+     "value": 0,
+     "evidence": "none in run"
+    },
+    "prep_explicit": {
+     "value": 1,
+     "evidence": "#5:L23 X[feat_cols].astype(float)"
+    },
+    "prep_select": {
+     "value": 0,
+     "evidence": "only target dropped by name"
+    },
+    "prep_select_rule": {
+     "value": 0,
+     "evidence": "constant filter #5:L18-20 via list selection, no .drop(/selector (semantically a rule)"
+    },
+    "prep_construct": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_multi_family": {
+     "value": 1,
+     "evidence": "linear, svm, naive_bayes (#7 ComplementNB)"
+    },
+    "model_cv": {
+     "value": 1,
+     "evidence": "#5:L26 StratifiedKFold"
+    },
+    "model_test_design": {
+     "value": 1,
+     "evidence": "#5:L35 cross_val_score"
+    },
+    "model_tuning": {
+     "value": 1,
+     "evidence": "(b) LinearSVC C=0.5 (#5:L31) vs C=1.0/2.0/0.3 (#7:L13-18)"
+    },
+    "model_assess_detail": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_class_weight": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_baseline": {
+     "value": 1,
+     "evidence": "#5:L29 DummyClassifier (action of first model); T>#6 'vs baseline 10.6%'"
+    },
+    "eval_business": {
+     "value": 0,
+     "evidence": "'beats baseline' not an evaluation verb against goal/criterion"
+    },
+    "eval_review_next": {
+     "value": 0,
+     "evidence": "'try a couple of improvements' (T>#6) not in keyword list"
+    },
+    "doc_notes": {
+     "value": 1,
+     "evidence": "#11 notes.md"
+    },
+    "doc_crisp_sections": {
+     "value": 1,
+     "evidence": "#11 Data Understanding, Data Preparation, Modeling, Evaluation"
+    },
+    "doc_upfront": {
+     "value": 0,
+     "evidence": "first note #11 after model"
+    },
+    "verify_outputs": {
+     "value": 1,
+     "evidence": "#10 python -c reads predictions.parquet/result.json (chained after python model.py; borderline)"
+    },
+    "canonical_order": {
+     "value": 1,
+     "evidence": "BU T>#2 < MODEL #5; DU #2 < PREP #5"
+    },
+    "implicit_crisp": {
+     "value": 1,
+     "evidence": "all phases + canonical"
+    },
+    "backjump_any": {
+     "value": 1,
+     "evidence": "#7 new configs after EVAL"
+    },
+    "monolith": {
+     "value": 1,
+     "evidence": "model.py: #5:L18 nunique (DU) + astype + models + predictions"
+    },
+    "single_pipeline_script": {
+     "value": 1,
+     "evidence": "model.py"
+    },
+    "n_families": {
+     "value": 3,
+     "evidence": ""
+    },
+    "n_backjumps": {
+     "value": 1,
+     "evidence": "DU-PREP-MODEL-EVAL-(PREP: TfidfTransformer?)-MODEL-EVAL(note #11 baseline number)"
+    },
+    "n_actions": {
+     "value": 11,
+     "evidence": ""
+    },
+    "n_code_actions": {
+     "value": 8,
+     "evidence": ""
+    },
+    "n_scripts": {
+     "value": 1,
+     "evidence": ""
+    },
+    "n_inline_python": {
+     "value": 5,
+     "evidence": ""
+    }
+   },
+   "alt_intent": {
+    "prep_select_rule": {
+     "value": 1,
+     "reason": "#5:L18-20 nunique-based constant filter (definition), only the .drop( form is missing"
+    }
+   },
+   "notes": "n_backjumps=1 whether or not TfidfTransformer is a PREP token"
+  },
+  "main-wine-crisp_react-r2": {
+   "arm": "crisp_react",
+   "set": "wine",
+   "stratum": "easy",
+   "model_start": "#4:L32 LogisticRegression(",
+   "phase_sequence": "DU-PREP-MODEL-EVAL",
+   "codes": {
+    "bu_target": {
+     "value": 1,
+     "evidence": "T>#2 'The target is clearly `col_13`'"
+    },
+    "bu_metric": {
+     "value": 1,
+     "evidence": "T>#3 'I'll use macro-F1'"
+    },
+    "bu_explicit": {
+     "value": 1,
+     "evidence": "T>#3"
+    },
+    "bu_metric_rationale": {
+     "value": 1,
+     "evidence": "T>#3 'I'll use macro-F1 given mild imbalance.'"
+    },
+    "bu_success_criterion": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "bu_business_context": {
+     "value": 0,
+     "evidence": "none before model"
+    },
+    "du_inspect_before_model": {
+     "value": 1,
+     "evidence": "#2:L5 tr.shape"
+    },
+    "du_class_dist": {
+     "value": 1,
+     "evidence": "#3:L5 tr['col_13'].value_counts"
+    },
+    "du_missing": {
+     "value": 1,
+     "evidence": "#3:L6 tr.isna()"
+    },
+    "du_quality_ext": {
+     "value": 0,
+     "evidence": "no duplicated/nunique/is_unique"
+    },
+    "du_stats": {
+     "value": 1,
+     "evidence": "#3:L8 tr.describe()"
+    },
+    "du_relations": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_leakage": {
+     "value": 1,
+     "evidence": "T>#3 '(no IDs/constants/leakage)'"
+    },
+    "leakage_mention_any": {
+     "value": 1,
+     "evidence": "T>#3"
+    },
+    "prep_explicit": {
+     "value": 1,
+     "evidence": "#4:L25 SimpleImputer / L26 StandardScaler"
+    },
+    "prep_select": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "prep_select_rule": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "prep_construct": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_multi_family": {
+     "value": 1,
+     "evidence": "linear, random_forest"
+    },
+    "model_cv": {
+     "value": 1,
+     "evidence": "#4:L21 StratifiedKFold"
+    },
+    "model_test_design": {
+     "value": 1,
+     "evidence": "#4:L39 cross_val_score"
+    },
+    "model_tuning": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_assess_detail": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_class_weight": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_baseline": {
+     "value": 1,
+     "evidence": "#4:L31 DummyClassifier (action of first model)"
+    },
+    "eval_business": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_review_next": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_notes": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_crisp_sections": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_upfront": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "verify_outputs": {
+     "value": 1,
+     "evidence": "#6 reads predictions.parquet + result.json"
+    },
+    "canonical_order": {
+     "value": 1,
+     "evidence": "BU T>#2 < MODEL #4; DU #2 < PREP #4"
+    },
+    "implicit_crisp": {
+     "value": 1,
+     "evidence": "all phases + canonical"
+    },
+    "backjump_any": {
+     "value": 0,
+     "evidence": "DU-PREP-MODEL-EVAL"
+    },
+    "monolith": {
+     "value": 0,
+     "evidence": "model.py has no DU line (only output value_counts, excluded)"
+    },
+    "single_pipeline_script": {
+     "value": 1,
+     "evidence": "model.py"
+    },
+    "n_families": {
+     "value": 2,
+     "evidence": ""
+    },
+    "n_backjumps": {
+     "value": 0,
+     "evidence": "DU-PREP-MODEL-EVAL"
+    },
+    "n_actions": {
+     "value": 6,
+     "evidence": ""
+    },
+    "n_code_actions": {
+     "value": 4,
+     "evidence": ""
+    },
+    "n_scripts": {
+     "value": 1,
+     "evidence": ""
+    },
+    "n_inline_python": {
+     "value": 3,
+     "evidence": ""
+    }
+   },
+   "alt_intent": {},
+   "notes": ""
+  },
+  "main-adult-crisp_react-r1": {
+   "arm": "crisp_react",
+   "set": "adult",
+   "stratum": "medium",
+   "model_start": "#5:L47 HistGradientBoostingClassifier(",
+   "phase_sequence": "DU-PREP-MODEL-EVAL",
+   "codes": {
+    "bu_target": {
+     "value": 1,
+     "evidence": "T>#3 'The target is clearly `col_14`'"
+    },
+    "bu_metric": {
+     "value": 1,
+     "evidence": "T>#4 'Given imbalance, I'll use **F1**.'"
+    },
+    "bu_explicit": {
+     "value": 1,
+     "evidence": "T>#4"
+    },
+    "bu_metric_rationale": {
+     "value": 1,
+     "evidence": "T>#4 'Given imbalance, I'll use **F1**.'"
+    },
+    "bu_success_criterion": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "bu_business_context": {
+     "value": 0,
+     "evidence": "no business wording before model (comments #5:L20-21, L29 technical)"
+    },
+    "du_inspect_before_model": {
+     "value": 1,
+     "evidence": "#3:L5 tr.shape"
+    },
+    "du_class_dist": {
+     "value": 1,
+     "evidence": "#4:L5 tr['col_14'].value_counts"
+    },
+    "du_missing": {
+     "value": 1,
+     "evidence": "#4:L10 tr[c].isna()"
+    },
+    "du_quality_ext": {
+     "value": 1,
+     "evidence": "#4:L10 tr[c].nunique() over all columns"
+    },
+    "du_stats": {
+     "value": 0,
+     "evidence": "no describe/quantile/skew/kurt/agg"
+    },
+    "du_relations": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_leakage": {
+     "value": 1,
+     "evidence": "T>#4 'No ID/constant columns ... No leakage columns.'"
+    },
+    "leakage_mention_any": {
+     "value": 1,
+     "evidence": "T>#4"
+    },
+    "prep_explicit": {
+     "value": 1,
+     "evidence": "#5:L23 X.drop(columns=drop_cols); L35 SimpleImputer; L36 OneHotEncoder"
+    },
+    "prep_select": {
+     "value": 1,
+     "evidence": "#5:L23 drop(columns=drop_cols), drop_cols = ['education']"
+    },
+    "prep_select_rule": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "prep_construct": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_multi_family": {
+     "value": 0,
+     "evidence": "hist_gb only"
+    },
+    "model_cv": {
+     "value": 1,
+     "evidence": "#5:L51 cross_val_predict(cv=5)"
+    },
+    "model_test_design": {
+     "value": 1,
+     "evidence": "#5:L51"
+    },
+    "model_tuning": {
+     "value": 0,
+     "evidence": "none (#7 is a repair of the encoder)"
+    },
+    "model_assess_detail": {
+     "value": 1,
+     "evidence": "#5:L57 classification_report"
+    },
+    "model_class_weight": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_baseline": {
+     "value": 1,
+     "evidence": "#5:L56 '| baseline acc:' (after L47); final report"
+    },
+    "eval_business": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_review_next": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_notes": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_crisp_sections": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_upfront": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "verify_outputs": {
+     "value": 1,
+     "evidence": "#9 reads predictions.parquet + result.json"
+    },
+    "canonical_order": {
+     "value": 1,
+     "evidence": "BU T>#3 < MODEL #5; DU #3 < PREP #5"
+    },
+    "implicit_crisp": {
+     "value": 1,
+     "evidence": "all phases + canonical"
+    },
+    "backjump_any": {
+     "value": 0,
+     "evidence": "DU-PREP-MODEL-EVAL; #7 is a repair"
+    },
+    "monolith": {
+     "value": 1,
+     "evidence": "model.py: #5:L54 y.value_counts(normalize=True).max() is a count line on the target (.max() not in the closed exception list idxmax/idxmin/mode) + PREP + MODEL + predictions"
+    },
+    "single_pipeline_script": {
+     "value": 1,
+     "evidence": "model.py"
+    },
+    "n_families": {
+     "value": 1,
+     "evidence": ""
+    },
+    "n_backjumps": {
+     "value": 0,
+     "evidence": "DU-PREP-MODEL-EVAL"
+    },
+    "n_actions": {
+     "value": 9,
+     "evidence": ""
+    },
+    "n_code_actions": {
+     "value": 6,
+     "evidence": ""
+    },
+    "n_scripts": {
+     "value": 1,
+     "evidence": ""
+    },
+    "n_inline_python": {
+     "value": 4,
+     "evidence": ""
+    }
+   },
+   "alt_intent": {
+    "monolith": {
+     "value": 0,
+     "reason": "L54 only extracts the majority share for the baseline (exception intent), no inspection"
+    }
+   },
+   "notes": ""
+  },
+  "main-fashion_mnist-crisp_react-r4": {
+   "arm": "crisp_react",
+   "set": "fashion_mnist",
+   "stratum": "medium",
+   "model_start": "#5:L27 LogisticRegression(",
+   "phase_sequence": "DU-PREP-MODEL-EVAL-MODEL",
+   "codes": {
+    "bu_target": {
+     "value": 1,
+     "evidence": "T>#2 '`col_784` (the target, present in train, absent in test)'"
+    },
+    "bu_metric": {
+     "value": 1,
+     "evidence": "T>#3 '**accuracy** is the appropriate metric'"
+    },
+    "bu_explicit": {
+     "value": 1,
+     "evidence": "T>#3"
+    },
+    "bu_metric_rationale": {
+     "value": 1,
+     "evidence": "T>#3 'Classes are perfectly balanced, so **accuracy** is the appropriate metric.'"
+    },
+    "bu_success_criterion": {
+     "value": 1,
+     "evidence": "N#4:L6 'Success criterion: beat most-frequent-class baseline'"
+    },
+    "bu_business_context": {
+     "value": 1,
+     "evidence": "N#4:L3 heading 'Business/Data Mining Understanding' (keyword 'business'; content is only a goal statement)"
+    },
+    "du_inspect_before_model": {
+     "value": 1,
+     "evidence": "#2:L5 tr.shape"
+    },
+    "du_class_dist": {
+     "value": 1,
+     "evidence": "#3:L7 tr['col_784'].value_counts()"
+    },
+    "du_missing": {
+     "value": 1,
+     "evidence": "#3:L8 .isna()"
+    },
+    "du_quality_ext": {
+     "value": 0,
+     "evidence": "only .unique() on target"
+    },
+    "du_stats": {
+     "value": 0,
+     "evidence": "min/max only"
+    },
+    "du_relations": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_leakage": {
+     "value": 1,
+     "evidence": "N#4:L13 'No ID or constant columns', L21 'No leakage'"
+    },
+    "leakage_mention_any": {
+     "value": 1,
+     "evidence": "N#4"
+    },
+    "prep_explicit": {
+     "value": 1,
+     "evidence": "#5:L16 / 255.0"
+    },
+    "prep_select": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "prep_select_rule": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "prep_construct": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_multi_family": {
+     "value": 1,
+     "evidence": "linear, mlp"
+    },
+    "model_cv": {
+     "value": 0,
+     "evidence": "holdout only"
+    },
+    "model_test_design": {
+     "value": 1,
+     "evidence": "#5:L20 train_test_split"
+    },
+    "model_tuning": {
+     "value": 0,
+     "evidence": "LR change #7 is a repair; both MLP constructors identical after normalisation"
+    },
+    "model_assess_detail": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_class_weight": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_baseline": {
+     "value": 1,
+     "evidence": "#5:L23-24 DummyClassifier / 'baseline acc'"
+    },
+    "eval_business": {
+     "value": 0,
+     "evidence": "final report 'meeting the success criterion': verb form 'meeting' is not in the enumerated list (met/meets/...)"
+    },
+    "eval_review_next": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_notes": {
+     "value": 1,
+     "evidence": "#4 notes.md"
+    },
+    "doc_crisp_sections": {
+     "value": 0,
+     "evidence": "N#4 literal terms only 2 (data understanding, modeling); 'Business/Data Mining Understanding' and 'Preparation' are not the listed terms"
+    },
+    "doc_upfront": {
+     "value": 1,
+     "evidence": "N#4 before #5"
+    },
+    "verify_outputs": {
+     "value": 1,
+     "evidence": "#11"
+    },
+    "canonical_order": {
+     "value": 1,
+     "evidence": "BU T>#2 < MODEL #5; DU #2 < PREP #5"
+    },
+    "implicit_crisp": {
+     "value": 1,
+     "evidence": "all phases + canonical"
+    },
+    "backjump_any": {
+     "value": 1,
+     "evidence": "#9 new MLP config after EVAL (T>#8)"
+    },
+    "monolith": {
+     "value": 0,
+     "evidence": "no DU line in model1_fast.py / model2_mlp.py (only output value_counts)"
+    },
+    "single_pipeline_script": {
+     "value": 1,
+     "evidence": "model1_fast.py"
+    },
+    "n_families": {
+     "value": 2,
+     "evidence": ""
+    },
+    "n_backjumps": {
+     "value": 1,
+     "evidence": "DU-PREP-MODEL-EVAL-MODEL"
+    },
+    "n_actions": {
+     "value": 11,
+     "evidence": ""
+    },
+    "n_code_actions": {
+     "value": 6,
+     "evidence": ""
+    },
+    "n_scripts": {
+     "value": 2,
+     "evidence": ""
+    },
+    "n_inline_python": {
+     "value": 3,
+     "evidence": ""
+    }
+   },
+   "alt_intent": {
+    "bu_business_context": {
+     "value": 0,
+     "reason": "heading only; content is the goal statement, no framing beyond target/metric"
+    },
+    "eval_business": {
+     "value": 1,
+     "reason": "'meeting the success criterion' evaluates against the criterion (definition)"
+    },
+    "doc_crisp_sections": {
+     "value": 1,
+     "reason": "note is structured by CRISP phase headings (BU/DM understanding, DU, Preparation, Modeling)"
+    }
+   },
+   "notes": ""
+  },
+  "main-vehicle-crisp_react-r1": {
+   "arm": "crisp_react",
+   "set": "vehicle",
+   "stratum": "medium",
+   "model_start": "#4:L21 RandomForestClassifier(",
+   "phase_sequence": "DU-PREP-MODEL-EVAL-MODEL-EVAL(note #9)",
+   "codes": {
+    "bu_target": {
+     "value": 1,
+     "evidence": "T>#2 '`col_18` is clearly the target'"
+    },
+    "bu_metric": {
+     "value": 0,
+     "evidence": "no metric in text before model; scoring='accuracy' is in the fit call; note #9 after model"
+    },
+    "bu_explicit": {
+     "value": 0,
+     "evidence": "metric missing"
+    },
+    "bu_metric_rationale": {
+     "value": 0,
+     "evidence": "no metric before model"
+    },
+    "bu_success_criterion": {
+     "value": 0,
+     "evidence": "only in N#9 after model"
+    },
+    "bu_business_context": {
+     "value": 0,
+     "evidence": "none before model"
+    },
+    "du_inspect_before_model": {
+     "value": 1,
+     "evidence": "#2:L5 tr.shape"
+    },
+    "du_class_dist": {
+     "value": 1,
+     "evidence": "#3:L6 tr['col_18'].value_counts()"
+    },
+    "du_missing": {
+     "value": 1,
+     "evidence": "#3:L8 tr.isna()"
+    },
+    "du_quality_ext": {
+     "value": 1,
+     "evidence": "#3:L16 tr.nunique()"
+    },
+    "du_stats": {
+     "value": 1,
+     "evidence": "#3:L12 tr.describe()"
+    },
+    "du_relations": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_leakage": {
+     "value": 1,
+     "evidence": "T>#3 'no missing/constant/ID columns'"
+    },
+    "leakage_mention_any": {
+     "value": 1,
+     "evidence": "T>#3"
+    },
+    "prep_explicit": {
+     "value": 1,
+     "evidence": "#4:L22 StandardScaler"
+    },
+    "prep_select": {
+     "value": 0,
+     "evidence": "only target dropped"
+    },
+    "prep_select_rule": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "prep_construct": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_multi_family": {
+     "value": 1,
+     "evidence": "random_forest, svm"
+    },
+    "model_cv": {
+     "value": 1,
+     "evidence": "#4:L17 StratifiedKFold"
+    },
+    "model_test_design": {
+     "value": 1,
+     "evidence": "#4:L26 cross_val_score"
+    },
+    "model_tuning": {
+     "value": 1,
+     "evidence": "#6:L12 GridSearchCV"
+    },
+    "model_assess_detail": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_class_weight": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_baseline": {
+     "value": 1,
+     "evidence": "#4:L20 DummyClassifier (action of first model); T>#5"
+    },
+    "eval_business": {
+     "value": 0,
+     "evidence": "no reference+verb sentence"
+    },
+    "eval_review_next": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_notes": {
+     "value": 1,
+     "evidence": "#9 notes.md"
+    },
+    "doc_crisp_sections": {
+     "value": 1,
+     "evidence": "N#9 Data Understanding, Data Preparation, Modeling, Evaluation"
+    },
+    "doc_upfront": {
+     "value": 0,
+     "evidence": "note after model"
+    },
+    "verify_outputs": {
+     "value": 1,
+     "evidence": "#8 python -c reads predictions/result.json (chained after python model.py; borderline)"
+    },
+    "canonical_order": {
+     "value": 1,
+     "evidence": "BU T>#2 < MODEL #4; DU #2 < PREP #4"
+    },
+    "implicit_crisp": {
+     "value": 0,
+     "evidence": "bu_explicit missing"
+    },
+    "backjump_any": {
+     "value": 1,
+     "evidence": "#6 GridSearchCV after EVAL"
+    },
+    "monolith": {
+     "value": 0,
+     "evidence": "model.py has no DU line"
+    },
+    "single_pipeline_script": {
+     "value": 1,
+     "evidence": "model.py"
+    },
+    "n_families": {
+     "value": 2,
+     "evidence": ""
+    },
+    "n_backjumps": {
+     "value": 1,
+     "evidence": "DU-PREP-MODEL-EVAL-MODEL-EVAL(note #9)"
+    },
+    "n_actions": {
+     "value": 9,
+     "evidence": ""
+    },
+    "n_code_actions": {
+     "value": 6,
+     "evidence": ""
+    },
+    "n_scripts": {
+     "value": 1,
+     "evidence": ""
+    },
+    "n_inline_python": {
+     "value": 4,
+     "evidence": ""
+    }
+   },
+   "alt_intent": {},
+   "notes": ""
+  },
+  "main-bank_marketing-crisp_react-r2": {
+   "arm": "crisp_react",
+   "set": "bank_marketing",
+   "stratum": "hard",
+   "model_start": "#4:L39 LogisticRegression(",
+   "phase_sequence": "DU-PREP-MODEL-EVAL-MODEL-EVAL(note #10)",
+   "codes": {
+    "bu_target": {
+     "value": 1,
+     "evidence": "T>#1 '`col_16` which is the likely target' / T>#2 '`col_16` is the target'"
+    },
+    "bu_metric": {
+     "value": 1,
+     "evidence": "T>#2 '**F1** is the appropriate metric'"
+    },
+    "bu_explicit": {
+     "value": 1,
+     "evidence": "T>#2"
+    },
+    "bu_metric_rationale": {
+     "value": 1,
+     "evidence": "T>#2 'Given the class imbalance, **F1** is the appropriate metric.'"
+    },
+    "bu_success_criterion": {
+     "value": 0,
+     "evidence": "only in N#10 after model"
+    },
+    "bu_business_context": {
+     "value": 0,
+     "evidence": "no keyword before model (business framing only in N#10)"
+    },
+    "du_inspect_before_model": {
+     "value": 1,
+     "evidence": "#1:L1 print(df.shape)"
+    },
+    "du_class_dist": {
+     "value": 1,
+     "evidence": "#2:L12 df['col_16'].value_counts"
+    },
+    "du_missing": {
+     "value": 1,
+     "evidence": "#3:L8 df.isna()"
+    },
+    "du_quality_ext": {
+     "value": 1,
+     "evidence": "#2:L10 df[c].nunique() all columns"
+    },
+    "du_stats": {
+     "value": 0,
+     "evidence": "only min()"
+    },
+    "du_relations": {
+     "value": 1,
+     "evidence": "#3:L6 df.groupby('col_16')['V12'].mean()"
+    },
+    "du_leakage": {
+     "value": 1,
+     "evidence": "T>#2 'the well-known leakage column'"
+    },
+    "leakage_mention_any": {
+     "value": 1,
+     "evidence": "T>#2"
+    },
+    "prep_explicit": {
+     "value": 1,
+     "evidence": "#4:L23 drop; L34 StandardScaler; L35 OneHotEncoder"
+    },
+    "prep_select": {
+     "value": 1,
+     "evidence": "#4:L23 drop(columns=drop_cols) with LEAKAGE=['V12']; #6:L11 drop(columns=['col_16','V12'])"
+    },
+    "prep_select_rule": {
+     "value": 0,
+     "evidence": "#4:L24 drop([c for c in LEAKAGE if c in test.columns]) filters the named list, not a data rule (borderline vs. literal rule)"
+    },
+    "prep_construct": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_multi_family": {
+     "value": 1,
+     "evidence": "linear, hist_gb"
+    },
+    "model_cv": {
+     "value": 1,
+     "evidence": "#4:L45 cross_val_predict(cv=5)"
+    },
+    "model_test_design": {
+     "value": 1,
+     "evidence": "#4:L51"
+    },
+    "model_tuning": {
+     "value": 1,
+     "evidence": "(d) #6:L27-30 threshold loop; (b) HGB default vs class_weight='balanced'"
+    },
+    "model_assess_detail": {
+     "value": 1,
+     "evidence": "#4:L54 classification_report"
+    },
+    "model_class_weight": {
+     "value": 1,
+     "evidence": "#4:L39 class_weight='balanced'"
+    },
+    "eval_baseline": {
+     "value": 1,
+     "evidence": "#4:L44 DummyClassifier (action of first model); T>#5"
+    },
+    "eval_business": {
+     "value": 0,
+     "evidence": "N#10 'Success criterion: A model that beats ...' has no evaluation verb"
+    },
+    "eval_review_next": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_notes": {
+     "value": 1,
+     "evidence": "#10 notes.md"
+    },
+    "doc_crisp_sections": {
+     "value": 1,
+     "evidence": "N#10 Business Understanding ... Evaluation"
+    },
+    "doc_upfront": {
+     "value": 0,
+     "evidence": "note after model"
+    },
+    "verify_outputs": {
+     "value": 1,
+     "evidence": "#9"
+    },
+    "canonical_order": {
+     "value": 1,
+     "evidence": "BU T>#1 < MODEL #4; DU #1 < PREP #4"
+    },
+    "implicit_crisp": {
+     "value": 1,
+     "evidence": "all phases + canonical"
+    },
+    "backjump_any": {
+     "value": 1,
+     "evidence": "#6 new HGB config + threshold search after EVAL"
+    },
+    "monolith": {
+     "value": 0,
+     "evidence": "pipeline.py has no DU line"
+    },
+    "single_pipeline_script": {
+     "value": 1,
+     "evidence": "pipeline.py"
+    },
+    "n_families": {
+     "value": 2,
+     "evidence": ""
+    },
+    "n_backjumps": {
+     "value": 1,
+     "evidence": "DU-PREP-MODEL-EVAL-MODEL-EVAL(note #10)"
+    },
+    "n_actions": {
+     "value": 10,
+     "evidence": ""
+    },
+    "n_code_actions": {
+     "value": 7,
+     "evidence": ""
+    },
+    "n_scripts": {
+     "value": 1,
+     "evidence": ""
+    },
+    "n_inline_python": {
+     "value": 5,
+     "evidence": ""
+    }
+   },
+   "alt_intent": {},
+   "notes": ""
+  },
+  "main-cmc-crisp_react-r3": {
+   "arm": "crisp_react",
+   "set": "cmc",
+   "stratum": "hard",
+   "model_start": "#4:L35 LogisticRegression(",
+   "phase_sequence": "DU-PREP-MODEL-EVAL",
+   "codes": {
+    "bu_target": {
+     "value": 1,
+     "evidence": "T>#2 '`col_9` is the target'"
+    },
+    "bu_metric": {
+     "value": 1,
+     "evidence": "T>#3 'I'll use macro F1'"
+    },
+    "bu_explicit": {
+     "value": 1,
+     "evidence": "T>#3"
+    },
+    "bu_metric_rationale": {
+     "value": 1,
+     "evidence": "T>#3 '3-class, imbalanced → I'll use macro F1.'"
+    },
+    "bu_success_criterion": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "bu_business_context": {
+     "value": 0,
+     "evidence": "none before model"
+    },
+    "du_inspect_before_model": {
+     "value": 1,
+     "evidence": "#2:L5 tr.shape"
+    },
+    "du_class_dist": {
+     "value": 1,
+     "evidence": "#3:L4 tr['col_9'].value_counts()"
+    },
+    "du_missing": {
+     "value": 1,
+     "evidence": "#3:L8 isnull()"
+    },
+    "du_quality_ext": {
+     "value": 1,
+     "evidence": "#3:L8 tr[c].nunique() all columns"
+    },
+    "du_stats": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_relations": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_leakage": {
+     "value": 1,
+     "evidence": "T>#3 'No IDs, constants, or leakage columns'"
+    },
+    "leakage_mention_any": {
+     "value": 1,
+     "evidence": "T>#3"
+    },
+    "prep_explicit": {
+     "value": 1,
+     "evidence": "#4:L21 pd.to_numeric; L22 fillna"
+    },
+    "prep_select": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "prep_select_rule": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "prep_construct": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_multi_family": {
+     "value": 1,
+     "evidence": "linear, random_forest, hist_gb"
+    },
+    "model_cv": {
+     "value": 1,
+     "evidence": "#4:L31 StratifiedKFold"
+    },
+    "model_test_design": {
+     "value": 1,
+     "evidence": "#4:L42 cross_val_score"
+    },
+    "model_tuning": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_assess_detail": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_class_weight": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_baseline": {
+     "value": 1,
+     "evidence": "#4:L34 DummyClassifier; T>#5"
+    },
+    "eval_business": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_review_next": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_notes": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_crisp_sections": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_upfront": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "verify_outputs": {
+     "value": 1,
+     "evidence": "#6"
+    },
+    "canonical_order": {
+     "value": 1,
+     "evidence": "BU T>#2 < MODEL #4; DU #2 < PREP #4"
+    },
+    "implicit_crisp": {
+     "value": 1,
+     "evidence": "all phases + canonical"
+    },
+    "backjump_any": {
+     "value": 0,
+     "evidence": "DU-PREP-MODEL-EVAL"
+    },
+    "monolith": {
+     "value": 0,
+     "evidence": "model.py has no DU line"
+    },
+    "single_pipeline_script": {
+     "value": 1,
+     "evidence": "model.py"
+    },
+    "n_families": {
+     "value": 3,
+     "evidence": ""
+    },
+    "n_backjumps": {
+     "value": 0,
+     "evidence": "DU-PREP-MODEL-EVAL"
+    },
+    "n_actions": {
+     "value": 6,
+     "evidence": ""
+    },
+    "n_code_actions": {
+     "value": 4,
+     "evidence": ""
+    },
+    "n_scripts": {
+     "value": 1,
+     "evidence": ""
+    },
+    "n_inline_python": {
+     "value": 3,
+     "evidence": ""
+    }
+   },
+   "alt_intent": {},
+   "notes": ""
+  },
+  "main-credit_g-crisp_react-r6": {
+   "arm": "crisp_react",
+   "set": "credit_g",
+   "stratum": "hard",
+   "model_start": "#4:L36 LogisticRegression(",
+   "phase_sequence": "DU-PREP-MODEL-EVAL-PREP-EVAL(note #10)",
+   "codes": {
+    "bu_target": {
+     "value": 1,
+     "evidence": "T>#2 'The target is clearly `col_20`'"
+    },
+    "bu_metric": {
+     "value": 1,
+     "evidence": "T>#3 'I'll use F1'"
+    },
+    "bu_explicit": {
+     "value": 1,
+     "evidence": "T>#3"
+    },
+    "bu_metric_rationale": {
+     "value": 1,
+     "evidence": "T>#3 'I'll use F1 given the class imbalance.'"
+    },
+    "bu_success_criterion": {
+     "value": 0,
+     "evidence": "only in N#10 after model"
+    },
+    "bu_business_context": {
+     "value": 1,
+     "evidence": "#4:L14 comment 'bad credit risk (the costly, minority class)'"
+    },
+    "du_inspect_before_model": {
+     "value": 1,
+     "evidence": "#2:L5 tr.shape"
+    },
+    "du_class_dist": {
+     "value": 1,
+     "evidence": "#3:L5 tr['col_20'].value_counts()"
+    },
+    "du_missing": {
+     "value": 1,
+     "evidence": "#3:L8 tr.isna()"
+    },
+    "du_quality_ext": {
+     "value": 0,
+     "evidence": "no duplicated/nunique/is_unique"
+    },
+    "du_stats": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_relations": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_leakage": {
+     "value": 1,
+     "evidence": "T>#3 '(no IDs/constants)'; #4:L22 comment 'No IDs/constants/leakage present.'"
+    },
+    "leakage_mention_any": {
+     "value": 1,
+     "evidence": "T>#3"
+    },
+    "prep_explicit": {
+     "value": 1,
+     "evidence": "#4:L28 OneHotEncoder"
+    },
+    "prep_select": {
+     "value": 0,
+     "evidence": "only target dropped"
+    },
+    "prep_select_rule": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "prep_construct": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_multi_family": {
+     "value": 1,
+     "evidence": "linear, random_forest, gb"
+    },
+    "model_cv": {
+     "value": 1,
+     "evidence": "#4:L33 StratifiedKFold"
+    },
+    "model_test_design": {
+     "value": 1,
+     "evidence": "#4:L49 cross_val_score"
+    },
+    "model_tuning": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_assess_detail": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_class_weight": {
+     "value": 1,
+     "evidence": "#4:L36 class_weight='balanced'"
+    },
+    "eval_baseline": {
+     "value": 1,
+     "evidence": "#4:L42 DummyClassifier; T>#5"
+    },
+    "eval_business": {
+     "value": 1,
+     "evidence": "N#10:L30 'far above the 0.0 baseline → meets success criterion'"
+    },
+    "eval_review_next": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_notes": {
+     "value": 1,
+     "evidence": "#10 notes.md"
+    },
+    "doc_crisp_sections": {
+     "value": 1,
+     "evidence": "N#10 Business Understanding ... Evaluation"
+    },
+    "doc_upfront": {
+     "value": 0,
+     "evidence": "note after model"
+    },
+    "verify_outputs": {
+     "value": 1,
+     "evidence": "#9"
+    },
+    "canonical_order": {
+     "value": 1,
+     "evidence": "BU T>#2 < MODEL #4; DU #2 < PREP #4"
+    },
+    "implicit_crisp": {
+     "value": 1,
+     "evidence": "all phases + canonical"
+    },
+    "backjump_any": {
+     "value": 1,
+     "evidence": "#7 adds StandardScaler after EVAL (T>#5); #5 exited 0, so not a repair"
+    },
+    "monolith": {
+     "value": 0,
+     "evidence": "model.py has no DU line"
+    },
+    "single_pipeline_script": {
+     "value": 1,
+     "evidence": "model.py"
+    },
+    "n_families": {
+     "value": 3,
+     "evidence": ""
+    },
+    "n_backjumps": {
+     "value": 1,
+     "evidence": "DU-PREP-MODEL-EVAL-PREP-EVAL(note #10)"
+    },
+    "n_actions": {
+     "value": 10,
+     "evidence": ""
+    },
+    "n_code_actions": {
+     "value": 6,
+     "evidence": ""
+    },
+    "n_scripts": {
+     "value": 1,
+     "evidence": ""
+    },
+    "n_inline_python": {
+     "value": 3,
+     "evidence": ""
+    }
+   },
+   "alt_intent": {},
+   "notes": ""
+  },
+  "main-eucalyptus-crisp_react-r3": {
+   "arm": "crisp_react",
+   "set": "eucalyptus",
+   "stratum": "hard",
+   "model_start": "#4:L46 HistGradientBoostingClassifier(",
+   "phase_sequence": "DU-PREP-MODEL-EVAL-PREP-MODEL-EVAL(note #10)",
+   "codes": {
+    "bu_target": {
+     "value": 1,
+     "evidence": "T>#2 '`col_19` ... likely the target'"
+    },
+    "bu_metric": {
+     "value": 1,
+     "evidence": "T>#3 'I'll use macro F1'"
+    },
+    "bu_explicit": {
+     "value": 1,
+     "evidence": "T>#3"
+    },
+    "bu_metric_rationale": {
+     "value": 1,
+     "evidence": "T>#3 'I'll use macro F1 (multiclass, mild imbalance).'"
+    },
+    "bu_success_criterion": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "bu_business_context": {
+     "value": 0,
+     "evidence": "none before model"
+    },
+    "du_inspect_before_model": {
+     "value": 1,
+     "evidence": "#2:L5 tr.shape"
+    },
+    "du_class_dist": {
+     "value": 1,
+     "evidence": "#3:L5 tr['col_19'].value_counts"
+    },
+    "du_missing": {
+     "value": 1,
+     "evidence": "#3:L12 tr.isna()"
+    },
+    "du_quality_ext": {
+     "value": 1,
+     "evidence": "#3:L10 tr[c].nunique()"
+    },
+    "du_stats": {
+     "value": 0,
+     "evidence": "only median in imputation"
+    },
+    "du_relations": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_leakage": {
+     "value": 1,
+     "evidence": "#4:L16 comment 'Map_Ref is essentially a unique geo ID' (before L46)"
+    },
+    "leakage_mention_any": {
+     "value": 1,
+     "evidence": "#4:L16; T>#6 'ID-like columns'"
+    },
+    "prep_explicit": {
+     "value": 1,
+     "evidence": "#4:L19 drop; L36 fillna; L39 OrdinalEncoder"
+    },
+    "prep_select": {
+     "value": 1,
+     "evidence": "#4:L19 X.drop(columns=drop_cols), drop_cols=['Map_Ref']"
+    },
+    "prep_select_rule": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "prep_construct": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_multi_family": {
+     "value": 1,
+     "evidence": "hist_gb, random_forest (#6)"
+    },
+    "model_cv": {
+     "value": 1,
+     "evidence": "#4:L48 StratifiedKFold"
+    },
+    "model_test_design": {
+     "value": 1,
+     "evidence": "#4:L49"
+    },
+    "model_tuning": {
+     "value": 0,
+     "evidence": "same HGB params everywhere; loop in #6 is over feature sets"
+    },
+    "model_assess_detail": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_class_weight": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_baseline": {
+     "value": 1,
+     "evidence": "#4:L54 DummyClassifier; T>#5 'vs 0.09 baseline'"
+    },
+    "eval_business": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_review_next": {
+     "value": 0,
+     "evidence": "T>#5 'see if I can improve' not in list"
+    },
+    "doc_notes": {
+     "value": 1,
+     "evidence": "#10 NOTES.md"
+    },
+    "doc_crisp_sections": {
+     "value": 0,
+     "evidence": "N#10 literal terms only 2 (data understanding, modeling); 'Data prep', 'Results' not listed terms"
+    },
+    "doc_upfront": {
+     "value": 0,
+     "evidence": "note after model"
+    },
+    "verify_outputs": {
+     "value": 1,
+     "evidence": "#9"
+    },
+    "canonical_order": {
+     "value": 1,
+     "evidence": "BU T>#2 < MODEL #4; DU #2 < PREP #4"
+    },
+    "implicit_crisp": {
+     "value": 1,
+     "evidence": "all phases + canonical"
+    },
+    "backjump_any": {
+     "value": 1,
+     "evidence": "#6 new drop sets + RF after EVAL"
+    },
+    "monolith": {
+     "value": 0,
+     "evidence": "model.py has no DU line"
+    },
+    "single_pipeline_script": {
+     "value": 1,
+     "evidence": "model.py"
+    },
+    "n_families": {
+     "value": 2,
+     "evidence": ""
+    },
+    "n_backjumps": {
+     "value": 1,
+     "evidence": "DU-PREP-MODEL-EVAL-PREP-MODEL-EVAL(note #10)"
+    },
+    "n_actions": {
+     "value": 10,
+     "evidence": ""
+    },
+    "n_code_actions": {
+     "value": 6,
+     "evidence": ""
+    },
+    "n_scripts": {
+     "value": 1,
+     "evidence": ""
+    },
+    "n_inline_python": {
+     "value": 4,
+     "evidence": ""
+    }
+   },
+   "alt_intent": {
+    "doc_crisp_sections": {
+     "value": 1,
+     "reason": "note is structured by CRISP phases (Business/Data understanding, Data prep, Modeling, Results)"
+    }
+   },
+   "notes": ""
+  },
+  "main-ev_purchase-crisp_react-r4": {
+   "arm": "crisp_react",
+   "set": "ev_purchase",
+   "stratum": "post_cutoff",
+   "model_start": "#5:L49 HistGradientBoostingClassifier(",
+   "phase_sequence": "DU-PREP-MODEL-EVAL-MODEL",
+   "codes": {
+    "bu_target": {
+     "value": 1,
+     "evidence": "T>#2 'The target column is `col_13`'"
+    },
+    "bu_metric": {
+     "value": 1,
+     "evidence": "T>#3 'I'll use **F1**'"
+    },
+    "bu_explicit": {
+     "value": 1,
+     "evidence": "T>#3"
+    },
+    "bu_metric_rationale": {
+     "value": 1,
+     "evidence": "T>#3 'I'll use **F1** given the imbalance.'"
+    },
+    "bu_success_criterion": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "bu_business_context": {
+     "value": 0,
+     "evidence": "none before model"
+    },
+    "du_inspect_before_model": {
+     "value": 1,
+     "evidence": "#2:L5 tr.shape"
+    },
+    "du_class_dist": {
+     "value": 1,
+     "evidence": "#3:L5 tr['col_13'].value_counts"
+    },
+    "du_missing": {
+     "value": 1,
+     "evidence": "#3:L13 tr.isna()"
+    },
+    "du_quality_ext": {
+     "value": 1,
+     "evidence": "#3:L8 tr[c].nunique()"
+    },
+    "du_stats": {
+     "value": 1,
+     "evidence": "#3:L10 tr.describe()"
+    },
+    "du_relations": {
+     "value": 1,
+     "evidence": "#4:L11 pd.crosstab"
+    },
+    "du_leakage": {
+     "value": 1,
+     "evidence": "#4:L8 comment 'check perfect separation leakage'; T>#4"
+    },
+    "leakage_mention_any": {
+     "value": 1,
+     "evidence": "#4:L8"
+    },
+    "prep_explicit": {
+     "value": 1,
+     "evidence": "#5:L25 pd.to_numeric; L30 fillna; L35 .map("
+    },
+    "prep_select": {
+     "value": 0,
+     "evidence": "only target dropped"
+    },
+    "prep_select_rule": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "prep_construct": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_multi_family": {
+     "value": 0,
+     "evidence": "hist_gb only"
+    },
+    "model_cv": {
+     "value": 0,
+     "evidence": "holdout only"
+    },
+    "model_test_design": {
+     "value": 1,
+     "evidence": "#5:L41 train_test_split"
+    },
+    "model_tuning": {
+     "value": 1,
+     "evidence": "(c) #7:L8-9 loop cw in [None,'balanced']; (d) #7:L13-15 threshold"
+    },
+    "model_assess_detail": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_class_weight": {
+     "value": 1,
+     "evidence": "#5:L52 class_weight='balanced'"
+    },
+    "eval_baseline": {
+     "value": 1,
+     "evidence": "#5:L44 DummyClassifier; T>#6"
+    },
+    "eval_business": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_review_next": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_notes": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_crisp_sections": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_upfront": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "verify_outputs": {
+     "value": 1,
+     "evidence": "#9 python -c reads predictions/result.json (chained after python model.py; borderline)"
+    },
+    "canonical_order": {
+     "value": 1,
+     "evidence": "BU T>#2 < MODEL #5; DU #2 < PREP #5"
+    },
+    "implicit_crisp": {
+     "value": 1,
+     "evidence": "all phases + canonical"
+    },
+    "backjump_any": {
+     "value": 1,
+     "evidence": "#7 class-weight loop + threshold after EVAL"
+    },
+    "monolith": {
+     "value": 0,
+     "evidence": "model.py has no DU line"
+    },
+    "single_pipeline_script": {
+     "value": 1,
+     "evidence": "model.py"
+    },
+    "n_families": {
+     "value": 1,
+     "evidence": ""
+    },
+    "n_backjumps": {
+     "value": 1,
+     "evidence": "DU-PREP-MODEL-EVAL-MODEL"
+    },
+    "n_actions": {
+     "value": 9,
+     "evidence": ""
+    },
+    "n_code_actions": {
+     "value": 7,
+     "evidence": ""
+    },
+    "n_scripts": {
+     "value": 1,
+     "evidence": ""
+    },
+    "n_inline_python": {
+     "value": 5,
+     "evidence": ""
+    }
+   },
+   "alt_intent": {},
+   "notes": ""
+  },
+  "main-student_health-crisp_react-r4": {
+   "arm": "crisp_react",
+   "set": "student_health",
+   "stratum": "post_cutoff",
+   "model_start": "#6:L39 HistGradientBoostingClassifier( (inside make_model)",
+   "phase_sequence": "DU-PREP-MODEL-EVAL",
+   "codes": {
+    "bu_target": {
+     "value": 1,
+     "evidence": "T>#2 'The target is `col_13`'"
+    },
+    "bu_metric": {
+     "value": 1,
+     "evidence": "T>#3 'macro-F1 is the right metric'"
+    },
+    "bu_explicit": {
+     "value": 1,
+     "evidence": "T>#3"
+    },
+    "bu_metric_rationale": {
+     "value": 1,
+     "evidence": "T>#3 'Highly imbalanced → macro-F1 is the right metric.'"
+    },
+    "bu_success_criterion": {
+     "value": 0,
+     "evidence": "N#5 only 'macro-F1 vs most-frequent baseline' (no beat/exceed/criterion)"
+    },
+    "bu_business_context": {
+     "value": 1,
+     "evidence": "N#5:L3 heading 'Business/Data Mining understanding' (keyword only)"
+    },
+    "du_inspect_before_model": {
+     "value": 1,
+     "evidence": "#2:L5 tr.shape"
+    },
+    "du_class_dist": {
+     "value": 1,
+     "evidence": "#3:L5 tr['col_13'].value_counts"
+    },
+    "du_missing": {
+     "value": 1,
+     "evidence": "#4:L9 tr.isna()"
+    },
+    "du_quality_ext": {
+     "value": 0,
+     "evidence": "no duplicated/nunique on features before model"
+    },
+    "du_stats": {
+     "value": 1,
+     "evidence": "#4:L6 tr.describe()"
+    },
+    "du_relations": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_leakage": {
+     "value": 1,
+     "evidence": "T>#4 'no IDs, constants, or leakage'"
+    },
+    "leakage_mention_any": {
+     "value": 1,
+     "evidence": "T>#4"
+    },
+    "prep_explicit": {
+     "value": 1,
+     "evidence": "#6:L20 fillna; L23 .map("
+    },
+    "prep_select": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "prep_select_rule": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "prep_construct": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_multi_family": {
+     "value": 0,
+     "evidence": "hist_gb only"
+    },
+    "model_cv": {
+     "value": 0,
+     "evidence": "holdout only"
+    },
+    "model_test_design": {
+     "value": 1,
+     "evidence": "#6:L36 train_test_split"
+    },
+    "model_tuning": {
+     "value": 0,
+     "evidence": "plain vs sample_weight differ only in fit argument, constructor identical"
+    },
+    "model_assess_detail": {
+     "value": 1,
+     "evidence": "#6:L68 classification_report"
+    },
+    "model_class_weight": {
+     "value": 1,
+     "evidence": "#6:L61 sample_weight=sw"
+    },
+    "eval_baseline": {
+     "value": 1,
+     "evidence": "#6:L47 print('Baseline most-frequent:') after L39; T>#7"
+    },
+    "eval_business": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_review_next": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_notes": {
+     "value": 1,
+     "evidence": "#5 notes.md"
+    },
+    "doc_crisp_sections": {
+     "value": 1,
+     "evidence": "N#5 Data understanding, Data preparation, Modeling"
+    },
+    "doc_upfront": {
+     "value": 1,
+     "evidence": "N#5 before #6"
+    },
+    "verify_outputs": {
+     "value": 1,
+     "evidence": "#8"
+    },
+    "canonical_order": {
+     "value": 1,
+     "evidence": "BU T>#2 < MODEL #6; DU #2 < PREP #6"
+    },
+    "implicit_crisp": {
+     "value": 1,
+     "evidence": "all phases + canonical"
+    },
+    "backjump_any": {
+     "value": 0,
+     "evidence": "DU-PREP-MODEL-EVAL"
+    },
+    "monolith": {
+     "value": 1,
+     "evidence": "train.py: #6:L76 y.value_counts() (count line on target, for class weights) + PREP + MODEL + predictions"
+    },
+    "single_pipeline_script": {
+     "value": 1,
+     "evidence": "train.py"
+    },
+    "n_families": {
+     "value": 1,
+     "evidence": ""
+    },
+    "n_backjumps": {
+     "value": 0,
+     "evidence": "DU-PREP-MODEL-EVAL"
+    },
+    "n_actions": {
+     "value": 8,
+     "evidence": ""
+    },
+    "n_code_actions": {
+     "value": 5,
+     "evidence": ""
+    },
+    "n_scripts": {
+     "value": 1,
+     "evidence": ""
+    },
+    "n_inline_python": {
+     "value": 4,
+     "evidence": ""
+    }
+   },
+   "alt_intent": {
+    "bu_business_context": {
+     "value": 0,
+     "reason": "heading only, content is goal statement (definition: framing beyond target/metric)"
+    },
+    "monolith": {
+     "value": 0,
+     "reason": "value_counts lines compute class weights, no inspection (definition)"
+    }
+   },
+   "notes": ""
+  },
+  "main-cnae_9-naked_react-r6": {
+   "arm": "naked_react",
+   "set": "cnae_9",
+   "stratum": "easy",
+   "model_start": "#5:L32 LogisticRegression( (in Pipeline with TfidfTransformer)",
+   "phase_sequence": "DU-PREP-MODEL-EVAL",
+   "codes": {
+    "bu_target": {
+     "value": 1,
+     "evidence": "#5:L10 TARGET = \"col_856\" (no assistant text before final report)"
+    },
+    "bu_metric": {
+     "value": 0,
+     "evidence": "no text; scoring='accuracy' only in fit/CV calls"
+    },
+    "bu_explicit": {
+     "value": 0,
+     "evidence": "metric missing"
+    },
+    "bu_metric_rationale": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "bu_success_criterion": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "bu_business_context": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_inspect_before_model": {
+     "value": 1,
+     "evidence": "#2:L5 tr.shape"
+    },
+    "du_class_dist": {
+     "value": 1,
+     "evidence": "#3:L6 tr['col_856'].value_counts()"
+    },
+    "du_missing": {
+     "value": 1,
+     "evidence": "#3:L9 isnull()"
+    },
+    "du_quality_ext": {
+     "value": 1,
+     "evidence": "#4:L7 X.nunique()"
+    },
+    "du_stats": {
+     "value": 0,
+     "evidence": "only min/max"
+    },
+    "du_relations": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_leakage": {
+     "value": 1,
+     "evidence": "#4:L10 comment '# check for leakage: columns perfectly separating target'"
+    },
+    "leakage_mention_any": {
+     "value": 1,
+     "evidence": "#4:L10"
+    },
+    "prep_explicit": {
+     "value": 1,
+     "evidence": "#5:L32 TfidfTransformer (counted as scaling 'u. a.'; other prep = constant filter without .drop, to_numpy(dtype=float))"
+    },
+    "prep_select": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "prep_select_rule": {
+     "value": 0,
+     "evidence": "constant filter #5:L16-18 without .drop("
+    },
+    "prep_construct": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_multi_family": {
+     "value": 1,
+     "evidence": "linear, naive_bayes, svm"
+    },
+    "model_cv": {
+     "value": 1,
+     "evidence": "#5:L25 StratifiedKFold"
+    },
+    "model_test_design": {
+     "value": 1,
+     "evidence": "#5:L28 cross_val_score"
+    },
+    "model_tuning": {
+     "value": 0,
+     "evidence": "one config per family"
+    },
+    "model_assess_detail": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_class_weight": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_baseline": {
+     "value": 1,
+     "evidence": "#5:L28 DummyClassifier (action of first model)"
+    },
+    "eval_business": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_review_next": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_notes": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_crisp_sections": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_upfront": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "verify_outputs": {
+     "value": 1,
+     "evidence": "#7"
+    },
+    "canonical_order": {
+     "value": 1,
+     "evidence": "BU #5:L10 < MODEL #5:L32; DU #2 < PREP #5"
+    },
+    "implicit_crisp": {
+     "value": 0,
+     "evidence": "bu_explicit missing"
+    },
+    "backjump_any": {
+     "value": 0,
+     "evidence": "DU-PREP-MODEL-EVAL"
+    },
+    "monolith": {
+     "value": 1,
+     "evidence": "model.py: #5:L16 nunique (DU) + Tfidf + models + predictions"
+    },
+    "single_pipeline_script": {
+     "value": 1,
+     "evidence": "model.py"
+    },
+    "n_families": {
+     "value": 3,
+     "evidence": ""
+    },
+    "n_backjumps": {
+     "value": 0,
+     "evidence": "DU-PREP-MODEL-EVAL"
+    },
+    "n_actions": {
+     "value": 7,
+     "evidence": ""
+    },
+    "n_code_actions": {
+     "value": 5,
+     "evidence": ""
+    },
+    "n_scripts": {
+     "value": 1,
+     "evidence": ""
+    },
+    "n_inline_python": {
+     "value": 4,
+     "evidence": ""
+    }
+   },
+   "alt_intent": {
+    "prep_select_rule": {
+     "value": 1,
+     "reason": "#5:L16-18 nunique-based constant filter (definition)"
+    }
+   },
+   "notes": "if TfidfTransformer is not a PREP token, PREP is missing (prep_explicit=0, monolith=0, single_pipeline_script=0)"
+  },
+  "main-covertype-naked_react-r1": {
+   "arm": "naked_react",
+   "set": "covertype",
+   "stratum": "easy",
+   "model_start": "#4:L32 RandomForestClassifier( (#3 Write failed, excluded)",
+   "phase_sequence": "DU-PREP-MODEL-EVAL",
+   "codes": {
+    "bu_target": {
+     "value": 1,
+     "evidence": "T>#2 'Target is `col_54`'"
+    },
+    "bu_metric": {
+     "value": 0,
+     "evidence": "metric only in final report"
+    },
+    "bu_explicit": {
+     "value": 0,
+     "evidence": "metric missing"
+    },
+    "bu_metric_rationale": {
+     "value": 0,
+     "evidence": "only in final report"
+    },
+    "bu_success_criterion": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "bu_business_context": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_inspect_before_model": {
+     "value": 1,
+     "evidence": "#1:L1 print(df.shape)"
+    },
+    "du_class_dist": {
+     "value": 1,
+     "evidence": "#2:L4 df['col_54'].value_counts()"
+    },
+    "du_missing": {
+     "value": 1,
+     "evidence": "#2:L9 isnull()"
+    },
+    "du_quality_ext": {
+     "value": 1,
+     "evidence": "#4:L20 X[c].nunique() (before L32)"
+    },
+    "du_stats": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_relations": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_leakage": {
+     "value": 0,
+     "evidence": "only comment in failed Write #3 ('candidate leakage/ID') — excluded; nothing else before model"
+    },
+    "leakage_mention_any": {
+     "value": 1,
+     "evidence": "final report 'No constant, ID, or leakage columns were found'"
+    },
+    "prep_explicit": {
+     "value": 1,
+     "evidence": "#4:L16 pd.to_numeric"
+    },
+    "prep_select": {
+     "value": 0,
+     "evidence": "no named column"
+    },
+    "prep_select_rule": {
+     "value": 1,
+     "evidence": "#4:L22 X.drop(columns=const_cols), const_cols from nunique comprehension"
+    },
+    "prep_construct": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_multi_family": {
+     "value": 0,
+     "evidence": "random_forest only"
+    },
+    "model_cv": {
+     "value": 0,
+     "evidence": "holdout only"
+    },
+    "model_test_design": {
+     "value": 1,
+     "evidence": "#4:L25 train_test_split"
+    },
+    "model_tuning": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_assess_detail": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_class_weight": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_baseline": {
+     "value": 1,
+     "evidence": "#4:L28 DummyClassifier (action of first model)"
+    },
+    "eval_business": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_review_next": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_notes": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_crisp_sections": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_upfront": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "verify_outputs": {
+     "value": 0,
+     "evidence": "no separate read-back action"
+    },
+    "canonical_order": {
+     "value": 1,
+     "evidence": "BU T>#2 < MODEL #4; DU #1 < PREP #4"
+    },
+    "implicit_crisp": {
+     "value": 0,
+     "evidence": "bu_explicit missing"
+    },
+    "backjump_any": {
+     "value": 0,
+     "evidence": "DU-PREP-MODEL-EVAL"
+    },
+    "monolith": {
+     "value": 1,
+     "evidence": "model.py: #4:L20 nunique + to_numeric + RF + predictions"
+    },
+    "single_pipeline_script": {
+     "value": 1,
+     "evidence": "model.py"
+    },
+    "n_families": {
+     "value": 1,
+     "evidence": ""
+    },
+    "n_backjumps": {
+     "value": 0,
+     "evidence": "DU-PREP-MODEL-EVAL"
+    },
+    "n_actions": {
+     "value": 5,
+     "evidence": ""
+    },
+    "n_code_actions": {
+     "value": 3,
+     "evidence": ""
+    },
+    "n_scripts": {
+     "value": 1,
+     "evidence": ""
+    },
+    "n_inline_python": {
+     "value": 2,
+     "evidence": ""
+    }
+   },
+   "alt_intent": {},
+   "notes": "n_code_actions excludes the failed Write #3"
+  },
+  "main-wine-naked_react-r2": {
+   "arm": "naked_react",
+   "set": "wine",
+   "stratum": "easy",
+   "model_start": "#3:L34 LogisticRegression(",
+   "phase_sequence": "DU-PREP-MODEL-EVAL",
+   "codes": {
+    "bu_target": {
+     "value": 1,
+     "evidence": "T>#1 'The target is `col_13`'"
+    },
+    "bu_metric": {
+     "value": 1,
+     "evidence": "T>#2 '... with CV, macro-F1 metric.'"
+    },
+    "bu_explicit": {
+     "value": 1,
+     "evidence": "T>#2"
+    },
+    "bu_metric_rationale": {
+     "value": 0,
+     "evidence": "no reason word in metric sentence"
+    },
+    "bu_success_criterion": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "bu_business_context": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_inspect_before_model": {
+     "value": 1,
+     "evidence": "#1:L5 tr.shape"
+    },
+    "du_class_dist": {
+     "value": 1,
+     "evidence": "#2:L4 tr['col_13'].value_counts()"
+    },
+    "du_missing": {
+     "value": 1,
+     "evidence": "#2:L5 isnull()"
+    },
+    "du_quality_ext": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_stats": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_relations": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_leakage": {
+     "value": 0,
+     "evidence": "no leak/ID wording before model"
+    },
+    "leakage_mention_any": {
+     "value": 1,
+     "evidence": "final report 'No IDs, constants, or leakage columns present.'"
+    },
+    "prep_explicit": {
+     "value": 1,
+     "evidence": "#3:L21 astype(float); L33 StandardScaler"
+    },
+    "prep_select": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "prep_select_rule": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "prep_construct": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_multi_family": {
+     "value": 1,
+     "evidence": "linear, random_forest"
+    },
+    "model_cv": {
+     "value": 1,
+     "evidence": "#3:L25 StratifiedKFold"
+    },
+    "model_test_design": {
+     "value": 1,
+     "evidence": "#3:L29 cross_val_score"
+    },
+    "model_tuning": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_assess_detail": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_class_weight": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_baseline": {
+     "value": 1,
+     "evidence": "#3:L28 DummyClassifier (action of first model)"
+    },
+    "eval_business": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_review_next": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_notes": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_crisp_sections": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_upfront": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "verify_outputs": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "canonical_order": {
+     "value": 1,
+     "evidence": "BU T>#1 < MODEL #3; DU #1 < PREP #3"
+    },
+    "implicit_crisp": {
+     "value": 1,
+     "evidence": "all phases + canonical"
+    },
+    "backjump_any": {
+     "value": 0,
+     "evidence": "DU-PREP-MODEL-EVAL"
+    },
+    "monolith": {
+     "value": 0,
+     "evidence": "solve.py has no DU line"
+    },
+    "single_pipeline_script": {
+     "value": 1,
+     "evidence": "solve.py"
+    },
+    "n_families": {
+     "value": 2,
+     "evidence": ""
+    },
+    "n_backjumps": {
+     "value": 0,
+     "evidence": "DU-PREP-MODEL-EVAL"
+    },
+    "n_actions": {
+     "value": 4,
+     "evidence": ""
+    },
+    "n_code_actions": {
+     "value": 3,
+     "evidence": ""
+    },
+    "n_scripts": {
+     "value": 1,
+     "evidence": ""
+    },
+    "n_inline_python": {
+     "value": 2,
+     "evidence": ""
+    }
+   },
+   "alt_intent": {},
+   "notes": ""
+  },
+  "main-fashion_mnist-naked_react-r2": {
+   "arm": "naked_react",
+   "set": "fashion_mnist",
+   "stratum": "medium",
+   "model_start": "#3:L27 MLPClassifier(",
+   "phase_sequence": "DU-PREP-MODEL-EVAL (alt: ...-EVAL-DU)",
+   "codes": {
+    "bu_target": {
+     "value": 1,
+     "evidence": "T>#2 'Target is `col_784`'"
+    },
+    "bu_metric": {
+     "value": 1,
+     "evidence": "T>#2 'Metric: accuracy (balanced classes).'"
+    },
+    "bu_explicit": {
+     "value": 1,
+     "evidence": "T>#2"
+    },
+    "bu_metric_rationale": {
+     "value": 1,
+     "evidence": "T>#2 'Metric: accuracy (balanced classes).'"
+    },
+    "bu_success_criterion": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "bu_business_context": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_inspect_before_model": {
+     "value": 1,
+     "evidence": "#1:L1 print(df.shape)"
+    },
+    "du_class_dist": {
+     "value": 1,
+     "evidence": "#2:L6 tr['col_784'].value_counts()"
+    },
+    "du_missing": {
+     "value": 1,
+     "evidence": "#2:L7 isnull()"
+    },
+    "du_quality_ext": {
+     "value": 1,
+     "evidence": "#3:L11 tr[feat].nunique() (before L27)"
+    },
+    "du_stats": {
+     "value": 0,
+     "evidence": "min/max only"
+    },
+    "du_relations": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_leakage": {
+     "value": 0,
+     "evidence": "no leak/ID wording before model"
+    },
+    "leakage_mention_any": {
+     "value": 1,
+     "evidence": "final report 'no IDs or leakage columns present'"
+    },
+    "prep_explicit": {
+     "value": 1,
+     "evidence": "#3:L16 .astype('float32') / 255.0"
+    },
+    "prep_select": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "prep_select_rule": {
+     "value": 0,
+     "evidence": "constant filter #3:L11-13 without .drop("
+    },
+    "prep_construct": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_multi_family": {
+     "value": 0,
+     "evidence": "mlp only"
+    },
+    "model_cv": {
+     "value": 0,
+     "evidence": "holdout only"
+    },
+    "model_test_design": {
+     "value": 1,
+     "evidence": "#3:L20 train_test_split"
+    },
+    "model_tuning": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_assess_detail": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_class_weight": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_baseline": {
+     "value": 1,
+     "evidence": "#3:L23 mode() / L24 'baseline acc' (action of first model); T>#6"
+    },
+    "eval_business": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_review_next": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_notes": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_crisp_sections": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_upfront": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "verify_outputs": {
+     "value": 1,
+     "evidence": "#7 reads predictions.parquet + result.json"
+    },
+    "canonical_order": {
+     "value": 1,
+     "evidence": "BU T>#2 < MODEL #3; DU #1 < PREP #3"
+    },
+    "implicit_crisp": {
+     "value": 1,
+     "evidence": "all phases + canonical"
+    },
+    "backjump_any": {
+     "value": 0,
+     "evidence": "#8 inspects target dtype via .dtype/.iloc (not in DU pattern list) -> no DU event"
+    },
+    "monolith": {
+     "value": 1,
+     "evidence": "model.py: #3:L11 nunique + /255 + MLP + predictions"
+    },
+    "single_pipeline_script": {
+     "value": 1,
+     "evidence": "model.py"
+    },
+    "n_families": {
+     "value": 1,
+     "evidence": ""
+    },
+    "n_backjumps": {
+     "value": 0,
+     "evidence": "DU-PREP-MODEL-EVAL (alt: ...-EVAL-DU)"
+    },
+    "n_actions": {
+     "value": 8,
+     "evidence": ""
+    },
+    "n_code_actions": {
+     "value": 6,
+     "evidence": ""
+    },
+    "n_scripts": {
+     "value": 1,
+     "evidence": ""
+    },
+    "n_inline_python": {
+     "value": 4,
+     "evidence": ""
+    }
+   },
+   "alt_intent": {
+    "prep_select_rule": {
+     "value": 1,
+     "reason": "nunique-based constant filter (definition)"
+    },
+    "backjump_any": {
+     "value": 1,
+     "reason": "#8 is a pure inspection after EVAL (EVAL -> DU)"
+    },
+    "n_backjumps": {
+     "value": 1,
+     "reason": "see backjump_any"
+    }
+   },
+   "notes": ""
+  },
+  "main-phoneme-naked_react-r5": {
+   "arm": "naked_react",
+   "set": "phoneme",
+   "stratum": "medium",
+   "model_start": "#4:L27 RandomForestClassifier(",
+   "phase_sequence": "DU-PREP-MODEL-EVAL",
+   "codes": {
+    "bu_target": {
+     "value": 1,
+     "evidence": "T>#2 '`col_5` is the nasal/oral target'"
+    },
+    "bu_metric": {
+     "value": 1,
+     "evidence": "T>#3 'I'll use F1'"
+    },
+    "bu_explicit": {
+     "value": 1,
+     "evidence": "T>#3"
+    },
+    "bu_metric_rationale": {
+     "value": 1,
+     "evidence": "T>#3 'I'll use F1 given the imbalance.'"
+    },
+    "bu_success_criterion": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "bu_business_context": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_inspect_before_model": {
+     "value": 1,
+     "evidence": "#2:L5 tr.shape"
+    },
+    "du_class_dist": {
+     "value": 1,
+     "evidence": "#3:L7 tr['col_5'].value_counts()"
+    },
+    "du_missing": {
+     "value": 1,
+     "evidence": "#3:L5 tr.isna()"
+    },
+    "du_quality_ext": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_stats": {
+     "value": 1,
+     "evidence": "#2:L10 tr.describe()"
+    },
+    "du_relations": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_leakage": {
+     "value": 0,
+     "evidence": "no leak/ID wording before model"
+    },
+    "leakage_mention_any": {
+     "value": 1,
+     "evidence": "final report 'no IDs/constants/leakage columns'"
+    },
+    "prep_explicit": {
+     "value": 1,
+     "evidence": "#4:L14 astype(float)"
+    },
+    "prep_select": {
+     "value": 0,
+     "evidence": "inclusion list FEATURES, no drop"
+    },
+    "prep_select_rule": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "prep_construct": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_multi_family": {
+     "value": 0,
+     "evidence": "random_forest only"
+    },
+    "model_cv": {
+     "value": 1,
+     "evidence": "#4:L28 cross_val_predict(cv=5)"
+    },
+    "model_test_design": {
+     "value": 1,
+     "evidence": "#4:L28"
+    },
+    "model_tuning": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_assess_detail": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_class_weight": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_baseline": {
+     "value": 1,
+     "evidence": "#4:L21 DummyClassifier (action of first model)"
+    },
+    "eval_business": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_review_next": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_notes": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_crisp_sections": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_upfront": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "verify_outputs": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "canonical_order": {
+     "value": 1,
+     "evidence": "BU T>#2 < MODEL #4; DU #2 < PREP #4"
+    },
+    "implicit_crisp": {
+     "value": 1,
+     "evidence": "all phases + canonical"
+    },
+    "backjump_any": {
+     "value": 0,
+     "evidence": "DU-PREP-MODEL-EVAL"
+    },
+    "monolith": {
+     "value": 0,
+     "evidence": "model.py: only L18 value_counts().idxmin() (exception)"
+    },
+    "single_pipeline_script": {
+     "value": 1,
+     "evidence": "model.py"
+    },
+    "n_families": {
+     "value": 1,
+     "evidence": ""
+    },
+    "n_backjumps": {
+     "value": 0,
+     "evidence": "DU-PREP-MODEL-EVAL"
+    },
+    "n_actions": {
+     "value": 5,
+     "evidence": ""
+    },
+    "n_code_actions": {
+     "value": 3,
+     "evidence": ""
+    },
+    "n_scripts": {
+     "value": 1,
+     "evidence": ""
+    },
+    "n_inline_python": {
+     "value": 2,
+     "evidence": ""
+    }
+   },
+   "alt_intent": {},
+   "notes": ""
+  },
+  "main-vehicle-naked_react-r4": {
+   "arm": "naked_react",
+   "set": "vehicle",
+   "stratum": "medium",
+   "model_start": "#4:L25 RandomForestClassifier(",
+   "phase_sequence": "DU-PREP-MODEL-EVAL",
+   "codes": {
+    "bu_target": {
+     "value": 1,
+     "evidence": "T>#3 'Target is `col_18`'"
+    },
+    "bu_metric": {
+     "value": 0,
+     "evidence": "no metric before model; scoring='f1_macro' only in CV calls"
+    },
+    "bu_explicit": {
+     "value": 0,
+     "evidence": "metric missing"
+    },
+    "bu_metric_rationale": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "bu_success_criterion": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "bu_business_context": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_inspect_before_model": {
+     "value": 1,
+     "evidence": "#2:L6 explore.py train.shape"
+    },
+    "du_class_dist": {
+     "value": 1,
+     "evidence": "#2:L19 train[c].value_counts() for c in candidate targets (target referenced via loop variable)"
+    },
+    "du_missing": {
+     "value": 1,
+     "evidence": "#2:L12 train.isna()"
+    },
+    "du_quality_ext": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_stats": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_relations": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_leakage": {
+     "value": 1,
+     "evidence": "#4:L15 comment '(no IDs/constants)' before L25"
+    },
+    "leakage_mention_any": {
+     "value": 1,
+     "evidence": "#4:L15"
+    },
+    "prep_explicit": {
+     "value": 1,
+     "evidence": "#4:L26 StandardScaler"
+    },
+    "prep_select": {
+     "value": 0,
+     "evidence": "only target dropped"
+    },
+    "prep_select_rule": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "prep_construct": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_multi_family": {
+     "value": 1,
+     "evidence": "random_forest, svm"
+    },
+    "model_cv": {
+     "value": 1,
+     "evidence": "#4:L18 StratifiedKFold"
+    },
+    "model_test_design": {
+     "value": 1,
+     "evidence": "#4:L21 cross_val_score"
+    },
+    "model_tuning": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_assess_detail": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_class_weight": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_baseline": {
+     "value": 1,
+     "evidence": "#4:L20 DummyClassifier (action of first model)"
+    },
+    "eval_business": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_review_next": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_notes": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_crisp_sections": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_upfront": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "verify_outputs": {
+     "value": 1,
+     "evidence": "#6"
+    },
+    "canonical_order": {
+     "value": 1,
+     "evidence": "BU T>#3 < MODEL #4; DU #2 < PREP #4"
+    },
+    "implicit_crisp": {
+     "value": 0,
+     "evidence": "bu_explicit missing"
+    },
+    "backjump_any": {
+     "value": 0,
+     "evidence": "DU-PREP-MODEL-EVAL"
+    },
+    "monolith": {
+     "value": 0,
+     "evidence": "model.py has no DU line; explore.py has no model"
+    },
+    "single_pipeline_script": {
+     "value": 1,
+     "evidence": "model.py"
+    },
+    "n_families": {
+     "value": 2,
+     "evidence": ""
+    },
+    "n_backjumps": {
+     "value": 0,
+     "evidence": "DU-PREP-MODEL-EVAL"
+    },
+    "n_actions": {
+     "value": 6,
+     "evidence": ""
+    },
+    "n_code_actions": {
+     "value": 3,
+     "evidence": ""
+    },
+    "n_scripts": {
+     "value": 2,
+     "evidence": ""
+    },
+    "n_inline_python": {
+     "value": 1,
+     "evidence": ""
+    }
+   },
+   "alt_intent": {
+    "du_class_dist": {
+     "value": 0,
+     "reason": "literal: loop variable c is none of name/y/TARGET/target/label"
+    }
+   },
+   "notes": ""
+  },
+  "main-cmc-naked_react-r6": {
+   "arm": "naked_react",
+   "set": "cmc",
+   "stratum": "hard",
+   "model_start": "#4:L28 RandomForestClassifier( (#3 Write failed, excluded)",
+   "phase_sequence": "DU-PREP-MODEL-EVAL",
+   "codes": {
+    "bu_target": {
+     "value": 1,
+     "evidence": "T>#2 '`col_9` is the target'"
+    },
+    "bu_metric": {
+     "value": 1,
+     "evidence": "T>#2 'Multiclass → using F1 (macro).'"
+    },
+    "bu_explicit": {
+     "value": 1,
+     "evidence": "T>#2"
+    },
+    "bu_metric_rationale": {
+     "value": 0,
+     "evidence": "metric sentence has no reason word ('Multiclass')"
+    },
+    "bu_success_criterion": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "bu_business_context": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_inspect_before_model": {
+     "value": 1,
+     "evidence": "#1:L1 print(df.shape)"
+    },
+    "du_class_dist": {
+     "value": 1,
+     "evidence": "#2:L4 df['col_9'].value_counts()"
+    },
+    "du_missing": {
+     "value": 1,
+     "evidence": "#2:L8 df.isna()"
+    },
+    "du_quality_ext": {
+     "value": 1,
+     "evidence": "#1:L1 df.nunique()"
+    },
+    "du_stats": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_relations": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_leakage": {
+     "value": 0,
+     "evidence": "none before model"
+    },
+    "leakage_mention_any": {
+     "value": 1,
+     "evidence": "final report 'no IDs, constants, or leakage columns found'"
+    },
+    "prep_explicit": {
+     "value": 1,
+     "evidence": "#4:L16 pd.to_numeric; L22 fillna"
+    },
+    "prep_select": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "prep_select_rule": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "prep_construct": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_multi_family": {
+     "value": 0,
+     "evidence": "random_forest only"
+    },
+    "model_cv": {
+     "value": 1,
+     "evidence": "#4:L29 cross_val_score(cv=5)"
+    },
+    "model_test_design": {
+     "value": 1,
+     "evidence": "#4:L29"
+    },
+    "model_tuning": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_assess_detail": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_class_weight": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_baseline": {
+     "value": 1,
+     "evidence": "#4:L25 DummyClassifier (action of first model)"
+    },
+    "eval_business": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_review_next": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_notes": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_crisp_sections": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_upfront": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "verify_outputs": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "canonical_order": {
+     "value": 1,
+     "evidence": "BU T>#2 < MODEL #4; DU #1 < PREP #4"
+    },
+    "implicit_crisp": {
+     "value": 1,
+     "evidence": "all phases + canonical"
+    },
+    "backjump_any": {
+     "value": 0,
+     "evidence": "DU-PREP-MODEL-EVAL"
+    },
+    "monolith": {
+     "value": 0,
+     "evidence": "solve.py has no DU line"
+    },
+    "single_pipeline_script": {
+     "value": 1,
+     "evidence": "solve.py"
+    },
+    "n_families": {
+     "value": 1,
+     "evidence": ""
+    },
+    "n_backjumps": {
+     "value": 0,
+     "evidence": "DU-PREP-MODEL-EVAL"
+    },
+    "n_actions": {
+     "value": 5,
+     "evidence": ""
+    },
+    "n_code_actions": {
+     "value": 3,
+     "evidence": ""
+    },
+    "n_scripts": {
+     "value": 1,
+     "evidence": ""
+    },
+    "n_inline_python": {
+     "value": 2,
+     "evidence": ""
+    }
+   },
+   "alt_intent": {},
+   "notes": ""
+  },
+  "main-connect_4-naked_react-r4": {
+   "arm": "naked_react",
+   "set": "connect_4",
+   "stratum": "hard",
+   "model_start": "#5:L24 HistGradientBoostingClassifier(",
+   "phase_sequence": "DU-PREP-MODEL-EVAL",
+   "codes": {
+    "bu_target": {
+     "value": 1,
+     "evidence": "T>#3 '`col_42` is the game-theoretic outcome'; #5:L8 TARGET"
+    },
+    "bu_metric": {
+     "value": 0,
+     "evidence": "metric only in final report"
+    },
+    "bu_explicit": {
+     "value": 0,
+     "evidence": "metric missing"
+    },
+    "bu_metric_rationale": {
+     "value": 0,
+     "evidence": "none before model"
+    },
+    "bu_success_criterion": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "bu_business_context": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_inspect_before_model": {
+     "value": 1,
+     "evidence": "#2:L5 tr.shape"
+    },
+    "du_class_dist": {
+     "value": 1,
+     "evidence": "#3:L5 tr['col_42'].value_counts"
+    },
+    "du_missing": {
+     "value": 1,
+     "evidence": "#3:L9 tr.isna()"
+    },
+    "du_quality_ext": {
+     "value": 1,
+     "evidence": "#4:L6 tr[c].nunique()"
+    },
+    "du_stats": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_relations": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_leakage": {
+     "value": 1,
+     "evidence": "#4:L8 comment '# leakage: any single feature perfectly separating?'"
+    },
+    "leakage_mention_any": {
+     "value": 1,
+     "evidence": "#4:L8"
+    },
+    "prep_explicit": {
+     "value": 1,
+     "evidence": "#5:L18 OneHotEncoder"
+    },
+    "prep_select": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "prep_select_rule": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "prep_construct": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_multi_family": {
+     "value": 0,
+     "evidence": "hist_gb only"
+    },
+    "model_cv": {
+     "value": 0,
+     "evidence": "holdout only"
+    },
+    "model_test_design": {
+     "value": 1,
+     "evidence": "#5:L23 train_test_split"
+    },
+    "model_tuning": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_assess_detail": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_class_weight": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_baseline": {
+     "value": 1,
+     "evidence": "#5:L31 print('baseline acc:') after L24; T>#6"
+    },
+    "eval_business": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_review_next": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_notes": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_crisp_sections": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_upfront": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "verify_outputs": {
+     "value": 1,
+     "evidence": "#7"
+    },
+    "canonical_order": {
+     "value": 1,
+     "evidence": "BU T>#3 < MODEL #5; DU #2 < PREP #5"
+    },
+    "implicit_crisp": {
+     "value": 0,
+     "evidence": "bu_explicit missing"
+    },
+    "backjump_any": {
+     "value": 0,
+     "evidence": "DU-PREP-MODEL-EVAL"
+    },
+    "monolith": {
+     "value": 0,
+     "evidence": "solve.py only y.value_counts().idxmax() (exception)"
+    },
+    "single_pipeline_script": {
+     "value": 1,
+     "evidence": "solve.py"
+    },
+    "n_families": {
+     "value": 1,
+     "evidence": ""
+    },
+    "n_backjumps": {
+     "value": 0,
+     "evidence": "DU-PREP-MODEL-EVAL"
+    },
+    "n_actions": {
+     "value": 7,
+     "evidence": ""
+    },
+    "n_code_actions": {
+     "value": 5,
+     "evidence": ""
+    },
+    "n_scripts": {
+     "value": 1,
+     "evidence": ""
+    },
+    "n_inline_python": {
+     "value": 4,
+     "evidence": ""
+    }
+   },
+   "alt_intent": {},
+   "notes": ""
+  },
+  "main-credit_g-naked_react-r2": {
+   "arm": "naked_react",
+   "set": "credit_g",
+   "stratum": "hard",
+   "model_start": "#3:L36 RandomForestClassifier(",
+   "phase_sequence": "DU-PREP-MODEL-EVAL",
+   "codes": {
+    "bu_target": {
+     "value": 1,
+     "evidence": "T>#2 '`col_20` is the target'"
+    },
+    "bu_metric": {
+     "value": 1,
+     "evidence": "T>#2 'so I'll use F1'"
+    },
+    "bu_explicit": {
+     "value": 1,
+     "evidence": "T>#2"
+    },
+    "bu_metric_rationale": {
+     "value": 1,
+     "evidence": "T>#2 'Classes are imbalanced (490 good / 210 bad), so I'll use F1.'"
+    },
+    "bu_success_criterion": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "bu_business_context": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_inspect_before_model": {
+     "value": 1,
+     "evidence": "#1:L5 print(tr.shape, te.shape)"
+    },
+    "du_class_dist": {
+     "value": 1,
+     "evidence": "#2:L4 tr['col_20'].value_counts()"
+    },
+    "du_missing": {
+     "value": 0,
+     "evidence": "no isna/isnull/info before model (only fillna = PREP)"
+    },
+    "du_quality_ext": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_stats": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_relations": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_leakage": {
+     "value": 0,
+     "evidence": "none before model"
+    },
+    "leakage_mention_any": {
+     "value": 1,
+     "evidence": "final report 'no IDs, constants, or leakage columns'"
+    },
+    "prep_explicit": {
+     "value": 1,
+     "evidence": "#3:L25 fillna; L33 OneHotEncoder"
+    },
+    "prep_select": {
+     "value": 0,
+     "evidence": "only target dropped"
+    },
+    "prep_select_rule": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "prep_construct": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_multi_family": {
+     "value": 0,
+     "evidence": "random_forest only"
+    },
+    "model_cv": {
+     "value": 1,
+     "evidence": "#3:L38 cross_val_score(cv=5)"
+    },
+    "model_test_design": {
+     "value": 1,
+     "evidence": "#3:L38"
+    },
+    "model_tuning": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_assess_detail": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_class_weight": {
+     "value": 1,
+     "evidence": "#3:L36 class_weight='balanced'"
+    },
+    "eval_baseline": {
+     "value": 1,
+     "evidence": "#3:L39 DummyClassifier"
+    },
+    "eval_business": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_review_next": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_notes": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_crisp_sections": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_upfront": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "verify_outputs": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "canonical_order": {
+     "value": 1,
+     "evidence": "BU T>#2 < MODEL #3; DU #1 < PREP #3"
+    },
+    "implicit_crisp": {
+     "value": 1,
+     "evidence": "all phases + canonical"
+    },
+    "backjump_any": {
+     "value": 0,
+     "evidence": "DU-PREP-MODEL-EVAL"
+    },
+    "monolith": {
+     "value": 0,
+     "evidence": "model.py has no DU line"
+    },
+    "single_pipeline_script": {
+     "value": 1,
+     "evidence": "model.py"
+    },
+    "n_families": {
+     "value": 1,
+     "evidence": ""
+    },
+    "n_backjumps": {
+     "value": 0,
+     "evidence": "DU-PREP-MODEL-EVAL"
+    },
+    "n_actions": {
+     "value": 4,
+     "evidence": ""
+    },
+    "n_code_actions": {
+     "value": 3,
+     "evidence": ""
+    },
+    "n_scripts": {
+     "value": 1,
+     "evidence": ""
+    },
+    "n_inline_python": {
+     "value": 2,
+     "evidence": ""
+    }
+   },
+   "alt_intent": {},
+   "notes": ""
+  },
+  "main-eucalyptus-naked_react-r4": {
+   "arm": "naked_react",
+   "set": "eucalyptus",
+   "stratum": "hard",
+   "model_start": "#4:L40 RandomForestClassifier(",
+   "phase_sequence": "DU-PREP-MODEL-EVAL-PREP-MODEL",
+   "codes": {
+    "bu_target": {
+     "value": 1,
+     "evidence": "T>#2 '`col_19` ... is the Utility rating target'"
+    },
+    "bu_metric": {
+     "value": 0,
+     "evidence": "metric only in final report"
+    },
+    "bu_explicit": {
+     "value": 0,
+     "evidence": "metric missing"
+    },
+    "bu_metric_rationale": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "bu_success_criterion": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "bu_business_context": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_inspect_before_model": {
+     "value": 1,
+     "evidence": "#2:L5 tr.shape"
+    },
+    "du_class_dist": {
+     "value": 1,
+     "evidence": "#3:L4 tr['col_19'].value_counts"
+    },
+    "du_missing": {
+     "value": 1,
+     "evidence": "#3:L8 tr.isna()"
+    },
+    "du_quality_ext": {
+     "value": 1,
+     "evidence": "#3:L6 tr.nunique()"
+    },
+    "du_stats": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_relations": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_leakage": {
+     "value": 1,
+     "evidence": "#4:L20 comment 'no perfect-separation leakage columns detected' (before L40)"
+    },
+    "leakage_mention_any": {
+     "value": 1,
+     "evidence": "#4:L20"
+    },
+    "prep_explicit": {
+     "value": 1,
+     "evidence": "#4:L32 SimpleImputer; L35 OneHotEncoder"
+    },
+    "prep_select": {
+     "value": 0,
+     "evidence": "only target dropped"
+    },
+    "prep_select_rule": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "prep_construct": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_multi_family": {
+     "value": 1,
+     "evidence": "random_forest, hist_gb (#6)"
+    },
+    "model_cv": {
+     "value": 1,
+     "evidence": "#4:L42 cross_val_score(cv=5)"
+    },
+    "model_test_design": {
+     "value": 1,
+     "evidence": "#4:L42"
+    },
+    "model_tuning": {
+     "value": 0,
+     "evidence": "one config per family"
+    },
+    "model_assess_detail": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_class_weight": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_baseline": {
+     "value": 1,
+     "evidence": "#4:L46 DummyClassifier; T>#5"
+    },
+    "eval_business": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_review_next": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_notes": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_crisp_sections": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_upfront": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "verify_outputs": {
+     "value": 1,
+     "evidence": "#9 python -c reads predictions/result.json (chained after python model.py; borderline)"
+    },
+    "canonical_order": {
+     "value": 1,
+     "evidence": "BU T>#2 < MODEL #4; DU #2 < PREP #4"
+    },
+    "implicit_crisp": {
+     "value": 0,
+     "evidence": "bu_explicit missing"
+    },
+    "backjump_any": {
+     "value": 1,
+     "evidence": "#6 OrdinalEncoder + HGB after EVAL (T>#5)"
+    },
+    "monolith": {
+     "value": 0,
+     "evidence": "model.py has no DU line"
+    },
+    "single_pipeline_script": {
+     "value": 1,
+     "evidence": "model.py"
+    },
+    "n_families": {
+     "value": 2,
+     "evidence": ""
+    },
+    "n_backjumps": {
+     "value": 1,
+     "evidence": "DU-PREP-MODEL-EVAL-PREP-MODEL"
+    },
+    "n_actions": {
+     "value": 9,
+     "evidence": ""
+    },
+    "n_code_actions": {
+     "value": 7,
+     "evidence": ""
+    },
+    "n_scripts": {
+     "value": 1,
+     "evidence": ""
+    },
+    "n_inline_python": {
+     "value": 4,
+     "evidence": ""
+    }
+   },
+   "alt_intent": {},
+   "notes": ""
+  },
+  "main-ev_purchase-naked_react-r3": {
+   "arm": "naked_react",
+   "set": "ev_purchase",
+   "stratum": "post_cutoff",
+   "model_start": "#4:L39 HistGradientBoostingClassifier(",
+   "phase_sequence": "DU-PREP-MODEL-EVAL",
+   "codes": {
+    "bu_target": {
+     "value": 1,
+     "evidence": "T>#2 '`col_13` ... likely the target'"
+    },
+    "bu_metric": {
+     "value": 1,
+     "evidence": "T>#3 '**F1** is the right metric'"
+    },
+    "bu_explicit": {
+     "value": 1,
+     "evidence": "T>#3"
+    },
+    "bu_metric_rationale": {
+     "value": 1,
+     "evidence": "T>#3 'Classes are imbalanced (~17% Yes), so **F1** is the right metric.'"
+    },
+    "bu_success_criterion": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "bu_business_context": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_inspect_before_model": {
+     "value": 1,
+     "evidence": "#2:L5 tr.shape"
+    },
+    "du_class_dist": {
+     "value": 1,
+     "evidence": "#3:L5 tr['col_13'].value_counts"
+    },
+    "du_missing": {
+     "value": 1,
+     "evidence": "#3:L11 tr.isna()"
+    },
+    "du_quality_ext": {
+     "value": 1,
+     "evidence": "#4:L19 X[c].nunique() (before L39)"
+    },
+    "du_stats": {
+     "value": 1,
+     "evidence": "#3:L13 tr.describe()"
+    },
+    "du_relations": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_leakage": {
+     "value": 1,
+     "evidence": "#4:L18 comment 'identify ID/constant columns'"
+    },
+    "leakage_mention_any": {
+     "value": 1,
+     "evidence": "#4:L18"
+    },
+    "prep_explicit": {
+     "value": 1,
+     "evidence": "#4:L22 drop(columns=drop_cols); L30 OneHotEncoder"
+    },
+    "prep_select": {
+     "value": 0,
+     "evidence": "no named feature column"
+    },
+    "prep_select_rule": {
+     "value": 1,
+     "evidence": "#4:L22 X.drop(columns=drop_cols), drop_cols from nunique comprehension"
+    },
+    "prep_construct": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_multi_family": {
+     "value": 0,
+     "evidence": "hist_gb only"
+    },
+    "model_cv": {
+     "value": 0,
+     "evidence": "holdout only"
+    },
+    "model_test_design": {
+     "value": 1,
+     "evidence": "#4:L35 train_test_split"
+    },
+    "model_tuning": {
+     "value": 1,
+     "evidence": "(d) #4:L51-55 threshold loop"
+    },
+    "model_assess_detail": {
+     "value": 1,
+     "evidence": "#4:L67 classification_report"
+    },
+    "model_class_weight": {
+     "value": 1,
+     "evidence": "#4:L41 class_weight='balanced'"
+    },
+    "eval_baseline": {
+     "value": 1,
+     "evidence": "#4:L65 'Baseline (most freq) F1' after L39"
+    },
+    "eval_business": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_review_next": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_notes": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_crisp_sections": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_upfront": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "verify_outputs": {
+     "value": 1,
+     "evidence": "#6"
+    },
+    "canonical_order": {
+     "value": 1,
+     "evidence": "BU T>#2 < MODEL #4; DU #2 < PREP #4"
+    },
+    "implicit_crisp": {
+     "value": 1,
+     "evidence": "all phases + canonical"
+    },
+    "backjump_any": {
+     "value": 0,
+     "evidence": "DU-PREP-MODEL-EVAL"
+    },
+    "monolith": {
+     "value": 1,
+     "evidence": "train.py: #4:L19 nunique + drop/OHE + HGB + predictions"
+    },
+    "single_pipeline_script": {
+     "value": 1,
+     "evidence": "train.py"
+    },
+    "n_families": {
+     "value": 1,
+     "evidence": ""
+    },
+    "n_backjumps": {
+     "value": 0,
+     "evidence": "DU-PREP-MODEL-EVAL"
+    },
+    "n_actions": {
+     "value": 6,
+     "evidence": ""
+    },
+    "n_code_actions": {
+     "value": 4,
+     "evidence": ""
+    },
+    "n_scripts": {
+     "value": 1,
+     "evidence": ""
+    },
+    "n_inline_python": {
+     "value": 3,
+     "evidence": ""
+    }
+   },
+   "alt_intent": {},
+   "notes": ""
+  },
+  "main-student_health-naked_react-r6": {
+   "arm": "naked_react",
+   "set": "student_health",
+   "stratum": "post_cutoff",
+   "model_start": "#3:L28 HistGradientBoostingClassifier(",
+   "phase_sequence": "DU-PREP-MODEL-EVAL",
+   "codes": {
+    "bu_target": {
+     "value": 1,
+     "evidence": "T>#2 '`col_13` is the target'"
+    },
+    "bu_metric": {
+     "value": 1,
+     "evidence": "T>#2 'so I'll use macro F1'"
+    },
+    "bu_explicit": {
+     "value": 1,
+     "evidence": "T>#2"
+    },
+    "bu_metric_rationale": {
+     "value": 1,
+     "evidence": "T>#2 'It's imbalanced, so I'll use macro F1.'"
+    },
+    "bu_success_criterion": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "bu_business_context": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_inspect_before_model": {
+     "value": 1,
+     "evidence": "#1:L5 print(tr.shape, te.shape)"
+    },
+    "du_class_dist": {
+     "value": 1,
+     "evidence": "#2:L5 tr['col_13'].value_counts"
+    },
+    "du_missing": {
+     "value": 1,
+     "evidence": "#2:L10 tr.isna()"
+    },
+    "du_quality_ext": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_stats": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_relations": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "du_leakage": {
+     "value": 0,
+     "evidence": "none before model"
+    },
+    "leakage_mention_any": {
+     "value": 1,
+     "evidence": "final report 'No IDs, constants, or leakage columns found.'"
+    },
+    "prep_explicit": {
+     "value": 1,
+     "evidence": "#3:L24 SimpleImputer; L26 OneHotEncoder"
+    },
+    "prep_select": {
+     "value": 0,
+     "evidence": "only target dropped"
+    },
+    "prep_select_rule": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "prep_construct": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_multi_family": {
+     "value": 0,
+     "evidence": "hist_gb only"
+    },
+    "model_cv": {
+     "value": 0,
+     "evidence": "holdout only"
+    },
+    "model_test_design": {
+     "value": 1,
+     "evidence": "#3:L30 train_test_split"
+    },
+    "model_tuning": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_assess_detail": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "model_class_weight": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_baseline": {
+     "value": 1,
+     "evidence": "#3:L35 DummyClassifier"
+    },
+    "eval_business": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "eval_review_next": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_notes": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_crisp_sections": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "doc_upfront": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "verify_outputs": {
+     "value": 0,
+     "evidence": "none"
+    },
+    "canonical_order": {
+     "value": 1,
+     "evidence": "BU T>#2 < MODEL #3; DU #1 < PREP #3"
+    },
+    "implicit_crisp": {
+     "value": 1,
+     "evidence": "all phases + canonical"
+    },
+    "backjump_any": {
+     "value": 0,
+     "evidence": "DU-PREP-MODEL-EVAL"
+    },
+    "monolith": {
+     "value": 0,
+     "evidence": "model.py has no DU line (select_dtypes is not a DU pattern)"
+    },
+    "single_pipeline_script": {
+     "value": 1,
+     "evidence": "model.py"
+    },
+    "n_families": {
+     "value": 1,
+     "evidence": ""
+    },
+    "n_backjumps": {
+     "value": 0,
+     "evidence": "DU-PREP-MODEL-EVAL"
+    },
+    "n_actions": {
+     "value": 4,
+     "evidence": ""
+    },
+    "n_code_actions": {
+     "value": 3,
+     "evidence": ""
+    },
+    "n_scripts": {
+     "value": 1,
+     "evidence": ""
+    },
+    "n_inline_python": {
+     "value": 2,
+     "evidence": ""
+    }
+   },
+   "alt_intent": {},
+   "notes": ""
+  }
+ }
+}

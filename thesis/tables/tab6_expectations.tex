@@ -1,0 +1,23 @@
+%!TEX root = ../thesis.tex
+% generiert von thesis/scripts/make_tables.py — nicht von Hand aendern
+\begin{table}[htbp]
+  \centering
+  \small
+  \caption[Expected pattern and outcome]{The expected pattern fixed before the main runs (\autoref{sec:3:GoalAndHypotheses}) against the observations in the core suite and the post-cutoff control. Arms as in \autoref{tab:3:arms}.}
+  \label{tab:6:expectations}
+  \begin{tabularx}{\textwidth}{>{\RaggedRight\arraybackslash}p{3.2cm}LL}
+    \toprule
+    Expected pattern & Core suite & Post-cutoff control \\
+    \midrule
+    1. Clean datasets: parity of A and D & Consistent (n.\,s.): Friedman (Iman--Davenport) $p = 0.853$, rank difference A--D 0.46 $<$ CD, $\delta = +0.017$ & Not testable ($N = 2$); A above D on both sets \\
+    \addlinespace
+    2. Traps: A $>$ D & Not tested for injected leaks (D exploited 1/39 and 4/39) and unsolvable tasks; natural leak in bank-marketing: A excludes it in 6/6 runs and scores lower (F1 0.709 vs.\ 0.753); D excludes it in 1/6, its only failed run & Not applicable \\
+    \addlinespace
+    3. Run SD of A $<$ D & No: median 0.0088 vs.\ 0.0067; A lower on 4 of 13 datasets & Yes (descriptive): 0.0023 vs.\ 0.0182 \\
+    \addlinespace
+    4. Imbalanced datasets: pass rate A $>$ D & No: direction only by a single run (bank-marketing, 88\,\% majority class: 6/6 vs.\ 5/6), equal on all other datasets; $p = 1.000$ pooled over all 13 datasets & Direction yes: 11/12 vs.\ 6/12, \mbox{$p = 0.069$} (Holm 0.343) \\
+    \addlinespace
+    5. Refinement: D ahead on high-dimensional datasets & No: cnae-9 0.957 vs.\ 0.957, fashion-mnist 0.895 vs.\ 0.888 (A vs.\ D) & Not applicable \\
+    \bottomrule
+  \end{tabularx}
+\end{table}

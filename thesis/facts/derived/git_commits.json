@@ -1,0 +1,698 @@
+{
+ "runs": {
+  "df11a94": [
+   "2026-11-15T13:17:35",
+   "runs: H1 second stage complete — Arm A and A-Single, 180 runs"
+  ],
+  "df7de52": [
+   "2026-11-09T10:01:32",
+   "Post-Cutoff-Auswertung (sauber, 27.10.) nachgetragen"
+  ],
+  "25644b7": [
+   "2026-10-27T10:26:20",
+   "Post-Cutoff neu (48 Runs) + Kern-Auswertung, Harness mit Isolations-Fixes"
+  ],
+  "4b46569": [
+   "2026-10-26T19:56:16",
+   "Kern-Neustart Nr. 2: 4 Arme verschraenkt, Harness mit Isolations-Fixes"
+  ],
+  "3085c8b": [
+   "2026-10-26T10:04:20",
+   "Kern-Neustart Nr. 2: Zwischenstand 194/312 (Sicherung nach Herunterfahren)"
+  ],
+  "22684c4": [
+   "2026-10-25T19:02:19",
+   "Kern-Neustart Nr. 2: Zwischenstand 177/312 (Sicherung nach PC-Neustart)"
+  ],
+  "94d9212": [
+   "2026-10-24T18:09:05",
+   "Leakage Batch 2 (spurious) Arm D, Harness mit Isolations-Fixes"
+  ],
+  "868b43c": [
+   "2026-10-24T17:22:20",
+   "Leakage Batch 1 Arm D (sauber): 39/39, Leak 1/39, 6,51 $"
+  ],
+  "c4131f5": [
+   "2026-10-24T16:08:59",
+   "Archiv: erster Neu-Lauf (Leakage D) mit Git-Kontext -> gitctx_*"
+  ],
+  "4a17bf4": [
+   "2026-10-24T15:30:03",
+   "Archiv: alle Runs mit geteiltem Auto-Memory -> automem_*"
+  ],
+  "3d979f6": [
+   "2026-10-24T15:20:05",
+   "Leakage-Batch 2 (spurious) Arm D: 39/39, Leak 1/39, 7,74 $ + Auto-Memory-Snapshot"
+  ],
+  "3b42e6e": [
+   "2026-10-24T12:57:43",
+   "Leakage-Runs Arm D komplett: 39/39, Leak 0/39 ausgenutzt, 7,20 $"
+  ],
+  "3d32ff4": [
+   "2026-10-04T20:47:29",
+   "Post-Cutoff komplett: 48/48 SUCCESS, 47,56 $"
+  ],
+  "15df189": [
+   "2026-10-04T15:22:32",
+   "Arm B (neues Design) komplett: 78/78 SUCCESS, 148,51 $ + 4-Arm-Auswertung"
+  ],
+  "9b91bae": [
+   "2026-09-25T13:13:05",
+   "Arm A (neues Design) komplett: 78/78 SUCCESS, 106,83 $"
+  ],
+  "f0d2c8d": [
+   "2026-09-23T23:31:53",
+   "Arm C (neues Design) komplett: 77/78, 22,31 $ + Aggregation/Analyse C vs D"
+  ],
+  "f69d795": [
+   "2026-09-23T21:01:42",
+   "Runs: Stand 23.09.2026 (D neu komplett, C laeuft)"
+  ]
+ },
+ "harness@e0e190a": {
+  "e0e190a": [
+   "2026-09-23T18:11:47",
+   "feat: Kern-Neustart-Design (S1 Split 70/10/20, B3, S4 Kontingent, S8) + Review-2-Wortlaut"
+  ],
+  "f7b28de": [
+   "2026-09-23T14:58:01",
+   "feat(prompts): CRISP-DM-Inhalt aus der Quelle statt eigener Paraphrase"
+  ],
+  "eed38dd": [
+   "2026-09-23T14:49:06",
+   "thesis: Mechanismus zur C-vs-D-These notiert (Kap. 7.2)"
+  ],
+  "fd42705": [
+   "2026-09-23T14:46:04",
+   "feat(scripts): Memorisierungs- und Aussenzugriffs-Check; These korrigiert"
+  ],
+  "6ecb41e": [
+   "2026-09-23T14:38:51",
+   "thesis: explorative These C vs. D in Kap. 7.2 notiert"
+  ],
+  "96351ce": [
+   "2026-09-23T14:37:21",
+   "roadmap: Arm C komplett + erste C-vs-D-Befunde"
+  ],
+  "c42374a": [
+   "2026-09-23T14:22:24",
+   "thesis: Kapitel 4 (Artifact) erster Entwurf + FSM-Diagramm"
+  ],
+  "dea7635": [
+   "2026-09-23T14:04:02",
+   "thesis: Kapitel 3 (Research Design) erster Entwurf"
+  ],
+  "0a0e0da": [
+   "2026-09-23T13:53:23",
+   "thesis: Metadaten eingetragen (Matrikel, Mail, Abgabe 30.11.2026, Moehring-Titel)"
+  ],
+  "f7764b5": [
+   "2026-09-23T13:45:22",
+   "feat(thesis): HHZ-LaTeX-Vorlage + Gliederungsentwurf (Englisch)"
+  ],
+  "6c2633f": [
+   "2026-09-23T12:51:16",
+   "feat(analysis): Zwei-Stufen-Auswertung, best_f1_measured primaer"
+  ],
+  "4fb654e": [
+   "2026-09-23T12:43:39",
+   "fix(gitignore): Baseline-Predictions versionieren"
+  ],
+  "7beed77": [
+   "2026-09-23T12:43:08",
+   "feat(success): gepaarter Bootstrap gegen die Default-Baseline als Erfolgsregel"
+  ],
+  "4845fc0": [
+   "2026-09-23T12:09:32",
+   "fix(threshold): Erfolgsschwelle auf dem Run-Holdout statt CV-Mittel"
+  ],
+  "1c6160f": [
+   "2026-09-23T10:53:48",
+   "feat(datasets): Post-Cutoff-Kontrolle — Kaggle-Loader + 2 Playground-Sets"
+  ],
+  "97537b1": [
+   "2026-09-23T10:32:34",
+   "feat(scripts): Auswertungs-Script analyze_main.py (experiment-design §5)"
+  ],
+  "b6fcc73": [
+   "2026-09-23T10:25:44",
+   "fix(main_runs): eigene run_id bis zum Subprocess durchreichen"
+  ],
+  "ace118b": [
+   "2026-09-18T10:34:15",
+   "docs: Stand 18.09. + „Nächste Session\"-Block (Kern-Pakete pro Arm)"
+  ],
+  "2cb4911": [
+   "2026-09-18T10:24:58",
+   "feat(scripts): Haupt-Runner main_runs.py — 4 Arme x 13 Sets x n=6, resumebar"
+  ],
+  "bfd21b5": [
+   "2026-09-18T10:22:39",
+   "feat(state): best_f1_measured — F1-Verteilung unabhaengig von der Schwelle"
+  ],
+  "bc5fb39": [
+   "2026-09-18T09:51:27",
+   "feat(run): Abo-Kontingent-Ende = ERROR/rate_limited, Runner wartet + wiederholt"
+  ],
+  "e5fd7a6": [
+   "2026-09-18T09:46:25",
+   "feat(run): ERROR-Terminalzustand + fail_reason in allen Armen"
+  ],
+  "8e9fd19": [
+   "2026-09-18T09:35:26",
+   "feat(threshold): Erfolgsschwelle baseline-relativ (k=1) aus dem Manifest"
+  ],
+  "7cab44b": [
+   "2026-09-18T09:32:23",
+   "feat(harness): macro-F1 im Scorer + Kontext-Isolation fuer claude -p"
+  ],
+  "ba3ef24": [
+   "2026-09-18T09:32:23",
+   "docs: Protokoll Decker-Meeting 14.09. + Roadmap-Stand vor den Haupt-Runs"
+  ],
+  "7dbd1bf": [
+   "2026-09-13T09:39:40",
+   "Merge pull request #17 from ElevAyky/docs/prep-datasets"
+  ],
+  "88f4b1b": [
+   "2026-09-13T09:39:16",
+   "docs(meetings): Drittel-Regel und 0.05-Setzung begruendet"
+  ],
+  "7361c1d": [
+   "2026-09-13T09:38:53",
+   "docs(meetings): credit_g + covertype in der Vorbereitung beschrieben"
+  ],
+  "8e54ddb": [
+   "2026-09-13T09:33:58",
+   "Merge pull request #16 from ElevAyky/docs/meeting-2026-09-14-vorbereitung"
+  ],
+  "6b76cfe": [
+   "2026-09-13T09:27:45",
+   "docs(meetings): interne Vorbereitung Decker-Meeting 14.09."
+  ],
+  "249b343": [
+   "2026-09-12T18:53:53",
+   "Merge pull request #15 from ElevAyky/fix/harness-parity-from-pr11"
+  ],
+  "a0f11b4": [
+   "2026-09-12T18:39:03",
+   "docs(readme): SUCCESS-Definition nach Paritäts-Fix nachziehen"
+  ],
+  "abbdb2d": [
+   "2026-09-12T18:38:51",
+   "docs: Root-Cause der MLE-Bench-Probe + Erwartungs-Muster als Decker-Agenda-Punkt"
+  ],
+  "b8ecaa7": [
+   "2026-09-12T18:38:51",
+   "docs(benchmarks): MLE-Bench-Probe-Ergebnis — D Silber (0.8195), A unter Median (0.7701)"
+  ],
+  "612ac1f": [
+   "2026-09-12T18:38:51",
+   "docs(benchmarks): Frontier-Benchmark-Einordnung + Floor-Effekt-Argument + MLE-Bench-Probe geplant"
+  ],
+  "c4033a9": [
+   "2026-09-12T18:38:51",
+   "fix(scoring,react): zwei Scan-Befunde — SUCCESS-Paritaet + Label-Raum-Formfehler"
+  ],
+  "f54f823": [
+   "2026-09-12T18:38:29",
+   "Merge pull request #14 from ElevAyky/claude/thesis-anforderungen-2t5dwf"
+  ],
+  "3dff7ff": [
+   "2026-09-12T18:10:13",
+   "docs: Rebase auf master nach #13 — Scan-Stand zusammengeführt"
+  ],
+  "42622c2": [
+   "2026-09-12T18:09:30",
+   "docs(modellwahl): Cutoffs gegen die Model Cards verifiziert"
+  ],
+  "5c06e53": [
+   "2026-09-12T18:09:30",
+   "fix(pricing): Sonnet 5 steht auf 2/10, nicht 3/15"
+  ],
+  "dad081f": [
+   "2026-09-12T18:09:30",
+   "docs: Repo-Konsistenz nachziehen (README, CLAUDE.md, Meetings-Index)"
+  ],
+  "bbeba8a": [
+   "2026-09-12T18:09:17",
+   "feat(scripts): Varianz-Scan-Runner ueber die Kandidaten-Suite"
+  ],
+  "4cf038d": [
+   "2026-09-12T18:09:04",
+   "docs(roadmap): Formalia als abgenommen festhalten, n-Methodik als Decker-Vorgabe praezisieren"
+  ],
+  "bd39a3b": [
+   "2026-09-12T18:08:28",
+   "Merge pull request #13 from ElevAyky/claude/thesis-aufgaben-ccd3bf"
+  ],
+  "7bda49f": [
+   "2026-08-09T12:43:22",
+   "docs: Varianz-Scan komplett — n=6 bestaetigt (gepoolt), Kontraktbruch-Befund"
+  ],
+  "dd808dd": [
+   "2026-08-09T12:12:22",
+   "Merge pull request #12 from <account>/claude/thesis-aufgaben-ccd3bf"
+  ],
+  "aed0f39": [
+   "2026-08-09T12:09:51",
+   "feat(datasets): Kandidaten-Suite kuratiert (13 Manifeste) + Full-Size-Baseline"
+  ],
+  "8393a55": [
+   "2026-08-08T18:24:04",
+   "Merge pull request #10 from <account>/claude/next-steps-97f601"
+  ],
+  "3e5fc2c": [
+   "2026-08-08T18:23:53",
+   "docs: n=6 als vorlaeufig markiert, Varianz-Scan ueber volle Suite vor n-Festschreibung"
+  ],
+  "3c34ade": [
+   "2026-08-08T18:06:52",
+   "docs: Kalibrierungslauf-Ergebnis — n=6-Vorschlag, Varianz-Befund (frei >> FSM)"
+  ],
+  "740dca0": [
+   "2026-08-08T17:20:10",
+   "Merge pull request #9 from <account>/claude/next-steps-97f601"
+  ],
+  "f195de7": [
+   "2026-08-08T16:50:39",
+   "feat(datasets): OpenML-Loader + Kalibrierungs-Manifeste (credit_g, covertype) + Schwere-Baseline"
+  ],
+  "23cad79": [
+   "2026-08-08T16:23:54",
+   "Merge pull request #8 from <account>/claude/next-steps-b8b2b2"
+  ],
+  "ef0153e": [
+   "2026-08-08T16:10:43",
+   "docs: Arm-C-E2E-Smoke-Befund in Roadmap/CLAUDE.md (F1 0.9647, 5 Phasen im Transkript)"
+  ],
+  "76f6693": [
+   "2026-08-08T15:48:06",
+   "feat(react): Arm C CRISP-ReAct — freie Session mit CRISP-Anleitung (--arm crisp_react)"
+  ],
+  "6e26a0a": [
+   "2026-08-08T14:34:16",
+   "Merge pull request #7 from <account>/claude/next-steps-70072c"
+  ],
+  "b51ca01": [
+   "2026-08-08T14:28:00",
+   "fix(react): Arm-D-Budget-/Turn-Parität auf 5 FSM-Phasen nachgezogen"
+  ],
+  "26d783c": [
+   "2026-08-08T14:27:53",
+   "feat(softgates): Arm B Soft CRISP — LLM-Prüfer als Quality Gates (--arm soft_fsm)"
+  ],
+  "a4203a2": [
+   "2026-08-08T14:03:43",
+   "Merge pull request #6 from <account>/claude/thesis-next-steps-476756"
+  ],
+  "e392ab0": [
+   "2026-08-08T13:56:28",
+   "docs: Review-Fixes nachziehen — getarnte Leakage-Spalte, spec_mismatch-Budget-Semantik, 233 Tests"
+  ],
+  "0084865": [
+   "2026-08-08T13:50:19",
+   "fix(phases): spec_mismatch verbraucht kein DU-Retry-Budget, DU-Session wird verworfen"
+  ],
+  "ba7919c": [
+   "2026-08-08T13:50:10",
+   "fix(datasets): Leakage-Spalte tarnen — Feature-Namensstil statt col_31, Floats statt 0/1-Ints"
+  ],
+  "5c36476": [
+   "2026-08-08T12:26:53",
+   "docs: DU-Phase dokumentiert — Roadmap/CLAUDE.md-Stand, bu-gate-Doc-Fix"
+  ],
+  "7f6c320": [
+   "2026-08-08T12:26:53",
+   "feat(run): --leakage-Flag + leakage_detected/du_report im Summary"
+  ],
+  "bade696": [
+   "2026-08-08T12:26:53",
+   "feat(datasets): injizierbare Leakage-Spalte (Train korreliert, Test zufällig)"
+  ],
+  "5c22b46": [
+   "2026-08-08T12:26:53",
+   "feat(graph): DU-Phase verdrahtet (bu→du→prep) + spec_mismatch-Rücksprung zu bu"
+  ],
+  "6277a24": [
+   "2026-08-08T12:26:53",
+   "feat(bu): optionales Spec-Feld critical_columns als DU-Hinweis"
+  ],
+  "dca4f7e": [
+   "2026-08-08T12:26:53",
+   "feat(du): quality_issues + excluded_columns fließen in den Prep-Prompt"
+  ],
+  "020c589": [
+   "2026-08-08T12:26:53",
+   "feat(du): DU-Prompt + Phasen-Node mit check_du-Gate"
+  ],
+  "2fe9abb": [
+   "2026-08-08T12:26:53",
+   "feat(state): du-Attempts + du_report im RunState"
+  ],
+  "800105f": [
+   "2026-08-08T12:18:43",
+   "feat(gates): check_du-Faktentreue-Gate (roadmap §1)"
+  ],
+  "ea3d31a": [
+   "2026-08-08T12:03:02",
+   "chore: .obsidian/ ignorieren"
+  ],
+  "1ab79a0": [
+   "2026-08-08T12:02:22",
+   "docs+fix: Roadmap, Statistik-Paket §5, Modellwahl (Opus 4.8 + Sonnet 5, Cutoff 2026-01-31), pricing.py echte Preise, CLAUDE.md-Stand"
+  ],
+  "188e92e": [
+   "2026-07-19T17:01:13",
+   "Merge pull request #5 from <account>/feat/react-arm"
+  ],
+  "57753fb": [
+   "2026-07-19T12:02:33",
+   "docs: E2E-Befund erster A-vs-D-Datenpunkt (A 0.973 / D 0.965 / poisoned ABSTAIN)"
+  ],
+  "9d30eaf": [
+   "2026-07-19T11:54:17",
+   "fix(backend): Prompt via stdin statt argv — Windows-.cmd-Shim verschluckt Flags bei Quotes im Prompt"
+  ],
+  "a9f05a9": [
+   "2026-07-18T16:59:20",
+   "test(backend): cmd[0]-Assert an which-Auflösung angepasst"
+  ],
+  "4e3a5c4": [
+   "2026-07-18T16:58:31",
+   "fix(backend): claude-CLI via shutil.which auflösen (Windows npm-Shim, WinError 2)"
+  ],
+  "71e96bd": [
+   "2026-07-18T16:48:19",
+   "fix(react): USD-Budget-Parität Arm D (4x) + Doku-Korrekturen (Final-Review)"
+  ],
+  "8ad1d61": [
+   "2026-07-18T16:38:40",
+   "docs: Arm-D-Abweichung dokumentiert (claude -p statt create_react_agent), Status + SUCCESS-Semantik-Hinweis"
+  ],
+  "ee80502": [
+   "2026-07-18T16:35:19",
+   "fix(run): eval_f1_threshold im Summary + holdout-Hash über beide Dateien + react-max-turns-Passthrough-Test (Review Task 8)"
+  ],
+  "5aea579": [
+   "2026-07-18T16:27:50",
+   "feat(run): --arm-Dispatch + arm/target_correct/holdout_intact im Summary"
+  ],
+  "84dc08c": [
+   "2026-07-18T16:23:35",
+   "fix(react): result.json-Diagnose im Event-Log + UTF-8/OSError-Robustheit (Review Task 7)"
+  ],
+  "cf7b8c4": [
+   "2026-07-18T16:14:42",
+   "feat(react): Arm D — Naked-ReAct-Ein-Node-Graph (eine Session, kein Retry)"
+  ],
+  "28f2f16": [
+   "2026-07-18T16:10:07",
+   "fix(prompts): Wording-Parität test_features (Arm A ↔ D) + Purity-Test gehärtet (Review Task 6)"
+  ],
+  "49cc13f": [
+   "2026-07-18T16:09:13",
+   "docs(spec): Task-6-Review-Nachträge — Wording-Parität, gehärtete Purity-Liste, Nudge-Asymmetrie als Limitation"
+  ],
+  "839b626": [
+   "2026-07-18T16:03:18",
+   "feat(prompts): Naked-ReAct-Prompt mit Purity-Test (kein CRISP-Vokabular)"
+  ],
+  "195e3d6": [
+   "2026-07-18T15:58:57",
+   "refactor(state): accumulate_usage-Helper (geteilt von phases + react)"
+  ],
+  "a307054": [
+   "2026-07-18T15:57:02",
+   "fix(config): arm-Validierung + Klarstellungs-Kommentare (Review Task 4)"
+  ],
+  "3e64138": [
+   "2026-07-18T15:51:57",
+   "feat(config/state): arm-Feld, react_max_turns (4x-Paritaet), target_correct + eval_metric-Validierung"
+  ],
+  "e011ce0": [
+   "2026-07-18T15:48:11",
+   "fix(graph): Eval-Formfehler retryen eval selbst statt Rücksprung zu model (Review Task 3)"
+  ],
+  "018ad2a": [
+   "2026-07-18T15:46:07",
+   "docs(spec): Task-3-Review-Nachträge — Eval-Self-Retry bei Formfehlern, holdout-Integritäts-Check"
+  ],
+  "12f71f4": [
+   "2026-07-18T15:38:17",
+   "feat(eval): Harness-Scoring statt Self-Report — Predictions-Kontrakt, Labels bleiben in holdout/"
+  ],
+  "126f76c": [
+   "2026-07-18T15:29:21",
+   "feat(datasets): holdout/test_features.parquet — Test-Split ohne Labels"
+  ],
+  "3d6cfeb": [
+   "2026-07-18T15:27:11",
+   "fix(scoring): numerischer Dtype-Vergleich + NaN-Diagnose (Review-Findings Task 1)"
+  ],
+  "8e81414": [
+   "2026-07-18T15:26:21",
+   "docs(plan): Test-Baseline korrigiert (136+1, nicht 158)"
+  ],
+  "574a8d8": [
+   "2026-07-18T15:22:43",
+   "feat(scoring): deterministischer Predictions-Scorer (Harness rechnet F1/Accuracy selbst)"
+  ],
+  "47e96cf": [
+   "2026-07-18T14:53:04",
+   "docs(plan): Naked-ReAct-Arm Implementierungsplan (10 Tasks, TDD)"
+  ],
+  "2f058d9": [
+   "2026-07-18T11:58:47",
+   "docs(spec): Naked-ReAct-Arm (Arm D) + Harness-Scoring — Design"
+  ],
+  "b5a3023": [
+   "2026-07-17T16:12:18",
+   "feat(bu): task_prompts auf Englisch (OpenML-nah), Sprachentscheidung dokumentiert"
+  ],
+  "683bd87": [
+   "2026-07-17T12:13:45",
+   "Merge pull request #4 from <account>/feat/bu-agent"
+  ],
+  "2528992": [
+   "2026-07-17T12:11:57",
+   "fix(bu): poisoned-Feld im Summary, numerischer Typ-Konsistenz-Check, Ground-Truth-Leak-Tripwire"
+  ],
+  "5781628": [
+   "2026-07-17T12:03:46",
+   "docs: BU-Agent-Meilenstein — E2E-verifiziert (SUCCESS- + ABSTAIN-Pfad)"
+  ],
+  "6054560": [
+   "2026-07-17T11:58:01",
+   "feat(bu): run.py — Manifest-Anbindung, --poisoned-Flag, Outcome/bu_correct in Summary"
+  ],
+  "40bf568": [
+   "2026-07-17T11:51:22",
+   "feat(bu): bu-Node im Graph mit ABSTAIN als drittem Terminal-Zustand"
+  ],
+  "ef26c9d": [
+   "2026-07-17T11:45:23",
+   "refactor(gates): check_eval metrik-agnostisch (Vorbereitung Regression-Adapter)"
+  ],
+  "0a28ef4": [
+   "2026-07-17T11:42:17",
+   "feat(bu): BU-Phase im Node (Prompt-Dispatch, task_spec, bu_correct als Messung, abstain)"
+  ],
+  "3644851": [
+   "2026-07-17T11:39:28",
+   "docs(plan): fehlender Zeilenumbruch vor Task 6"
+  ],
+  "6f1d799": [
+   "2026-07-17T11:37:07",
+   "feat(bu): RunConfig/RunState um task_prompt, eval_metric, task_spec, abstained, bu_correct erweitert"
+  ],
+  "b7deba8": [
+   "2026-07-17T11:32:39",
+   "feat(bu): BU-Prompts (Spec-Schema + cannot_determine-Variante)"
+  ],
+  "81c40ab": [
+   "2026-07-17T11:30:12",
+   "feat(bu): check_bu-Gate + GateResult.abstain (Spec-Validierung gegen echtes Schema)"
+  ],
+  "b1a6ac7": [
+   "2026-07-17T11:25:37",
+   "feat(bu): Target-Neutralisierung im Loader (col_<n> + semantische Klassen-Labels)"
+  ],
+  "51e77b5": [
+   "2026-07-17T11:22:15",
+   "feat(bu): Manifest-Modul + YAML-Files (task_prompt / canonical_spec / poisoned_variant)"
+  ],
+  "956713f": [
+   "2026-07-17T11:20:08",
+   "docs(plan): BU-Agent Implementierungsplan (10 Tasks, TDD)"
+  ],
+  "2870335": [
+   "2026-07-17T11:13:18",
+   "Merge branch 'docs/bu-gate': Doc-Polish + Decker-Mitschrieb 01.07."
+  ],
+  "c36900d": [
+   "2026-07-17T11:13:11",
+   "docs(bu-gate): Decker-Antworten 01.07. zur success_threshold (Mitschrieb)"
+  ],
+  "b42d955": [
+   "2026-06-30T22:21:24",
+   "docs(bu-gate): Format-Fehler-Pfad ins Gate-Diagramm + ABSTAIN/FAIL sauber trennen"
+  ],
+  "c69b1eb": [
+   "2026-06-30T22:07:42",
+   "docs: BU-Gate auch aus architecture/benchmarks/topic verlinken"
+  ],
+  "1c6034b": [
+   "2026-06-30T22:02:29",
+   "docs: business-understanding-gate.md in die Doc-Struktur verlinken"
+  ],
+  "38391ef": [
+   "2026-06-30T21:43:32",
+   "docs(bu-gate): MLR-Bench-Referenz selbsterklaerend machen"
+  ],
+  "a3f9502": [
+   "2026-06-30T21:35:58",
+   "docs(bu-gate): Typ-Konsistenz-Check aus Feld-Tabelle als eigener Absatz erklaert"
+  ],
+  "ca9490e": [
+   "2026-06-30T21:18:31",
+   "docs(bu-gate): prosa entwrappen (ein Absatz = eine Zeile) fuer sauberes Rendering"
+  ],
+  "c34aa27": [
+   "2026-06-30T20:35:09",
+   "Merge pull request #3 from <account>/docs/bu-gate"
+  ],
+  "14bf927": [
+   "2026-06-30T20:29:34",
+   "docs: business-understanding gate + scope decision (Decker 10.06)"
+  ],
+  "984926e": [
+   "2026-06-05T21:37:39",
+   "Merge pull request #2 from <account>/feat/dashboard"
+  ],
+  "0a733b6": [
+   "2026-06-05T21:34:56",
+   "docs: refresh roadmap (dashboard+debug done) + mark verbose mode implemented"
+  ],
+  "4bdcc4e": [
+   "2026-06-05T20:52:54",
+   "feat(dashboard): verbose/debug mode UI (LLM output, run.log, artifact viewer)"
+  ],
+  "368f2f8": [
+   "2026-06-05T20:44:25",
+   "feat(dashboard): persist worker LLM output + run.log/file endpoints (debug mode)"
+  ],
+  "4076170": [
+   "2026-06-05T19:57:20",
+   "feat(dashboard): control-center SPA + Playwright verification + docs"
+  ],
+  "22cc59f": [
+   "2026-06-05T19:35:17",
+   "feat(dashboard): backend — run inventory, status, launch/cancel API"
+  ],
+  "5c51c77": [
+   "2026-06-05T19:21:50",
+   "Merge pull request #1 from <account>/feat/fsm-skeleton"
+  ],
+  "6ebe81a": [
+   "2026-06-05T19:20:34",
+   "test: comprehensive unit coverage across all modules (18 -> 104)"
+  ],
+  "009b34d": [
+   "2026-06-05T19:12:53",
+   "docs(architecture): document --bare subscription-auth caveat (Decision 4)"
+  ],
+  "3ebc33d": [
+   "2026-06-05T18:47:39",
+   "docs: mark FSM walking skeleton as running"
+  ],
+  "569dd1a": [
+   "2026-06-05T18:30:44",
+   "fix: drop --bare (skips subscription auth in CLI >=2.1.x); clean context via out-of-repo runs-dir"
+  ],
+  "b0b13e5": [
+   "2026-06-05T17:55:56",
+   "harden: pre-create phase output dir + assert eval->model loopback in test"
+  ],
+  "5461393": [
+   "2026-06-05T17:48:29",
+   "feat: run entry-point with cost summary"
+  ],
+  "adbabf9": [
+   "2026-06-05T17:05:13",
+   "feat: LangGraph FSM wiring with gate routing + eval loopback"
+  ],
+  "e5c5fa6": [
+   "2026-06-05T17:01:07",
+   "feat: phase nodes (worker call + gate + state update + event log)"
+  ],
+  "53081ba": [
+   "2026-06-05T16:58:05",
+   "feat: fixed phase prompts (initial + resume-with-feedback)"
+  ],
+  "ca54c1b": [
+   "2026-06-05T16:54:10",
+   "feat: ClaudeCliBackend with subprocess call + usage parsing"
+  ],
+  "c6e2836": [
+   "2026-06-05T16:50:09",
+   "feat: deterministic quality gates for prep/model/eval"
+  ],
+  "7740290": [
+   "2026-06-05T16:46:41",
+   "feat: dataset loading with held-out test split"
+  ],
+  "81d159a": [
+   "2026-06-05T16:44:46",
+   "feat: RunConfig + RunState with initializer"
+  ],
+  "a6ace89": [
+   "2026-06-05T16:40:41",
+   "feat: TokenUsage + pricing table with cost calculation"
+  ],
+  "3610763": [
+   "2026-06-05T16:36:19",
+   "chore: uv project setup for FSM skeleton"
+  ],
+  "2068c4c": [
+   "2026-06-05T16:23:58",
+   "Add implementation plan: FSM-Prototyp Walking Skeleton"
+  ],
+  "dfdeaf0": [
+   "2026-06-05T16:14:28",
+   "Add design spec: FSM-Prototyp Walking Skeleton"
+  ],
+  "e766bb8": [
+   "2026-06-05T14:46:54",
+   "Sync arm terminology to 4-arm enforcement gradient"
+  ],
+  "8823d96": [
+   "2026-06-05T14:38:47",
+   "Add 4th arm: Soft CRISP (LLM-gated) -> enforcement gradient"
+  ],
+  "1104a2c": [
+   "2026-06-04T13:10:13",
+   "Add benchmarks.md, CLAUDE.md, README diagrams + live status"
+  ],
+  "88d1f98": [
+   "2026-06-04T12:50:53",
+   "Add verified Agent SDK credit amounts (Decision 8)"
+  ],
+  "a52356b": [
+   "2026-06-04T12:47:24",
+   "Clarify: claude -p CLI vs Agent SDK are the same re: credit"
+  ],
+  "8845fc7": [
+   "2026-06-04T12:43:27",
+   "Add model-backend abstraction + ToS compliance decision"
+  ],
+  "e40b165": [
+   "2026-06-04T12:34:22",
+   "Add architecture decisions + shift token budget to AV"
+  ],
+  "34539c4": [
+   "2026-06-04T11:47:56",
+   "Initial thesis repo: topic, hypotheses, experiment design, meetings"
+  ]
+ }
+}

@@ -1,0 +1,60 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment / secrets
+.env
+.env.*
+*.key
+
+# MLflow
+mlruns/
+mlartifacts/
+mlflow.db
+
+# LangSmith / cache
+.langsmith/
+.cache/
+
+# Große Datasets nicht committen (kleine Test-CSVs in docs/ sind ok)
+/data/
+*.parquet
+*.feather
+# Ausnahme: Baseline-Predictions sind Teil des Versuchsaufbaus (Referenz des
+# gepaarten Bootstrap-Tests, 23.09.) — klein und muessen auf jedem Rechner identisch sein
+!manifests/baseline_preds/*.parquet
+!manifests/post_cutoff/baseline_preds/*.parquet
+
+# Experiment runs
+runs/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# OS / Editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Obsidian
+.obsidian/
+
+# Prozess-Kodierung: Aktionslisten der Runs (aus Transkripten reproduzierbar, thesis/scripts/extract_actions.py)
+thesis/facts/derived/actions/
+
+# Lese-Tracker: Build-Ausgabe (erzeugt von thesis/scripts/make_tracker.py)
+thesis/tracker/build/
+thesis/tracker/backups/
+
+# Fremd-Logs (MCP-Server), landen gelegentlich im Tracker-Ordner
+thesis/tracker/logs/

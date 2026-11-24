@@ -1,0 +1,17 @@
+dataset: fashion_mnist
+source: openml
+openml_data_id: 40996          # Fashion-MNIST (benchmarks.md §2, Schwere: schwer, 70k x 784 Pixel)
+task_prompt: "Determine the clothing category of a fashion product from its 28x28 grayscale image pixels."
+canonical_spec:
+  task_type: classification
+  target_column: class         # Name VOR Neutralisierung (Loader mappt, s. datasets.py)
+  metric: f1
+  positive_class: null         # multiclass (10 Kategorien, Labels '0'..'9') -> macro-F1
+leakage_column: pixel785           # getarnt im Stil der echten Features (pixel1..pixel784)
+spurious_column: "moon_phase"   # Leakage-Batch 2: fachfremd-absurd (docs/leakage-runs.md §7)
+poisoned_variant:
+  task_prompt: "Predict the retail price of the clothing item in dollars."
+  expected: ABSTAIN
+baseline_f1: 0.877   # Referenzmodell (LogReg/RF default, auf val gewaehlt), macro-F1 auf dem TEST-Anteil (70/10/20, seed 42); Predictions in baseline_preds/<set>.test.parquet -> Endurteil aller Arme
+baseline_f1_val: 0.880   # dasselbe Modell auf dem VALIDIERUNGS-Anteil; baseline_preds/<set>.val.parquet -> Referenz der A/B-Gates
+baseline_f1_cv: 0.882   # 5-fold CV full-size (benchmarks.md par. 2) -> nur Schwere/Terzile, NICHT Schwelle

@@ -1,0 +1,778 @@
+{
+  "input": "C:\\projects\\thesis-crisp-dm-runs\\_post_cutoff\\main_runs.json",
+  "agg": "median",
+  "alpha": 0.05,
+  "arms": [
+    "hard_fsm",
+    "soft_fsm",
+    "crisp_react",
+    "naked_react"
+  ],
+  "metrics": {
+    "f1_measured": {
+      "metric": "f1_measured",
+      "agg": "median",
+      "datasets": [
+        "ev_purchase",
+        "student_health"
+      ],
+      "dropped": [],
+      "matrix": [
+        [
+          0.8211750026690997,
+          0.8222540359298778,
+          0.8220633430667266,
+          0.8168414514271399
+        ],
+        [
+          0.9025427405160131,
+          0.9038404750058133,
+          0.8638410872470557,
+          0.8631371982718287
+        ]
+      ],
+      "friedman": {
+        "N": 2,
+        "k": 4,
+        "avg_ranks": [
+          2.5,
+          1.0,
+          2.5,
+          4.0
+        ],
+        "chi2": 5.3999999999999995,
+        "p_chi2": 0.1447435794148559,
+        "F": 8.999999999999991,
+        "df": [
+          3,
+          3
+        ],
+        "p_F": 0.052044019330914
+      },
+      "cd": 3.316605756983416,
+      "nemenyi": [
+        {
+          "a": "hard_fsm",
+          "b": "soft_fsm",
+          "rank_diff": 1.5,
+          "significant": false
+        },
+        {
+          "a": "hard_fsm",
+          "b": "crisp_react",
+          "rank_diff": 0.0,
+          "significant": false
+        },
+        {
+          "a": "hard_fsm",
+          "b": "naked_react",
+          "rank_diff": 1.5,
+          "significant": false
+        },
+        {
+          "a": "soft_fsm",
+          "b": "crisp_react",
+          "rank_diff": 1.5,
+          "significant": false
+        },
+        {
+          "a": "soft_fsm",
+          "b": "naked_react",
+          "rank_diff": 3.0,
+          "significant": false
+        },
+        {
+          "a": "crisp_react",
+          "b": "naked_react",
+          "rank_diff": 1.5,
+          "significant": false
+        }
+      ],
+      "cliques": [
+        [
+          "soft_fsm",
+          "hard_fsm",
+          "crisp_react",
+          "naked_react"
+        ]
+      ],
+      "cliffs": [
+        {
+          "a": "hard_fsm",
+          "b": "soft_fsm",
+          "per_dataset": {
+            "ev_purchase": -0.8888888888888888,
+            "student_health": -0.7777777777777778
+          },
+          "mean_delta": -0.8333333333333333,
+          "mean_magnitude": "large",
+          "a_better_large": 0,
+          "b_better_large": 2
+        },
+        {
+          "a": "hard_fsm",
+          "b": "crisp_react",
+          "per_dataset": {
+            "ev_purchase": -0.6111111111111112,
+            "student_health": 0.3333333333333333
+          },
+          "mean_delta": -0.13888888888888892,
+          "mean_magnitude": "negligible",
+          "a_better_large": 0,
+          "b_better_large": 1
+        },
+        {
+          "a": "hard_fsm",
+          "b": "naked_react",
+          "per_dataset": {
+            "ev_purchase": 0.5,
+            "student_health": 0.4444444444444444
+          },
+          "mean_delta": 0.4722222222222222,
+          "mean_magnitude": "medium",
+          "a_better_large": 1,
+          "b_better_large": 0
+        },
+        {
+          "a": "soft_fsm",
+          "b": "crisp_react",
+          "per_dataset": {
+            "ev_purchase": 0.1111111111111111,
+            "student_health": 0.3333333333333333
+          },
+          "mean_delta": 0.2222222222222222,
+          "mean_magnitude": "small",
+          "a_better_large": 0,
+          "b_better_large": 0
+        },
+        {
+          "a": "soft_fsm",
+          "b": "naked_react",
+          "per_dataset": {
+            "ev_purchase": 1.0,
+            "student_health": 0.6111111111111112
+          },
+          "mean_delta": 0.8055555555555556,
+          "mean_magnitude": "large",
+          "a_better_large": 2,
+          "b_better_large": 0
+        },
+        {
+          "a": "crisp_react",
+          "b": "naked_react",
+          "per_dataset": {
+            "ev_purchase": 0.8888888888888888,
+            "student_health": 0.16666666666666666
+          },
+          "mean_delta": 0.5277777777777778,
+          "mean_magnitude": "large",
+          "a_better_large": 1,
+          "b_better_large": 0
+        }
+      ],
+      "skipped": null,
+      "avg_ranks": {
+        "hard_fsm": 2.5,
+        "soft_fsm": 1.0,
+        "crisp_react": 2.5,
+        "naked_react": 4.0
+      }
+    },
+    "f1_combined": {
+      "metric": "f1_combined",
+      "agg": "median",
+      "datasets": [
+        "ev_purchase",
+        "student_health"
+      ],
+      "dropped": [],
+      "matrix": [
+        [
+          0.8211750026690997,
+          0.8222540359298778,
+          0.8220633430667266,
+          0.8168414514271399
+        ],
+        [
+          0.9025427405160131,
+          0.9038404750058133,
+          0.0,
+          0.0
+        ]
+      ],
+      "friedman": {
+        "N": 2,
+        "k": 4,
+        "avg_ranks": [
+          2.5,
+          1.0,
+          2.75,
+          3.75
+        ],
+        "chi2": 4.6499999999999995,
+        "p_chi2": 0.19929455769807983,
+        "F": 3.444444444444443,
+        "df": [
+          3,
+          3
+        ],
+        "p_F": 0.16841506437446668
+      },
+      "cd": 3.316605756983416,
+      "nemenyi": [
+        {
+          "a": "hard_fsm",
+          "b": "soft_fsm",
+          "rank_diff": 1.5,
+          "significant": false
+        },
+        {
+          "a": "hard_fsm",
+          "b": "crisp_react",
+          "rank_diff": 0.25,
+          "significant": false
+        },
+        {
+          "a": "hard_fsm",
+          "b": "naked_react",
+          "rank_diff": 1.25,
+          "significant": false
+        },
+        {
+          "a": "soft_fsm",
+          "b": "crisp_react",
+          "rank_diff": 1.75,
+          "significant": false
+        },
+        {
+          "a": "soft_fsm",
+          "b": "naked_react",
+          "rank_diff": 2.75,
+          "significant": false
+        },
+        {
+          "a": "crisp_react",
+          "b": "naked_react",
+          "rank_diff": 1.0,
+          "significant": false
+        }
+      ],
+      "cliques": [
+        [
+          "soft_fsm",
+          "hard_fsm",
+          "crisp_react",
+          "naked_react"
+        ]
+      ],
+      "cliffs": [
+        {
+          "a": "hard_fsm",
+          "b": "soft_fsm",
+          "per_dataset": {
+            "ev_purchase": -0.8888888888888888,
+            "student_health": -0.7777777777777778
+          },
+          "mean_delta": -0.8333333333333333,
+          "mean_magnitude": "large",
+          "a_better_large": 0,
+          "b_better_large": 2
+        },
+        {
+          "a": "hard_fsm",
+          "b": "crisp_react",
+          "per_dataset": {
+            "ev_purchase": -0.6111111111111112,
+            "student_health": 0.2222222222222222
+          },
+          "mean_delta": -0.19444444444444448,
+          "mean_magnitude": "small",
+          "a_better_large": 0,
+          "b_better_large": 1
+        },
+        {
+          "a": "hard_fsm",
+          "b": "naked_react",
+          "per_dataset": {
+            "ev_purchase": 0.5,
+            "student_health": 0.3333333333333333
+          },
+          "mean_delta": 0.41666666666666663,
+          "mean_magnitude": "medium",
+          "a_better_large": 1,
+          "b_better_large": 0
+        },
+        {
+          "a": "soft_fsm",
+          "b": "crisp_react",
+          "per_dataset": {
+            "ev_purchase": 0.1111111111111111,
+            "student_health": 0.3333333333333333
+          },
+          "mean_delta": 0.2222222222222222,
+          "mean_magnitude": "small",
+          "a_better_large": 0,
+          "b_better_large": 0
+        },
+        {
+          "a": "soft_fsm",
+          "b": "naked_react",
+          "per_dataset": {
+            "ev_purchase": 1.0,
+            "student_health": 0.6111111111111112
+          },
+          "mean_delta": 0.8055555555555556,
+          "mean_magnitude": "large",
+          "a_better_large": 2,
+          "b_better_large": 0
+        },
+        {
+          "a": "crisp_react",
+          "b": "naked_react",
+          "per_dataset": {
+            "ev_purchase": 0.8888888888888888,
+            "student_health": 0.05555555555555555
+          },
+          "mean_delta": 0.4722222222222222,
+          "mean_magnitude": "medium",
+          "a_better_large": 1,
+          "b_better_large": 0
+        }
+      ],
+      "skipped": null,
+      "avg_ranks": {
+        "hard_fsm": 2.5,
+        "soft_fsm": 1.0,
+        "crisp_react": 2.75,
+        "naked_react": 3.75
+      }
+    },
+    "f1_on_success": {
+      "metric": "f1_on_success",
+      "agg": "median",
+      "datasets": [
+        "ev_purchase",
+        "student_health"
+      ],
+      "dropped": [],
+      "matrix": [
+        [
+          0.8211750026690997,
+          0.8222540359298778,
+          0.8220633430667266,
+          0.8189353789795666
+        ],
+        [
+          0.9025438582723688,
+          0.9038404750058133,
+          0.910084757642857,
+          0.9063474549427679
+        ]
+      ],
+      "friedman": {
+        "N": 2,
+        "k": 4,
+        "avg_ranks": [
+          3.5,
+          2.0,
+          1.5,
+          3.0
+        ],
+        "chi2": 3.0,
+        "p_chi2": 0.3916251762710877,
+        "F": 1.0,
+        "df": [
+          3,
+          3
+        ],
+        "p_F": 0.5000000000000001
+      },
+      "cd": 3.316605756983416,
+      "nemenyi": [
+        {
+          "a": "hard_fsm",
+          "b": "soft_fsm",
+          "rank_diff": 1.5,
+          "significant": false
+        },
+        {
+          "a": "hard_fsm",
+          "b": "crisp_react",
+          "rank_diff": 2.0,
+          "significant": false
+        },
+        {
+          "a": "hard_fsm",
+          "b": "naked_react",
+          "rank_diff": 0.5,
+          "significant": false
+        },
+        {
+          "a": "soft_fsm",
+          "b": "crisp_react",
+          "rank_diff": 0.5,
+          "significant": false
+        },
+        {
+          "a": "soft_fsm",
+          "b": "naked_react",
+          "rank_diff": 1.0,
+          "significant": false
+        },
+        {
+          "a": "crisp_react",
+          "b": "naked_react",
+          "rank_diff": 1.5,
+          "significant": false
+        }
+      ],
+      "cliques": [
+        [
+          "crisp_react",
+          "soft_fsm",
+          "naked_react",
+          "hard_fsm"
+        ]
+      ],
+      "cliffs": [
+        {
+          "a": "hard_fsm",
+          "b": "soft_fsm",
+          "per_dataset": {
+            "ev_purchase": -0.8888888888888888,
+            "student_health": -0.7333333333333333
+          },
+          "mean_delta": -0.8111111111111111,
+          "mean_magnitude": "large",
+          "a_better_large": 0,
+          "b_better_large": 2
+        },
+        {
+          "a": "hard_fsm",
+          "b": "crisp_react",
+          "per_dataset": {
+            "ev_purchase": -0.6111111111111112,
+            "student_health": -1.0
+          },
+          "mean_delta": -0.8055555555555556,
+          "mean_magnitude": "large",
+          "a_better_large": 0,
+          "b_better_large": 2
+        },
+        {
+          "a": "hard_fsm",
+          "b": "naked_react",
+          "per_dataset": {
+            "ev_purchase": 0.25,
+            "student_health": -0.6
+          },
+          "mean_delta": -0.175,
+          "mean_magnitude": "small",
+          "a_better_large": 0,
+          "b_better_large": 1
+        },
+        {
+          "a": "soft_fsm",
+          "b": "crisp_react",
+          "per_dataset": {
+            "ev_purchase": 0.1111111111111111,
+            "student_health": -1.0
+          },
+          "mean_delta": -0.4444444444444444,
+          "mean_magnitude": "medium",
+          "a_better_large": 0,
+          "b_better_large": 1
+        },
+        {
+          "a": "soft_fsm",
+          "b": "naked_react",
+          "per_dataset": {
+            "ev_purchase": 1.0,
+            "student_health": -0.16666666666666666
+          },
+          "mean_delta": 0.4166666666666667,
+          "mean_magnitude": "medium",
+          "a_better_large": 1,
+          "b_better_large": 0
+        },
+        {
+          "a": "crisp_react",
+          "b": "naked_react",
+          "per_dataset": {
+            "ev_purchase": 0.8333333333333334,
+            "student_health": 0.5
+          },
+          "mean_delta": 0.6666666666666667,
+          "mean_magnitude": "large",
+          "a_better_large": 2,
+          "b_better_large": 0
+        }
+      ],
+      "skipped": null,
+      "avg_ranks": {
+        "hard_fsm": 3.5,
+        "soft_fsm": 2.0,
+        "crisp_react": 1.5,
+        "naked_react": 3.0
+      }
+    }
+  },
+  "rates": {
+    "per_arm": {
+      "hard_fsm": {
+        "success": 11,
+        "n": 12,
+        "rate": 0.9166666666666666,
+        "wilson": [
+          0.6461140782014047,
+          0.9851352905492264
+        ]
+      },
+      "soft_fsm": {
+        "success": 12,
+        "n": 12,
+        "rate": 1.0,
+        "wilson": [
+          0.7574992425007574,
+          1.0
+        ]
+      },
+      "crisp_react": {
+        "success": 8,
+        "n": 12,
+        "rate": 0.6666666666666666,
+        "wilson": [
+          0.3906175873976139,
+          0.8618821601026385
+        ]
+      },
+      "naked_react": {
+        "success": 6,
+        "n": 12,
+        "rate": 0.5,
+        "wilson": [
+          0.2537781703934222,
+          0.7462218296065778
+        ]
+      }
+    },
+    "per_cell": [
+      {
+        "arm": "hard_fsm",
+        "dataset": "ev_purchase",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "soft_fsm",
+        "dataset": "ev_purchase",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "crisp_react",
+        "dataset": "ev_purchase",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "naked_react",
+        "dataset": "ev_purchase",
+        "success": 4,
+        "n": 6,
+        "wilson": [
+          0.29998832134152864,
+          0.9032306674407831
+        ],
+        "fail_reasons": {
+          "below_threshold": 2
+        }
+      },
+      {
+        "arm": "hard_fsm",
+        "dataset": "student_health",
+        "success": 5,
+        "n": 6,
+        "wilson": [
+          0.43649056343635395,
+          0.9699474141282697
+        ],
+        "fail_reasons": {
+          "below_threshold": 1
+        }
+      },
+      {
+        "arm": "soft_fsm",
+        "dataset": "student_health",
+        "success": 6,
+        "n": 6,
+        "wilson": [
+          0.6096569663469354,
+          0.9999999999999999
+        ],
+        "fail_reasons": {}
+      },
+      {
+        "arm": "crisp_react",
+        "dataset": "student_health",
+        "success": 2,
+        "n": 6,
+        "wilson": [
+          0.09676933255921683,
+          0.7000116786584712
+        ],
+        "fail_reasons": {
+          "below_threshold": 4
+        }
+      },
+      {
+        "arm": "naked_react",
+        "dataset": "student_health",
+        "success": 2,
+        "n": 6,
+        "wilson": [
+          0.09676933255921683,
+          0.7000116786584712
+        ],
+        "fail_reasons": {
+          "below_threshold": 4
+        }
+      }
+    ],
+    "fisher": [
+      {
+        "a": "hard_fsm",
+        "b": "soft_fsm",
+        "table": [
+          [
+            11,
+            1
+          ],
+          [
+            12,
+            0
+          ]
+        ],
+        "odds_ratio": 0.0,
+        "p": 1.0
+      },
+      {
+        "a": "hard_fsm",
+        "b": "crisp_react",
+        "table": [
+          [
+            11,
+            1
+          ],
+          [
+            8,
+            4
+          ]
+        ],
+        "odds_ratio": 5.5,
+        "p": 0.31677018633540377
+      },
+      {
+        "a": "hard_fsm",
+        "b": "naked_react",
+        "table": [
+          [
+            11,
+            1
+          ],
+          [
+            6,
+            6
+          ]
+        ],
+        "odds_ratio": 11.0,
+        "p": 0.06864988558352403
+      },
+      {
+        "a": "soft_fsm",
+        "b": "crisp_react",
+        "table": [
+          [
+            12,
+            0
+          ],
+          [
+            8,
+            4
+          ]
+        ],
+        "odds_ratio": Infinity,
+        "p": 0.09316770186335403
+      },
+      {
+        "a": "soft_fsm",
+        "b": "naked_react",
+        "table": [
+          [
+            12,
+            0
+          ],
+          [
+            6,
+            6
+          ]
+        ],
+        "odds_ratio": Infinity,
+        "p": 0.013729977116704806
+      },
+      {
+        "a": "crisp_react",
+        "b": "naked_react",
+        "table": [
+          [
+            8,
+            4
+          ],
+          [
+            6,
+            6
+          ]
+        ],
+        "odds_ratio": 2.0,
+        "p": 0.6801722977520528
+      }
+    ]
+  },
+  "run_sd": {
+    "hard_fsm": {
+      "median_sd": 0.002308206559504863,
+      "max_sd": 0.002664478346550747,
+      "cells": 2
+    },
+    "soft_fsm": {
+      "median_sd": 0.0011687412534985336,
+      "max_sd": 0.0019058019647369103,
+      "cells": 2
+    },
+    "crisp_react": {
+      "median_sd": 0.012485454212859497,
+      "max_sd": 0.024219266249414464,
+      "cells": 2
+    },
+    "naked_react": {
+      "median_sd": 0.018179116883070022,
+      "max_sd": 0.02253815257261797,
+      "cells": 2
+    }
+  }
+}

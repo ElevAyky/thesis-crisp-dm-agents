@@ -1,0 +1,28 @@
+%!TEX root = ../thesis.tex
+% generiert von thesis/scripts/make_tables.py — nicht von Hand aendern
+\begin{table}[htbp]
+  \centering
+  \small
+  \caption[Difficulty terciles as moderator]{Difficulty terciles as moderator (descriptive). Mean rank: ranks of the cell means within each dataset, averaged over the datasets of the tercile; mean F1 $-$ baseline: average distance of the cell means to the default baseline on the test split. Arms as in \autoref{tab:3:arms}.}
+  \label{tab:6:terciles}
+  \begin{tabular}{lrrrr}
+    \toprule
+     & A & B & C & D \\
+    \midrule
+    \multicolumn{5}{l}{\emph{Easy} (wine, breast cancer, cnae-9, covertype)} \\
+    \quad Mean rank & 1.88 & 2.62 & 2.88 & 2.62 \\
+    \quad Mean F1 $-$ baseline & $+$0.003 & $+$0.003 & $+$0.002 & $+$0.001 \\
+    \quad Passed & 24/24 & 24/24 & 24/24 & 24/24 \\
+    \midrule
+    \multicolumn{5}{l}{\emph{Medium} (phoneme, fashion-mnist, adult, vehicle)} \\
+    \quad Mean rank & 2.00 & 2.75 & 2.75 & 2.50 \\
+    \quad Mean F1 $-$ baseline & $+$0.038 & $+$0.035 & $+$0.034 & $+$0.034 \\
+    \quad Passed & 24/24 & 24/24 & 24/24 & 24/24 \\
+    \midrule
+    \multicolumn{5}{l}{\emph{Hard} (bank-marketing, credit-g, connect-4, eucalyptus, cmc)} \\
+    \quad Mean rank & 2.80 & 2.20 & 2.00 & 3.00 \\
+    \quad Mean F1 $-$ baseline & $+$0.025 & $+$0.025 & $+$0.043 & $+$0.037 \\
+    \quad Passed & 30/30 & 30/30 & 30/30 & 29/30 \\
+    \bottomrule
+  \end{tabular}
+\end{table}

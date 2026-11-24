@@ -1,0 +1,37 @@
+%!TEX root = ../thesis.tex
+% generiert von thesis/scripts/make_tables.py — nicht von Hand aendern
+\begin{table}[htbp]
+  \centering
+  \small
+  \caption[First pass against second pass]{Findings of the archived first pass, which ran with the shared client memory, against the second pass. The values of the first pass are reported for this comparison only. \emph{Status}: whether the finding suggested by the first pass holds in the second pass. Mean F1 is the cell mean of the primary F1 measure (\autoref{sec:3:Variables}). Arms as in \autoref{tab:3:arms}.}
+  \label{tab:5:contamination}
+  \begin{tabular}{llrrrrl}
+    \toprule
+    Measure & Pass & A & B & C & D & Status \\
+    \midrule
+    Friedman test, $p$ (Iman--Davenport) & first & \multicolumn{4}{c}{0.725} & holds \\
+     & second & \multicolumn{4}{c}{0.853} &  \\
+    \addlinespace
+    Mean rank, core suite & first & 2.27 & 2.35 & 2.58 & 2.81 & holds \\
+     & second & 2.27 & 2.50 & 2.50 & 2.73 & (A first, D last) \\
+    \addlinespace
+    Passed runs, core suite (of 78) & first & 78 & 78 & 77 & 75 & -- \\
+     & second & 78 & 78 & 78 & 77 &  \\
+    \addlinespace
+    Median run SD, core suite & first & 0.0045 & 0.0091 & 0.0056 & 0.0104 & falls \\
+     & second & 0.0088 & 0.0078 & 0.0053 & 0.0067 &  \\
+    \addlinespace
+    Mean F1 on covertype & first & 0.915 & 0.926 & 0.923 & 0.887 & falls \\
+     & second & 0.923 & 0.919 & 0.922 & 0.921 &  \\
+    \addlinespace
+    Passed runs, post-cutoff (of 12) & first & 12 & 12 & 12 & 12 & falls \\
+     & second & 11 & 12 & 8 & 6 &  \\
+    \addlinespace
+    Cost in USD, core suite & first & \multicolumn{4}{c}{290.01} & -- \\
+     & second & \multicolumn{4}{c}{251.93} &  \\
+    \addlinespace
+    Cost in USD, post-cutoff & first & \multicolumn{4}{c}{47.56} & -- \\
+     & second & \multicolumn{4}{c}{41.94} &  \\
+    \bottomrule
+  \end{tabular}
+\end{table}

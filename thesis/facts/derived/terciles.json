@@ -1,0 +1,176 @@
+{
+ "assignment": {
+  "wine": "easy",
+  "breast_cancer": "easy",
+  "cnae_9": "easy",
+  "covertype": "easy",
+  "phoneme": "medium",
+  "fashion_mnist": "medium",
+  "adult": "medium",
+  "vehicle": "medium",
+  "bank_marketing": "hard",
+  "credit_g": "hard",
+  "connect_4": "hard",
+  "eucalyptus": "hard",
+  "cmc": "hard"
+ },
+ "order_by_cv": [
+  "wine",
+  "breast_cancer",
+  "cnae_9",
+  "covertype",
+  "phoneme",
+  "fashion_mnist",
+  "adult",
+  "vehicle",
+  "bank_marketing",
+  "credit_g",
+  "connect_4",
+  "eucalyptus",
+  "cmc"
+ ],
+ "baseline_cv": {
+  "wine": 0.983,
+  "breast_cancer": 0.971,
+  "cnae_9": 0.942,
+  "covertype": 0.918,
+  "phoneme": 0.89,
+  "fashion_mnist": 0.882,
+  "adult": 0.788,
+  "vehicle": 0.787,
+  "bank_marketing": 0.723,
+  "credit_g": 0.68,
+  "connect_4": 0.628,
+  "eucalyptus": 0.613,
+  "cmc": 0.485
+ },
+ "per_tercile": {
+  "easy": {
+   "datasets": [
+    "wine",
+    "breast_cancer",
+    "cnae_9",
+    "covertype"
+   ],
+   "arms": {
+    "hard_fsm": {
+     "mean_rank": 1.875,
+     "mean_f1": 0.9549041809783845,
+     "mean_f1_minus_baseline": 0.0034497843094294656,
+     "success": 24,
+     "n": 24,
+     "sig_better": 2
+    },
+    "soft_fsm": {
+     "mean_rank": 2.625,
+     "mean_f1": 0.9542415079765785,
+     "mean_f1_minus_baseline": 0.002787111307623491,
+     "success": 24,
+     "n": 24,
+     "sig_better": 3
+    },
+    "crisp_react": {
+     "mean_rank": 2.875,
+     "mean_f1": 0.953715930952937,
+     "mean_f1_minus_baseline": 0.002261534283982125,
+     "success": 24,
+     "n": 24,
+     "sig_better": 6
+    },
+    "naked_react": {
+     "mean_rank": 2.625,
+     "mean_f1": 0.9527002996953228,
+     "mean_f1_minus_baseline": 0.0012459030263678172,
+     "success": 24,
+     "n": 24,
+     "sig_better": 6
+    }
+   }
+  },
+  "medium": {
+   "datasets": [
+    "phoneme",
+    "fashion_mnist",
+    "adult",
+    "vehicle"
+   ],
+   "arms": {
+    "hard_fsm": {
+     "mean_rank": 2.0,
+     "mean_f1": 0.856778532587697,
+     "mean_f1_minus_baseline": 0.037941742362712805,
+     "success": 24,
+     "n": 24,
+     "sig_better": 18
+    },
+    "soft_fsm": {
+     "mean_rank": 2.75,
+     "mean_f1": 0.8539714428872862,
+     "mean_f1_minus_baseline": 0.03513465266230206,
+     "success": 24,
+     "n": 24,
+     "sig_better": 18
+    },
+    "crisp_react": {
+     "mean_rank": 2.75,
+     "mean_f1": 0.8531954533091684,
+     "mean_f1_minus_baseline": 0.03435866308418417,
+     "success": 24,
+     "n": 24,
+     "sig_better": 21
+    },
+    "naked_react": {
+     "mean_rank": 2.5,
+     "mean_f1": 0.8530630843138138,
+     "mean_f1_minus_baseline": 0.03422629408882971,
+     "success": 24,
+     "n": 24,
+     "sig_better": 20
+    }
+   }
+  },
+  "hard": {
+   "datasets": [
+    "bank_marketing",
+    "credit_g",
+    "connect_4",
+    "eucalyptus",
+    "cmc"
+   ],
+   "arms": {
+    "hard_fsm": {
+     "mean_rank": 2.8,
+     "mean_f1": 0.6439822379407614,
+     "mean_f1_minus_baseline": 0.025183956056804114,
+     "success": 30,
+     "n": 30,
+     "sig_better": 9
+    },
+    "soft_fsm": {
+     "mean_rank": 2.2,
+     "mean_f1": 0.6437989920312609,
+     "mean_f1_minus_baseline": 0.025000710147303706,
+     "success": 30,
+     "n": 30,
+     "sig_better": 11
+    },
+    "crisp_react": {
+     "mean_rank": 2.0,
+     "mean_f1": 0.6620658042924801,
+     "mean_f1_minus_baseline": 0.04326752240852284,
+     "success": 30,
+     "n": 30,
+     "sig_better": 12
+    },
+    "naked_react": {
+     "mean_rank": 3.0,
+     "mean_f1": 0.6554703961933306,
+     "mean_f1_minus_baseline": 0.036672114309373435,
+     "success": 29,
+     "n": 30,
+     "sig_better": 12
+    }
+   }
+  }
+ }
+}

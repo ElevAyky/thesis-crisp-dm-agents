@@ -1,0 +1,31 @@
+%!TEX root = ../thesis.tex
+% generiert von thesis/scripts/make_tables.py — nicht von Hand aendern
+\begin{table}[htbp]
+  \centering
+  \small
+  \caption[Phase-level diagnostics of the state-machine arms]{Phase-level diagnostics of the state-machine arms. Retries repeat a phase after a failed gate; jumps return to an earlier phase. All DU gate failures were caused by the worker listing the target column among the excluded columns. The free arms run a single session, so only their turn counts are comparable. Arms as in \autoref{tab:3:arms}.}
+  \label{tab:6:phases}
+  \begin{tabular}{lrrrr}
+    \toprule
+     & \multicolumn{2}{c}{Core suite} & \multicolumn{2}{c}{Post-cutoff} \\
+    \cmidrule(lr){2-3}\cmidrule(lr){4-5}
+    Measure & A & B & A & B \\
+    \midrule
+    Runs & 78 & 78 & 12 & 12 \\
+    Phase attempts BU / DU / Prep & 78 / 102 / 78 & 78 / 97 / 78 & 12 / 14 / 12 & 12 / 15 / 12 \\
+    Phase attempts Model / Eval & 83 / 78 & 79 / 78 & 16 / 14 & 15 / 15 \\
+    Runs with a repeated phase & 25 & 20 & 4 & 5 \\
+    \quad DU retries (target listed as excluded) & 24 (24) & 19 (19) & 2 (2) & 3 (3) \\
+    \quad Model retries & 5 & 1 & 2 & 0 \\
+    \quad Eval $\rightarrow$ Model jumps & 0 & 0 & 2 & 3 \\
+    \quad DU $\rightarrow$ BU jumps (spec.\ mismatch) & 0 & 0 & 0 & 0 \\
+    Worker calls, mean (max) & 5.37 (7) & 5.26 (6) & 5.67 (9) & 5.75 (8) \\
+    Judge calls, total & -- & 410 & -- & 69 \\
+    Worker turns, mean (max) & 47.1 (66) & 47.1 (61) & 51.8 (73) & 53.9 (75) \\
+    Budget exhausted & 0 & 0 & 0 & 0 \\
+    Target correct in first BU attempt & 78/78 & 78/78 & 12/12 & 12/12 \\
+    \midrule
+    Free arms: worker turns C / D, mean (max) & \multicolumn{2}{c}{9.1 (16) / 6.9 (13)} & \multicolumn{2}{c}{9.8 (13) / 6.6 (10)} \\
+    \bottomrule
+  \end{tabular}
+\end{table}

@@ -1,0 +1,1732 @@
+{
+ "meta": {
+  "n_runs": 24,
+  "runs": [
+   "main-breast_cancer-crisp_react-r3",
+   "main-cnae_9-crisp_react-r5",
+   "main-wine-crisp_react-r2",
+   "main-adult-crisp_react-r1",
+   "main-fashion_mnist-crisp_react-r4",
+   "main-vehicle-crisp_react-r1",
+   "main-bank_marketing-crisp_react-r2",
+   "main-cmc-crisp_react-r3",
+   "main-credit_g-crisp_react-r6",
+   "main-eucalyptus-crisp_react-r3",
+   "main-ev_purchase-crisp_react-r4",
+   "main-student_health-crisp_react-r4",
+   "main-cnae_9-naked_react-r6",
+   "main-covertype-naked_react-r1",
+   "main-wine-naked_react-r2",
+   "main-fashion_mnist-naked_react-r2",
+   "main-phoneme-naked_react-r5",
+   "main-vehicle-naked_react-r4",
+   "main-cmc-naked_react-r6",
+   "main-connect_4-naked_react-r4",
+   "main-credit_g-naked_react-r2",
+   "main-eucalyptus-naked_react-r4",
+   "main-ev_purchase-naked_react-r3",
+   "main-student_health-naked_react-r6"
+  ],
+  "coder_a": "thesis/scripts/code_process.py (rule-based) -> process_coding.json",
+  "coder_b": "LLM agent (Claude Opus 5.5), blind to coder A -> process_coding_manual.json",
+  "kappa_undefined_when": "expected agreement p_e = 1 (both coders constant on the same value)",
+  "reliability_rule": "kappa >= 0.6; if at least one coder is constant over the sample (kappa then undefined or 0 for any disagreement): agreement >= 90%; same rule for the rule and the alt reading",
+  "alt": "sensitivity: coder B with alt_intent values (definition instead of literal rule)",
+  "swap_fix": {
+   "main-vehicle-naked_react-r4:du_class_dist": {
+    "rule": 0,
+    "alt": 1
+   }
+  }
+ },
+ "binary": {
+  "bu_explicit": {
+   "group": "main",
+   "rule": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 18,
+    "prevalence_manual": 18,
+    "cells": {
+     "both_1": 18,
+     "both_0": 6,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable",
+    "disagreements": []
+   },
+   "alt": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 18,
+    "prevalence_manual": 18,
+    "cells": {
+     "both_1": 18,
+     "both_0": 6,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable"
+   }
+  },
+  "bu_metric_rationale": {
+   "group": "main",
+   "rule": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 16,
+    "prevalence_manual": 16,
+    "cells": {
+     "both_1": 16,
+     "both_0": 8,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable",
+    "disagreements": []
+   },
+   "alt": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 16,
+    "prevalence_manual": 16,
+    "cells": {
+     "both_1": 16,
+     "both_0": 8,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable"
+   }
+  },
+  "bu_success_criterion": {
+   "group": "main",
+   "rule": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 1,
+    "prevalence_manual": 1,
+    "cells": {
+     "both_1": 1,
+     "both_0": 23,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable",
+    "disagreements": []
+   },
+   "alt": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 1,
+    "prevalence_manual": 1,
+    "cells": {
+     "both_1": 1,
+     "both_0": 23,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable"
+   }
+  },
+  "bu_business_context": {
+   "group": "main",
+   "rule": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 3,
+    "prevalence_manual": 3,
+    "cells": {
+     "both_1": 3,
+     "both_0": 21,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable",
+    "disagreements": []
+   },
+   "alt": {
+    "agreement": 0.9167,
+    "kappa": 0.4667,
+    "prevalence_auto": 3,
+    "prevalence_manual": 1,
+    "cells": {
+     "both_1": 1,
+     "both_0": 21,
+     "auto1_manual0": 2,
+     "auto0_manual1": 0
+    },
+    "verdict": "not reliable"
+   }
+  },
+  "du_inspect_before_model": {
+   "group": "main",
+   "rule": {
+    "agreement": 1.0,
+    "kappa": null,
+    "prevalence_auto": 24,
+    "prevalence_manual": 24,
+    "cells": {
+     "both_1": 24,
+     "both_0": 0,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable (agreement, no variance)",
+    "disagreements": []
+   },
+   "alt": {
+    "agreement": 1.0,
+    "kappa": null,
+    "prevalence_auto": 24,
+    "prevalence_manual": 24,
+    "cells": {
+     "both_1": 24,
+     "both_0": 0,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable (agreement, no variance)"
+   }
+  },
+  "du_class_dist": {
+   "group": "main",
+   "rule": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 23,
+    "prevalence_manual": 23,
+    "cells": {
+     "both_1": 23,
+     "both_0": 1,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable",
+    "disagreements": []
+   },
+   "alt": {
+    "agreement": 0.9583,
+    "kappa": 0.0,
+    "prevalence_auto": 23,
+    "prevalence_manual": 24,
+    "cells": {
+     "both_1": 23,
+     "both_0": 0,
+     "auto1_manual0": 0,
+     "auto0_manual1": 1
+    },
+    "verdict": "reliable (agreement, no variance)"
+   }
+  },
+  "du_missing": {
+   "group": "main",
+   "rule": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 23,
+    "prevalence_manual": 23,
+    "cells": {
+     "both_1": 23,
+     "both_0": 1,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable",
+    "disagreements": []
+   },
+   "alt": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 23,
+    "prevalence_manual": 23,
+    "cells": {
+     "both_1": 23,
+     "both_0": 1,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable"
+   }
+  },
+  "du_quality_ext": {
+   "group": "main",
+   "rule": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 15,
+    "prevalence_manual": 15,
+    "cells": {
+     "both_1": 15,
+     "both_0": 9,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable",
+    "disagreements": []
+   },
+   "alt": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 15,
+    "prevalence_manual": 15,
+    "cells": {
+     "both_1": 15,
+     "both_0": 9,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable"
+   }
+  },
+  "du_stats": {
+   "group": "main",
+   "rule": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 8,
+    "prevalence_manual": 8,
+    "cells": {
+     "both_1": 8,
+     "both_0": 16,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable",
+    "disagreements": []
+   },
+   "alt": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 8,
+    "prevalence_manual": 8,
+    "cells": {
+     "both_1": 8,
+     "both_0": 16,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable"
+   }
+  },
+  "du_relations": {
+   "group": "main",
+   "rule": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 2,
+    "prevalence_manual": 2,
+    "cells": {
+     "both_1": 2,
+     "both_0": 22,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable",
+    "disagreements": []
+   },
+   "alt": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 2,
+    "prevalence_manual": 2,
+    "cells": {
+     "both_1": 2,
+     "both_0": 22,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable"
+   }
+  },
+  "du_leakage": {
+   "group": "main",
+   "rule": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 16,
+    "prevalence_manual": 16,
+    "cells": {
+     "both_1": 16,
+     "both_0": 8,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable",
+    "disagreements": []
+   },
+   "alt": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 16,
+    "prevalence_manual": 16,
+    "cells": {
+     "both_1": 16,
+     "both_0": 8,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable"
+   }
+  },
+  "prep_explicit": {
+   "group": "main",
+   "rule": {
+    "agreement": 0.9583,
+    "kappa": 0.0,
+    "prevalence_auto": 23,
+    "prevalence_manual": 24,
+    "cells": {
+     "both_1": 23,
+     "both_0": 0,
+     "auto1_manual0": 0,
+     "auto0_manual1": 1
+    },
+    "verdict": "reliable (agreement, no variance)",
+    "disagreements": [
+     {
+      "run": "main-cnae_9-naked_react-r6",
+      "auto": 0,
+      "auto_evidence": null,
+      "manual": 1,
+      "manual_evidence": "#5:L32 TfidfTransformer (counted as scaling 'u. a.'; other prep = constant filter without .drop, to_numpy(dtype=float))",
+      "manual_alt": null
+     }
+    ]
+   },
+   "alt": {
+    "agreement": 0.9583,
+    "kappa": 0.0,
+    "prevalence_auto": 23,
+    "prevalence_manual": 24,
+    "cells": {
+     "both_1": 23,
+     "both_0": 0,
+     "auto1_manual0": 0,
+     "auto0_manual1": 1
+    },
+    "verdict": "reliable (agreement, no variance)"
+   }
+  },
+  "prep_select": {
+   "group": "main",
+   "rule": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 3,
+    "prevalence_manual": 3,
+    "cells": {
+     "both_1": 3,
+     "both_0": 21,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable",
+    "disagreements": []
+   },
+   "alt": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 3,
+    "prevalence_manual": 3,
+    "cells": {
+     "both_1": 3,
+     "both_0": 21,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable"
+   }
+  },
+  "prep_construct": {
+   "group": "main",
+   "rule": {
+    "agreement": 1.0,
+    "kappa": null,
+    "prevalence_auto": 0,
+    "prevalence_manual": 0,
+    "cells": {
+     "both_1": 0,
+     "both_0": 24,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable (agreement, no variance)",
+    "disagreements": []
+   },
+   "alt": {
+    "agreement": 1.0,
+    "kappa": null,
+    "prevalence_auto": 0,
+    "prevalence_manual": 0,
+    "cells": {
+     "both_1": 0,
+     "both_0": 24,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable (agreement, no variance)"
+   }
+  },
+  "model_multi_family": {
+   "group": "main",
+   "rule": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 13,
+    "prevalence_manual": 13,
+    "cells": {
+     "both_1": 13,
+     "both_0": 11,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable",
+    "disagreements": []
+   },
+   "alt": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 13,
+    "prevalence_manual": 13,
+    "cells": {
+     "both_1": 13,
+     "both_0": 11,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable"
+   }
+  },
+  "model_cv": {
+   "group": "main",
+   "rule": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 16,
+    "prevalence_manual": 16,
+    "cells": {
+     "both_1": 16,
+     "both_0": 8,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable",
+    "disagreements": []
+   },
+   "alt": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 16,
+    "prevalence_manual": 16,
+    "cells": {
+     "both_1": 16,
+     "both_0": 8,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable"
+   }
+  },
+  "model_test_design": {
+   "group": "main",
+   "rule": {
+    "agreement": 1.0,
+    "kappa": null,
+    "prevalence_auto": 24,
+    "prevalence_manual": 24,
+    "cells": {
+     "both_1": 24,
+     "both_0": 0,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable (agreement, no variance)",
+    "disagreements": []
+   },
+   "alt": {
+    "agreement": 1.0,
+    "kappa": null,
+    "prevalence_auto": 24,
+    "prevalence_manual": 24,
+    "cells": {
+     "both_1": 24,
+     "both_0": 0,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable (agreement, no variance)"
+   }
+  },
+  "model_tuning": {
+   "group": "main",
+   "rule": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 5,
+    "prevalence_manual": 5,
+    "cells": {
+     "both_1": 5,
+     "both_0": 19,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable",
+    "disagreements": []
+   },
+   "alt": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 5,
+    "prevalence_manual": 5,
+    "cells": {
+     "both_1": 5,
+     "both_0": 19,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable"
+   }
+  },
+  "model_assess_detail": {
+   "group": "main",
+   "rule": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 4,
+    "prevalence_manual": 4,
+    "cells": {
+     "both_1": 4,
+     "both_0": 20,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable",
+    "disagreements": []
+   },
+   "alt": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 4,
+    "prevalence_manual": 4,
+    "cells": {
+     "both_1": 4,
+     "both_0": 20,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable"
+   }
+  },
+  "eval_baseline": {
+   "group": "main",
+   "rule": {
+    "agreement": 1.0,
+    "kappa": null,
+    "prevalence_auto": 24,
+    "prevalence_manual": 24,
+    "cells": {
+     "both_1": 24,
+     "both_0": 0,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable (agreement, no variance)",
+    "disagreements": []
+   },
+   "alt": {
+    "agreement": 1.0,
+    "kappa": null,
+    "prevalence_auto": 24,
+    "prevalence_manual": 24,
+    "cells": {
+     "both_1": 24,
+     "both_0": 0,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable (agreement, no variance)"
+   }
+  },
+  "eval_business": {
+   "group": "main",
+   "rule": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 1,
+    "prevalence_manual": 1,
+    "cells": {
+     "both_1": 1,
+     "both_0": 23,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable",
+    "disagreements": []
+   },
+   "alt": {
+    "agreement": 0.9583,
+    "kappa": 0.6471,
+    "prevalence_auto": 1,
+    "prevalence_manual": 2,
+    "cells": {
+     "both_1": 1,
+     "both_0": 22,
+     "auto1_manual0": 0,
+     "auto0_manual1": 1
+    },
+    "verdict": "reliable"
+   }
+  },
+  "eval_review_next": {
+   "group": "main",
+   "rule": {
+    "agreement": 1.0,
+    "kappa": null,
+    "prevalence_auto": 0,
+    "prevalence_manual": 0,
+    "cells": {
+     "both_1": 0,
+     "both_0": 24,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable (agreement, no variance)",
+    "disagreements": []
+   },
+   "alt": {
+    "agreement": 1.0,
+    "kappa": null,
+    "prevalence_auto": 0,
+    "prevalence_manual": 0,
+    "cells": {
+     "both_1": 0,
+     "both_0": 24,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable (agreement, no variance)"
+   }
+  },
+  "doc_notes": {
+   "group": "main",
+   "rule": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 7,
+    "prevalence_manual": 7,
+    "cells": {
+     "both_1": 7,
+     "both_0": 17,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable",
+    "disagreements": []
+   },
+   "alt": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 7,
+    "prevalence_manual": 7,
+    "cells": {
+     "both_1": 7,
+     "both_0": 17,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable"
+   }
+  },
+  "doc_crisp_sections": {
+   "group": "main",
+   "rule": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 5,
+    "prevalence_manual": 5,
+    "cells": {
+     "both_1": 5,
+     "both_0": 19,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable",
+    "disagreements": []
+   },
+   "alt": {
+    "agreement": 0.9167,
+    "kappa": 0.7798,
+    "prevalence_auto": 5,
+    "prevalence_manual": 7,
+    "cells": {
+     "both_1": 5,
+     "both_0": 17,
+     "auto1_manual0": 0,
+     "auto0_manual1": 2
+    },
+    "verdict": "reliable"
+   }
+  },
+  "canonical_order": {
+   "group": "main",
+   "rule": {
+    "agreement": 1.0,
+    "kappa": null,
+    "prevalence_auto": 24,
+    "prevalence_manual": 24,
+    "cells": {
+     "both_1": 24,
+     "both_0": 0,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable (agreement, no variance)",
+    "disagreements": []
+   },
+   "alt": {
+    "agreement": 1.0,
+    "kappa": null,
+    "prevalence_auto": 24,
+    "prevalence_manual": 24,
+    "cells": {
+     "both_1": 24,
+     "both_0": 0,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable (agreement, no variance)"
+   }
+  },
+  "implicit_crisp": {
+   "group": "main",
+   "rule": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 18,
+    "prevalence_manual": 18,
+    "cells": {
+     "both_1": 18,
+     "both_0": 6,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable",
+    "disagreements": []
+   },
+   "alt": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 18,
+    "prevalence_manual": 18,
+    "cells": {
+     "both_1": 18,
+     "both_0": 6,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable"
+   }
+  },
+  "backjump_any": {
+   "group": "main",
+   "rule": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 8,
+    "prevalence_manual": 8,
+    "cells": {
+     "both_1": 8,
+     "both_0": 16,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable",
+    "disagreements": []
+   },
+   "alt": {
+    "agreement": 0.9583,
+    "kappa": 0.9091,
+    "prevalence_auto": 8,
+    "prevalence_manual": 9,
+    "cells": {
+     "both_1": 8,
+     "both_0": 15,
+     "auto1_manual0": 0,
+     "auto0_manual1": 1
+    },
+    "verdict": "reliable"
+   }
+  },
+  "monolith": {
+   "group": "main",
+   "rule": {
+    "agreement": 0.9583,
+    "kappa": 0.9032,
+    "prevalence_auto": 7,
+    "prevalence_manual": 8,
+    "cells": {
+     "both_1": 7,
+     "both_0": 16,
+     "auto1_manual0": 0,
+     "auto0_manual1": 1
+    },
+    "verdict": "reliable",
+    "disagreements": [
+     {
+      "run": "main-cnae_9-naked_react-r6",
+      "auto": 0,
+      "auto_evidence": null,
+      "manual": 1,
+      "manual_evidence": "model.py: #5:L16 nunique (DU) + Tfidf + models + predictions",
+      "manual_alt": null
+     }
+    ]
+   },
+   "alt": {
+    "agreement": 0.875,
+    "kappa": 0.6842,
+    "prevalence_auto": 7,
+    "prevalence_manual": 6,
+    "cells": {
+     "both_1": 5,
+     "both_0": 16,
+     "auto1_manual0": 2,
+     "auto0_manual1": 1
+    },
+    "verdict": "reliable"
+   }
+  },
+  "bu_target": {
+   "group": "aux",
+   "rule": {
+    "agreement": 1.0,
+    "kappa": null,
+    "prevalence_auto": 24,
+    "prevalence_manual": 24,
+    "cells": {
+     "both_1": 24,
+     "both_0": 0,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable (agreement, no variance)",
+    "disagreements": []
+   },
+   "alt": {
+    "agreement": 1.0,
+    "kappa": null,
+    "prevalence_auto": 24,
+    "prevalence_manual": 24,
+    "cells": {
+     "both_1": 24,
+     "both_0": 0,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable (agreement, no variance)"
+   }
+  },
+  "bu_metric": {
+   "group": "aux",
+   "rule": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 18,
+    "prevalence_manual": 18,
+    "cells": {
+     "both_1": 18,
+     "both_0": 6,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable",
+    "disagreements": []
+   },
+   "alt": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 18,
+    "prevalence_manual": 18,
+    "cells": {
+     "both_1": 18,
+     "both_0": 6,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable"
+   }
+  },
+  "leakage_mention_any": {
+   "group": "aux",
+   "rule": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 23,
+    "prevalence_manual": 23,
+    "cells": {
+     "both_1": 23,
+     "both_0": 1,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable",
+    "disagreements": []
+   },
+   "alt": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 23,
+    "prevalence_manual": 23,
+    "cells": {
+     "both_1": 23,
+     "both_0": 1,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable"
+   }
+  },
+  "prep_select_rule": {
+   "group": "aux",
+   "rule": {
+    "agreement": 0.9583,
+    "kappa": 0.7778,
+    "prevalence_auto": 3,
+    "prevalence_manual": 2,
+    "cells": {
+     "both_1": 2,
+     "both_0": 21,
+     "auto1_manual0": 1,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable",
+    "disagreements": [
+     {
+      "run": "main-bank_marketing-crisp_react-r2",
+      "auto": 1,
+      "auto_evidence": "#4:L23",
+      "manual": 0,
+      "manual_evidence": "#4:L24 drop([c for c in LEAKAGE if c in test.columns]) filters the named list, not a data rule (borderline vs. literal rule)",
+      "manual_alt": null
+     }
+    ]
+   },
+   "alt": {
+    "agreement": 0.7917,
+    "kappa": 0.3333,
+    "prevalence_auto": 3,
+    "prevalence_manual": 6,
+    "cells": {
+     "both_1": 2,
+     "both_0": 17,
+     "auto1_manual0": 1,
+     "auto0_manual1": 4
+    },
+    "verdict": "not reliable"
+   }
+  },
+  "model_class_weight": {
+   "group": "aux",
+   "rule": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 7,
+    "prevalence_manual": 7,
+    "cells": {
+     "both_1": 7,
+     "both_0": 17,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable",
+    "disagreements": []
+   },
+   "alt": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 7,
+    "prevalence_manual": 7,
+    "cells": {
+     "both_1": 7,
+     "both_0": 17,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable"
+   }
+  },
+  "doc_upfront": {
+   "group": "aux",
+   "rule": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 2,
+    "prevalence_manual": 2,
+    "cells": {
+     "both_1": 2,
+     "both_0": 22,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable",
+    "disagreements": []
+   },
+   "alt": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 2,
+    "prevalence_manual": 2,
+    "cells": {
+     "both_1": 2,
+     "both_0": 22,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable"
+   }
+  },
+  "verify_outputs": {
+   "group": "aux",
+   "rule": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 18,
+    "prevalence_manual": 18,
+    "cells": {
+     "both_1": 18,
+     "both_0": 6,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable",
+    "disagreements": []
+   },
+   "alt": {
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "prevalence_auto": 18,
+    "prevalence_manual": 18,
+    "cells": {
+     "both_1": 18,
+     "both_0": 6,
+     "auto1_manual0": 0,
+     "auto0_manual1": 0
+    },
+    "verdict": "reliable"
+   }
+  },
+  "single_pipeline_script": {
+   "group": "aux",
+   "rule": {
+    "agreement": 0.9583,
+    "kappa": 0.0,
+    "prevalence_auto": 23,
+    "prevalence_manual": 24,
+    "cells": {
+     "both_1": 23,
+     "both_0": 0,
+     "auto1_manual0": 0,
+     "auto0_manual1": 1
+    },
+    "verdict": "reliable (agreement, no variance)",
+    "disagreements": [
+     {
+      "run": "main-cnae_9-naked_react-r6",
+      "auto": 0,
+      "auto_evidence": null,
+      "manual": 1,
+      "manual_evidence": "model.py",
+      "manual_alt": null
+     }
+    ]
+   },
+   "alt": {
+    "agreement": 0.9583,
+    "kappa": 0.0,
+    "prevalence_auto": 23,
+    "prevalence_manual": 24,
+    "cells": {
+     "both_1": 23,
+     "both_0": 0,
+     "auto1_manual0": 0,
+     "auto0_manual1": 1
+    },
+    "verdict": "reliable (agreement, no variance)"
+   }
+  }
+ },
+ "counts": {
+  "n_families": {
+   "exact_agreement": 1.0,
+   "mean_abs_diff": 0.0,
+   "exact_agreement_alt": 1.0,
+   "mean_auto": 1.708,
+   "mean_manual": 1.708,
+   "disagreements": []
+  },
+  "n_backjumps": {
+   "exact_agreement": 0.9583,
+   "mean_abs_diff": 0.0417,
+   "exact_agreement_alt": 0.9167,
+   "mean_auto": 0.375,
+   "mean_manual": 0.333,
+   "disagreements": [
+    {
+     "run": "main-ev_purchase-crisp_react-r4",
+     "auto": 2,
+     "manual": 1
+    }
+   ]
+  },
+  "n_actions": {
+   "exact_agreement": 1.0,
+   "mean_abs_diff": 0.0,
+   "exact_agreement_alt": 1.0,
+   "mean_auto": 7.292,
+   "mean_manual": 7.292,
+   "disagreements": []
+  },
+  "n_code_actions": {
+   "exact_agreement": 0.0,
+   "mean_abs_diff": 2.125,
+   "exact_agreement_alt": 0.0,
+   "mean_auto": 7.0,
+   "mean_manual": 4.875,
+   "disagreements": [
+    {
+     "run": "main-breast_cancer-crisp_react-r3",
+     "auto": 6,
+     "manual": 4
+    },
+    {
+     "run": "main-cnae_9-crisp_react-r5",
+     "auto": 10,
+     "manual": 8
+    },
+    {
+     "run": "main-wine-crisp_react-r2",
+     "auto": 6,
+     "manual": 4
+    },
+    {
+     "run": "main-adult-crisp_react-r1",
+     "auto": 9,
+     "manual": 6
+    },
+    {
+     "run": "main-fashion_mnist-crisp_react-r4",
+     "auto": 10,
+     "manual": 6
+    },
+    {
+     "run": "main-vehicle-crisp_react-r1",
+     "auto": 8,
+     "manual": 6
+    },
+    {
+     "run": "main-bank_marketing-crisp_react-r2",
+     "auto": 9,
+     "manual": 7
+    },
+    {
+     "run": "main-cmc-crisp_react-r3",
+     "auto": 6,
+     "manual": 4
+    },
+    {
+     "run": "main-credit_g-crisp_react-r6",
+     "auto": 9,
+     "manual": 6
+    },
+    {
+     "run": "main-eucalyptus-crisp_react-r3",
+     "auto": 9,
+     "manual": 6
+    },
+    {
+     "run": "main-ev_purchase-crisp_react-r4",
+     "auto": 9,
+     "manual": 7
+    },
+    {
+     "run": "main-student_health-crisp_react-r4",
+     "auto": 7,
+     "manual": 5
+    },
+    {
+     "run": "main-cnae_9-naked_react-r6",
+     "auto": 7,
+     "manual": 5
+    },
+    {
+     "run": "main-covertype-naked_react-r1",
+     "auto": 5,
+     "manual": 3
+    },
+    {
+     "run": "main-wine-naked_react-r2",
+     "auto": 4,
+     "manual": 3
+    },
+    {
+     "run": "main-fashion_mnist-naked_react-r2",
+     "auto": 8,
+     "manual": 6
+    },
+    {
+     "run": "main-phoneme-naked_react-r5",
+     "auto": 5,
+     "manual": 3
+    },
+    {
+     "run": "main-vehicle-naked_react-r4",
+     "auto": 6,
+     "manual": 3
+    },
+    {
+     "run": "main-cmc-naked_react-r6",
+     "auto": 5,
+     "manual": 3
+    },
+    {
+     "run": "main-connect_4-naked_react-r4",
+     "auto": 7,
+     "manual": 5
+    },
+    {
+     "run": "main-credit_g-naked_react-r2",
+     "auto": 4,
+     "manual": 3
+    },
+    {
+     "run": "main-eucalyptus-naked_react-r4",
+     "auto": 9,
+     "manual": 7
+    },
+    {
+     "run": "main-ev_purchase-naked_react-r3",
+     "auto": 6,
+     "manual": 4
+    },
+    {
+     "run": "main-student_health-naked_react-r6",
+     "auto": 4,
+     "manual": 3
+    }
+   ]
+  },
+  "n_scripts": {
+   "exact_agreement": 1.0,
+   "mean_abs_diff": 0.0,
+   "exact_agreement_alt": 1.0,
+   "mean_auto": 1.083,
+   "mean_manual": 1.083,
+   "disagreements": []
+  },
+  "n_inline_python": {
+   "exact_agreement": 1.0,
+   "mean_abs_diff": 0.0,
+   "exact_agreement_alt": 1.0,
+   "mean_auto": 3.25,
+   "mean_manual": 3.25,
+   "disagreements": []
+  }
+ },
+ "summary": {
+  "reliable_rule": [
+   "bu_explicit",
+   "bu_metric_rationale",
+   "bu_success_criterion",
+   "bu_business_context",
+   "du_inspect_before_model",
+   "du_class_dist",
+   "du_missing",
+   "du_quality_ext",
+   "du_stats",
+   "du_relations",
+   "du_leakage",
+   "prep_explicit",
+   "prep_select",
+   "prep_construct",
+   "model_multi_family",
+   "model_cv",
+   "model_test_design",
+   "model_tuning",
+   "model_assess_detail",
+   "eval_baseline",
+   "eval_business",
+   "eval_review_next",
+   "doc_notes",
+   "doc_crisp_sections",
+   "canonical_order",
+   "implicit_crisp",
+   "backjump_any",
+   "monolith",
+   "bu_target",
+   "bu_metric",
+   "leakage_mention_any",
+   "prep_select_rule",
+   "model_class_weight",
+   "doc_upfront",
+   "verify_outputs",
+   "single_pipeline_script"
+  ],
+  "not_reliable_rule": [],
+  "reliable_alt": [
+   "bu_explicit",
+   "bu_metric_rationale",
+   "bu_success_criterion",
+   "du_inspect_before_model",
+   "du_class_dist",
+   "du_missing",
+   "du_quality_ext",
+   "du_stats",
+   "du_relations",
+   "du_leakage",
+   "prep_explicit",
+   "prep_select",
+   "prep_construct",
+   "model_multi_family",
+   "model_cv",
+   "model_test_design",
+   "model_tuning",
+   "model_assess_detail",
+   "eval_baseline",
+   "eval_business",
+   "eval_review_next",
+   "doc_notes",
+   "doc_crisp_sections",
+   "canonical_order",
+   "implicit_crisp",
+   "backjump_any",
+   "monolith",
+   "bu_target",
+   "bu_metric",
+   "leakage_mention_any",
+   "model_class_weight",
+   "doc_upfront",
+   "verify_outputs",
+   "single_pipeline_script"
+  ],
+  "main_mean_agreement": 0.997,
+  "main_kappas_defined": 22,
+  "n_disagreement_cells_main": 2,
+  "n_disagreement_cells_aux": 2,
+  "n_cells_main": 672,
+  "n_cells_aux": 192
+ },
+ "full_set_checks": {
+  "n_runs": 180,
+  "prep_explicit_false": [
+   {
+    "run": "main-cnae_9-crisp_react-r4",
+    "core": true,
+    "tfidf": true,
+    "phases_missing": [
+     "PREP",
+     "BU_explicit"
+    ],
+    "implicit_crisp": false
+   },
+   {
+    "run": "main-cnae_9-naked_react-r6",
+    "core": true,
+    "tfidf": true,
+    "phases_missing": [
+     "PREP",
+     "BU_explicit"
+    ],
+    "implicit_crisp": false
+   },
+   {
+    "run": "main-phoneme-crisp_react-r3",
+    "core": true,
+    "tfidf": false,
+    "phases_missing": [
+     "PREP"
+    ],
+    "implicit_crisp": false
+   },
+   {
+    "run": "main-phoneme-crisp_react-r6",
+    "core": true,
+    "tfidf": false,
+    "phases_missing": [
+     "PREP"
+    ],
+    "implicit_crisp": false
+   },
+   {
+    "run": "main-phoneme-naked_react-r1",
+    "core": true,
+    "tfidf": false,
+    "phases_missing": [
+     "PREP"
+    ],
+    "implicit_crisp": false
+   },
+   {
+    "run": "main-phoneme-naked_react-r3",
+    "core": true,
+    "tfidf": false,
+    "phases_missing": [
+     "PREP"
+    ],
+    "implicit_crisp": false
+   },
+   {
+    "run": "main-phoneme-naked_react-r4",
+    "core": true,
+    "tfidf": false,
+    "phases_missing": [
+     "PREP"
+    ],
+    "implicit_crisp": false
+   },
+   {
+    "run": "main-phoneme-naked_react-r6",
+    "core": true,
+    "tfidf": false,
+    "phases_missing": [
+     "PREP"
+    ],
+    "implicit_crisp": false
+   }
+  ],
+  "eval_first_from_final_report": [
+   "main-adult-crisp_react-r1"
+  ],
+  "prep_select_rule_hits": [
+   {
+    "run": "main-bank_marketing-crisp_react-r2",
+    "line": "X = train.drop(columns=drop_cols)",
+    "assignment": "[TARGET] + LEAKAGE",
+    "data_rule": false
+   },
+   {
+    "run": "main-bank_marketing-naked_react-r4",
+    "line": "X = X.drop(columns=drop); Xte = te.drop(columns=[c for c in drop if c in te.columns])",
+    "assignment": "[c for c in X.columns if X[c].nunique(dropna=False) <= 1 or X[c].nunique(dropna=",
+    "data_rule": true
+   },
+   {
+    "run": "main-bank_marketing-naked_react-r6",
+    "line": "X = X.drop(columns=drop_cols)",
+    "assignment": "[c for c in X.columns if nunique[c] <= 1]",
+    "data_rule": true
+   },
+   {
+    "run": "main-breast_cancer-naked_react-r1",
+    "line": "X = X.drop(columns=drop_cols)",
+    "assignment": "nunique[nunique <= 1].index.tolist()",
+    "data_rule": true
+   },
+   {
+    "run": "main-cnae_9-crisp_react-r1",
+    "line": "X = X.drop(columns=const_cols)",
+    "assignment": "nunq[nunq <= 1].index.tolist()",
+    "data_rule": true
+   },
+   {
+    "run": "main-cnae_9-naked_react-r4",
+    "line": "(\"var\", VarianceThreshold(0.0)),",
+    "assignment": "",
+    "data_rule": true
+   },
+   {
+    "run": "main-connect_4-naked_react-r3",
+    "line": "X = X.drop(columns=const); Xte = Xte.drop(columns=const)",
+    "assignment": "nunique[nunique <= 1].index.tolist()",
+    "data_rule": true
+   },
+   {
+    "run": "main-covertype-naked_react-r1",
+    "line": "X = X.drop(columns=const_cols)",
+    "assignment": "[c for c in X.columns if X[c].nunique() <= 1]",
+    "data_rule": true
+   },
+   {
+    "run": "main-covertype-naked_react-r2",
+    "line": "Xp = Xp.drop(columns=const_cols)",
+    "assignment": "[c for c in Xp.columns if Xp[c].nunique() <= 1]",
+    "data_rule": true
+   },
+   {
+    "run": "main-covertype-naked_react-r3",
+    "line": "X = X.drop(columns=const_cols)",
+    "assignment": "[c for c in X.columns if X[c].nunique() <= 1]",
+    "data_rule": true
+   },
+   {
+    "run": "main-covertype-naked_react-r4",
+    "line": "X = X.drop(columns=const); Xte = Xte.drop(columns=const)",
+    "assignment": "[c for c in X.columns if X[c].nunique() <= 1]",
+    "data_rule": true
+   },
+   {
+    "run": "main-covertype-naked_react-r5",
+    "line": "X = X.drop(columns=const); Xtest = Xtest.drop(columns=const)",
+    "assignment": "[c for c in X.columns if X[c].nunique() <= 1]",
+    "data_rule": true
+   },
+   {
+    "run": "main-credit_g-naked_react-r3",
+    "line": "X = X.drop(columns=drop)",
+    "assignment": "[c for c in X.columns if X[c].nunique() <= 1]",
+    "data_rule": true
+   },
+   {
+    "run": "main-credit_g-naked_react-r5",
+    "line": "X = X.drop(columns=drop)",
+    "assignment": "[c for c in X.columns if X[c].nunique() <= 1]",
+    "data_rule": true
+   },
+   {
+    "run": "main-credit_g-naked_react-r6",
+    "line": "X = X.drop(columns=drop_cols)",
+    "assignment": "nunique[nunique <= 1].index.tolist()",
+    "data_rule": true
+   },
+   {
+    "run": "main-ev_purchase-naked_react-r3",
+    "line": "X = X.drop(columns=drop_cols)",
+    "assignment": "[c for c in X.columns if X[c].nunique() <= 1]",
+    "data_rule": true
+   }
+  ],
+  "baseline_word_as_string_marker": [
+   "main-ev_purchase-crisp_react-r4"
+  ],
+  "du_class_dist_false": [
+   {
+    "run": "main-cnae_9-crisp_react-r2",
+    "loop_variable_value_counts": true
+   },
+   {
+    "run": "main-fashion_mnist-naked_react-r3",
+    "loop_variable_value_counts": false
+   },
+   {
+    "run": "main-fashion_mnist-naked_react-r5",
+    "loop_variable_value_counts": false
+   },
+   {
+    "run": "main-vehicle-naked_react-r4",
+    "loop_variable_value_counts": true
+   }
+  ],
+  "bu_business_context": {
+   "by_evidence_kind": {
+    "note_body": [
+     "main-bank_marketing-crisp_react-r1",
+     "main-bank_marketing-crisp_react-r4",
+     "main-credit_g-crisp_react-r4"
+    ],
+    "text_or_comment": [
+     "main-credit_g-crisp_react-r1",
+     "main-credit_g-crisp_react-r2",
+     "main-credit_g-crisp_react-r3",
+     "main-credit_g-crisp_react-r5",
+     "main-credit_g-crisp_react-r6"
+    ],
+    "note_heading_only": [
+     "main-eucalyptus-crisp_react-r4",
+     "main-fashion_mnist-crisp_react-r2",
+     "main-fashion_mnist-crisp_react-r4",
+     "main-phoneme-crisp_react-r4",
+     "main-student_health-crisp_react-r4",
+     "main-student_health-crisp_react-r5"
+    ]
+   },
+   "core_C": 12,
+   "core_D": 0,
+   "core_C_without_heading_only": 8,
+   "fisher_p_core_without_heading_only": 0.0065,
+   "holm_p_core_without_heading_only": 0.1229
+  },
+  "doc_crisp_sections_variant_headings": [
+   {
+    "run": "main-cmc-crisp_react-r5",
+    "core": true,
+    "headings": [
+     "## Business/Data Understanding",
+     "## Preparation",
+     "## Modeling (5-fold stratified CV, f1_ma"
+    ]
+   },
+   {
+    "run": "main-connect_4-crisp_react-r2",
+    "core": true,
+    "headings": [
+     "## Business/Data understanding",
+     "## Preparation",
+     "## Modeling"
+    ]
+   },
+   {
+    "run": "main-covertype-crisp_react-r1",
+    "core": true,
+    "headings": [
+     "## Business / Data Mining goal",
+     "## Preprocessing",
+     "## Models (20% stratified holdout)"
+    ]
+   },
+   {
+    "run": "main-covertype-crisp_react-r6",
+    "core": true,
+    "headings": [
+     "## Business/Data mining goal",
+     "## Data understanding",
+     "## Preprocessing",
+     "## Modeling (20% stratified holdout)"
+    ]
+   },
+   {
+    "run": "main-eucalyptus-crisp_react-r3",
+    "core": true,
+    "headings": [
+     "## Business/Data understanding",
+     "## Data prep",
+     "## Modeling",
+     "## Results (5-fold stratified CV)"
+    ]
+   },
+   {
+    "run": "main-fashion_mnist-crisp_react-r4",
+    "core": true,
+    "headings": [
+     "## Business/Data Mining Understanding",
+     "## Data Understanding",
+     "## Preparation",
+     "## Modeling"
+    ]
+   },
+   {
+    "run": "main-phoneme-crisp_react-r6",
+    "core": true,
+    "headings": [
+     "## Business/Data mining goal",
+     "## Data understanding",
+     "## Modeling (5-fold stratified CV)",
+     "## Result"
+    ]
+   },
+   {
+    "run": "main-student_health-crisp_react-r3",
+    "core": false,
+    "headings": [
+     "## Business / Data Mining goal",
+     "## Preprocessing",
+     "## Model & validation"
+    ]
+   }
+  ],
+  "eval_business_verb_form_misses": [
+   "main-breast_cancer-crisp_react-r6",
+   "main-fashion_mnist-crisp_react-r4"
+  ]
+ }
+}

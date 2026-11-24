@@ -1,0 +1,17 @@
+dataset: eucalyptus
+source: openml
+openml_data_id: 188            # eucalyptus (CC18; empirisch schwer, best-Baseline 0.613; Missing Values + mixed)
+task_prompt: "Determine the utility rating of a eucalyptus seedlot for soil conservation from site conditions and growth measurements."
+canonical_spec:
+  task_type: classification
+  target_column: Utility       # Name VOR Neutralisierung (Loader mappt, s. datasets.py)
+  metric: f1
+  positive_class: null         # multiclass (none/low/average/good/best) -> macro-F1
+leakage_column: Soil_pH            # getarnt im Stil der echten Features (Rainfall, Frosts, Altitude, DBH, ...)
+spurious_column: "Football_Scores"   # Leakage-Batch 2: fachfremd-absurd (docs/leakage-runs.md §7)
+poisoned_variant:
+  task_prompt: "Predict the market price of the harvested timber per cubic meter."
+  expected: ABSTAIN
+baseline_f1: 0.627   # Referenzmodell (LogReg/RF default, auf val gewaehlt), macro-F1 auf dem TEST-Anteil (70/10/20, seed 42); Predictions in baseline_preds/<set>.test.parquet -> Endurteil aller Arme
+baseline_f1_val: 0.646   # dasselbe Modell auf dem VALIDIERUNGS-Anteil; baseline_preds/<set>.val.parquet -> Referenz der A/B-Gates
+baseline_f1_cv: 0.613   # 5-fold CV full-size (benchmarks.md par. 2) -> nur Schwere/Terzile, NICHT Schwelle

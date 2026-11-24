@@ -1,0 +1,833 @@
+{
+ "level1": {
+  "per_arm": {
+   "hard_fsm": {
+    "success": 11,
+    "n": 12,
+    "rate": 0.9166666666666666,
+    "wilson": [
+     0.6461140782014047,
+     0.9851352905492264
+    ],
+    "fail_reasons": {
+     "below_threshold": 1
+    }
+   },
+   "soft_fsm": {
+    "success": 12,
+    "n": 12,
+    "rate": 1.0,
+    "wilson": [
+     0.7574992425007574,
+     1.0
+    ],
+    "fail_reasons": {}
+   },
+   "crisp_react": {
+    "success": 8,
+    "n": 12,
+    "rate": 0.6666666666666666,
+    "wilson": [
+     0.3906175873976139,
+     0.8618821601026385
+    ],
+    "fail_reasons": {
+     "below_threshold": 4
+    }
+   },
+   "naked_react": {
+    "success": 6,
+    "n": 12,
+    "rate": 0.5,
+    "wilson": [
+     0.2537781703934222,
+     0.7462218296065778
+    ],
+    "fail_reasons": {
+     "below_threshold": 6
+    }
+   }
+  },
+  "pairs": [
+   {
+    "a": "hard_fsm",
+    "b": "soft_fsm",
+    "table": [
+     [
+      11,
+      1
+     ],
+     [
+      12,
+      0
+     ]
+    ],
+    "odds_ratio": 0.0,
+    "p": 1.0,
+    "p_holm": 1.0
+   },
+   {
+    "a": "hard_fsm",
+    "b": "crisp_react",
+    "table": [
+     [
+      11,
+      1
+     ],
+     [
+      8,
+      4
+     ]
+    ],
+    "odds_ratio": 5.5,
+    "p": 0.31677018633540377,
+    "p_holm": 0.9503105590062113
+   },
+   {
+    "a": "hard_fsm",
+    "b": "naked_react",
+    "table": [
+     [
+      11,
+      1
+     ],
+     [
+      6,
+      6
+     ]
+    ],
+    "odds_ratio": 11.0,
+    "p": 0.06864988558352403,
+    "p_holm": 0.34324942791762014
+   },
+   {
+    "a": "soft_fsm",
+    "b": "crisp_react",
+    "table": [
+     [
+      12,
+      0
+     ],
+     [
+      8,
+      4
+     ]
+    ],
+    "odds_ratio": "inf",
+    "p": 0.09316770186335403,
+    "p_holm": 0.37267080745341613
+   },
+   {
+    "a": "soft_fsm",
+    "b": "naked_react",
+    "table": [
+     [
+      12,
+      0
+     ],
+     [
+      6,
+      6
+     ]
+    ],
+    "odds_ratio": "inf",
+    "p": 0.013729977116704806,
+    "p_holm": 0.08237986270022885
+   },
+   {
+    "a": "crisp_react",
+    "b": "naked_react",
+    "table": [
+     [
+      8,
+      4
+     ],
+     [
+      6,
+      6
+     ]
+    ],
+    "odds_ratio": 2.0,
+    "p": 0.6801722977520528,
+    "p_holm": 1.0
+   }
+  ],
+  "per_cell": [
+   {
+    "dataset": "ev_purchase",
+    "arm": "hard_fsm",
+    "success": 6,
+    "n": 6,
+    "wilson": [
+     0.6096569663469354,
+     0.9999999999999999
+    ],
+    "fail_reasons": {},
+    "fails": []
+   },
+   {
+    "dataset": "ev_purchase",
+    "arm": "soft_fsm",
+    "success": 6,
+    "n": 6,
+    "wilson": [
+     0.6096569663469354,
+     0.9999999999999999
+    ],
+    "fail_reasons": {},
+    "fails": []
+   },
+   {
+    "dataset": "ev_purchase",
+    "arm": "crisp_react",
+    "success": 6,
+    "n": 6,
+    "wilson": [
+     0.6096569663469354,
+     0.9999999999999999
+    ],
+    "fail_reasons": {},
+    "fails": []
+   },
+   {
+    "dataset": "ev_purchase",
+    "arm": "naked_react",
+    "success": 4,
+    "n": 6,
+    "wilson": [
+     0.29998832134152864,
+     0.9032306674407831
+    ],
+    "fail_reasons": {
+     "below_threshold": 2
+    },
+    "fails": [
+     {
+      "run_id": "main-ev_purchase-naked_react-r4",
+      "fail_reason": "below_threshold",
+      "f1": 0.7926896177058571,
+      "diff": -0.0190400820837634,
+      "ci_hi": -0.016183921388962106
+     },
+     {
+      "run_id": "main-ev_purchase-naked_react-r5",
+      "fail_reason": "below_threshold",
+      "f1": 0.7924594359699233,
+      "diff": -0.01927026381969721,
+      "ci_hi": -0.016378388403934765
+     }
+    ]
+   },
+   {
+    "dataset": "student_health",
+    "arm": "hard_fsm",
+    "success": 5,
+    "n": 6,
+    "wilson": [
+     0.43649056343635395,
+     0.9699474141282697
+    ],
+    "fail_reasons": {
+     "below_threshold": 1
+    },
+    "fails": [
+     {
+      "run_id": "main-student_health-hard_fsm-r4",
+      "fail_reason": "below_threshold",
+      "f1": 0.8979904705573615,
+      "diff": -0.0038753314095125724,
+      "ci_hi": -0.0010892195133587778
+     }
+    ]
+   },
+   {
+    "dataset": "student_health",
+    "arm": "soft_fsm",
+    "success": 6,
+    "n": 6,
+    "wilson": [
+     0.6096569663469354,
+     0.9999999999999999
+    ],
+    "fail_reasons": {},
+    "fails": []
+   },
+   {
+    "dataset": "student_health",
+    "arm": "crisp_react",
+    "success": 2,
+    "n": 6,
+    "wilson": [
+     0.09676933255921683,
+     0.7000116786584712
+    ],
+    "fail_reasons": {
+     "below_threshold": 4
+    },
+    "fails": [
+     {
+      "run_id": "main-student_health-crisp_react-r1",
+      "fail_reason": "below_threshold",
+      "f1": 0.8631371982718287,
+      "diff": -0.03872860369504538,
+      "ci_hi": -0.03526849699320606
+     },
+     {
+      "run_id": "main-student_health-crisp_react-r2",
+      "fail_reason": "below_threshold",
+      "f1": 0.8631371982718287,
+      "diff": -0.03872860369504538,
+      "ci_hi": -0.03526849699320606
+     },
+     {
+      "run_id": "main-student_health-crisp_react-r5",
+      "fail_reason": "below_threshold",
+      "f1": 0.8645449762222827,
+      "diff": -0.03732082574459139,
+      "ci_hi": -0.03374475865165767
+     },
+     {
+      "run_id": "main-student_health-crisp_react-r6",
+      "fail_reason": "below_threshold",
+      "f1": 0.8620540261200672,
+      "diff": -0.03981177584680684,
+      "ci_hi": -0.036565482746574327
+     }
+    ]
+   },
+   {
+    "dataset": "student_health",
+    "arm": "naked_react",
+    "success": 2,
+    "n": 6,
+    "wilson": [
+     0.09676933255921683,
+     0.7000116786584712
+    ],
+    "fail_reasons": {
+     "below_threshold": 4
+    },
+    "fails": [
+     {
+      "run_id": "main-student_health-naked_react-r1",
+      "fail_reason": "below_threshold",
+      "f1": 0.8630350654913679,
+      "diff": -0.03883073647550617,
+      "ci_hi": -0.03530959928402427
+     },
+     {
+      "run_id": "main-student_health-naked_react-r2",
+      "fail_reason": "below_threshold",
+      "f1": 0.8624375768450347,
+      "diff": -0.0394282251218393,
+      "ci_hi": -0.035941200899671635
+     },
+     {
+      "run_id": "main-student_health-naked_react-r4",
+      "fail_reason": "below_threshold",
+      "f1": 0.8631371982718287,
+      "diff": -0.03872860369504538,
+      "ci_hi": -0.03526849699320606
+     },
+     {
+      "run_id": "main-student_health-naked_react-r5",
+      "fail_reason": "below_threshold",
+      "f1": 0.8631371982718287,
+      "diff": -0.03872860369504538,
+      "ci_hi": -0.03526849699320606
+     }
+    ]
+   }
+  ]
+ },
+ "pooled_fsm_vs_react": {
+  "AB": [
+   23,
+   24
+  ],
+  "CD": [
+   14,
+   24
+  ],
+  "table": [
+   [
+    23,
+    1
+   ],
+   [
+    14,
+    10
+   ]
+  ],
+  "odds_ratio": 16.428571428571427,
+  "p": 0.004387328918773145,
+  "note": "post hoc gruppiert (nach Sicht der Daten), nur explorativ"
+ },
+ "secondary": {
+  "per_arm": {
+   "hard_fsm": {
+    "sig_better": 8,
+    "n": 12,
+    "rate": 0.6666666666666666,
+    "wilson": [
+     0.3906175873976139,
+     0.8618821601026385
+    ]
+   },
+   "soft_fsm": {
+    "sig_better": 11,
+    "n": 12,
+    "rate": 0.9166666666666666,
+    "wilson": [
+     0.6461140782014047,
+     0.9851352905492264
+    ]
+   },
+   "crisp_react": {
+    "sig_better": 8,
+    "n": 12,
+    "rate": 0.6666666666666666,
+    "wilson": [
+     0.3906175873976139,
+     0.8618821601026385
+    ]
+   },
+   "naked_react": {
+    "sig_better": 5,
+    "n": 12,
+    "rate": 0.4166666666666667,
+    "wilson": [
+     0.19325746190524656,
+     0.6804926643446272
+    ]
+   }
+  },
+  "pairs": [
+   {
+    "a": "hard_fsm",
+    "b": "soft_fsm",
+    "table": [
+     [
+      8,
+      4
+     ],
+     [
+      11,
+      1
+     ]
+    ],
+    "odds_ratio": 0.18181818181818182,
+    "p": 0.31677018633540377,
+    "p_holm": 1.0
+   },
+   {
+    "a": "hard_fsm",
+    "b": "crisp_react",
+    "table": [
+     [
+      8,
+      4
+     ],
+     [
+      8,
+      4
+     ]
+    ],
+    "odds_ratio": 1.0,
+    "p": 1.0,
+    "p_holm": 1.0
+   },
+   {
+    "a": "hard_fsm",
+    "b": "naked_react",
+    "table": [
+     [
+      8,
+      4
+     ],
+     [
+      5,
+      7
+     ]
+    ],
+    "odds_ratio": 2.8,
+    "p": 0.4136492125454302,
+    "p_holm": 1.0
+   },
+   {
+    "a": "soft_fsm",
+    "b": "crisp_react",
+    "table": [
+     [
+      11,
+      1
+     ],
+     [
+      8,
+      4
+     ]
+    ],
+    "odds_ratio": 5.5,
+    "p": 0.31677018633540377,
+    "p_holm": 1.0
+   },
+   {
+    "a": "soft_fsm",
+    "b": "naked_react",
+    "table": [
+     [
+      11,
+      1
+     ],
+     [
+      5,
+      7
+     ]
+    ],
+    "odds_ratio": 15.4,
+    "p": 0.027190738995827163,
+    "p_holm": 0.16314443397496298
+   },
+   {
+    "a": "crisp_react",
+    "b": "naked_react",
+    "table": [
+     [
+      8,
+      4
+     ],
+     [
+      5,
+      7
+     ]
+    ],
+    "odds_ratio": 2.8,
+    "p": 0.4136492125454302,
+    "p_holm": 1.0
+   }
+  ],
+  "per_cell": [
+   {
+    "dataset": "ev_purchase",
+    "hard_fsm": 6,
+    "soft_fsm": 6,
+    "crisp_react": 6,
+    "naked_react": 4
+   },
+   {
+    "dataset": "student_health",
+    "hard_fsm": 2,
+    "soft_fsm": 5,
+    "crisp_react": 2,
+    "naked_react": 1
+   }
+  ],
+  "cells_with_zero": {
+   "hard_fsm": [],
+   "soft_fsm": [],
+   "crisp_react": [],
+   "naked_react": []
+  }
+ },
+ "f1_cell_means": {
+  "ev_purchase": {
+   "crisp_react": 0.8221387574337733,
+   "hard_fsm": 0.8202880905129305,
+   "naked_react": 0.8102292202207951,
+   "soft_fsm": 0.8223005488295274
+  },
+  "student_health": {
+   "crisp_react": 0.8788404856952869,
+   "hard_fsm": 0.9018344624353238,
+   "naked_react": 0.8774069914609326,
+   "soft_fsm": 0.9044841297169017
+  }
+ },
+ "baseline_test": {
+  "ev_purchase": 0.8117296997896205,
+  "student_health": 0.901865801966874
+ },
+ "f1_cell_minus_baseline": {
+  "ev_purchase": {
+   "hard_fsm": 0.008558390723309994,
+   "soft_fsm": 0.010570849039906904,
+   "crisp_react": 0.010409057644152786,
+   "naked_react": -0.0015004795688253747
+  },
+  "student_health": {
+   "hard_fsm": -3.133953155021185e-05,
+   "soft_fsm": 0.0026183277500276825,
+   "crisp_react": -0.023025316271587104,
+   "naked_react": -0.024458810505941453
+  }
+ },
+ "run_sd": {
+  "per_cell": {
+   "ev_purchase": {
+    "crisp_react": 0.0007516421763045289,
+    "hard_fsm": 0.002664478346550747,
+    "naked_react": 0.013820081193522075,
+    "soft_fsm": 0.000431680542260157
+   },
+   "student_health": {
+    "crisp_react": 0.024219266249414464,
+    "hard_fsm": 0.0019519347724589794,
+    "naked_react": 0.02253815257261797,
+    "soft_fsm": 0.0019058019647369103
+   }
+  },
+  "per_arm": {
+   "hard_fsm": {
+    "median_sd": 0.002308206559504863,
+    "max_sd": 0.002664478346550747,
+    "max_sd_dataset": "ev_purchase",
+    "min_sd": 0.0019519347724589794,
+    "cells": 2
+   },
+   "soft_fsm": {
+    "median_sd": 0.0011687412534985336,
+    "max_sd": 0.0019058019647369103,
+    "max_sd_dataset": "student_health",
+    "min_sd": 0.000431680542260157,
+    "cells": 2
+   },
+   "crisp_react": {
+    "median_sd": 0.012485454212859497,
+    "max_sd": 0.024219266249414464,
+    "max_sd_dataset": "student_health",
+    "min_sd": 0.0007516421763045289,
+    "cells": 2
+   },
+   "naked_react": {
+    "median_sd": 0.018179116883070022,
+    "max_sd": 0.02253815257261797,
+    "max_sd_dataset": "student_health",
+    "min_sd": 0.013820081193522075,
+    "cells": 2
+   }
+  },
+  "arm_with_largest_sd_count": {
+   "naked_react": 1,
+   "crisp_react": 1
+  },
+  "sets_with_tied_largest_sd": [],
+  "zero_sd_cells": {
+   "hard_fsm": [],
+   "soft_fsm": [],
+   "crisp_react": [],
+   "naked_react": []
+  }
+ },
+ "friedman_f1_measured": {
+  "friedman": {
+   "N": 2,
+   "k": 4,
+   "avg_ranks": [
+    2.5,
+    1.0,
+    2.5,
+    4.0
+   ],
+   "chi2": 5.3999999999999995,
+   "p_chi2": 0.1447435794148559,
+   "F": 8.999999999999991,
+   "df": [
+    3,
+    3
+   ],
+   "p_F": 0.052044019330914
+  },
+  "cd": 3.316605756983416,
+  "avg_ranks": {
+   "hard_fsm": 2.5,
+   "soft_fsm": 1.0,
+   "crisp_react": 2.5,
+   "naked_react": 4.0
+  }
+ },
+ "median_diff_to_baseline_post": {
+  "hard_fsm": {
+   "median_diff": 0.00227030506982856,
+   "mean_diff": 0.0042635255958799285,
+   "n": 12
+  },
+  "soft_fsm": {
+   "median_diff": 0.007733514533789898,
+   "mean_diff": 0.006594588394967293,
+   "n": 12
+  },
+  "crisp_react": {
+   "median_diff": 0.009305386448214603,
+   "mean_diff": -0.006308129313717224,
+   "n": 12
+  },
+  "naked_react": {
+   "median_diff": -0.009111260149343214,
+   "mean_diff": -0.012979645037383395,
+   "n": 12
+  }
+ },
+ "median_diff_to_baseline_core": {
+  "hard_fsm": {
+   "median_diff": 0.004577604091281828,
+   "mean_diff": 0.0224219913055838,
+   "n": 78
+  },
+  "soft_fsm": {
+   "median_diff": 0.006347380493742505,
+   "mean_diff": 0.02128389281663238,
+   "n": 78
+  },
+  "crisp_react": {
+   "median_diff": 0.009708935858799284,
+   "mean_diff": 0.027909107808867635,
+   "n": 78
+  },
+  "naked_react": {
+   "median_diff": 0.010993908122140017,
+   "mean_diff": 0.025019181539050573,
+   "n": 78
+  }
+ },
+ "fails": [
+  {
+   "run_id": "main-ev_purchase-naked_react-r4",
+   "arm": "naked_react",
+   "dataset": "ev_purchase",
+   "f1": 0.7926896177058571,
+   "diff": -0.0190400820837634,
+   "ci_hi": -0.016183921388962106,
+   "fail_reason": "below_threshold"
+  },
+  {
+   "run_id": "main-ev_purchase-naked_react-r5",
+   "arm": "naked_react",
+   "dataset": "ev_purchase",
+   "f1": 0.7924594359699233,
+   "diff": -0.01927026381969721,
+   "ci_hi": -0.016378388403934765,
+   "fail_reason": "below_threshold"
+  },
+  {
+   "run_id": "main-student_health-crisp_react-r1",
+   "arm": "crisp_react",
+   "dataset": "student_health",
+   "f1": 0.8631371982718287,
+   "diff": -0.03872860369504538,
+   "ci_hi": -0.03526849699320606,
+   "fail_reason": "below_threshold"
+  },
+  {
+   "run_id": "main-student_health-crisp_react-r2",
+   "arm": "crisp_react",
+   "dataset": "student_health",
+   "f1": 0.8631371982718287,
+   "diff": -0.03872860369504538,
+   "ci_hi": -0.03526849699320606,
+   "fail_reason": "below_threshold"
+  },
+  {
+   "run_id": "main-student_health-crisp_react-r5",
+   "arm": "crisp_react",
+   "dataset": "student_health",
+   "f1": 0.8645449762222827,
+   "diff": -0.03732082574459139,
+   "ci_hi": -0.03374475865165767,
+   "fail_reason": "below_threshold"
+  },
+  {
+   "run_id": "main-student_health-crisp_react-r6",
+   "arm": "crisp_react",
+   "dataset": "student_health",
+   "f1": 0.8620540261200672,
+   "diff": -0.03981177584680684,
+   "ci_hi": -0.036565482746574327,
+   "fail_reason": "below_threshold"
+  },
+  {
+   "run_id": "main-student_health-hard_fsm-r4",
+   "arm": "hard_fsm",
+   "dataset": "student_health",
+   "f1": 0.8979904705573615,
+   "diff": -0.0038753314095125724,
+   "ci_hi": -0.0010892195133587778,
+   "fail_reason": "below_threshold"
+  },
+  {
+   "run_id": "main-student_health-naked_react-r1",
+   "arm": "naked_react",
+   "dataset": "student_health",
+   "f1": 0.8630350654913679,
+   "diff": -0.03883073647550617,
+   "ci_hi": -0.03530959928402427,
+   "fail_reason": "below_threshold"
+  },
+  {
+   "run_id": "main-student_health-naked_react-r2",
+   "arm": "naked_react",
+   "dataset": "student_health",
+   "f1": 0.8624375768450347,
+   "diff": -0.0394282251218393,
+   "ci_hi": -0.035941200899671635,
+   "fail_reason": "below_threshold"
+  },
+  {
+   "run_id": "main-student_health-naked_react-r4",
+   "arm": "naked_react",
+   "dataset": "student_health",
+   "f1": 0.8631371982718287,
+   "diff": -0.03872860369504538,
+   "ci_hi": -0.03526849699320606,
+   "fail_reason": "below_threshold"
+  },
+  {
+   "run_id": "main-student_health-naked_react-r5",
+   "arm": "naked_react",
+   "dataset": "student_health",
+   "f1": 0.8631371982718287,
+   "diff": -0.03872860369504538,
+   "ci_hi": -0.03526849699320606,
+   "fail_reason": "below_threshold"
+  }
+ ],
+ "fails_by_arm_set": {
+  "naked_react|ev_purchase": 2,
+  "crisp_react|student_health": 4,
+  "hard_fsm|student_health": 1,
+  "naked_react|student_health": 4
+ },
+ "eval_to_model_runs_fsm": [
+  "main-student_health-hard_fsm-r1",
+  "main-student_health-hard_fsm-r5",
+  "main-student_health-soft_fsm-r2",
+  "main-student_health-soft_fsm-r4",
+  "main-student_health-soft_fsm-r6"
+ ],
+ "eval_to_model_runs_fsm_by_set": {
+  "student_health": 5
+ },
+ "fsm_runs_without_eval_loop_student_health": [
+  "main-student_health-hard_fsm-r2",
+  "main-student_health-hard_fsm-r3",
+  "main-student_health-hard_fsm-r4",
+  "main-student_health-hard_fsm-r6",
+  "main-student_health-soft_fsm-r1",
+  "main-student_health-soft_fsm-r3",
+  "main-student_health-soft_fsm-r5"
+ ],
+ "class_balance": {
+  "ev_purchase": {
+   "No": 386320,
+   "Yes": 81745
+  },
+  "student_health": {
+   "at-risk": 414793,
+   "unhealthy": 40406,
+   "fit": 27862
+  }
+ },
+ "check_vs_analysis_json": {
+  "success_equal": true,
+  "ranks_equal": true
+ }
+}

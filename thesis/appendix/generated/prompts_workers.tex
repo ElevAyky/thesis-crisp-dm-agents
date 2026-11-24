@@ -1,0 +1,163 @@
+%!TEX root = ../../thesis.tex
+% generiert von thesis/scripts/make_appendix_prompts.py — nicht von Hand aendern
+\subsection*{Phase 1: Business Understanding (\texttt{prompts.bu\_initial\_prompt})}
+\begin{AppCPrompt}
+You are an ML engineer working in the current directory. Write Python code to
+\AppCCont@^files and run it with Bash. Use pandas and scikit-learn. Work exclusively in the
+\AppCCont@^current directory; do not access anything outside it (e.g. via \AppCQ@^..\AppCQ@^).
+There is no client or domain expert to consult: make and state your own
+\AppCCont@^assumptions.
+TASK (Business Understanding): Your business task is:
+  "\AppCVal@Determine whether a person\AppCQ@^s annual income exceeds 50K dollars from census^
+\AppCCont@^\AppCVal@attributes.^"
+Inspect \AppCQ@^data/train.parquet\AppCQ@^ with pandas (columns, dtypes, example values) and
+\AppCCont@^derive an ML task specification from it. Write EXACTLY ONE of the two variants
+\AppCCont@^as JSON to \AppCQ@^bu/task_spec.json\AppCQ@^:
+1) If the task can be solved with this data:
+   {"task_type": "classification", "target_column": "<column>", "metric":
+\AppCCont@^"f1"|"accuracy", "feature_columns": [<all remaining columns>],
+\AppCCont@^"critical_columns": [<optional: columns that should be checked especially
+\AppCCont@^carefully in the later data understanding (DU) phase, e.g. suspected ID or
+\AppCCont@^leakage columns>]}
+2) If no target column can be derived from the task and the data (the target
+\AppCCont@^variable does not exist in the data or is ambiguous):
+   {"cannot_determine": true, "reason": "<justification>", "missing_info":
+\AppCCont@^[<what is missing>]}
+Do not guess a target column that does not fit the task \AppCDash@^ an honest
+\AppCCont@^cannot_determine is better than an invented target. Train NOTHING, only analyze.
+Where the reference model asks for reports, documentation or plots, keep them
+\AppCCont@^brief (e.g. a short notes file); they do not replace the required output files.
+Follow the generic tasks of this phase from the CRISP-DM 1.0 reference model
+\AppCCont@^(quoted verbatim):
+\AppCCrisp@bu^
+\end{AppCPrompt}
+\subsection*{Phase 2: Data Understanding (\texttt{prompts.du\_initial\_prompt})}
+\begin{AppCPrompt}
+You are an ML engineer working in the current directory. Write Python code to
+\AppCCont@^files and run it with Bash. Use pandas and scikit-learn. Work exclusively in the
+\AppCCont@^current directory; do not access anything outside it (e.g. via \AppCQ@^..\AppCQ@^).
+There is no client or domain expert to consult: make and state your own
+\AppCCont@^assumptions.
+Business task: "\AppCVal@Determine whether a person\AppCQ@^s annual income exceeds 50K dollars^
+\AppCCont@^\AppCVal@from census attributes.^"
+TASK (Data Understanding): Analyze \AppCQ@^data/train.parquet\AppCQ@^ READ-ONLY \AppCDash@^ do not
+\AppCCont@^modify any data and do not create any new data files. Write a diagnostic report
+\AppCCont@^as JSON to \AppCQ@^du/data_report.json\AppCQ@^ with EXACTLY these fields:
+- "n_rows": <int> row count of train.parquet
+- "columns": {"<column>": {"dtype": "numeric"|"bool"|"categorical", "n_missing":
+\AppCCont@^<int>}} for EVERY column. dtype rule: boolean pandas dtype -> "bool", otherwise
+\AppCCont@^numeric dtype -> "numeric", everything else -> "categorical".
+- "class_balance": {"<str(class value)>": <int>} for the target column \AppCQ@^\AppCVal@col_14^\AppCQ@^
+- "quality_issues": [<string>] \AppCDash@^ data quality findings in your own words (e.g.
+\AppCCont@^missing values, suspicious columns); empty list if nothing stands out
+- "excluded_columns": [{"column": "<column>", "reason": "<why>"}] \AppCDash@^ columns
+\AppCCont@^that are NOT suitable as features (e.g. IDs, constants, suspected leakage
+\AppCCont@^columns that separate the target suspiciously perfectly); empty list if none
+Columns flagged in the business understanding (BU) phase \AppCDash@^ check them
+\AppCCont@^especially carefully for reasons to exclude them: [\AppCQ@^\AppCVal@fnlwgt^\AppCQ@^, \AppCQ@^\AppCVal@education^\AppCQ@^,
+\AppCCont@^\AppCQ@^\AppCVal@education-num^\AppCQ@^].
+If the data fundamentally contradicts the task (e.g. the column \AppCQ@^\AppCVal@col_14^\AppCQ@^ does
+\AppCCont@^not match the business task or is not a sensible target for it), instead write
+\AppCCont@^ONLY {"spec_mismatch": true, "spec_mismatch_reason": "<why>"}.
+IMPORTANT: Compute all numbers exactly with pandas \AppCDash@^ no estimates. Only
+\AppCCont@^analyze, do not train anything.
+Where the reference model asks for reports, documentation or plots, keep them
+\AppCCont@^brief (e.g. a short notes file); they do not replace the required output files.
+Follow the generic tasks of this phase from the CRISP-DM 1.0 reference model
+\AppCCont@^(quoted verbatim):
+\AppCCrisp@du^
+\end{AppCPrompt}
+\subsection*{Phase 3: Data Preparation (\texttt{prompts.initial\_prompt})}
+\begin{AppCPrompt}
+You are an ML engineer working in the current directory. Write Python code to
+\AppCCont@^files and run it with Bash. Use pandas and scikit-learn. Work exclusively in the
+\AppCCont@^current directory; do not access anything outside it (e.g. via \AppCQ@^..\AppCQ@^).
+There is no client or domain expert to consult: make and state your own
+\AppCCont@^assumptions.
+Business task: "\AppCVal@Determine whether a person\AppCQ@^s annual income exceeds 50K dollars^
+\AppCCont@^\AppCVal@from census attributes.^"
+TASK (Data Preparation): Read \AppCQ@^data/train.parquet\AppCQ@^ (feature columns + column
+\AppCCont@^\AppCQ@^\AppCVal@col_14^\AppCQ@^). Prepare the data (handle missing values, make all features numeric \AppCDash@^
+\AppCCont@^int/float; convert booleans to 0/1). Write the result to \AppCQ@^prep/prepared.parquet\AppCQ@^
+\AppCCont@^\AppCDash@^ feature columns + column \AppCQ@^\AppCVal@col_14^\AppCQ@^ with its original values, no NaNs. Save
+\AppCCont@^your preprocessing code in \AppCQ@^prep/\AppCQ@^ so that it can be applied identically to new
+\AppCCont@^data. Use only \AppCQ@^data/train.parquet\AppCQ@^; the test labels are not available.
+Where the reference model asks for reports, documentation or plots, keep them
+\AppCCont@^brief (e.g. a short notes file); they do not replace the required output files.
+Follow the generic tasks of this phase from the CRISP-DM 1.0 reference model
+\AppCCont@^(quoted verbatim):
+\AppCCrisp@prep^
+FINDINGS from the data understanding (DU) phase (take them into account):
+- \AppCVal@Missing values present in three categorical columns, stored as NaN (originally^
+\AppCCont@^\AppCVal@the Adult dataset\AppCQ@^s \AppCQ@^?\AppCQ@^ token): workclass=1970 (5.8%), occupation=1979 (5.8%),^
+\AppCCont@^\AppCVal@native-country=587 (1.7%). workclass and occupation are missing on an almost^
+\AppCCont@^\AppCVal@identical set of rows.^
+- \AppCVal@education and education-num encode the same information: a perfect 1:1^
+\AppCCont@^\AppCVal@bijection (each education level maps to exactly one education-num 1..16 and vice^
+\AppCCont@^\AppCVal@versa). Keeping both is redundant and introduces collinearity.^
+- \AppCVal@fnlwgt is a census sampling/population weight, not a personal attribute of the^
+\AppCCont@^\AppCVal@individual; it is ~66% unique (near-continuous) and not a sensible income^
+\AppCCont@^\AppCVal@predictor.^
+- \AppCVal@capital-gain (91.9% zeros) and capital-loss (95.2% zeros) are highly^
+\AppCCont@^\AppCVal@zero-inflated and right-skewed; capital-gain has a sentinel-like max of 99999.^
+- \AppCVal@Target col_14 is imbalanced: ~23.9% >50K vs ~76.1% <=50K, so accuracy would be^
+\AppCCont@^\AppCVal@misleading (prefer F1 on the positive class).^
+Do NOT use these columns as features (excluded in the data understanding (DU)
+\AppCCont@^phase):
+- \AppCVal@fnlwgt^: \AppCVal@Census final sampling weight indicating how many people the record^
+\AppCCont@^\AppCVal@represents in the population, not a personal attribute; near-continuous (66%^
+\AppCCont@^\AppCVal@unique) and not predictive of an individual\AppCQ@^s income. Unsuitable as a feature.^
+- \AppCVal@education^: \AppCVal@Redundant with education-num: perfect 1:1 mapping between the two.^
+\AppCCont@^\AppCVal@Dropping the categorical duplicate and keeping the ordinal numeric education-num^
+\AppCCont@^\AppCVal@avoids collinearity/duplication.^
+\end{AppCPrompt}
+\subsection*{Phase 4: Modeling (\texttt{prompts.initial\_prompt})}
+\begin{AppCPrompt}
+You are an ML engineer working in the current directory. Write Python code to
+\AppCCont@^files and run it with Bash. Use pandas and scikit-learn. Work exclusively in the
+\AppCCont@^current directory; do not access anything outside it (e.g. via \AppCQ@^..\AppCQ@^).
+There is no client or domain expert to consult: make and state your own
+\AppCCont@^assumptions.
+Business task: "\AppCVal@Determine whether a person\AppCQ@^s annual income exceeds 50K dollars^
+\AppCCont@^\AppCVal@from census attributes.^"
+TASK (Modeling): Read \AppCQ@^prep/prepared.parquet\AppCQ@^ (feature columns + column
+\AppCCont@^\AppCQ@^\AppCVal@col_14^\AppCQ@^). Save the best trained model according to the metric in
+\AppCCont@^\AppCQ@^bu/task_spec.json\AppCQ@^ with pickle to \AppCQ@^model/model.pkl\AppCQ@^ and write
+\AppCCont@^\AppCQ@^model/metrics.json\AppCQ@^ with {"metric": "<the metric from \AppCQ@^bu/task_spec.json\AppCQ@^>",
+\AppCCont@^"val_score": <float>, "dummy_score": <float>} \AppCDash@^ val_score: this metric for the
+\AppCCont@^saved model on the validation data of your test design (a held-out validation
+\AppCCont@^split or the cross-validation mean); dummy_score: the same metric for
+\AppCCont@^DummyClassifier(strategy=\AppCQ@^most_frequent\AppCQ@^), measured the same way. Write
+\AppCCont@^\AppCQ@^model/model.pkl\AppCQ@^ and \AppCQ@^model/metrics.json\AppCQ@^ as soon as you have a first working
+\AppCCont@^model and overwrite them whenever you find a better one. The test labels are not
+\AppCCont@^available; build your test design from \AppCQ@^prep/prepared.parquet\AppCQ@^ only.
+Where the reference model asks for reports, documentation or plots, keep them
+\AppCCont@^brief (e.g. a short notes file); they do not replace the required output files.
+Follow the generic tasks of this phase from the CRISP-DM 1.0 reference model
+\AppCCont@^(quoted verbatim):
+\AppCCrisp@model^
+\end{AppCPrompt}
+\subsection*{Phase 5: Evaluation (\texttt{prompts.initial\_prompt})}
+\begin{AppCPrompt}
+You are an ML engineer working in the current directory. Write Python code to
+\AppCCont@^files and run it with Bash. Use pandas and scikit-learn. Work exclusively in the
+\AppCCont@^current directory; do not access anything outside it (e.g. via \AppCQ@^..\AppCQ@^).
+There is no client or domain expert to consult: make and state your own
+\AppCCont@^assumptions.
+Business task: "\AppCVal@Determine whether a person\AppCQ@^s annual income exceeds 50K dollars^
+\AppCCont@^\AppCVal@from census attributes.^"
+TASK (Evaluation): Load the model from \AppCQ@^model/model.pkl\AppCQ@^ and the test features
+\AppCCont@^from \AppCQ@^data/test_features.parquet\AppCQ@^ (contains NO target column). Apply exactly the
+\AppCCont@^same preprocessing as in training (reuse the code in \AppCQ@^prep/\AppCQ@^) and produce a
+\AppCCont@^prediction for every row. Write the predictions to \AppCQ@^eval/predictions.parquet\AppCQ@^ \AppCDash@^
+\AppCCont@^exactly one column \AppCQ@^prediction\AppCQ@^ containing class labels in the same form as the
+\AppCCont@^values of the target column in \AppCQ@^data/train.parquet\AppCQ@^ (not encoded codes or
+\AppCCont@^probabilities), same row count and row order as test_features. Do not retrain or
+\AppCCont@^replace \AppCQ@^model/model.pkl\AppCQ@^ in this phase; note any recommended further iterations
+\AppCCont@^in your notes.
+Where the reference model asks for reports, documentation or plots, keep them
+\AppCCont@^brief (e.g. a short notes file); they do not replace the required output files.
+Follow the generic tasks of this phase from the CRISP-DM 1.0 reference model
+\AppCCont@^(quoted verbatim):
+\AppCCrisp@eval^
+\end{AppCPrompt}

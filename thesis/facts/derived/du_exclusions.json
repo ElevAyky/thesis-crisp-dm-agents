@@ -1,0 +1,159 @@
+{
+ "bank_marketing": {
+  "hard_fsm": {
+   "runs": 6,
+   "excluded_column_counts": {
+    "V12": 6
+   },
+   "per_run": {
+    "main-bank_marketing-hard_fsm-r1": [
+     "V12"
+    ],
+    "main-bank_marketing-hard_fsm-r2": [
+     "V12"
+    ],
+    "main-bank_marketing-hard_fsm-r3": [
+     "V12"
+    ],
+    "main-bank_marketing-hard_fsm-r4": [
+     "V12"
+    ],
+    "main-bank_marketing-hard_fsm-r5": [
+     "V12"
+    ],
+    "main-bank_marketing-hard_fsm-r6": [
+     "V12"
+    ]
+   },
+   "f1_mean": 0.7093193277979538
+  },
+  "soft_fsm": {
+   "runs": 6,
+   "excluded_column_counts": {
+    "V12": 6
+   },
+   "per_run": {
+    "main-bank_marketing-soft_fsm-r1": [
+     "V12"
+    ],
+    "main-bank_marketing-soft_fsm-r2": [
+     "V12"
+    ],
+    "main-bank_marketing-soft_fsm-r3": [
+     "V12"
+    ],
+    "main-bank_marketing-soft_fsm-r4": [
+     "V12"
+    ],
+    "main-bank_marketing-soft_fsm-r5": [
+     "V12"
+    ],
+    "main-bank_marketing-soft_fsm-r6": [
+     "V12"
+    ]
+   },
+   "f1_mean": 0.7099878891854073
+  }
+ },
+ "eucalyptus": {
+  "hard_fsm": {
+   "runs": 6,
+   "excluded_column_counts": {
+    "Abbrev": 6,
+    "Map_Ref": 6,
+    "PMCno": 6,
+    "Latitude": 4,
+    "Locality": 2,
+    "Rep": 2
+   },
+   "per_run": {
+    "main-eucalyptus-hard_fsm-r1": [
+     "Abbrev",
+     "Map_Ref",
+     "PMCno"
+    ],
+    "main-eucalyptus-hard_fsm-r2": [
+     "PMCno",
+     "Abbrev",
+     "Map_Ref"
+    ],
+    "main-eucalyptus-hard_fsm-r3": [
+     "PMCno",
+     "Abbrev",
+     "Map_Ref",
+     "Latitude",
+     "Locality",
+     "Rep"
+    ],
+    "main-eucalyptus-hard_fsm-r4": [
+     "Abbrev",
+     "Map_Ref",
+     "Latitude",
+     "Locality",
+     "PMCno",
+     "Rep"
+    ],
+    "main-eucalyptus-hard_fsm-r5": [
+     "PMCno",
+     "Map_Ref",
+     "Abbrev",
+     "Latitude"
+    ],
+    "main-eucalyptus-hard_fsm-r6": [
+     "Abbrev",
+     "Map_Ref",
+     "Latitude",
+     "PMCno"
+    ]
+   },
+   "f1_mean": 0.6053062494090886
+  },
+  "soft_fsm": {
+   "runs": 6,
+   "excluded_column_counts": {
+    "Abbrev": 6,
+    "Map_Ref": 6,
+    "PMCno": 5,
+    "Rep": 2
+   },
+   "per_run": {
+    "main-eucalyptus-soft_fsm-r1": [
+     "Abbrev",
+     "Map_Ref"
+    ],
+    "main-eucalyptus-soft_fsm-r2": [
+     "Abbrev",
+     "Map_Ref",
+     "PMCno"
+    ],
+    "main-eucalyptus-soft_fsm-r3": [
+     "Abbrev",
+     "Map_Ref",
+     "PMCno",
+     "Rep"
+    ],
+    "main-eucalyptus-soft_fsm-r4": [
+     "Abbrev",
+     "Map_Ref",
+     "PMCno"
+    ],
+    "main-eucalyptus-soft_fsm-r5": [
+     "PMCno",
+     "Abbrev",
+     "Map_Ref"
+    ],
+    "main-eucalyptus-soft_fsm-r6": [
+     "Map_Ref",
+     "Abbrev",
+     "PMCno",
+     "Rep"
+    ]
+   },
+   "f1_mean": 0.6086649452308015
+  }
+ },
+ "v12_excluded_A_B": {
+  "hard_fsm": 6,
+  "soft_fsm": 6
+ }
+}

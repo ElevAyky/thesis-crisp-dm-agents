@@ -1,0 +1,30 @@
+%!TEX root = ../../thesis.tex
+% generiert von thesis/scripts/make_appendix_prompts.py — nicht von Hand aendern
+\begin{table}[!t]
+  \centering
+  \small
+  \caption[Task descriptions]{Task descriptions inserted for \texttt{\{task\_prompt\}} into the prompts of all arms, from the dataset manifests; identical to the field \texttt{task\_prompt} in the summary of every run. Core suite in tercile order, then the post-cutoff datasets.}
+  \label{tab:C:tasks}
+  \begin{tabularx}{\textwidth}{lL}
+    \toprule
+    Dataset & Task description \\
+    \midrule
+    wine & Determine the cultivar of a wine from its chemical analysis. \\
+    breast cancer & Determine whether a tumor is malignant or benign. \\
+    cnae-9 & Determine the economic activity category of a Brazilian company from the word-frequency vector of its business description. \\
+    covertype & Determine the forest cover type of a 30x30 meter terrain cell from cartographic features. \\
+    phoneme & Determine whether a spoken phoneme is nasal or oral from the amplitudes of its first five harmonics. \\
+    fashion-mnist & Determine the clothing category of a fashion product from its 28x28 grayscale image pixels. \\
+    adult & Determine whether a person's annual income exceeds 50K dollars from census attributes. \\
+    vehicle & Determine the type of vehicle from geometric features of its silhouette. \\
+    bank-marketing & Determine whether a client will subscribe to a term deposit as the outcome of a direct marketing phone campaign. \\
+    credit-g & Determine whether a loan applicant is a good or a bad credit risk. \\
+    connect-4 & Determine the game-theoretic outcome for the first player of a Connect Four position after eight moves. \\
+    eucalyptus & Determine the utility rating of a eucalyptus seedlot for soil conservation from site conditions and growth measurements. \\
+    cmc & Determine the contraceptive method used by a married woman from demographic and socio-economic survey attributes. \\
+    \midrule
+    student health & Determine the health condition category of a college student from lifestyle and health-behavior measurements. \\
+    EV purchase & Determine whether a person will buy an electric vehicle from demographic, commuting and charging-infrastructure attributes. \\
+    \bottomrule
+  \end{tabularx}
+\end{table}

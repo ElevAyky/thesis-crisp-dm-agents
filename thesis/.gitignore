@@ -1,0 +1,19 @@
+# LaTeX-Build-Artefakte (PDF entsteht per build.py)
+*.aux
+*.bbl
+*.blg
+*.lof
+*.log
+*.lol
+*.lot
+*.maf
+*.mtc*
+*.out
+*.synctex.gz
+*.tcp
+*.toc
+*.tps
+*.tui
+*.fdb_latexmk
+*.fls
+thesis.pdf

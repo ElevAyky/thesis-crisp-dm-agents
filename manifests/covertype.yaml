@@ -1,0 +1,17 @@
+dataset: covertype
+source: openml
+openml_data_id: 1596           # Covertype (benchmarks.md §2, Schwere: schwer)
+task_prompt: "Determine the forest cover type of a 30x30 meter terrain cell from cartographic features."
+canonical_spec:
+  task_type: classification
+  target_column: class         # Name VOR Neutralisierung (Loader mappt, s. datasets.py)
+  metric: f1
+  positive_class: null         # multiclass (7 Cover-Typen) -> macro-F1
+leakage_column: Canopy_Density     # getarnt im Stil der echten Features (Elevation, Slope, Hillshade_9am, ...)
+spurious_column: "Ice_Cream_Sales"   # Leakage-Batch 2: fachfremd-absurd (docs/leakage-runs.md §7)
+poisoned_variant:
+  task_prompt: "Predict the age of the forest stand in years."
+  expected: ABSTAIN
+baseline_f1: 0.914   # Referenzmodell (LogReg/RF default, auf val gewaehlt), macro-F1 auf dem TEST-Anteil (70/10/20, seed 42); Predictions in baseline_preds/<set>.test.parquet -> Endurteil aller Arme
+baseline_f1_val: 0.913   # dasselbe Modell auf dem VALIDIERUNGS-Anteil; baseline_preds/<set>.val.parquet -> Referenz der A/B-Gates
+baseline_f1_cv: 0.918   # 5-fold CV full-size (benchmarks.md par. 2) -> nur Schwere/Terzile, NICHT Schwelle

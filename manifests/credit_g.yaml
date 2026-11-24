@@ -1,0 +1,17 @@
+dataset: credit_g
+source: openml
+openml_data_id: 31             # German Credit (benchmarks.md §2, Schwere: mittel)
+task_prompt: "Determine whether a loan applicant is a good or a bad credit risk."
+canonical_spec:
+  task_type: classification
+  target_column: class         # Name VOR Neutralisierung (Loader mappt, s. datasets.py)
+  metric: f1
+  positive_class: bad          # Minderheits-/Risikoklasse (300 von 1000)
+leakage_column: repayment_status   # getarnt im Stil der echten Features (checking_status, savings_status, ...)
+spurious_column: "horoscope_score"   # Leakage-Batch 2: fachfremd-absurd (docs/leakage-runs.md §7)
+poisoned_variant:
+  task_prompt: "Predict the calendar month in which the applicant will fully repay the loan."
+  expected: ABSTAIN
+baseline_f1: 0.632   # Referenzmodell (LogReg/RF default, auf val gewaehlt), macro-F1 auf dem TEST-Anteil (70/10/20, seed 42); Predictions in baseline_preds/<set>.test.parquet -> Endurteil aller Arme
+baseline_f1_val: 0.644   # dasselbe Modell auf dem VALIDIERUNGS-Anteil; baseline_preds/<set>.val.parquet -> Referenz der A/B-Gates
+baseline_f1_cv: 0.680   # 5-fold CV full-size (benchmarks.md par. 2) -> nur Schwere/Terzile, NICHT Schwelle

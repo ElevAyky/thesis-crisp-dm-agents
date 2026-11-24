@@ -1,0 +1,326 @@
+{
+ "leak_perfect": {
+  "n_runs": 39,
+  "start_utc": "2026-10-24T14:36:21.426Z",
+  "end_utc": "2026-10-24T15:21:22.141Z",
+  "start_local": "2026-10-24 16:36 CEST",
+  "end_local": "2026-10-24 17:21 CEST",
+  "wall_clock_h": 0.7501986111111112,
+  "sum_run_minutes_h": 0.7027525,
+  "wall_clock_minus_gaps_h": 0.7501986111111112,
+  "gaps_over_60min": [],
+  "per_arm": {
+   "naked_react": {
+    "runs": 39,
+    "mean_min": 1.0811576923076922,
+    "median_min": 0.9531666666666666,
+    "max_min": 2.216533333333333,
+    "sum_h": 0.7027525,
+    "mean_model_latency_min": 0.8084709401709401
+   }
+  },
+  "cost_usd": 6.50894125,
+  "harness_commits": [
+   "9bb6a91"
+  ],
+  "claude_versions": [
+   "2.1.280 (Claude Code)"
+  ],
+  "arms": [
+   "naked_react"
+  ],
+  "datasets": [
+   "adult",
+   "bank_marketing",
+   "breast_cancer",
+   "cmc",
+   "cnae_9",
+   "connect_4",
+   "covertype",
+   "credit_g",
+   "eucalyptus",
+   "fashion_mnist",
+   "phoneme",
+   "vehicle",
+   "wine"
+  ],
+  "errors_in_final_summaries": 0
+ },
+ "leak_spurious": {
+  "n_runs": 39,
+  "start_utc": "2026-10-24T15:23:00.904Z",
+  "end_utc": "2026-10-24T16:09:02.634Z",
+  "start_local": "2026-10-24 17:23 CEST",
+  "end_local": "2026-10-24 18:09 CEST",
+  "wall_clock_h": 0.7671472222222222,
+  "sum_run_minutes_h": 0.72067,
+  "wall_clock_minus_gaps_h": 0.7671472222222222,
+  "gaps_over_60min": [],
+  "per_arm": {
+   "naked_react": {
+    "runs": 39,
+    "mean_min": 1.108723076923077,
+    "median_min": 0.96985,
+    "max_min": 2.9260666666666664,
+    "sum_h": 0.72067,
+    "mean_model_latency_min": 0.822975641025641
+   }
+  },
+  "cost_usd": 6.2456465,
+  "harness_commits": [
+   "14e99e4"
+  ],
+  "claude_versions": [
+   "2.1.280 (Claude Code)"
+  ],
+  "arms": [
+   "naked_react"
+  ],
+  "datasets": [
+   "adult",
+   "bank_marketing",
+   "breast_cancer",
+   "cmc",
+   "cnae_9",
+   "connect_4",
+   "covertype",
+   "credit_g",
+   "eucalyptus",
+   "fashion_mnist",
+   "phoneme",
+   "vehicle",
+   "wine"
+  ],
+  "errors_in_final_summaries": 0
+ },
+ "core": {
+  "n_runs": 312,
+  "start_utc": "2026-10-24T16:09:10.976Z",
+  "end_utc": "2026-10-26T18:55:58.288Z",
+  "start_local": "2026-10-24 18:09 CEST",
+  "end_local": "2026-10-26 19:55 CET",
+  "wall_clock_h": 50.77980888888889,
+  "sum_run_minutes_h": 25.294972500000004,
+  "wall_clock_minus_gaps_h": 25.796001944444445,
+  "gaps_over_60min": [
+   {
+    "from_utc": "2026-10-24T21:10:22.480Z",
+    "to_utc": "2026-10-25T08:43:02.879Z",
+    "from_local": "2026-10-24 23:10 CEST",
+    "to_local": "2026-10-25 09:43 CET",
+    "minutes": 692.6733166666667,
+    "next_run": "main-cmc-soft_fsm-r2"
+   },
+   {
+    "from_utc": "2026-10-25T19:38:37.221Z",
+    "to_utc": "2026-10-26T09:04:58.527Z",
+    "from_local": "2026-10-25 20:38 CET",
+    "to_local": "2026-10-26 10:04 CET",
+    "minutes": 806.3551,
+    "next_run": "main-fashion_mnist-hard_fsm-r4"
+   }
+  ],
+  "per_arm": {
+   "hard_fsm": {
+    "runs": 78,
+    "mean_min": 7.418565811965812,
+    "median_min": 6.936608333333333,
+    "max_min": 18.456883333333334,
+    "sum_h": 9.644135555555556,
+    "mean_model_latency_min": 5.920479914529914
+   },
+   "soft_fsm": {
+    "runs": 78,
+    "mean_min": 9.7931702991453,
+    "median_min": 9.210508333333333,
+    "max_min": 20.8824,
+    "sum_h": 12.731121388888889,
+    "mean_model_latency_min": 7.923689316239317
+   },
+   "crisp_react": {
+    "runs": 78,
+    "mean_min": 1.352068376068376,
+    "median_min": 1.297875,
+    "max_min": 2.721233333333333,
+    "sum_h": 1.7576888888888889,
+    "mean_model_latency_min": 0.9960967948717948
+   },
+   "naked_react": {
+    "runs": 78,
+    "mean_min": 0.8938666666666666,
+    "median_min": 0.84555,
+    "max_min": 1.95355,
+    "sum_h": 1.1620266666666665,
+    "mean_model_latency_min": 0.6490572649572649
+   }
+  },
+  "cost_usd": 251.93331425,
+  "harness_commits": [
+   "14e99e4"
+  ],
+  "claude_versions": [
+   "2.1.280 (Claude Code)"
+  ],
+  "arms": [
+   "hard_fsm",
+   "soft_fsm",
+   "crisp_react",
+   "naked_react"
+  ],
+  "datasets": [
+   "adult",
+   "bank_marketing",
+   "breast_cancer",
+   "cmc",
+   "cnae_9",
+   "connect_4",
+   "covertype",
+   "credit_g",
+   "eucalyptus",
+   "fashion_mnist",
+   "phoneme",
+   "vehicle",
+   "wine"
+  ],
+  "errors_in_final_summaries": 0
+ },
+ "post_cutoff": {
+  "n_runs": 48,
+  "start_utc": "2026-10-26T18:56:37.012Z",
+  "end_utc": "2026-10-27T09:26:12.434Z",
+  "start_local": "2026-10-26 19:56 CET",
+  "end_local": "2026-10-27 10:26 CET",
+  "wall_clock_h": 14.493172777777778,
+  "sum_run_minutes_h": 4.603984722222222,
+  "wall_clock_minus_gaps_h": 4.7097236111111105,
+  "gaps_over_60min": [
+   {
+    "from_utc": "2026-10-26T21:35:49.212Z",
+    "to_utc": "2026-10-27T07:22:49.629Z",
+    "from_local": "2026-10-26 22:35 CET",
+    "to_local": "2026-10-27 08:22 CET",
+    "minutes": 587.0069500000001,
+    "next_run": "main-student_health-soft_fsm-r4"
+   }
+  ],
+  "per_arm": {
+   "hard_fsm": {
+    "runs": 12,
+    "mean_min": 7.881490277777778,
+    "median_min": 8.029883333333332,
+    "max_min": 10.3145,
+    "sum_h": 1.5762980555555555,
+    "mean_model_latency_min": 6.562380555555555
+   },
+   "soft_fsm": {
+    "runs": 12,
+    "mean_min": 12.779218055555555,
+    "median_min": 10.651483333333333,
+    "max_min": 25.088649999999998,
+    "sum_h": 2.555843611111111,
+    "mean_model_latency_min": 9.308527777777778
+   },
+   "crisp_react": {
+    "runs": 12,
+    "mean_min": 1.4697013888888888,
+    "median_min": 1.4234083333333334,
+    "max_min": 2.2235500000000004,
+    "sum_h": 0.29394027777777776,
+    "mean_model_latency_min": 1.0242402777777777
+   },
+   "naked_react": {
+    "runs": 12,
+    "mean_min": 0.8895138888888888,
+    "median_min": 0.777425,
+    "max_min": 1.8514166666666665,
+    "sum_h": 0.17790277777777777,
+    "mean_model_latency_min": 0.6271111111111111
+   }
+  },
+  "cost_usd": 41.9381495,
+  "harness_commits": [
+   "14e99e4"
+  ],
+  "claude_versions": [
+   "2.1.280 (Claude Code)"
+  ],
+  "arms": [
+   "hard_fsm",
+   "soft_fsm",
+   "crisp_react",
+   "naked_react"
+  ],
+  "datasets": [
+   "ev_purchase",
+   "student_health"
+  ],
+  "errors_in_final_summaries": 0
+ },
+ "_runs_repo_git_log": [
+  "2026-11-15 13:17:35 +0100 df11a94 runs: H1 second stage complete — Arm A and A-Single, 180 runs",
+  "2026-11-09 10:01:32 +0100 df7de52 Post-Cutoff-Auswertung (sauber, 27.10.) nachgetragen",
+  "2026-10-27 10:26:20 +0100 25644b7 Post-Cutoff neu (48 Runs) + Kern-Auswertung, Harness mit Isolations-Fixes",
+  "2026-10-26 19:56:16 +0100 4b46569 Kern-Neustart Nr. 2: 4 Arme verschraenkt, Harness mit Isolations-Fixes",
+  "2026-10-26 10:04:20 +0100 3085c8b Kern-Neustart Nr. 2: Zwischenstand 194/312 (Sicherung nach Herunterfahren)",
+  "2026-10-25 19:02:19 +0100 22684c4 Kern-Neustart Nr. 2: Zwischenstand 177/312 (Sicherung nach PC-Neustart)",
+  "2026-10-24 18:09:05 +0200 94d9212 Leakage Batch 2 (spurious) Arm D, Harness mit Isolations-Fixes",
+  "2026-10-24 17:22:20 +0200 868b43c Leakage Batch 1 Arm D (sauber): 39/39, Leak 1/39, 6,51 $",
+  "2026-10-24 16:08:59 +0200 c4131f5 Archiv: erster Neu-Lauf (Leakage D) mit Git-Kontext -> gitctx_*",
+  "2026-10-24 15:30:03 +0200 4a17bf4 Archiv: alle Runs mit geteiltem Auto-Memory -> automem_*",
+  "2026-10-24 15:20:05 +0200 3d979f6 Leakage-Batch 2 (spurious) Arm D: 39/39, Leak 1/39, 7,74 $ + Auto-Memory-Snapshot",
+  "2026-10-24 12:57:43 +0200 3b42e6e Leakage-Runs Arm D komplett: 39/39, Leak 0/39 ausgenutzt, 7,20 $",
+  "2026-10-04 20:47:29 +0200 3d32ff4 Post-Cutoff komplett: 48/48 SUCCESS, 47,56 $",
+  "2026-10-04 15:22:32 +0200 15df189 Arm B (neues Design) komplett: 78/78 SUCCESS, 148,51 $ + 4-Arm-Auswertung",
+  "2026-09-25 13:13:05 +0200 9b91bae Arm A (neues Design) komplett: 78/78 SUCCESS, 106,83 $",
+  "2026-09-23 23:31:53 +0200 f0d2c8d Arm C (neues Design) komplett: 77/78, 22,31 $ + Aggregation/Analyse C vs D",
+  "2026-09-23 21:01:42 +0200 f69d795 Runs: Stand 23.09.2026 (D neu komplett, C laeuft)"
+ ],
+ "_harness_repo_key_commits": [
+  "2026-10-27 10:36:03 +0100 de857cd fix(backend): Worker findet das runs-Repo nicht mehr per git (K-git)",
+  "2026-10-24 17:22:47 +0200 14e99e4 leakage: Batch 1 neu (sauber) - D 39/39, Leak 1/39, kein A/B/C",
+  "2026-10-24 16:08:56 +0200 9bb6a91 fix: Review-Befunde - Git-Kontext, Umgebung, Leak-Zuordnung, Transkripte",
+  "2026-10-24 15:30:01 +0200 d848587 fix(backend): Auto-Memory der Worker sperren - Kern-Neustart Nr. 2",
+  "2026-09-25 13:24:08 +0200 e62ea25 roadmap: Arm A komplett + Befund A vs. C vs. D, Decker-Agenda 05.10.",
+  "2026-09-24 19:29:47 +0200 63200e3 fix(run): Session-Limit als Kontingent-Ende + Neustart mit leerem Workdir",
+  "2026-09-23 23:42:54 +0200 559eafc experiment-design 5.3b: 'signifikant besser' als sekundaere Kennzahl festgelegt (vor A/B)",
+  "2026-09-23 12:09:32 +0200 4845fc0 fix(threshold): Erfolgsschwelle auf dem Run-Holdout statt CV-Mittel",
+  "2026-09-23 10:25:44 +0200 b6fcc73 fix(main_runs): eigene run_id bis zum Subprocess durchreichen"
+ ],
+ "_diff_9bb6a91_14e99e4": [
+  "docs/leakage-runs.md | 7 +++++++",
+  " docs/roadmap.md      | 2 ++",
+  " 2 files changed, 9 insertions(+)"
+ ],
+ "_summaries_per_runs_repo_commit": {
+  "868b43c": {
+   "leak": 39
+  },
+  "94d9212": {
+   "leak": 39,
+   "spur": 39
+  },
+  "22684c4": {
+   "leak": 39,
+   "main": 177,
+   "spur": 39
+  },
+  "3085c8b": {
+   "leak": 39,
+   "main": 194,
+   "spur": 39
+  },
+  "4b46569": {
+   "leak": 39,
+   "main": 312,
+   "spur": 39
+  },
+  "25644b7": {
+   "leak": 39,
+   "main": 360,
+   "spur": 39
+  }
+ },
+ "_interruption_note": "Runner-Logs werden pro Versuch ueberschrieben (variance_scan.execute, open(..., 'w')), Warte-Meldungen bei rate_limited gehen nur auf die Konsole -> Rate-Limit-Ereignisse sind aus den Daten nicht rekonstruierbar.",
+ "_logs_scanned": 438,
+ "_logs_with_error_or_limit_marker": []
+}

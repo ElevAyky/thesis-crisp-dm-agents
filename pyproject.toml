@@ -1,0 +1,30 @@
+[project]
+name = "crispfsm"
+version = "0.1.0"
+description = "CRISP-DM als FSM zur Steuerung autonomer LLM-Agenten — Walking Skeleton"
+requires-python = ">=3.12"
+dependencies = [
+    "langgraph>=0.2",
+    "pandas>=2.2",
+    "scikit-learn>=1.5",
+    "pyarrow>=17",
+    "pyyaml>=6.0.3",
+]
+
+[dependency-groups]
+dev = [
+    "matplotlib>=3.11.2",
+    "pytest>=8",
+]
+dashboard = ["fastapi>=0.115", "uvicorn>=0.30"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/crispfsm"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "scripts"]
+testpaths = ["tests"]

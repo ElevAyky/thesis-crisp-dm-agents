@@ -1,0 +1,30 @@
+%!TEX root = ../thesis.tex
+% generiert von thesis/scripts/make_tables.py — nicht von Hand aendern
+\begin{table}[htbp]
+  \centering
+  \small
+  \caption[Post-cutoff control]{Post-cutoff control: two synthetic Kaggle Playground datasets released after the model's training cutoff, six runs per cell. All failures are \emph{below baseline}. With $N = 2$ the results are descriptive; the Friedman test has no power ($\mathit{CD} = 3.32$). Best mean F1 per dataset at three decimals in bold. The last two rows compare the median distance to the baseline with the core suite (memorization check). Arms as in \autoref{tab:3:arms}.}
+  \label{tab:6:postcutoff}
+  \begin{tabular}{lrrrr}
+    \toprule
+     & A & B & C & D \\
+    \midrule
+    \multicolumn{5}{l}{\emph{student health} (baseline 0.902)} \\
+    \quad Passed (of 6) & 5 & 6 & 2 & 2 \\
+    \quad Mean F1 & 0.902 & \textbf{0.904} & 0.879 & 0.877 \\
+    \quad Mean F1 $-$ baseline & 0.000 & $+$0.003 & $-$0.023 & $-$0.024 \\
+    \quad Run SD & 0.0020 & 0.0019 & 0.0242 & 0.0225 \\
+    \midrule
+    \multicolumn{5}{l}{\emph{EV purchase} (baseline 0.812)} \\
+    \quad Passed (of 6) & 6 & 6 & 6 & 4 \\
+    \quad Mean F1 & 0.820 & \textbf{0.822} & \textbf{0.822} & 0.810 \\
+    \quad Mean F1 $-$ baseline & $+$0.009 & $+$0.011 & $+$0.010 & $-$0.002 \\
+    \quad Run SD & 0.0027 & 0.0004 & 0.0008 & 0.0138 \\
+    \midrule
+    Passed, both sets (of 12) & 11 & 12 & 8 & 6 \\
+    \quad Wilson 95\,\% CI & [0.646, 0.985] & [0.757, 1.000] & [0.391, 0.862] & [0.254, 0.746] \\
+    Median F1 $-$ baseline, all runs & $+$0.002 & $+$0.008 & $+$0.009 & $-$0.009 \\
+    \quad same, core suite & $+$0.005 & $+$0.006 & $+$0.010 & $+$0.011 \\
+    \bottomrule
+  \end{tabular}
+\end{table}

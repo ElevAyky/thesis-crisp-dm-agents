@@ -1,0 +1,30 @@
+%!TEX root = ../thesis.tex
+% generiert von thesis/scripts/make_tables.py — nicht von Hand aendern
+\begin{table}[htbp]
+  \centering
+  \small
+  \caption[Second stage: F1 per cell, A and A-Single]{Second stage, core suite: mean macro-F1 per cell (six runs, primary view) of Arm~A and Arm A-Single, run interleaved in one batch, and of the main runs of Arm~A from October. $\Delta$: A minus A-Single, and A minus A (Oct.). A superscript gives the passed runs of a cell with fewer than six. \emph{Signed-rank $p$}: exact two-sided Wilcoxon signed-rank test over the 13 datasets. On breast cancer, the second $\Delta$ is shown rounded to $+$0.005; unrounded, it lies below 0.005. Arms as in \autoref{tab:3:arms}.}
+  \label{tab:6:h1}
+  \begin{tabular}{lrrrrr}
+    \toprule
+    Dataset & A & A-Single & $\Delta$ & A (Oct.) & $\Delta$ \\
+    \midrule
+    wine & 0.971 & 0.971 & 0.000 & 0.971 & 0.000 \\
+    breast cancer & 0.973 & 0.973 & 0.000 & 0.968 & $+$0.005 \\
+    cnae-9 & 0.951 & 0.962 & $-$0.011 & 0.957 & $-$0.006 \\
+    covertype & 0.919 & 0.927 & $-$0.008 & 0.923 & $-$0.004 \\
+    phoneme & 0.865 & 0.859$^{5/6}$ & $+$0.006 & 0.865 & 0.000 \\
+    fashion-mnist & 0.895 & 0.889 & $+$0.005 & 0.895 & 0.000 \\
+    adult & 0.817 & 0.816 & 0.000 & 0.815 & $+$0.002 \\
+    vehicle & 0.841 & 0.852 & $-$0.011 & 0.852 & $-$0.011 \\
+    bank-marketing & 0.710 & 0.708$^{5/6}$ & $+$0.002 & 0.709 & 0.000 \\
+    credit-g & 0.650 & 0.635 & $+$0.015 & 0.625 & $+$0.025 \\
+    connect-4 & 0.729 & 0.726 & $+$0.003 & 0.732 & $-$0.002 \\
+    eucalyptus & 0.604 & 0.612 & $-$0.008 & 0.605 & $-$0.002 \\
+    cmc & 0.552 & 0.551 & $+$0.001 & 0.549 & $+$0.003 \\
+    \midrule
+    Passed & 78/78 & 76/78 &  & 78/78 &  \\
+    Signed-rank $p$ &  &  & 0.973 &  & 0.919 \\
+    \bottomrule
+  \end{tabular}
+\end{table}

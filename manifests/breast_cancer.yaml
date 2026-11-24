@@ -1,0 +1,14 @@
+dataset: breast_cancer
+task_prompt: "Determine whether a tumor is malignant or benign."
+canonical_spec:
+  task_type: classification
+  target_column: target        # Name VOR Neutralisierung (Loader mappt, s. datasets.py)
+  metric: f1
+  positive_class: malignant
+spurious_column: "mean ice cream sales"   # Leakage-Batch 2: fachfremd-absurd (docs/leakage-runs.md §7)
+poisoned_variant:
+  task_prompt: "Predict how many months the patient survives after diagnosis."
+  expected: ABSTAIN
+baseline_f1: 0.962   # Referenzmodell (LogReg/RF default, auf val gewaehlt), macro-F1 auf dem TEST-Anteil (70/10/20, seed 42); Predictions in baseline_preds/<set>.test.parquet -> Endurteil aller Arme
+baseline_f1_val: 0.981   # dasselbe Modell auf dem VALIDIERUNGS-Anteil; baseline_preds/<set>.val.parquet -> Referenz der A/B-Gates
+baseline_f1_cv: 0.971   # 5-fold CV full-size (benchmarks.md par. 2) -> nur Schwere/Terzile, NICHT Schwelle

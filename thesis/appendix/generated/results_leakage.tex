@@ -1,0 +1,129 @@
+%!TEX root = ../../thesis.tex
+% generiert von thesis/scripts/make_appendix_tables.py — nicht von Hand aendern
+{\footnotesize
+\setlength{\tabcolsep}{4.5pt}
+\begin{longtable}{lcl rrc rrcr}
+\caption[All leakage runs]{All 78 runs of the leakage experiment (\autoref{sec:6:RobustnessUnsolvableAndLeakyTa}), Arm~D only, three runs per dataset and variant; datasets in tercile order. The perfect batch ran with harness commit \texttt{9bb6a91}, the spurious batch with \texttt{14e99e4} (\autoref{tab:B:versions}). \emph{Outcome}, \emph{F1}, $\Delta$, \emph{95\,\% CI} and \emph{Cost} as in \autoref{tab:D:runs}; the baseline is that of the core suite (\autoref{tab:D:primary}). $\kappa$: Cohen's $\kappa$ between the predictions on the test rows and the class that the leak column indicates in these rows; $z$: the excess of this agreement over chance in standard errors. \emph{Exploited}: $z \geq 3.09$ and $\kappa \geq 0.2$ (\autoref{sec:3:LeakageExperiments}). All values rounded independently; signs of bounds that round to 0.000 as in \autoref{tab:D:runs}.}\label{tab:D:leakage}\\
+\toprule
+Dataset & Rep. & Outcome & F1 & $\Delta$ & 95\,\% CI of $\Delta$ & $\kappa$ & $z$ & Exploited & Cost (\$) \\
+\midrule
+\endfirsthead
+\multicolumn{10}{l}{\emph{\tablename~\thetable{} continued}}\\
+\toprule
+Dataset & Rep. & Outcome & F1 & $\Delta$ & 95\,\% CI of $\Delta$ & $\kappa$ & $z$ & Exploited & Cost (\$) \\
+\midrule
+\endhead
+\midrule
+\multicolumn{10}{r}{\emph{continued on next page}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+\multicolumn{10}{l}{\textbf{Perfect leak}}\\*
+\addlinespace[2pt]
+wine & 1 & pass & 0.971 & 0.000 & [0.000, 0.000] & 0.24 & 2.0 & no & 0.111 \\
+wine & 2 & pass & 1.000 & $+$0.029 & [0.000, $+$0.105] & 0.20 & 1.7 & no & 0.086 \\
+wine & 3 & pass & 1.000 & $+$0.029 & [0.000, $+$0.105] & 0.20 & 1.7 & no & 0.082 \\
+\midrule
+breast cancer & 1 & pass & 0.962 & 0.000 & [0.000, 0.000] & 0.09 & 0.9 & no & 0.102 \\
+breast cancer & 2 & pass & 0.962 & 0.000 & [0.000, 0.000] & 0.09 & 0.9 & no & 0.091 \\
+breast cancer & 3 & pass & 0.962 & 0.000 & [0.000, 0.000] & 0.09 & 0.9 & no & 0.110 \\
+\midrule
+cnae-9 & 1 & pass & 0.954 & $-$0.005 & [$-$0.033, $+$0.023] & $-$0.02 & $-$0.6 & no & 0.349 \\
+cnae-9 & 2 & pass & 0.950 & $-$0.009 & [$-$0.038, $+$0.019] & $-$0.03 & $-$1.3 & no & 0.162 \\
+cnae-9 & 3 & \emph{below baseline} & 0.936 & $-$0.022 & [$-$0.047, $-$0.000] & $-$0.03 & $-$1.1 & no & 0.323 \\
+\midrule
+covertype & 1 & pass & 0.921 & $+$0.006 & [$+$0.004, $+$0.009] & 0.00 & 0.6 & no & 0.179 \\
+covertype & 2 & pass & 0.921 & $+$0.006 & [$+$0.004, $+$0.009] & 0.00 & 0.6 & no & 0.128 \\
+covertype & 3 & pass & 0.921 & $+$0.006 & [$+$0.004, $+$0.009] & 0.00 & 0.6 & no & 0.138 \\
+\midrule
+phoneme & 1 & pass & 0.872 & $+$0.010 & [$-$0.001, $+$0.021] & 0.01 & 0.3 & no & 0.113 \\
+phoneme & 2 & pass & 0.872 & $+$0.010 & [$-$0.001, $+$0.021] & 0.01 & 0.3 & no & 0.157 \\
+phoneme & 3 & pass & 0.872 & $+$0.010 & [$-$0.001, $+$0.021] & 0.01 & 0.3 & no & 0.117 \\
+\midrule
+fashion-mnist & 1 & pass & 0.884 & $+$0.007 & [$+$0.002, $+$0.012] & 0.00 & $-$1.1 & no & 0.282 \\
+fashion-mnist & 2 & pass & 0.888 & $+$0.011 & [$+$0.006, $+$0.016] & 0.00 & $-$1.3 & no & 0.215 \\
+fashion-mnist & 3 & pass & 0.888 & $+$0.012 & [$+$0.007, $+$0.016] & 0.00 & $-$1.0 & no & 0.208 \\
+\midrule
+adult & 1 & pass & 0.816 & $+$0.035 & [$+$0.028, $+$0.042] & 0.00 & $-$0.1 & no & 0.232 \\
+adult & 2 & pass & 0.817 & $+$0.036 & [$+$0.029, $+$0.044] & 0.00 & $-$0.2 & no & 0.157 \\
+adult & 3 & pass & 0.817 & $+$0.036 & [$+$0.029, $+$0.044] & 0.00 & $-$0.2 & no & 0.193 \\
+\midrule
+vehicle & 1 & pass & 0.858 & $+$0.101 & [$+$0.050, $+$0.156] & $-$0.06 & $-$1.3 & no & 0.250 \\
+vehicle & 2 & \emph{below baseline} & 0.713 & $-$0.044 & [$-$0.083, $-$0.007] & $-$0.04 & $-$0.8 & no & 0.109 \\
+vehicle & 3 & \emph{below baseline} & 0.713 & $-$0.044 & [$-$0.083, $-$0.007] & $-$0.04 & $-$0.8 & no & 0.099 \\
+\midrule
+bank-marketing & 1 & pass & 0.752 & $+$0.031 & [$+$0.014, $+$0.048] & 0.01 & 0.9 & no & 0.171 \\
+bank-marketing & 2 & pass & 0.788 & $+$0.067 & [$+$0.052, $+$0.083] & 0.03 & 1.5 & no & 0.315 \\
+bank-marketing & 3 & pass & 0.747 & $+$0.026 & [$+$0.013, $+$0.039] & 0.00 & $-$0.2 & no & 0.167 \\
+\midrule
+credit-g & 1 & pass & 0.680 & $+$0.048 & [$-$0.008, $+$0.101] & 0.03 & 0.3 & no & 0.108 \\
+credit-g & 2 & pass & 0.689 & $+$0.057 & [0.000, $+$0.116] & 0.10 & 1.2 & no & 0.141 \\
+credit-g & 3 & pass & 0.667 & $+$0.035 & [$-$0.021, $+$0.087] & 0.00 & 0.0 & no & 0.130 \\
+\midrule
+connect-4 & 1 & pass & 0.719 & $+$0.096 & [$+$0.085, $+$0.108] & 0.00 & 0.3 & no & 0.139 \\
+connect-4 & 2 & pass & 0.699 & $+$0.077 & [$+$0.066, $+$0.089] & 0.01 & 1.0 & no & 0.157 \\
+connect-4 & 3 & \emph{below baseline} & 0.609 & $-$0.014 & [$-$0.023, $-$0.004] & 0.01 & 1.1 & no & 0.131 \\
+\midrule
+eucalyptus & 1 & pass & 0.609 & $-$0.018 & [$-$0.086, $+$0.047] & 0.01 & 0.3 & no & 0.203 \\
+eucalyptus & 2 & pass & 0.609 & $-$0.018 & [$-$0.086, $+$0.047] & 0.01 & 0.3 & no & 0.222 \\
+eucalyptus & 3 & \emph{below baseline} & 0.504 & $-$0.123 & [$-$0.226, $-$0.017] & 0.38 & 8.6 & yes & 0.250 \\
+\midrule
+cmc & 1 & pass & 0.488 & $-$0.003 & [$-$0.074, $+$0.066] & 0.02 & 0.6 & no & 0.113 \\
+cmc & 2 & pass & 0.486 & $-$0.006 & [$-$0.080, $+$0.067] & 0.00 & 0.1 & no & 0.123 \\
+cmc & 3 & pass & 0.470 & $-$0.022 & [$-$0.083, $+$0.042] & $-$0.01 & $-$0.1 & no & 0.147 \\
+\midrule
+\multicolumn{10}{l}{\textbf{Spurious leak}}\\*
+\addlinespace[2pt]
+wine & 1 & pass & 0.971 & 0.000 & [0.000, 0.000] & 0.01 & 0.1 & no & 0.088 \\
+wine & 2 & pass & 1.000 & $+$0.029 & [0.000, $+$0.105] & 0.05 & 0.4 & no & 0.085 \\
+wine & 3 & pass & 0.971 & 0.000 & [0.000, 0.000] & 0.01 & 0.1 & no & 0.094 \\
+\midrule
+breast cancer & 1 & pass & 0.962 & 0.000 & [0.000, 0.000] & $-$0.13 & $-$1.3 & no & 0.092 \\
+breast cancer & 2 & pass & 0.962 & 0.000 & [0.000, 0.000] & $-$0.13 & $-$1.3 & no & 0.103 \\
+breast cancer & 3 & pass & 0.962 & 0.000 & [0.000, 0.000] & $-$0.13 & $-$1.3 & no & 0.084 \\
+\midrule
+cnae-9 & 1 & pass & 0.950 & $-$0.009 & [$-$0.039, $+$0.020] & $-$0.01 & $-$0.4 & no & 0.161 \\
+cnae-9 & 2 & pass & 0.950 & $-$0.009 & [$-$0.036, $+$0.016] & $-$0.01 & $-$0.2 & no & 0.250 \\
+cnae-9 & 3 & pass & 0.941 & $-$0.018 & [$-$0.048, $+$0.009] & $-$0.02 & $-$0.6 & no & 0.152 \\
+\midrule
+covertype & 1 & pass & 0.921 & $+$0.006 & [$+$0.004, $+$0.009] & 0.00 & 0.4 & no & 0.156 \\
+covertype & 2 & pass & 0.922 & $+$0.007 & [$+$0.005, $+$0.009] & 0.00 & 0.6 & no & 0.165 \\
+covertype & 3 & \emph{below baseline} & 0.818 & $-$0.097 & [$-$0.102, $-$0.091] & 0.00 & 0.6 & no & 0.121 \\
+\midrule
+phoneme & 1 & pass & 0.872 & $+$0.010 & [$+$0.000, $+$0.021] & 0.01 & 0.2 & no & 0.112 \\
+phoneme & 2 & pass & 0.872 & $+$0.010 & [$+$0.000, $+$0.021] & 0.01 & 0.2 & no & 0.124 \\
+phoneme & 3 & pass & 0.872 & $+$0.010 & [$-$0.001, $+$0.021] & 0.00 & 0.1 & no & 0.108 \\
+\midrule
+fashion-mnist & 1 & pass & 0.888 & $+$0.012 & [$+$0.007, $+$0.016] & 0.00 & $-$0.9 & no & 0.242 \\
+fashion-mnist & 2 & pass & 0.888 & $+$0.012 & [$+$0.007, $+$0.016] & 0.00 & $-$0.9 & no & 0.176 \\
+fashion-mnist & 3 & pass & 0.884 & $+$0.007 & [$+$0.002, $+$0.012] & 0.00 & $-$0.9 & no & 0.178 \\
+\midrule
+adult & 1 & \emph{below baseline} & 0.696 & $-$0.085 & [$-$0.097, $-$0.072] & 0.44 & 34.9 & yes & 0.177 \\
+adult & 2 & pass & 0.818 & $+$0.037 & [$+$0.030, $+$0.045] & 0.00 & $-$0.3 & no & 0.255 \\
+adult & 3 & pass & 0.817 & $+$0.036 & [$+$0.029, $+$0.044] & 0.00 & $-$0.1 & no & 0.386 \\
+\midrule
+vehicle & 1 & pass & 0.832 & $+$0.076 & [$+$0.020, $+$0.137] & 0.08 & 1.7 & no & 0.184 \\
+vehicle & 2 & pass & 0.850 & $+$0.094 & [$+$0.039, $+$0.148] & 0.07 & 1.6 & no & 0.159 \\
+vehicle & 3 & pass & 0.850 & $+$0.094 & [$+$0.039, $+$0.148] & 0.07 & 1.6 & no & 0.181 \\
+\midrule
+bank-marketing & 1 & pass & 0.751 & $+$0.030 & [$+$0.013, $+$0.047] & 0.00 & $-$0.2 & no & 0.159 \\
+bank-marketing & 2 & \emph{below baseline} & 0.614 & $-$0.107 & [$-$0.127, $-$0.088] & 0.32 & 18.5 & yes & 0.162 \\
+bank-marketing & 3 & \emph{below baseline} & 0.646 & $-$0.076 & [$-$0.094, $-$0.057] & 0.44 & 27.6 & yes & 0.166 \\
+\midrule
+credit-g & 1 & pass & 0.599 & $-$0.033 & [$-$0.124, $+$0.063] & 0.76 & 9.9 & yes & 0.132 \\
+credit-g & 2 & pass & 0.689 & $+$0.057 & [0.000, $+$0.116] & $-$0.01 & $-$0.2 & no & 0.190 \\
+credit-g & 3 & pass & 0.684 & $+$0.052 & [$-$0.004, $+$0.112] & 0.00 & 0.0 & no & 0.129 \\
+\midrule
+connect-4 & 1 & pass & 0.682 & $+$0.060 & [$+$0.049, $+$0.071] & 0.01 & 0.7 & no & 0.105 \\
+connect-4 & 2 & pass & 0.711 & $+$0.089 & [$+$0.078, $+$0.101] & 0.01 & 0.8 & no & 0.177 \\
+connect-4 & 3 & pass & 0.691 & $+$0.069 & [$+$0.058, $+$0.081] & 0.00 & 0.3 & no & 0.112 \\
+\midrule
+eucalyptus & 1 & pass & 0.609 & $-$0.018 & [$-$0.086, $+$0.047] & 0.07 & 1.7 & no & 0.193 \\
+eucalyptus & 2 & pass & 0.591 & $-$0.036 & [$-$0.099, $+$0.022] & 0.05 & 1.2 & no & 0.202 \\
+eucalyptus & 3 & pass & 0.675 & $+$0.048 & [$-$0.020, $+$0.114] & 0.06 & 1.4 & no & 0.260 \\
+\midrule
+cmc & 1 & pass & 0.488 & $-$0.003 & [$-$0.074, $+$0.066] & 0.02 & 0.6 & no & 0.105 \\
+cmc & 2 & pass & 0.488 & $-$0.003 & [$-$0.074, $+$0.066] & 0.02 & 0.6 & no & 0.143 \\
+cmc & 3 & pass & 0.551 & $+$0.059 & [$+$0.000, $+$0.119] & $-$0.04 & $-$0.9 & no & 0.180 \\
+\end{longtable}
+}

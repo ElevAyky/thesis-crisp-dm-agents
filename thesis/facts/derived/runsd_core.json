@@ -1,0 +1,138 @@
+{
+ "per_cell": {
+  "adult": {
+   "crisp_react": 0.004168180444989666,
+   "hard_fsm": 0.002992728452919881,
+   "naked_react": 0.002100472754859499,
+   "soft_fsm": 0.007752877199891858
+  },
+  "bank_marketing": {
+   "crisp_react": 0.03211517364006073,
+   "hard_fsm": 0.003086016189718077,
+   "naked_react": 0.04135240154620506,
+   "soft_fsm": 0.0011677231022805274
+  },
+  "breast_cancer": {
+   "crisp_react": 0.005297439642058609,
+   "hard_fsm": 0.009890693139644996,
+   "naked_react": 0.0,
+   "soft_fsm": 0.010431067750683105
+  },
+  "cmc": {
+   "crisp_react": 0.025654419538220154,
+   "hard_fsm": 0.009824598230033439,
+   "naked_react": 0.010510941057412022,
+   "soft_fsm": 0.014535183510239432
+  },
+  "cnae_9": {
+   "crisp_react": 0.012638630055796775,
+   "hard_fsm": 0.008823500338631418,
+   "naked_react": 0.0067311035107550776,
+   "soft_fsm": 0.005495067673217217
+  },
+  "connect_4": {
+   "crisp_react": 0.007565469146545693,
+   "hard_fsm": 0.003779587149198809,
+   "naked_react": 0.015079636321730957,
+   "soft_fsm": 0.011277500234954645
+  },
+  "covertype": {
+   "crisp_react": 0.0013690627785044205,
+   "hard_fsm": 0.014086004950302673,
+   "naked_react": 0.0,
+   "soft_fsm": 0.0058732578652248525
+  },
+  "credit_g": {
+   "crisp_react": 0.0,
+   "hard_fsm": 0.02010346990103333,
+   "naked_react": 0.008935280014410003,
+   "soft_fsm": 0.04857214602603226
+  },
+  "eucalyptus": {
+   "crisp_react": 0.03356442694261329,
+   "hard_fsm": 0.028003813499560902,
+   "naked_react": 0.02146964418903646,
+   "soft_fsm": 0.017164085671034682
+  },
+  "fashion_mnist": {
+   "crisp_react": 0.005347015977070755,
+   "hard_fsm": 3.2418683752495534e-05,
+   "naked_react": 0.005552344035966985,
+   "soft_fsm": 0.004407211332314474
+  },
+  "phoneme": {
+   "crisp_react": 0.0025260494535826253,
+   "hard_fsm": 0.0017740515632489733,
+   "naked_react": 0.00027330698282157094,
+   "soft_fsm": 0.0035123703342696743
+  },
+  "vehicle": {
+   "crisp_react": 0.009553668721831925,
+   "hard_fsm": 0.01043809782692471,
+   "naked_react": 0.007446053164928432,
+   "soft_fsm": 0.009310755836617245
+  },
+  "wine": {
+   "crisp_react": 0.0,
+   "hard_fsm": 0.0,
+   "naked_react": 0.0,
+   "soft_fsm": 0.0
+  }
+ },
+ "per_arm": {
+  "hard_fsm": {
+   "median_sd": 0.008823500338631418,
+   "max_sd": 0.028003813499560902,
+   "max_sd_dataset": "eucalyptus",
+   "min_sd": 0.0,
+   "cells": 13
+  },
+  "soft_fsm": {
+   "median_sd": 0.007752877199891858,
+   "max_sd": 0.04857214602603226,
+   "max_sd_dataset": "credit_g",
+   "min_sd": 0.0,
+   "cells": 13
+  },
+  "crisp_react": {
+   "median_sd": 0.005347015977070755,
+   "max_sd": 0.03356442694261329,
+   "max_sd_dataset": "eucalyptus",
+   "min_sd": 0.0,
+   "cells": 13
+  },
+  "naked_react": {
+   "median_sd": 0.0067311035107550776,
+   "max_sd": 0.04135240154620506,
+   "max_sd_dataset": "bank_marketing",
+   "min_sd": 0.0,
+   "cells": 13
+  }
+ },
+ "arm_with_largest_sd_count": {
+  "soft_fsm": 4,
+  "naked_react": 3,
+  "crisp_react": 3,
+  "hard_fsm": 2
+ },
+ "sets_with_tied_largest_sd": [
+  "wine"
+ ],
+ "zero_sd_cells": {
+  "hard_fsm": [
+   "wine"
+  ],
+  "soft_fsm": [
+   "wine"
+  ],
+  "crisp_react": [
+   "credit_g",
+   "wine"
+  ],
+  "naked_react": [
+   "breast_cancer",
+   "covertype",
+   "wine"
+  ]
+ }
+}

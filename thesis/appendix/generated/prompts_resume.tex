@@ -1,0 +1,48 @@
+%!TEX root = ../../thesis.tex
+% generiert von thesis/scripts/make_appendix_prompts.py — nicht von Hand aendern
+\par\vspace{0pt plus 8\baselineskip}\penalty-300\vspace{0pt plus -8\baselineskip}
+\paragraph{Retry after the phase's own gate failed, Business Understanding.}\leavevmode
+\begin{AppCPrompt}
+Your last attempt at the phase \AppCQ@^Business Understanding\AppCQ@^ did NOT pass the Quality
+\AppCCont@^Gate.
+Reason: \AppCVal@{feedback}^
+Correct the specification in \AppCQ@^bu/task_spec.json\AppCQ@^ accordingly.
+
+\AppCRest@^
+\end{AppCPrompt}
+\par\vspace{0pt plus 8\baselineskip}\penalty-300\vspace{0pt plus -8\baselineskip}
+\paragraph{Retry after the phase's own gate failed, Data Understanding.}\leavevmode
+\begin{AppCPrompt}
+Your last attempt at the phase \AppCQ@^Data Understanding\AppCQ@^ did NOT pass the Quality
+\AppCCont@^Gate.
+Reason: \AppCVal@{feedback}^
+Correct \AppCQ@^du/data_report.json\AppCQ@^ accordingly.
+
+\AppCRest@^
+\end{AppCPrompt}
+\par\vspace{0pt plus 8\baselineskip}\penalty-300\vspace{0pt plus -8\baselineskip}
+\paragraph{Retry after the phase's own gate failed, Data Preparation, Modeling and Evaluation.}\leavevmode
+\begin{AppCPrompt}
+Your last attempt at this phase did NOT pass the Quality Gate.
+Reason: \AppCVal@{feedback}^
+Address this and fulfill the original task again.
+
+\AppCRest@^
+\end{AppCPrompt}
+\par\vspace{0pt plus 8\baselineskip}\penalty-300\vspace{0pt plus -8\baselineskip}
+\paragraph{Re-entry after a later gate sent the process back (Evaluation to Modeling, specification mismatch to Business Understanding).}\leavevmode
+\begin{AppCPrompt}
+A later quality check found a problem with the pipeline result.
+Reason: \AppCVal@{feedback}^
+Revise your work accordingly and complete the task below again.
+
+\AppCRest@^
+\end{AppCPrompt}
+\par\vspace{0pt plus 8\baselineskip}\penalty-300\vspace{0pt plus -8\baselineskip}
+\paragraph{Re-entry after an earlier phase was revised (e.g., Evaluation after a new model).}\leavevmode
+\begin{AppCPrompt}
+An earlier step of the pipeline has been revised since your last attempt.
+\AppCCont@^Complete the task below again based on the current files.
+
+\AppCRest@^
+\end{AppCPrompt}

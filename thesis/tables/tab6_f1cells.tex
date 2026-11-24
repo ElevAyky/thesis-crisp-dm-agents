@@ -1,0 +1,31 @@
+%!TEX root = ../thesis.tex
+% generiert von thesis/scripts/make_tables.py — nicht von Hand aendern
+\begin{table}[htbp]
+  \centering
+  \small
+  \caption[Mean macro-F1 per cell]{Mean macro-F1 per cell (six runs, primary view) on the test split, grouped by difficulty tercile. \emph{Majority}: share of the majority class in the training rows. \emph{Baseline}: default reference model on the same test rows. The best value per dataset at three decimals is set in bold (ties in bold for all). Arms as in \autoref{tab:3:arms}.}
+  \label{tab:6:f1cells}
+  \begin{tabular}{llrrrrrr}
+    \toprule
+    Dataset & Tercile & Majority & Baseline & A & B & C & D \\
+    \midrule
+    wine & easy & 40\,\% & 0.971 & \textbf{0.971} & \textbf{0.971} & \textbf{0.971} & \textbf{0.971} \\
+    breast cancer & easy & 63\,\% & 0.962 & 0.968 & \textbf{0.971} & 0.967 & 0.962 \\
+    cnae-9 & easy & 11\,\% & 0.959 & \textbf{0.957} & 0.956 & 0.956 & \textbf{0.957} \\
+    covertype & easy & 49\,\% & 0.914 & \textbf{0.923} & 0.919 & 0.922 & 0.921 \\
+    \midrule
+    phoneme & medium & 71\,\% & 0.862 & 0.865 & 0.865 & 0.870 & \textbf{0.872} \\
+    fashion-mnist & medium & 10\,\% & 0.877 & \textbf{0.895} & 0.893 & 0.891 & 0.888 \\
+    adult & medium & 76\,\% & 0.781 & 0.815 & 0.813 & 0.814 & \textbf{0.817} \\
+    vehicle & medium & 26\,\% & 0.756 & \textbf{0.852} & 0.845 & 0.839 & 0.835 \\
+    \midrule
+    bank-marketing & hard & 88\,\% & 0.721 & 0.709 & 0.710 & \textbf{0.775} & 0.753 \\
+    credit-g & hard & 70\,\% & 0.632 & 0.625 & 0.626 & 0.640 & \textbf{0.685} \\
+    connect-4 & hard & 66\,\% & 0.622 & \textbf{0.732} & 0.724 & 0.721 & 0.708 \\
+    eucalyptus & hard & 29\,\% & 0.627 & 0.605 & 0.609 & \textbf{0.638} & 0.598 \\
+    cmc & hard & 43\,\% & 0.492 & 0.549 & \textbf{0.551} & 0.537 & 0.533 \\
+    \midrule
+    Mean rank &  &  &  & 2.27 & 2.50 & 2.50 & 2.73 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
